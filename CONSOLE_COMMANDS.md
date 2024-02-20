@@ -30,6 +30,7 @@
 
 ## Node/NPM/NVM
 
+- npm outdated, npm update
 - node -v, node --version, npm version
 - nvm install 6.9.2, nvm alias default 6.9.2, nvm use 6.9.1, nvm ls
 - npm list -all, npm list --depth 1, npm list --parseable, npm list --json, npm list -g, npm audit fix --force
