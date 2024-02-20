@@ -60,7 +60,7 @@
 
 - Ways in which we can define JavaScript function, last one is preferred and myObject name should be like a namespace name for your application. Function 2 and function 5 will be available on the global scope.
 
-![typescript-function-defining-ways](./assets/images/typescript-function-defining-ways.png)
+![typescript-function-defining-ways](./src/assets/images/typescript-function-defining-ways.png)
 
 - Event handlers are not supposed to return any value at all. But if we return false it will tell browser to stop any subsequent processing associated with that event. But we should use a JavaScript function by name preventDefault() to cancel and event because all browser do not support to cancel the event if we return as false. Example scenario if we apply double click event on div which contains text then it will by default also select the text.
 
@@ -88,11 +88,11 @@
 
 - Arrow functions are used to make ‘this’ easier to understand. Below code will return the window object, not the document object which would be the case if we do not use arrow function. So, we are no more limited to have access only object which called the function means context of the function:
 
-![typescript-arrow-function-issue](./assets/images/typescript-arrow-function-issue.png)
+![typescript-arrow-function-issue](./src/assets/images/typescript-arrow-function-issue.png)
 
 - Below code as well will return the window object not the invoice object:
 
-![typescript-arrow-function-issue2](./assets/images/typescript-arrow-function-issue2.png)
+![typescript-arrow-function-issue2](./src/assets/images/typescript-arrow-function-issue2.png)
 
 - Symbols is a concept in ES6 to provide some unique string. It is a unique and immutable data type and may be used as an identifier for object properties. There is no way to access its unique ID value. Well-known symbols used in meta programming, meta programming involves looking more deeply in objects or functions even how JavaScript operates.
 
@@ -165,7 +165,7 @@
 
 - Module formats are just a syntax which is used to define a module, module loaders are generally JS library which we can include in our project that understand the module format we have decided to use and how to load and execute the modules we define in that format. This relationship is similar to JS and browser and itself.
 
-![typescript-module-type-format](./assets/images/typescript-module-type-format.png)
+![typescript-module-type-format](./src/assets/images/typescript-module-type-format.png)
 
 - Common JS format is used mostly with server side, Universal module definition (UMD) is a single format that attempts to be compatible with both the AMD and Common JS formats. We might consider using this format if we need to same module on the server in a node application and as part of a browser application. It would be supported by the CommonJS module loader in Node, as well as an AMD loader in the browser like RequireJS.
 
@@ -223,9 +223,9 @@
 
 - Crude computation bug – below will make the infinite loop. JavaScript only has 1 number type and it is IEEE 754 double-precision floating point, by this we can represent wide range of values but downside is that some of the precession can be lost in the process.
 
-![typescript-number-type](./assets/images/typescript-number-type.png)
+![typescript-number-type](./src/assets/images/typescript-number-type.png)
 
-![javascript-number-type-2](./assets/images/typescript-number-type-2.png)
+![javascript-number-type-2](./src/assets/images/typescript-number-type-2.png)
 
 - To make overloading work in javascript, instead of creating different methods, we should handle it manually in same method by taking consideration of arguments length or types
 
@@ -233,9 +233,9 @@
 
 - Value of ‘this’ in function for different cases invocation. We need to use call, bind or prototype to control this context –
 
-![typescript-value-of-this-based-on-context](./assets/images/typescript-value-of-this-based-on-context.png)
+![typescript-value-of-this-based-on-context](./src/assets/images/typescript-value-of-this-based-on-context.png)
 
-![typescript-value-of-this-based-on-context2](./assets/images/typescript-value-of-this-based-on-context2.png)
+![typescript-value-of-this-based-on-context2](./src/assets/images/typescript-value-of-this-based-on-context2.png)
 
 - We cannot compare NaN with NaN, it will give false. So we need to call isNaN(NaN) function instead
 
@@ -249,7 +249,7 @@
 
 - Issues with using Objects as Maps – when using objects as maps, its key are always converted to strings. We should stop using the object, but use Map objects which is a simple key/value data structure. Any value may be used as either a key or a value, and the objects are not converted to strings. Also, we can use maps when keys are unknown until runtime, use objects if keys are predefined. We should also use maps when keys are of same type and all values are of same type. Maps are iterable, so they can be used in a for-of loop. Each run of the loops returns a [key, value] pair for an entry in the Map.
 
-![typescript-using-maps-instead-of-objects](./assets/images/typescript-using-maps-instead-of-objects.png)
+![typescript-using-maps-instead-of-objects](./src/assets/images/typescript-using-maps-instead-of-objects.png)
 
 - The WeakMap is a type of Map where only objects can be passed as keys, primitive data types such as strings, numbers, Booleans, etc. are not allowed. WeekMaps are not iterable, so they can’t be used with for-of loop. Weakmaps are better with memory, they can be garbage collected. Individual entries in a weakmap can be garbage collected, while the weakmap itself still exists.
 
@@ -279,7 +279,7 @@
 
 - Webpack process –
 
-![typescript-webpack-process](./assets/images/typescript-webpack-process.png)
+![typescript-webpack-process](./src/assets/images/typescript-webpack-process.png)
 
 - In JS constructor functions are used to create new objects. When we use the new keyword the function gets a branch new empty context, here we store the properties and functions for this object on ‘this’. By using prototype property we can create a function directly on function without having duplicate copies on every object. Prototype also helps us to extend an objects to add new functionalities to the instance of that object. Polyfills also uses prototypes for their working.
 
@@ -287,7 +287,7 @@
 
 - Window is a global object in JS, we can access it from anywhere. Important key things are below –
 
-![typescript-important-document-api](./assets/images/typescript-important-document-api.png)
+![typescript-important-document-api](./src/assets/images/typescript-important-document-api.png)
 
 - By using eval() keyword, it will open our application for injection attacks. Like the string is coming from database or web api which might be compromised, then eval will execute then string as a javascript script.
 
@@ -299,7 +299,7 @@
 
 - The event queue – if at a time only person can go to the teller, then there has to be a queue to hold the other people, this queue is a part of event loop in JS. This is where work is stored until the current operation or task is done executing.
 
-![typescript-event-queue](./assets/images/typescript-event-queue.png)
+![typescript-event-queue](./src/assets/images/typescript-event-queue.png)
 
 - The javascript engine will only execute one piece of JS code at a time, behind the scenes there are a pool of threads that are used for things like making web requests. This pool of threads can have multiple connections open to multiple different servers to request data for multiple different requests at the same time. This is all hidden behind the scenes, this is how we can still achieve parallelism within JS. We still have behind the scenes the ability for multithreading, it is not just applied to our JS code itself.
 
@@ -311,12 +311,12 @@
 
 - The JS engine and the browser tab that we are working has a separate event loop dedicated just to our application, this event loop contains a queue, inside of this queue work can be placed that will be eventually executed when whatever is running is complete. In addition to this queue, there is a call stack it contains whatever is executing at this current time, a call stack is like a todo list while performing a task. Work will be pushed on call stack and then once it is done it will vanish. A todo item can also have sub-task like to create a hamburger we might need to find many items to look for same with the work, it will be further pushed to the stack only, as usual after completion of that subtask, it will be removed from the stack and controls get back to the earlier item on the stack.
 
-![typescript-event-loop2](./assets/images/typescript-event-loop2.png)
+![typescript-event-loop2](./src/assets/images/typescript-event-loop2.png)
 
 - The black box items will be handle by browser behind the scenes for us, and a mechanism in browser will also listen for the their responses as-well, after getting the response it will push those response inside the queue. Behind the scene the browser is handling these requests not the JS engine, so that multiple threads handling multiple request at the same time. So it is possible while our single-
   threaded JS engine is doing work that behind the scenes other things can be happening, we just don’t have those things happening inside of our JS engine –
 
-![typescript-event-loop3](./assets/images/typescript-event-loop3.png)
+![typescript-event-loop3](./src/assets/images/typescript-event-loop3.png)
 
 - In setTimeout() function there is not guarantee that our function will be called at exactly at the mentioned time, at that time elapse the function will be pushed in the queue, but it will called once all other prior work in the queue gets completed. Also when we say 0 milliseconds the browser is putting in as 4.
 
@@ -414,7 +414,7 @@
 
 - Meta object API – a property is a named collection of attributes, earlier this api wasn’t exposed for outside world.
 
-![typescript-meta-object-api](./assets/images/typescript-meta-object-api.png)
+![typescript-meta-object-api](./src/assets/images/typescript-meta-object-api.png)
 
 - We can stop object extensibility by using preventExtensions() method, the object won’t accept new property assignment. The freeze() stop its extension and also make all property as read-only and immutable. By this we can pass this object to third party and be confident that third party can’t be able to corrupt this object
 
@@ -424,7 +424,7 @@
 
 - Event driven model was inspired by HyperCard
 
-![typescript-hyper-card](./assets/images/typescript-hyper-card.png)
+![typescript-hyper-card](./src/assets/images/typescript-hyper-card.png)
 
 - In node.js we got non-blocking file i/o which is the main advantage. Node.js implements a web server in a JS event loop. It is a high-performance event pump.
 
@@ -440,7 +440,7 @@
 
 - In 40s when the first Von Neumann machines start coming online they are integer-only machines, but most of the programmers are mathematicians and they are trying to figure out how to do read computation and it is hard, they were trying to do stuff with scaled integers and it is lot of work, and it is error prone. And someone figures out floating point, that we will have two numbers per number, one is the number itself and other is a scale factor, which tells us how many positions to move the decimal point. Then we can just give it to a subroutine, and subroutine will figure out how to add these things. And it worked and it made programming much easier to do. Unfortunately, those libraries were really slow. So, when we get to the 50s, there is now interest in putting floating point into hardware, but we were making out stuff of tubes, and it is hard to do. Someone has figured it out that if we use binary floating pinot instead of decimal floating point, we don’t have to implement a dive by 10 in order to do a scaling, we can just shift 1 bit, which is free. That worked great for scientific computing because in scientific computing, our lower digits are probably wrong anyway, but it doesn’t work for business processing because they are adding up money and they need to be exact. They have to give the cents exact. So, even successor like java is not good with business types, that is the tragedy we are in now. The solution might be below, this might be only 1 number system which a future language needs to be adopt –
 
-![typescript-dec-64](./assets/images/typescript-dec-64.png)
+![typescript-dec-64](./src/assets/images/typescript-dec-64.png)
 
 - If we are adding integers in a software implementation, it can add two integers and five instructions, in a hardware implementation adding integers should happen in once cycle, which means we don’t need to have int as a separate type in order to get performance. We can get performance and range of values that we need in one number type.
 
@@ -456,7 +456,7 @@
 
 - TypeScript implements structural type system, so in below the object developer can be directly treated as interface as it has all the interface properties. As long as the structure match, we can treat the object as the type with that structure event if it wasn’t explicitly declared with that type. This is also called duck typing:
 
-![typescript-duck-typing](./assets/images/typescript-duck-typing.png)
+![typescript-duck-typing](./src/assets/images/typescript-duck-typing.png)
 
 - Static members are a nice way to add utility or helper methods that are related to the purpose of class but aren’t dependent on any data that might be stored in instances of the class.
 
@@ -464,7 +464,7 @@
 
 - There is different module syntax like AMD, Common JS, TS has adapted ES2015 module syntax by default. Benefits – encapsulation, reusability, create higher-level abstraction. We will also need module loader/bundler to run our code. Webpack will prepare our modules to execute in a browser as part of a build step.
 
-![typescript-supported-technologies](./assets/images/typescript-supported-technologies.png)
+![typescript-supported-technologies](./src/assets/images/typescript-supported-technologies.png)
 
 - Relative vs. non-relative imports – ‘./’, ‘/’, ‘../’ all are same for current directive. We should give relative reference when giving our own modules and non-relative paths when referring third party modules.
 
@@ -484,7 +484,7 @@
 
 - Duck Typing – in below we don’t need to specify the probablyADuck variable as a Duck type, it is considered automatically as it has all its methods.
 
-![typescript-duck-typing2](./assets/images/typescript-duck-typing2.png)
+![typescript-duck-typing2](./src/assets/images/typescript-duck-typing2.png)
 
 - Abstract class are created with the abstract keyword, we cannot directly instantiate this class but they can contain the implementation details but also can have abstract methods which are not implemented but these methods must be implemented in derived classes.
 
@@ -496,11 +496,11 @@
 
 - Ambient modules – large JS libraries could potentially have lots of modules in them. Each module in a large library would have its own d.ts file and that would quickly become unwieldy and inconvenient. The solution is to declare ambient modules inside a single d.ts file. Ambient modules don’t provide any implementation details. In type definition files they are just the wrapper aournd an implementing that defined in the actual library. Since there aren’t any top-level exports, it can’t be imported directly. We first need to add a triple slash reference to the d.ts file, then we can write the import statement, we don’t need to define the path for the module to import but just the name of the module in the double quote exactly it was defined in d.ts file.
 
-![typescript-ambient-modules](./assets/images/typescript-ambient-modules.png)
+![typescript-ambient-modules](./src/assets/images/typescript-ambient-modules.png)
 
 - Babel is a second stage transpiler and provides a handy backup plan just in case Typescript doesn’t transpile something as we expected.
 
-![typescript-babel-working](./assets/images/typescript-babel-working.png)
+![typescript-babel-working](./src/assets/images/typescript-babel-working.png)
 
 - Nested arrow functions share the same ‘this’ instance, the ‘this’ value is always the containing code which is also called Lexical Binding.
 
@@ -510,15 +510,15 @@
 
 - Declaration merging - The compiler merges two seperate declarations declared with the same same into a single definition. allowed merges - interfaces, enums, namespaces with classes/functions/enums. disallowed - classes with classes. We can use declaration merging to implement module augmentation. It is a technique that allows us to extend existing modules with new members. It is a nice way to extend modules that we might not maintain or to extend the 3rd party code that we may not be responsible for maintaining.
 
-![typescript-declaration-merging](./assets/images/typescript-declaration-merging.png)
+![typescript-declaration-merging](./src/assets/images/typescript-declaration-merging.png)
 
 - Type Guards – they are a way for us to check the type of a variable. They are a way for the compiler to narrow a variable to a specific type. By this the compiler can check more error based on type. The typeof type guard, instanceof guard, user-defined type guards
 
 - Symbols – they are new primitive data type, they are unique and immutable. Every symbol we create is different from every other symbol. Once we created them we can’t change them. Use case for them – to make good unique constants, enum like behaviour, computer property declarations to avoid name collisions, customize internal language behaviour. The string passed below in symbol is just for debugging purpose.
 
-![typescript-symbol1](./assets/images/typescript-symbol1.png)
+![typescript-symbol1](./src/assets/images/typescript-symbol1.png)
 
-![typescript-symbol2](./assets/images/typescript-symbol2.png)
+![typescript-symbol2](./src/assets/images/typescript-symbol2.png)
 
 - Decorators - They are like annotations in java and attributes in c#. In JS they are implemented as functions.
 
@@ -526,7 +526,7 @@
 
 - An interface defines the shape of data. It is like a mold used to create baked goods such as muffins. It drives consistency across the objects. Unlike Interface, Type can also be used to represent primary types not just object like data structure.
 
-![typescript-interface-vs-types](./assets/images/typescript-interface-vs-types.png)
+![typescript-interface-vs-types](./src/assets/images/typescript-interface-vs-types.png)
 
 - The ‘typeof null’ will return generic ‘object’ value.
 
@@ -534,7 +534,7 @@
 
 - A closure wraps up an entire environment, binding necessary variable from other scope. It is unlike a function’s local variables as they aren’t available once the function’s scope is closed. Closures are very useful in creating function ‘construction zones’, a closure can make the creation of very similar functions ultra-efficient. We should aware that bound variables won’t be evident in the stored function, examining the contents of our new variables doesn’t reveal closures.
 
-![typescript-closure](./assets/images/typescript-closure.png)
+![typescript-closure](./src/assets/images/typescript-closure.png)
 
 - Order of operations – PEMDAS.
 
@@ -544,11 +544,11 @@
 
 - Iterables return an iterator object. This object knows how to access items from a collection 1 at a time, while keeping track of its current position within the same sequence.
 
-![typescript-iterables](./assets/images/typescript-iterables.png)
+![typescript-iterables](./src/assets/images/typescript-iterables.png)
 
 - Proxies and reflection are both forms of meta programming generally to know information about itself or for a program to control how is executing while it is executing other programs. Reflection is getting information about the program and proxy is changing how the program execute during execution. Proxy object sits between other code and target object. Proxies are slower than regular object. Revocable proxies allow the system to recover resources – use in very large applications with lots of data.
 
-![typescript-proxy-and-reflection](./assets/images/typescript-proxy-and-reflection.png)
+![typescript-proxy-and-reflection](./src/assets/images/typescript-proxy-and-reflection.png)
 
 - Typescript also support new features of ECMAScript and other features which even didn’t introduced yet in ECMAScript like interface.
 

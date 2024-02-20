@@ -1817,7 +1817,7 @@ One-column forms are more comfortable to scan and conform better to mobile displ
 
 It's easier to scan checkbox and radio options when presented vertically. However, presenting options with associated graphics can add an extra dimension to the design that negates the need for a vertical presentation.
 
-![image](./assets/images/bp-ux-show-vertically.jpeg)
+![image](./src/assets/images/bp-ux-show-vertically.jpeg)
 
 ### 1.4 Show all `selection options` if < `6`
 
@@ -1825,7 +1825,7 @@ Use a drop-down selector when there are over 5 options and incorporate search wi
 
 **Otherwise:** Placing options in a drop-down selector hides choices and requires two clicks to choose an option.
 
-![image](./assets/images/bp-ux-show-radio-instead-selections.jpeg)
+![image](./src/assets/images/bp-ux-show-radio-instead-selections.jpeg)
 
 ### 1.5 Size the `modal` window appropriately
 
@@ -1841,25 +1841,25 @@ Never design a modal window that triggers a modal window.
 
 To unify the button action with the dialog content.
 
-![image](./assets/images/bp-ux-flat-buttons-on-modals.png)
+![image](./src/assets/images/bp-ux-flat-buttons-on-modals.png)
 
 ### 1.8 Use `Raised` and `Ghost` buttons
 
 For primary actions, use raised buttons and for secondary or tertiary content we can use ghost buttons.
 
-![image](./assets/images/bp-ux-primary-and-ghost-buttons.png)
+![image](./src/assets/images/bp-ux-primary-and-ghost-buttons.png)
 
 ### 1.9 Provide meaningful placeholder
 
 Use placeholder text to give the user a hint about the data they need to provide. For example, if you ask the user to provide a tracking number, you can add a placeholder with an example of a tracking number).
 
-![user-experience-meaningful-placeholder](./assets/images/bp-ux-user-experience-meaningful-placeholder.png)
+![user-experience-meaningful-placeholder](./src/assets/images/bp-ux-user-experience-meaningful-placeholder.png)
 
 ### 1.10 Add a help icon (“?” or “i”) next to the field to help the user enter the data
 
 A tooltip with helpful information becomes visible when the user hovers over the icon. This feature will be helpful when you want to provide a quick guide on data input ( i.e., you ask the user to provide social security number, but they might know where to find it) or when you collect personal information (i.e., you ask the user to provide a phone number, and want to explain how you will use it).
 
-![user-experience-help-icon.png](./assets/images/bp-ux-user-experience-help-icon.png)
+![user-experience-help-icon.png](./src/assets/images/bp-ux-user-experience-help-icon.png)
 
 ### 1.11 Use toggle if you have two options, and they are yes or no instead of `radio` or `select`
 
@@ -1869,13 +1869,13 @@ It is generally not a good idea to place a few primary buttons next to each othe
 
 To avoid this issue, you have to combine different types of buttons (filled, with border, plain) if you use them together.
 
-![bp-ux-button-variations.webp](./assets/images/bp-ux-button-variations.webp)
+![bp-ux-button-variations.webp](./src/assets/images/bp-ux-button-variations.webp)
 
 ### 1.13 Use proper colours for positive and negative actions
 
 For example, a red button might be used to indicate a warning or a destructive action like "Delete", while a green button might be used to indicate a positive action such as saving or approving something. Moreover, you can add an icon to the context to make it even more prominent.
 
-![bp-ux-colored-button.webp](./assets/images/bp-ux-colored-button.webp)
+![bp-ux-colored-button.webp](./src/assets/images/bp-ux-colored-button.webp)
 
 ### 1.14 Make it clear
 
@@ -1891,7 +1891,7 @@ Vertical alignment can make the options easier to read and understand. Vertical 
 
 A multi-select field can be a good alternative to a checkbox with more than seven options (The rule of 5 plus minus 2). This allows the user to easily select and deselect multiple options without having to check and uncheck a large number of checkboxes individually.
 
-![bp-ux-prefer-multiselect.webp](./assets/images/bp-ux-prefer-multiselect.webp)
+![bp-ux-prefer-multiselect.webp](./src/assets/images/bp-ux-prefer-multiselect.webp)
 
 ## Security
 

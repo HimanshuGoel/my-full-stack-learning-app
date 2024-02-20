@@ -18,7 +18,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
   readonly #logger = inject(LoggerService);
 
-  readonly title = 'Full Stack Learning App';
+  readonly title = 'Full Stack Learnings App';
   readonly angularLink = `./${ROUTER_TOKENS.ANGULAR}`;
   readonly typescriptLink = `./${ROUTER_TOKENS.TYPESCRIPT}`;
 

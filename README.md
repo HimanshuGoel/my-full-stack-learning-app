@@ -1,4 +1,4 @@
-# Full Stack Learning Application
+# Full Stack Learnings App
 
 ## Overview
 

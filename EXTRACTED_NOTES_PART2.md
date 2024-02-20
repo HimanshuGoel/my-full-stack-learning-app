@@ -30,7 +30,7 @@
 
 - History of HTML5 – WHATWG accounted that it will no longer work on named versions of HTML so there will be no HTML6, HTML7, but the HTML spec is now a living standard. So HTML 5 no longer exists as new features are found in living standard.
 
-![html-history](./assets/images/html-history.png)
+![html-history](./src/assets/images/html-history.png)
 
 - Standard Bodies for HTML – W3C, WHATWG, ECMASCRIPT
 
@@ -59,25 +59,25 @@
 
 - Web real time communication lets us incorporate peer to peer video, audio and data communication in the browser without any plug-ins. Use cases and inspiration of WebRTC
 
-![html-webrtc-use-cases](./assets/images/html-webrtc-use-cases.png)
+![html-webrtc-use-cases](./src/assets/images/html-webrtc-use-cases.png)
 
 - History of web
 
-![html-history-of-web](./assets/images/html-history-of-web.png)
+![html-history-of-web](./src/assets/images/html-history-of-web.png)
 
 - What is WWW – is an information space where documents and other web resources are identified by URL in linked by hypertext links and can be accessed via the internet. The internet has been around since the 80s and the web has been around since the 90s.
 
-![html-history-of-html](./assets/images/html-history-of-html.png)
+![html-history-of-html](./src/assets/images/html-history-of-html.png)
 
 - History of css
 
-![html-history-of-css](./assets/images/html-history-of-css.png)
+![html-history-of-css](./src/assets/images/html-history-of-css.png)
 
 CSS is the styling mechanism for the web. It is a standard of selectors, properties and attributes. As it is just a standard so it doesn’t do anything, it just tells the people of created the web browsers how to interpret the CSS language and how to style HTML with it.
 
 - History of JavaScript
 
-![html-history-of-javascript](./assets/images/html-history-of-javascript.png)
+![html-history-of-javascript](./src/assets/images/html-history-of-javascript.png)
 
 - Html file naming conventions – always start with a lowercase letter, no special characters, no spaces, hyphens, underscores, or camel case can be used for file names with multiple word. Index.html is the standard name for a home page, browser looks for this name page to display as your lading or home page.
 
@@ -89,7 +89,7 @@ CSS is the styling mechanism for the web. It is a standard of selectors, propert
 
 - ID vs Class attributes – use class attribute for styling instead of id.
 
-![html-id-vs-class-attribute](./assets/images/html-id-vs-class-attribute.png)
+![html-id-vs-class-attribute](./src/assets/images/html-id-vs-class-attribute.png)
 
 - If images are deemed as part of the content, we should add it as HTML. If its is there for presentation and style, it should be added using CSS.
 
@@ -108,13 +108,13 @@ CSS is the styling mechanism for the web. It is a standard of selectors, propert
 
 - Web worker – a script running int the background. It initiated from the main document, runs separately from main document and doesn’t have access to the DOM. It is often used as a programmable network proxy which lets you control incoming and outgoing network request. We can combine it with the cache API to serve requests from the cache. Specially if network request fails from server, it can handle it
 
-![html-service-worker-life-cycle](./assets/images/html-service-worker-life-cycle.png)
+![html-service-worker-life-cycle](./src/assets/images/html-service-worker-life-cycle.png)
 
 - Web workers – it brings background threading as a first-class citizen to web browsers. We can splice an intensive process logic into a worker and it will run independent of the UI thread.
 
 - Workbox caching strategies –
 
-![html-workbox-cache-strategies](./assets/images/html-workbox-cache-strategies.png)
+![html-workbox-cache-strategies](./src/assets/images/html-workbox-cache-strategies.png)
 
 - Browser cache, if files are already in browser cache then it will not make request to sever for them. In application, all the cache files will be in grouped to a single manifest file. We should not mix browser caching and application caching. In browser, we can specify when a file will be expired, but in application cache we can only send updated files if we change the manifest file.
 
@@ -133,13 +133,13 @@ CSS is the styling mechanism for the web. It is a standard of selectors, propert
 - The term progressive enhancement refers to the use of newer features that add to the experience in modern browsers that support those features, but doesn’t detract from the experience in older browsers.
 - URL part composition
 
-![html-url-parts-composition](./assets/images/html-url-parts-composition.png)
+![html-url-parts-composition](./src/assets/images/html-url-parts-composition.png)
 
 ## CSS
 
 - types of selectors - The pseudo classes are just something that the browser will implicitly apply.
 
-![css-types-of-selectors](./assets/images/css-types-of-selectors.png)
+![css-types-of-selectors](./src/assets/images/css-types-of-selectors.png)
 
 - The 1.0em; states for the size which is default to the page. If we say width: 50%; then it will be half of its parent width.
 
@@ -157,7 +157,7 @@ CSS is the styling mechanism for the web. It is a standard of selectors, propert
 
 - Specificity – the higher is the specificity number the more important the rule is. It contains 3 parts ABC like below:
 
-![css-specificity](./assets/images/css-specificity.png)
+![css-specificity](./src/assets/images/css-specificity.png)
 
 - Inheritance – some property values of an element will be inherited form the elements parents. Like text in div which is inside paragraph will inherit paragraph font size. But border, margin, paddings will not inherited form the parents. So, border set on paragraph will not have border on div or em or other tags inside it.
 
@@ -165,11 +165,11 @@ CSS is the styling mechanism for the web. It is a standard of selectors, propert
 
 - Width – when we specify the exact width it will specify of the content area. Any border, margin, or padding that we add will add to the width and require more space.
 
-![css-width](./assets/images/css-width.png)
+![css-width](./src/assets/images/css-width.png)
 
 - Layout with CSS - default position value is static. it stacked up elements one after the other down the page. relative position moves an element from its default position in some direction. we can set the top and left properties values. fixed and absolute removes the elements from the flow of documents. Absolute position moves an element to a specific position relative to the body of the document the top and left will be consider from the body element. while fixed position is relative to the window itself. When we apply relative position, we can set top or left kind of properties on it, it is unlike the padding and margin. It will sit on top on the element instead of just pushing them around.
 
-![css-position](./assets/images/css-position.png)
+![css-position](./src/assets/images/css-position.png)
 
 - Fixed positioning – it fixes the position of an element relative to the browser window. The element always stays fixed in place, even when scrolling. Generally, we use this in menu bar or navigation.
 
@@ -187,17 +187,17 @@ CSS is the styling mechanism for the web. It is a standard of selectors, propert
 
 - Visual break points in Bootstrap
 
-![css-bootstrap-visual-break-points](./assets/images/css-bootstrap-visual-break-points.png)
+![css-bootstrap-visual-break-points](./src/assets/images/css-bootstrap-visual-break-points.png)
 
 - types of selectors - relational, attribute, structural
 
 - Relational selectors
 
-![css-relational-selectors](./assets/images/css-relational-selectors.png)
+![css-relational-selectors](./src/assets/images/css-relational-selectors.png)
 
 - Other selectors
 
-![css-other-selectors](./assets/images/css-other-selectors.png)
+![css-other-selectors](./src/assets/images/css-other-selectors.png)
 
 - Earlier we use table-based layout, then fluid-based layout came, now flexbox is the latest layout technique.
 
@@ -207,13 +207,13 @@ CSS is the styling mechanism for the web. It is a standard of selectors, propert
 
 - Flexbox controls how items flow in one dimension, where the grid controls how items flow in two dimensions. Flexbox is great in handling alignment, distribution and order of content in space. CSS grid on the other hand is suited to lay items out in both dimensions. CSS grid, like flexbox, is all about the relationship between parent container and child items, grid-container, grid-items. It establishes a grid context for its children.
 
-![css-flex-layout-vs-grid](./assets/images/css-flex-layout-vs-grid.png)
+![css-flex-layout-vs-grid](./src/assets/images/css-flex-layout-vs-grid.png)
 
 - Responsive web design is a technique for creating a website that adapts to accommodate various device widths. It involves Fluid Grid, media queries, flexible images.
 
 - raster vs. vector images
 
-![css-raster-vs-vector-images](./assets/images/css-raster-vs-vector-images.png)
+![css-raster-vs-vector-images](./src/assets/images/css-raster-vs-vector-images.png)
 
 - JPEG format usage: progressive JPEG means it will render with the lowest quality first then get improved over time, unlike normal JPEG which gets render line by line paint with full quality. It is a best format for photos, lossy compression and progressive.
 
@@ -229,7 +229,7 @@ CSS is the styling mechanism for the web. It is a standard of selectors, propert
 
 - We should follow mobile first approach, then add media queries rules medium and large screen as required. So, we don’t have to add media queries in CSS reset and small screen. Due to this maximum CSS style rules will in small.css, then fewer in medium.css and few in large.css:
 
-![css-mobile-first-approach-style-files](./assets/images/css-mobile-first-approach-style-files.png)
+![css-mobile-first-approach-style-files](./src/assets/images/css-mobile-first-approach-style-files.png)
 
 - In progressive enhancement we first apply rule for small screen then by media query apply rules for medium screen and then finally for large screen.
 
@@ -266,25 +266,25 @@ CSS is the styling mechanism for the web. It is a standard of selectors, propert
 
 - Fonts of a typeface –
 
-![css-fonts-of-a-typeface](./assets/images/css-fonts-of-a-typeface.png)
+![css-fonts-of-a-typeface](./src/assets/images/css-fonts-of-a-typeface.png)
 
 - Anatomy of typeface –
 
-![css-anatomy-of-a-typeface](./assets/images/css-anatomy-of-a-typeface.png)
+![css-anatomy-of-a-typeface](./src/assets/images/css-anatomy-of-a-typeface.png)
 
 - Hyphenation – dividing words at the end of a line. Doesn’t look clean. No clear advantage. On digital application do not hyphenate.
 
-![css-hyphenation](./assets/images/css-hyphenation.png)
+![css-hyphenation](./src/assets/images/css-hyphenation.png)
 
 - Don’t put indent first paragraph in digital world –
 
-![css-indent](./assets/images/css-indent.png)
+![css-indent](./src/assets/images/css-indent.png)
 
 - Use all caps sparingly – instead of this try to use title cases
 
 - Pull quotes – it should not be a copy of original text.
 
-![css-pull-quotes](./assets/images/css-pull-quotes.png)
+![css-pull-quotes](./src/assets/images/css-pull-quotes.png)
 
 - Use maximum two different typefaces in the application like serif and sans-serif. Like one for header and another for content. We can use website fontjoy.com and fontinuse.com for font pairing.
 
@@ -294,11 +294,11 @@ CSS is the styling mechanism for the web. It is a standard of selectors, propert
 
 - CSS grid properties –
 
-![css-grid-properties](./assets/images/css-grid-properties.png)
+![css-grid-properties](./src/assets/images/css-grid-properties.png)
 
 - Building colors in RGB
 
-![css-rgb-colors](./assets/images/css-rgb-colors.png)
+![css-rgb-colors](./src/assets/images/css-rgb-colors.png)
 
 - Different ways to represent colors – RGB, CYMK, HSL, HSV and Pantone. RGB rules the world.
 
@@ -308,7 +308,7 @@ CSS is the styling mechanism for the web. It is a standard of selectors, propert
 
 - Rater vs. vector based images – for vector we use .svg files -
 
-![css-raster-vs-vector-images2](./assets/images/css-raster-vs-vector-images2.png)
+![css-raster-vs-vector-images2](./src/assets/images/css-raster-vs-vector-images2.png)
 
 - CSS filters – we can apply effects on images or other elements. Supported filters – blur, brightness, contrast, drop-shadow, gray-scale, hue-rotate, invert, opacity, saturate, sepie
 
@@ -318,7 +318,7 @@ CSS is the styling mechanism for the web. It is a standard of selectors, propert
 
 - Theme colors –
 
-![css-theme-colors](./assets/images/css-theme-colors.png)
+![css-theme-colors](./src/assets/images/css-theme-colors.png)
 
 ## Angular
 
@@ -352,7 +352,7 @@ CSS is the styling mechanism for the web. It is a standard of selectors, propert
 
 - Zone.js is a wrapper on the things which can change the state change like user interactions, http and timers, it knows when these things gets completed. Angular then subscribed to notification from zone.js so that it can run the change detection and re-render the display.
 
-![Angular Zone](./assets/images/angular-zone.png)
+![Angular Zone](./src/assets/images/angular-zone.png)
 
 - Rendering targets provided by angular – browser/DOM, server-side, native mobile apps, native desktop apps.
 
@@ -398,7 +398,7 @@ CSS is the styling mechanism for the web. It is a standard of selectors, propert
 
 - Using debug element – debugEl has a query method which we can use to select from the root node using “By” predicate.
 
-![angular-debug-element](./assets/images/angular-debug-element.png)
+![angular-debug-element](./src/assets/images/angular-debug-element.png)
 
 - Tree shaking removes the properties and functions from production build code that is never called.
 
@@ -408,7 +408,7 @@ CSS is the styling mechanism for the web. It is a standard of selectors, propert
 
 - Optimistic bundle download – eager lazy loading of the module. It will download it as soon as there is available download. We do not want to wait to render the application until it is downloaded.
 
-![angular-preload-all-modules](./assets/images/angular-preload-all-modules.png)
+![angular-preload-all-modules](./src/assets/images/angular-preload-all-modules.png)
 
 - If we set schemas: [NO_ERRORS_SCHEMA], it means we are testing shallow components, so angular won’t give error any error as it won’t render the child components. In provider if we use useClass or useValue then while doing dependency injection it will pass the instance of that class or value.
 
@@ -438,35 +438,35 @@ CSS is the styling mechanism for the web. It is a standard of selectors, propert
 
 - Query decorator - if template is inside view then use @ViewChild otherwise @ContentChild if template is inside component
 
-![angular-query-decorator](./assets/images/angular-query-decorator.png)
+![angular-query-decorator](./src/assets/images/angular-query-decorator.png)
 
 - Directive selectors
 
-![angular-directive-selectors](./assets/images/angular-directive-selectors.png)
+![angular-directive-selectors](./src/assets/images/angular-directive-selectors.png)
 
 - Native element using cautions – it tight couple our back-end code with front-end presentation, it is unavailable in angular universal, and we cannot move any logic directly using nativeElement into a web worker. So, if we use it property then these problems will not arise. For this we should use Renderer2 class.
 
 - Building templates with ngTemplate – by default it’s just add an empty element as comment <!----> on DOM. We can also use it with ngIf-then-else condition:
 
-![angular-ng-template](./assets/images/angular-ng-template.png)
+![angular-ng-template](./src/assets/images/angular-ng-template.png)
 
 - NgTempalteOutlet – by this we can decide the position of template to display on the DOM, other use-cases can be alternate UI, repeated UI elements, dynamic UI placement:
 
-![angular-ng-template-outlet](./assets/images/angular-ng-template-outlet.png)
+![angular-ng-template-outlet](./src/assets/images/angular-ng-template-outlet.png)
 
 - ngTemplateOutlet Context: we can pass some JSON which will alter the templateOutlet, it is useful for simple template modification scenarios:
 
-![angular-ng-template-outlet-context](./assets/images/angular-ng-template-outlet-context.png)
+![angular-ng-template-outlet-context](./src/assets/images/angular-ng-template-outlet-context.png)
 
 - Dynamic component creation - `*ngComponentOutlet`, `ComponentFactoryResolver`, `resolveComponentFactory`
 
 - Use ng-container wherever possible instead of div or span.
 
-![angular-ng-container](./assets/images/angular-ng-container.png)
+![angular-ng-container](./src/assets/images/angular-ng-container.png)
 
 - ngSwitch Bloat – instead of this use NgTemplateOutlet:
 
-![angular-avoid-switch-bloat](./assets/images/angualr-avoid-switch-bloat.png)
+![angular-avoid-switch-bloat](./src/assets/images/angualr-avoid-switch-bloat.png)
 
 - A pipe shouldn’t do a lot, for this a component will be a better choice. All built-in pipe are pure, except - splice, json, async
 
@@ -474,11 +474,11 @@ CSS is the styling mechanism for the web. It is a standard of selectors, propert
 
 - Angular lifecycle hooks – the blue blocks hooks don’t available in directives only in components:
 
-![angular-lifecycle-hooks](./assets/images/angular-lifecycle-hooks.png)
+![angular-lifecycle-hooks](./src/assets/images/angular-lifecycle-hooks.png)
 
-![angular-lifecycle-hooks-playground](./assets/images/angular-lifecycle-hooks-playground.png)
+![angular-lifecycle-hooks-playground](./src/assets/images/angular-lifecycle-hooks-playground.png)
 
-![angular-lifecycle-hooks-playground2](./assets/images/angular-lifecycle-hooks-playground2.png)
+![angular-lifecycle-hooks-playground2](./src/assets/images/angular-lifecycle-hooks-playground2.png)
 
 - Angular treats the UI as a DMZ, accessible to anyone untrusted and un-trustable. Angular treats all values as untrusted by default. Angular only trusts template HTML, binding expressions, and attributes. It will sanitize or cleanse any content it doesn’t trust before adding it to the DOM. It will still display it like a script by converting first into simple string text so that browser doesn’t parse it.
 
@@ -498,25 +498,25 @@ onOnInit() {
 
 - angular communication approaches
 
-![angular-communication-approaches](./assets/images/angular-communication-approaches.png)
+![angular-communication-approaches](./src/assets/images/angular-communication-approaches.png)
 
 - Angular Material is a reference implementation of Google’s material design specification. It provides a set of reusables, well tested, and accessible UI components based on Material Design. It supports Asymmetric acceleration and deceleration which create more natural and delightful motion than symmetric motion:
 
-![angular-asymmetric-acceleration-and-deceleration](./assets/images/angular-asymmetric-acceleration-and-deceleration.png)
+![angular-asymmetric-acceleration-and-deceleration](./src/assets/images/angular-asymmetric-acceleration-and-deceleration.png)
 
 - The goal of angular CDK is to give developers more tools to build awesome components for the web. This will be especially useful for projects that want to take advantage of the features of Angular Material without adopting the material design visual language.
 
-![angular-flex-layout-model](./assets/images/angular-flex-layout-model.png)
+![angular-flex-layout-model](./src/assets/images/angular-flex-layout-model.png)
 
 - AOT Compiler – improve performance, earlier JIT process compile the functions in DOM functions it takes time. But now using AOT it directly sends the DOM function without compiler.
 
-![angular-jit-process](./assets/images/angular-jit-process.png)
+![angular-jit-process](./src/assets/images/angular-jit-process.png)
 
-![angular-jit-process](./assets/images/angular-aot-process.png)
+![angular-jit-process](./src/assets/images/angular-aot-process.png)
 
 - We get the below CORS error unless the URL’s match, including the ports themselves:
 
-![angular-cors-error](./assets/images/angular-cors-error.png)
+![angular-cors-error](./src/assets/images/angular-cors-error.png)
 
 - Pure and impure pipe performance – pipes are pure by default means they do not work with data mutation, they only get re-evaluated if the object reference got changes that the pipes is applied to. We can resolve this by making the pipe impure but it will impact the performance. Like even initial loading of page this sorting pipe will be called many times due to object changes
 
@@ -530,15 +530,15 @@ onOnInit() {
 
 - Module organization – Core module should contain single use classes or singleton for the entire application, it should be imported only once in app module. We should have one more module i.e. AppRoutingModule for containing routing related information. Shared module should contain modules which are re-exported and shared throughout the app.
 
-![angular-module-organization](./assets/images/angular-module-organization.png)
+![angular-module-organization](./src/assets/images/angular-module-organization.png)
 
 - Unit Test – jasmine is main testing framework, and karma is the framework that executes our tests.
 
 - If we want to take up the control while newing up the instance of the recipe class, we need to create a factory that will be executed to create a new service instance. By this we will have more control for how it is created:
 
-![angular-use-factory](./assets/images/angular-use-factory.png)
+![angular-use-factory](./src/assets/images/angular-use-factory.png)
 
-![angular-use-factory2](./assets/images/angular-use-factory2.png)
+![angular-use-factory2](./src/assets/images/angular-use-factory2.png)
 
 - SkipSelf decorators to make sure it is properly checking for a separate input of the core.module. SkipSelf tells the injection system to begin looking for an existing instance of the module in the parent injector. Optional instructs the injector to pass in null if no other instance is found.
 
@@ -562,8 +562,8 @@ onOnInit() {
 
 - Understanding Schedulers and the Event loop: microtask queue has high priority than async task queue.
 
-![angular-scheduler-and-event-loop1](./assets/images/angular-scheduler-and-event-loop1.png)
-![angular-scheduler-and-event-loop](./assets/images/angular-scheduler-and-event-loop.png)
+![angular-scheduler-and-event-loop1](./src/assets/images/angular-scheduler-and-event-loop1.png)
+![angular-scheduler-and-event-loop](./src/assets/images/angular-scheduler-and-event-loop.png)
 
 - Using flatMap to process inner observables – flatMap operator is more sophisticated than map operation, it will also subscribe to the returning observable and deliver it throughout the rest of the pipeline.
 
@@ -577,7 +577,7 @@ onOnInit() {
 
 - RXJS operators
 
-![angular-rxjs-operators](./assets/images/angular-rxjs-operators.png)
+![angular-rxjs-operators](./src/assets/images/angular-rxjs-operators.png)
 
 - Types of observables – cold (Netflix / movie @ home) and hot (movie theatre)
 
@@ -589,7 +589,7 @@ onOnInit() {
 
 - Core and shared module – core or common module is designed for singleton type of services, which will be shared throughout the service like logging service, error service and data service. Service that are specific to a feature can go in the feature’s folder. Shared folder should contain reusable components, pipes and directives like calendar component, auto complete component. Shared module will be imported many times in different modules, but core module should be imported only one time into root module.
 
-![angular-module-organization2](./assets/images/angular-module-organization2.png)
+![angular-module-organization2](./src/assets/images/angular-module-organization2.png)
 
 - Change detection strategies – in case of container presentation pattern, we don’t want the child component changing the state of the data at all, because that is the job of the parent or container component. When using OnPush detectors, then the framework will check an OnPush component when any of its input properties changes, when it fires and event, or when an observable fire an event.
 
@@ -603,7 +603,7 @@ onOnInit() {
 
 - General architecture of application with libraries
 
-![angular-general-architecture-with-libraries](./assets/images/angular-general-architecture-with-libraries.png)
+![angular-general-architecture-with-libraries](./src/assets/images/angular-general-architecture-with-libraries.png)
 
 - The best way to test our angular library is to use npm pack command which is used to change directory into the library dist folder. We need to type command cd my-folder/dist then npm pack. It will create a tarball file (`*.tgz`) then we can install it using npm install my-folder/dist/package.tgz. other alternatives to test the library on local are npm install, npm link, but npm pack is best approach.
 
@@ -625,9 +625,9 @@ onOnInit() {
 
 - Now we can use `changeDetectionStrategy` onPush, it will optimize our view performance. It means that the change detector’s mode will be initially set to CheckOnce. Any asynchronous API events like XHR or promise based events will not trigger change detection once we change to this strategy of OnPush and the components template will not get updated. In default strategy it will every time changes in our application as a result of any user events, timers, XHR requests, promises, etc change detection will run on all components.
 
-![angular-without-change-detection-on-push-approach](./assets/images/angular-without-change-detection-on-push-approach.png)
+![angular-without-change-detection-on-push-approach](./src/assets/images/angular-without-change-detection-on-push-approach.png)
 
-![angular-without-change-detection-on-push-approach](./assets/images/angular-without-change-detection-on-push-approach.png)
+![angular-without-change-detection-on-push-approach](./src/assets/images/angular-without-change-detection-on-push-approach.png)
 
 - Now above component will be changed only if new input reference is passed or a dom event is raised in our component or its children otherwise the view will not get updated.
 
@@ -637,7 +637,7 @@ onOnInit() {
 
 - On console if we type ‘ng’ it will give us below methods –
 
-![angular-ng-console-functions](./assets/images/angular-ng-console-functions.png)
+![angular-ng-console-functions](./src/assets/images/angular-ng-console-functions.png)
 
 - Angular CLI Builders - Builder are wrongly given name, they just know that they are just given a set of options, run a function and return the results.
 
@@ -665,11 +665,11 @@ onOnInit() {
 
 - Anyone below we can use in effects. Exhaust map will discard any additional emission until one that is currently working on is complete, it is like going to postoffice and the front person is taking too much time and leave in-between. switchMap is opposite of exhaustMap, it will cancel the current work if new effect comes up. mergeMap, exhaustMap and switchMap can lead to raise condition as they are either cancelling the requests or discarding the new runs so concatMap is the safest operator but there is risk of back pressure and it will keep the emissions in order, it will lead to bad user experience of waiting. It is like waiting in a queue to get food, and we will only get the food when priors persons received the food.
 
-![angular-map-use-case2](./assets/images/angular-map-use-case2.png)
+![angular-map-use-case2](./src/assets/images/angular-map-use-case2.png)
 
 - Usage of RxJS operators in different scenario –
 
-![angular-rxjs-operators-different-scenarios](./assets/images/angular-rxjs-operators-different-scenarios.png)
+![angular-rxjs-operators-different-scenarios](./src/assets/images/angular-rxjs-operators-different-scenarios.png)
 
 - takeUntil is like throwing a person out of lunch line but everyone else will just continue. exhaustMap is like no line will ever perform, if someone is buying a lunch the other will just went away from there and never comes back.
 
@@ -677,7 +677,7 @@ onOnInit() {
 
 - Monorepos – everything that belongs to a system should get in there and it should have one version for all of these libraries not different version for different libraries by this we won’t have version conflicts, no burden with distributing lists
 
-![angular-monorepos](./assets/images/angular-monorepos.png)
+![angular-monorepos](./src/assets/images/angular-monorepos.png)
 
 - Earlier compiler used to build the packages also if someone changes something in a project file, but now ngcc compiler will compile the package separately to make the build process faster. No more JSON conversion of typescript components.
 
@@ -685,7 +685,7 @@ onOnInit() {
 
 - HttpBackend will be last interceptor –
 
-![angular-interceptor-sequence](./assets/images/angular-interceptor-sequence.png)
+![angular-interceptor-sequence](./src/assets/images/angular-interceptor-sequence.png)
 
 - Firebase was initial created to integrate online chat functionality. Google acquired it into 2014. Cloud functions can be triggered from different firebase services, google cloud services or even third parties through web hooks.
 
@@ -725,7 +725,7 @@ onOnInit() {
 
 - Service worker expands on web worker, this means that it has no access to the DOM, isn’t tied to a particular page and run on its own global script context, works only with HTTPS, run without a page and is event-driven, it also triggered again even when in inactive state.
 
-![angular-service-worker-lifecycle](./assets/images/angular-service-worker-lifecycle.png)
+![angular-service-worker-lifecycle](./src/assets/images/angular-service-worker-lifecycle.png)
 
 - What Is an "App"? - Application Richness and Reachability evolution, native app like IOS has increased the richness but reduced the availability.
 
@@ -739,7 +739,7 @@ onOnInit() {
 
 - The smart component will pass the updated data towards the dumb components
 
-![angular-smart-component-data-passing](./assets/images/angular-smart-component-data-passing.png)
+![angular-smart-component-data-passing](./src/assets/images/angular-smart-component-data-passing.png)
 
 - We should only use behaviors like logging in the tap operator, we should not use side-effects in it.
 
@@ -757,11 +757,11 @@ onOnInit() {
 
 - The difference between ElementRef, TemplateRef, and viewContainerRef with examples.
 
-![angular-element-ref-template-ref-vs-view-container-ref](./assets/images/angular-element-ref-template-ref-vs-view-container-ref.png)
+![angular-element-ref-template-ref-vs-view-container-ref](./src/assets/images/angular-element-ref-template-ref-vs-view-container-ref.png)
 
-![angular-ng-content-ng-template-ng-container](./assets/images/angular-ng-content-ng-template-ng-container.png)
+![angular-ng-content-ng-template-ng-container](./src/assets/images/angular-ng-content-ng-template-ng-container.png)
 
-![angular-ng-content-ng-template-outlet](./assets/images/angular-ng-content-ng-template-outlet.png)
+![angular-ng-content-ng-template-outlet](./src/assets/images/angular-ng-content-ng-template-outlet.png)
 
 - Angular 2 we have structural directive which are indicated by the prefix `*` because it is changing the structure of our DOM.
 
@@ -801,13 +801,13 @@ onOnInit() {
 
 - Different types of modules which we can have: root application module (AppModule), feature modules, shared modules, core module, routing modules
 
-![angular-for-root-vs-for-child](./assets/images/angular-for-root-vs-for-child.png)
+![angular-for-root-vs-for-child](./src/assets/images/angular-for-root-vs-for-child.png)
 
 - We need to use query parameters to retain the user setting when navigating to the different navigation. To define parameters that work across multiple routes. Like on product list user has some search data, then navigated to the details page then coming to the product list page. Just like optional parameter we use query parameters to pass optimal or complex information. Unlike optional parameters they can be retained across routing paths. Like optional parameters, query parameters are not part of the route configuration and are not involved with matching route paths.
 
 - We can use child routes to display routes within other routes for better route hierarchy, encapsulate and navigate through our application. Also makes easier to lazy load routes.
 
-![angular-lazy-loading-vs-preloading](./assets/images/angular-lazy-loading-vs-preloading.png)
+![angular-lazy-loading-vs-preloading](./src/assets/images/angular-lazy-loading-vs-preloading.png)
 
 - A form model is the data structure that represents the HTML form – it retains the form state, form value, child controls.
 
@@ -835,7 +835,7 @@ onOnInit() {
 
 - For data caching we can use shareReplay and share operators.
 
-![angular-life-cycle-steps](./assets/images/angular-life-cycle-steps.png)
+![angular-life-cycle-steps](./src/assets/images/angular-life-cycle-steps.png)
 
 - Angular is a tool to help you build interactive websites, you can call it a framework. It provides tools to communicate with the server and to improve the performance, package application, maintain state, organize code/logic, ease display of data, synchronize state as it changes.
 
@@ -874,7 +874,7 @@ ngOnDestroy() {}
 
 - We can understand the lifecycle hooks by splitting the process into two steps,” first-time hooks”, and “in every change detection cycle hooks”. “first-time hooks”, the triggered hooks are: onChanges, onInit, doCheck, afterContentInit, afterContentChecked, afterViewInit, afterViewChecked. “in every change detection cycle hooks”, the triggered hooks are: onChanges, doCheck, afterContentChecked, afterViewChecked.
 
-![angular-lifecycle-hooks-workflow](./assets/images/angular-lifecycle-hooks-workflow.png)
+![angular-lifecycle-hooks-workflow](./src/assets/images/angular-lifecycle-hooks-workflow.png)
 
 - How the Angular Compiler Works - The Angular Compiler (which we call ngc) is the tool used to compile Angular applications and libraries. ngc is built on the TypeScript compiler (called tsc) and extends the process of compiling TypeScript code to add additional code generation related to Angular’s capabilities.
 
@@ -950,15 +950,15 @@ ng new my-app --create-application=false | ng new my-app --createApplication=fal
 
 - Whether you are young professional, a student, or a CEO, understanding yourself is critical for becoming a better professional. It will help you enhance your strengths and improve your weakness to make you a better boss and a better colleague.
 
-![soft-skills-johari-window](./assets/images/soft-skills-johari-window.png)
+![soft-skills-johari-window](./src/assets/images/soft-skills-johari-window.png)
 
 - Values act as our personal compass, helping us to navigate choices and decisions, both personally and professionally. Values are formed by your life experience.
 
-![soft-skills-4-factors-of-trust](./assets/images/soft-skills-4-factors-of-trust.png)
+![soft-skills-4-factors-of-trust](./src/assets/images/soft-skills-4-factors-of-trust.png)
 
 - Credibility is essential for hiring, promoting and trusting people. Those who end up establishing expertise are confident about showcasing their qualifications and achievements. The more we care about the success of others around us, the more they will trust us, paving the way for collaboration.
 
-![soft-skill-trust-factors](./assets/images/soft-skill-trust-factors.png)
+![soft-skill-trust-factors](./src/assets/images/soft-skill-trust-factors.png)
 
 - Just being chatty is not same as being open. The attributes of openness are vulnerability, transparency and maintaining confidentiality.
 
@@ -995,21 +995,21 @@ ng new my-app --create-application=false | ng new my-app --createApplication=fal
 
 - The Flow Diagram - This diagram illustrates the moving parts in a business process.
 
-![architectural-flow-diagram](./assets/images/architectural-flow-diagram.png)
+![architectural-flow-diagram](./src/assets/images/architectural-flow-diagram.png)
 
 - The Persona Diagram - It is important to show that your architecture solves the business problem. A persona diagram describes a chronological view and actors in a particular workflow. This is your best tool for proving that you’ve taken the business into consideration when developing your solution.
 
-![architectural-personal-diagram](./assets/images/architectural-personal-diagram.png)
+![architectural-personal-diagram](./src/assets/images/architectural-personal-diagram.png)
 
 - The Infrastructure Diagram - The purpose of this diagram is to show what has been built and how the system currently works. Consider this a blueprint of the application you built.
 
-![architectural-infrastructural-diagram](./assets/images/architectural-infrastructural-diagram.png)
+![architectural-infrastructural-diagram](./src/assets/images/architectural-infrastructural-diagram.png)
 
-![architectural-infrastructural-diagram2](./assets/images/architectural-infrastructural-diagram2.png)
+![architectural-infrastructural-diagram2](./src/assets/images/architectural-infrastructural-diagram2.png)
 
-![architectural-technology-diagram](./assets/images/architectural-technology-diagram.png)
+![architectural-technology-diagram](./src/assets/images/architectural-technology-diagram.png)
 
-![architectural-application-diagram](./assets/images/architectural-application-diagram.png)
+![architectural-application-diagram](./src/assets/images/architectural-application-diagram.png)
 
 ## Mongo DB
 
@@ -1126,7 +1126,7 @@ db.animals.find({name: 'cat}).explain()
 
 - JWE has 5 distinct section instead of 3 of JWT –
 
-![misc-technical-jwe](./assets/images/misc-technical-jwe.png)
+![misc-technical-jwe](./src/assets/images/misc-technical-jwe.png)
 
 - When to use JWE – if we use PII (personally identifiable information) like names, email address street address, IP address, account number, telephone number etc., if token needs to be passed through multiple systems (including the 3rd party).
 
@@ -1136,7 +1136,7 @@ db.animals.find({name: 'cat}).explain()
 
 - It has two style – block (human readable) and flow (less human readable like JSON)
 
-![misc-technical-block-vs-flow-style](./assets/images/misc-technical-block-vs-flow-style.png)
+![misc-technical-block-vs-flow-style](./src/assets/images/misc-technical-block-vs-flow-style.png)
 
 - Building blocks – sequence (arrays), mapping (key-value) and scalar (string, number, boolean and dates). We should do indentation with spaces not with tabs.
 
@@ -1146,31 +1146,31 @@ db.animals.find({name: 'cat}).explain()
 
 - One YAML file can contain multiple documents. The documents can be separated by 3 hyphens (---).
 
-![misc-technical-yaml-key-value-and-array](./assets/images/misc-technical-yaml-key-value-and-array.png)
+![misc-technical-yaml-key-value-and-array](./src/assets/images/misc-technical-yaml-key-value-and-array.png)
 
-![misc-technical-yaml-nested-array](./assets/images/misc-technical-yaml-nested-array.png)
+![misc-technical-yaml-nested-array](./src/assets/images/misc-technical-yaml-nested-array.png)
 
-![misc-technical-yaml-nested-mappings](./assets/images/misc-technical-yaml-nested-mappings.png)
+![misc-technical-yaml-nested-mappings](./src/assets/images/misc-technical-yaml-nested-mappings.png)
 
 - Explicit typing – by using like !!str is an explicit typing which will convert the date into a string type.
 
-![misc-technical-yaml-explicit-typing](./assets/images/misc-technical-yaml-explicit-typing.png)
+![misc-technical-yaml-explicit-typing](./src/assets/images/misc-technical-yaml-explicit-typing.png)
 
 - Repeated nodes – to avoid code repeat.
 
-![misc-technical-repeated-nodes](./assets/images/misc-technical-repeated-nodes.png)
+![misc-technical-repeated-nodes](./src/assets/images/misc-technical-repeated-nodes.png)
 
 - Processing of YAML –
 
-![misc-technical-processing-of-yaml](./assets/images/misc-technical-processing-of-yaml.png)
+![misc-technical-processing-of-yaml](./src/assets/images/misc-technical-processing-of-yaml.png)
 
 - YAML vs. JSON – YAML is standard for configuration and JSON is standard for service API.
 
-![misc-technical-yaml-vs-json](./assets/images/misc-technical-yaml-vs-json.png)
+![misc-technical-yaml-vs-json](./src/assets/images/misc-technical-yaml-vs-json.png)
 
 - YAML vs. XML
 
-![misc-technical-yaml-vs-xmsl](./assets/images/misc-technical-yaml-vs-xmsl.png)
+![misc-technical-yaml-vs-xmsl](./src/assets/images/misc-technical-yaml-vs-xmsl.png)
 
 - GitLab is a single platform that provides entire DevOps toolchain for organizations of any scale and size.
 
@@ -1182,7 +1182,7 @@ db.animals.find({name: 'cat}).explain()
 
 - We can run a workflow on any Github event –
 
-![misc-technical-github-events](./assets/images/misc-technical-github-events.png)
+![misc-technical-github-events](./src/assets/images/misc-technical-github-events.png)
 
 - WordPress is an open-source, free platform for building and developing websites. WordPress is the most user-friendly and efficient blogging and website builder on the market right now.
 

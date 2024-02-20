@@ -16,10 +16,10 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'Full Stack Learning App'`, () => {
+  it(`should have as title 'Full Stack Learnings App'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('Full Stack Learning App');
+    expect(app.title).toEqual('Full Stack Learnings App');
   });
 
   it('should render title', () => {
@@ -27,7 +27,7 @@ describe('AppComponent', () => {
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('.content span')?.textContent).toContain(
-      'Full Stack Learning App'
+      'Full Stack Learnings App'
     );
   });
 });

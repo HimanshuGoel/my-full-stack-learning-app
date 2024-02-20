@@ -73,26 +73,26 @@ These notes have been pulled out from various learnings acquired from various tr
 
 - Web fonts recommendations
 
-  - ![web-fonts-recommendations1](./assets/images/ux-web-fonts-recommendations1.png)
-  - ![web-fonts-recommendations2](./assets/images/ux-web-fonts-recommendations2.png)
+  - ![web-fonts-recommendations1](./src/assets/images/ux-web-fonts-recommendations1.png)
+  - ![web-fonts-recommendations2](./src/assets/images/ux-web-fonts-recommendations2.png)
 
 - Color meanings
 
-  - ![ux-color-meaning-blue](./assets/images/ux-color-meaning-blue.png)
-  - ![ux-color-meaning-brown](./assets/images/ux-color-meaning-brown.png)
-  - ![ux-color-meaning-green](./assets/images/ux-color-meaning-green.png)
-  - ![ux-color-meaning-orange](./assets/images/ux-color-meaning-orange.png)
-  - ![ux-color-meaning-red](./assets/images/ux-color-meaning-red.png)
-  - ![ux-color-meaning-violet](./assets/images/ux-color-meaning-violet.png)
-  - ![ux-color-meaning-white-black](./assets/images/ux-color-meaning-white-black.png)
-  - ![ux-color-meaning-yellow](./assets/images/ux-color-meaning-yellow.png)
+  - ![ux-color-meaning-blue](./src/assets/images/ux-color-meaning-blue.png)
+  - ![ux-color-meaning-brown](./src/assets/images/ux-color-meaning-brown.png)
+  - ![ux-color-meaning-green](./src/assets/images/ux-color-meaning-green.png)
+  - ![ux-color-meaning-orange](./src/assets/images/ux-color-meaning-orange.png)
+  - ![ux-color-meaning-red](./src/assets/images/ux-color-meaning-red.png)
+  - ![ux-color-meaning-violet](./src/assets/images/ux-color-meaning-violet.png)
+  - ![ux-color-meaning-white-black](./src/assets/images/ux-color-meaning-white-black.png)
+  - ![ux-color-meaning-yellow](./src/assets/images/ux-color-meaning-yellow.png)
 
 - Color preferences
-  - ![ux-color-preference-blue](./assets/images/ux-color-preference-blue.png)
-  - ![ux-color-preference-green](./assets/images/ux-color-preference-green.png)
-  - ![ux-color-preference-orange](./assets/images/ux-color-preference-orange.png)
-  - ![ux-color-preference-red](./assets/images/ux-color-preference-red.png)
-  - ![ux-color-preference-yellow](./assets/images/ux-color-preference-yellow.png)
+  - ![ux-color-preference-blue](./src/assets/images/ux-color-preference-blue.png)
+  - ![ux-color-preference-green](./src/assets/images/ux-color-preference-green.png)
+  - ![ux-color-preference-orange](./src/assets/images/ux-color-preference-orange.png)
+  - ![ux-color-preference-red](./src/assets/images/ux-color-preference-red.png)
+  - ![ux-color-preference-yellow](./src/assets/images/ux-color-preference-yellow.png)
 
 ## Unit Testing
 
@@ -100,7 +100,7 @@ These notes have been pulled out from various learnings acquired from various tr
 
 - Actually, legacy code is the one which doesn’t have automated test for it. It makes the code more brittle and harder to maintain and extend.
 
-- ![TDD History](./assets/images/unit-testing-tdd-history.png)
+- ![TDD History](./src/assets/images/unit-testing-tdd-history.png)
 
 - Types of testing - unit testing, integration testing, acceptance testing (user interface).
 
@@ -110,11 +110,11 @@ These notes have been pulled out from various learnings acquired from various tr
 
 - Fake – building on a stub and adding a bit more sophistication is the idea of fake. It contains a bit more complex implementation by having state but not functional implementation. Like below we actually add and delete the list.
 
-![unit-testing-fake](./assets/images/unit-testing-fake.png)
+![unit-testing-fake](./src/assets/images/unit-testing-fake.png)
 
 - Spy – it records the information about the interaction that it has with the SUT. This information can be available for assertion purpose by the test itself.
 
-![unit-testing-spy](./assets/images/unit-testing-spy.png)
+![unit-testing-spy](./src/assets/images/unit-testing-spy.png)
 
 - Mock – can be used to simulate complex behavior. We should not develop mock our self, we should use mock libraries which allows us to configure mock behavior. Libraries example – type mock, rhino mock and MOQ.
 
@@ -148,7 +148,7 @@ These notes have been pulled out from various learnings acquired from various tr
 
 - We should handle exceptions like below -
 
-![handling-of-exceptions](./assets/images/unit-testing-how-to-handle-exceptions.png)
+![handling-of-exceptions](./src/assets/images/unit-testing-how-to-handle-exceptions.png)
 
 - Styles of unit testing – output verification or functional verification, state verification, collaboration verification.
 
@@ -187,15 +187,15 @@ These notes have been pulled out from various learnings acquired from various tr
 
 - We can have separate build environment for acceptance test running and can trigger once a day. We can also share it reports to business for progress:
 
-![unit-testing-acceptance-testing-progress-report](./assets/images/unit-testing-acceptance-testing-progress-report.png)
+![unit-testing-acceptance-testing-progress-report](./src/assets/images/unit-testing-acceptance-testing-progress-report.png)
 
 - Prudent code coverage – 100% code coverage doesn’t mean no defects. Use code coverage as a developer tool not a performance metric. Let the code coverage find things that are important enough to add test, but realize that it is only contextually important and it is very rare that we need to strive for any sort of code coverage numbers up around 90 and 100%.
 
 - Devi’s advocate, Gollum style and Ping Pong technique to write unit test case:
 
-![unit-testing-devils-advocate](./assets/images/unit-testing-devils-advocate.png)
+![unit-testing-devils-advocate](./src/assets/images/unit-testing-devils-advocate.png)
 
-![unit-testing-ping-pong](./assets/images/unit-testing-ping-pong.png)
+![unit-testing-ping-pong](./src/assets/images/unit-testing-ping-pong.png)
 
 - While creating an interface it should either contains all properties or all functions not both.
 
@@ -211,16 +211,16 @@ These notes have been pulled out from various learnings acquired from various tr
 
 - Hot observables start emitting the values before any subscribe method is called on. Any subscribers can subscribe at any time and they can get the latest values at the time of subscription. They are multicast means more than one subscriber can subscribe to this observable however they will listen to the same producer. Publish and share are used to make a hot observable like tune radio channel, cinema theater, mouse clicks, live movies, live cricket match, stock tickers, live life events.
 
-![unit-testing-jasmine-marble-hot-observable](./assets/images/unit-testing-jasmine-marble-hot-observable.png)
+![unit-testing-jasmine-marble-hot-observable](./src/assets/images/unit-testing-jasmine-marble-hot-observable.png)
 
 - Cold Observable – In RxJs the observables are cold by nature. Cold is when the producer is owned by the observable. Observable creates and activates the producer at the time of subscription only. The data is created from the observable itself. Will produce data only when subscribe method has been called. Subscriber get their own copy of values and they are unicast i.e. one subscriber per producer like of, from, interval, timers. Real life example – watching downloaded movies, recorded podcast or song, snapshot movies in which each have their own copy.
 
-![unit-testing-jasmine-marble-cold-observable1](./assets/images/unit-testing-jasmine-marble-cold-observable1.png)
-![unit-testing-jasmine-marble-cold-observable2](./assets/images/unit-testing-jasmine-marble-cold-observable2.png)
+![unit-testing-jasmine-marble-cold-observable1](./src/assets/images/unit-testing-jasmine-marble-cold-observable1.png)
+![unit-testing-jasmine-marble-cold-observable2](./src/assets/images/unit-testing-jasmine-marble-cold-observable2.png)
 
 - Frame – Jasmine-marbles convers observable sequence into frames. Frame is a JSON that consists of RxJs notification object that wraps the actual delivered value with additional metadata and message type.
 
-![unit-testing-jasmine-marble-frame](./assets/images/unit-testing-jasmine-marble-frame.png)
+![unit-testing-jasmine-marble-frame](./src/assets/images/unit-testing-jasmine-marble-frame.png)
 
 - RxJS schedulers are centre to control the time for any operator or observables in our project. Also, RxJS has made this schedulers injectable so that we can mock these schedulers and control the time in our test cases.
 
@@ -306,7 +306,7 @@ Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
 
 - Secure cookies – capturing someone cookie will lead to session hijacking. Secure cookie will not get send over insecure connection. So, always use secure cookies flag as default setting:
 
-![secure cookie settings](./assets/images/security-secure-cookie-settings.png)
+![secure cookie settings](./src/assets/images/security-secure-cookie-settings.png)
 
 - Using HTTPS will reduce the load on client and server both sides. As HTTP uses 1.1 protocol but HTTPS uses h2 protocol i.e. HTTP2, and HTTP2 allows for a binary stream of content, so lots of data coming down to the parallel. HTTP2 is only supported over TLS.
 
@@ -314,11 +314,11 @@ Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
 
 - To avoid enumeration risk, show below message when login failed, like a generic message, don’t say that user doesn’t exist:
 
-![security-avoid-enumeration-risk](./assets/images/security-avoid-enumeration-risk.png)
+![security-avoid-enumeration-risk](./src/assets/images/security-avoid-enumeration-risk.png)
 
 - Even in below case, if user type unavailable password then don’t show that it doesn’t exist, as we don’t want to show presence of a user on our system:
 
-![security-avoid-enumeration-risk2](./assets/images/security-avoid-enumeration-risk2.png)
+![security-avoid-enumeration-risk2](./src/assets/images/security-avoid-enumeration-risk2.png)
 
 - To solve an issue where account is already exist, sent an email to their registered email, so do not show message like "Username already taken".
 
@@ -368,7 +368,7 @@ Public-Key-Pins: pin-sha256=[pin 1]; pin-sha256=[pin 2]; max-age=2592000; report
 
 - We need to use hashing with a salt to avoid getting same output with same input, it also protects with rainbow table problems, but we need to use hash algorithm properly:
 
-![security-hash-with-salt](./assets/images/security-hash-with-salt.png)
+![security-hash-with-salt](./src/assets/images/security-hash-with-salt.png)
 
 - Email as username vs. free text for username for uniqueness – we should prefer email as username. Email as username is easier to remember, one less field to capture at sign-up, it is already unique per user, must be able to change in future. Free text for username can be displayed to user with less privacy risk, enable multiple accounts against one email, requires a "retrieve my username feature".
 
@@ -402,7 +402,7 @@ Public-Key-Pins: pin-sha256=[pin 1]; pin-sha256=[pin 2]; max-age=2592000; report
 
 - Web application firewalls (WAF) – we can get it by using Cloudflare service, it will look request pattern and reject it if it found malicious before allowing it to hit the actual web server:
 
-![security-web-application-firewalls](./assets/images/security-web-application-firewalls.png)
+![security-web-application-firewalls](./src/assets/images/security-web-application-firewalls.png)
 
 - We humans are the weakest link in the security chain.
 
@@ -414,7 +414,7 @@ Public-Key-Pins: pin-sha256=[pin 1]; pin-sha256=[pin 2]; max-age=2592000; report
 
 - Big O notation allows us to express in terms of the size of the input, the amount of work takes to solve the problem -
 
-![security-big-o-notation-types](./assets/images/security-big-o-notation-types.png)
+![security-big-o-notation-types](./src/assets/images/security-big-o-notation-types.png)
 
 - Public key can identify somebody, and their private key can prove their identity.
 
@@ -424,7 +424,7 @@ Public-Key-Pins: pin-sha256=[pin 1]; pin-sha256=[pin 2]; max-age=2592000; report
 
 - OAuth2 is about requesting access tokens from an authorization serve, then we can use this token to talk with backend service. OAuth is an open protocol to allow secure authorization in a simple and standard method from web, mobile and desktop applications. OAuth is about delegating authorization; means we want to authorize a client to access our resources on our behalf.
 
-![security-oauth-architecture](./assets/images/security-oauth-architecture.png)
+![security-oauth-architecture](./src/assets/images/security-oauth-architecture.png)
 
 - OpenID connect means the application doesn’t need to connect with back-end service, but it needs to know who the user is. It is for authentication.
 
@@ -436,7 +436,7 @@ Public-Key-Pins: pin-sha256=[pin 1]; pin-sha256=[pin 2]; max-age=2592000; report
 
 - Evolution of software ecosystem -
 
-![security-evolution-of-software-ecosystem](./assets/images/security-evolution-of-software-ecosystem.png)
+![security-evolution-of-software-ecosystem](./src/assets/images/security-evolution-of-software-ecosystem.png)
 
 - Types of versioning – calendar based, sequence based and semantic based versioning. Recommended is semantic based versioning.
 
@@ -460,7 +460,7 @@ Public-Key-Pins: pin-sha256=[pin 1]; pin-sha256=[pin 2]; max-age=2592000; report
 
 - We can have two types of certificates DV and AV. Below is an AV certificate, it requires a business name also need to be registered.
 
-![security-padlock](./assets/images/security-padlock.png)
+![security-padlock](./src/assets/images/security-padlock.png)
 
 - We can connect fiddler for the remote machine-like android device from our computer. By this we can intercept mobile app data in fiddler. By we can get a sense for how device is communicating with backend servers.
 
@@ -482,7 +482,7 @@ Public-Key-Pins: pin-sha256=[pin 1]; pin-sha256=[pin 2]; max-age=2592000; report
 
 - JWT structure and format - headers (metadata, algorithms & keys used), claims (issuer, audience, issue at, expiration, subject, other application defined claims)
 
-![security-jwt-token-format](./assets/images/security-jwt-token-format.png)
+![security-jwt-token-format](./src/assets/images/security-jwt-token-format.png)
 
 - There are two type of tokens access tokens (short lived) and refresh token (long lived).
 
@@ -518,13 +518,13 @@ req.book.save((err) => {
 
 - Middleware – It is going to inject itself in between the calls and this route.
 
-![node-js-middleware](./assets/images/node-js-middleware.png)
+![node-js-middleware](./src/assets/images/node-js-middleware.png)
 
 - HATEOAS - Using hypermedia to building self-documenting API, it is very easy for someone to navigate and understand what options are available to them anytime while they are using our API. HATEOAS means that list of links available to us that help us navigate the API.
 
 - Node.js provides a wrapper around V8 JS Runtime engine to provide additional functionalities for building network applications. It is fast because all written in C language. We can build WebSocket server, fast file uploading client, Ad Server, Any real-time data apps. Node.js is not a multi-threaded application. Benefits of non-blocking code – files will be read in parallel
 
-![node-js-blocking-vs-non-blocking](./assets/images/node-js-blocking-vs-non-blocking.png)
+![node-js-blocking-vs-non-blocking](./src/assets/images/node-js-blocking-vs-non-blocking.png)
 
 - We use javascript with Node.js because javascript makes easy to do event programming using the event loop and makes the code non-blocking.
 
@@ -534,29 +534,29 @@ req.book.save((err) => {
 
 - Execution of javascript on the server is not done by Node, but it is done with a virtual machine, VM like V8 or Chakra. Node is just the coordinator, it is the one who instructs a VM like V8 to execute our javascript. So Node.js is a wrapper around a VM like V8. V8 will tell the results to Node and Node will tell this result to us. Node comes with built-in modules providing rich features through easy-to-use asynchronous API’s. this works great because V8 itself is single threaded, this is also true for browser.
 
-![node-js-event-loop](./assets/images/node-js-event-loop.png)
+![node-js-event-loop](./src/assets/images/node-js-event-loop.png)
 
-![node-js-event-loop-extra](./assets/images/node-js-event-loop-extra.png)
+![node-js-event-loop-extra](./src/assets/images/node-js-event-loop-extra.png)
 
 - REST is not a framework nor HTTP pattern or protocol. Its full name is representational state transfer. The request should be stateless, it should not pass around the information about previous requests or next one. It should transfer data in JSON or XML. We should design the routes to access the resource like business modal.
 
 - Blueprint of a restful service -
 
-![node-js-restful-services-blueprint](./assets/images/node-js-restful-services-blueprint.png)
+![node-js-restful-services-blueprint](./src/assets/images/node-js-restful-services-blueprint.png)
 
 - Use express.static to serve everything within client as a static resource, and it will serve the index.html on the root of that directly on a GET to `/`
 
-![node-js-express-static](./assets/images/node-js-express-static.png)
+![node-js-express-static](./src/assets/images/node-js-express-static.png)
 
 - We should run our node process under PM2 tool, it will automatically use all the available cores in our server and it will automatically create a new process every time an active process crashes and exits. It will also reload our application without any downtime. This tool is must in production.
 
 - Node's architecture – V8 and libuv
 
-![node-js-architecture](./assets/images/node-js-architecture.png)
+![node-js-architecture](./src/assets/images/node-js-architecture.png)
 
 - Javascript Event loop – Javascript is a single threaded due to which we can execute only one chunk of code at a time i.e. a function. It executes a synchronous task in “Sync Task Queue” this is a callstack for our application. The callback functions which needs to be executed in asynchronously, they needs to be added in the “Async Task Queue” by “Sync Task Queue” and when “Sync Task Queue” is done with execution the Synchronous task, it will pick the async task from the “Async Task Queue. There is also a “Async Micro Task Queue”, it will contains asynchronous micro-task which will have higher priority than normal asynchronous tasks resides in “Async Task Queue”. We should not block the event loop, so wherever possible we should write the asynchronous code using async and await keywords.
 
-![node-js-javascript-event-loop](./assets/images/node-js-javascript-event-loop.png)
+![node-js-javascript-event-loop](./src/assets/images/node-js-javascript-event-loop.png)
 
 - NPM is not really part of node, it is just come packaged with node since it is the default and most popular package manager.
 
@@ -574,7 +574,7 @@ req.book.save((err) => {
 
 - The event loop facilitates this process; it constantly checks whether or not the call stack is empty. If it is empty, new functions are added from the event queue. If it is not, then the current function call is processed.
 
-![node-js-event-loop](./assets/images/node-js-event-loop.png)
+![node-js-event-loop](./src/assets/images/node-js-event-loop.png)
 
 - If you call setTimeOut with 0ms and resolve a promise immediately, which would console log first? The answer is Promises and the reason is that Job queue gets more priority than Event Queue.
 
@@ -584,11 +584,11 @@ req.book.save((err) => {
 
 - Think of NodeJS as a waiter taking the customer's orders while the I/O chefs prepare them in the kitchen. Other systems have multiple chefs, who take a customer's order, prepare the meal, clear the table and only then attend to the next customer.
 
-![node-js-event-loop2](./assets/images/node-js-event-loop2.png)
+![node-js-event-loop2](./src/assets/images/node-js-event-loop2.png)
 
 - Sample Node JS architecture -
 
-![node-js-sample-architecture](./assets/images/node-js-sample-architecture.png)
+![node-js-sample-architecture](./src/assets/images/node-js-sample-architecture.png)
 
 - Node js shines in I/O intensive uses that is in network applications. In order for event loop to function properly, our code can’t spend too much time doing anything of its own, this includes works that requires heavy use of CPU.
 
@@ -598,7 +598,7 @@ req.book.save((err) => {
 
 - How call stack actually works: event queue will only send the callbacks to call stack once call stack is empty otherwise it will wait until it gets empty.
 
-![node-js-callstack-working](./assets/images/node-js-callstack-working.png)
+![node-js-callstack-working](./src/assets/images/node-js-callstack-working.png)
 
 - Node JS server can simultaneously handle uploading of two files, one of main reason of Node JS creation is to handle the file upload. Other web apps try to load entire file into memory before writing it to the disk which can cause all sorts of issue at server side, also tricky to provide the progress of file uploads, but in Node JS we can do it very simply.
 
@@ -639,7 +639,7 @@ myEmitter.on('TEST_EVENT', () => {
 
 - Middleware – we can use router.all() for using middleware.
 
-![node-js-router-all-middleware](./assets/images/node-js-router-all-middleware.png)
+![node-js-router-all-middleware](./src/assets/images/node-js-router-all-middleware.png)
 
 - Using passport for user authentication and authorization, this is a default option for express library, and a simple way to implement. It manages user object in the session. It also deals with dropping it in a cookie, and pulling it out of a cookie and applying it to the session. We also need to use cookie-parser and express-session package for this
 
@@ -649,7 +649,7 @@ myEmitter.on('TEST_EVENT', () => {
 
 - While using PUT request to update the object, use assign / extend function like below -
 
-![node-js-update-data-put-request](./assets/images/node-js-update-data-put-request.png)
+![node-js-update-data-put-request](./src/assets/images/node-js-update-data-put-request.png)
 
 - If we are building API for our application then don’t return all other unnecessary details from API, but if we are building API as a service then we can return all the information.
 
@@ -657,7 +657,7 @@ myEmitter.on('TEST_EVENT', () => {
 
 - We should group our folder based on feature not types, also contain config and utils folder
 
-![node-js-folder-structure-group-by-feature](./assets/images/node-js-folder-structure-group-by-feature.png)
+![node-js-folder-structure-group-by-feature](./src/assets/images/node-js-folder-structure-group-by-feature.png)
 
 - Middleware is more tied to routes, validations are more tied to models, so we should bake the validation logic into the model itself using mongoose.
 
@@ -671,7 +671,7 @@ myEmitter.on('TEST_EVENT', () => {
 
 - Before deploying checklist -
 
-![node-js-pre-deployment-checklist](./assets/images/node-js-pre-deployment-checklist.png)
+![node-js-pre-deployment-checklist](./src/assets/images/node-js-pre-deployment-checklist.png)
 
 - Factors we can use for two-factor authentication - something you know (password), something you have (badge, id card, token), something you are (biometric)
 
@@ -681,7 +681,7 @@ myEmitter.on('TEST_EVENT', () => {
 
 - Parsing URLs and query strings – components of a parsed URL. Use url.parse for parsing an URL and other helper methods -
 
-![node-js-url-components](./assets/images/node-js-url-components.png)
+![node-js-url-components](./src/assets/images/node-js-url-components.png)
 
 - Working with big amounts of data in node js means working with streams. Streams are simple collection of data that might not be available all at once and don’t have to fit in memory. Types of streams – readable, writable, duplex, transform.
 
@@ -691,7 +691,7 @@ myEmitter.on('TEST_EVENT', () => {
 
 - The cluster module can be used to enable load balancing over an environment multiple CPU core. It is based on form function, it basically allows us to fork our main application process as many times as we have CPU cores, and then it will take over and load balance all request to the main process across all forked processes. This module is a helper for implementing cloning strategies but only on one machine. We can use process manager like PM2.
 
-![node-js-load-balancing](./assets/images/node-js-load-balancing.png)
+![node-js-load-balancing](./src/assets/images/node-js-load-balancing.png)
 
 - Load balancing and HTTP server – if a machine has 8 cores, it will start the 8 processes. These are completely different node js processes, each worker process will have its own even loop and memory space. The loaded will be distribute among different worker process.
 
@@ -703,7 +703,7 @@ myEmitter.on('TEST_EVENT', () => {
 
 - In cluster setup stateful communication also become a problem. Since the communication is not guaranteed to be with the same worker, creating a stateful channel on any one worker is not an option, like problem in authentication to one worker and next time sending its request to another worker which doesn’t know its authentication status. This problem can be solved by simply share the state across the many workers we have by storing these session’s information in a shared database or a Redis node, or better way is using sticky load balancing in this we send the same user request to same worker process but by this we don’t really get the full benefits of load balancing for authenticated users -
 
-![node-js-state-share](./assets/images/node-js-state-share.png)
+![node-js-state-share](./src/assets/images/node-js-state-share.png)
 
 - Pruning – to remove unused package from the project, it gives extraneous error if package is installed but not mentioned in package.json file. We can use npm prune, npm prune grunt it will match the installed the package with package.json file and remove the non-specified ones. We can use npm prune –production to remove dev dependencies package before going to production.
 
@@ -711,11 +711,11 @@ myEmitter.on('TEST_EVENT', () => {
 
 - Transpilers - Babel, TypeScript, Elm
 
-![node-js-transpilers-typescript-vs-babel](./assets/images/node-js-transpilers-typescript-vs-babel.png)
+![node-js-transpilers-typescript-vs-babel](./src/assets/images/node-js-transpilers-typescript-vs-babel.png)
 
 - ECMAScript versions -
 
-![node-js-ecmascript-versions](./assets/images/node-js-ecmascript-versions.png)
+![node-js-ecmascript-versions](./src/assets/images/node-js-ecmascript-versions.png)
 
 - Module formats - IIFE, Asynchronous Module Definition (AMD), CommonJS (CJS), Universal Module Definition (UMD), ES6 Modules
 
@@ -739,7 +739,7 @@ myEmitter.on('TEST_EVENT', () => {
 
 - Worker threads helps us to write CPU intensive tasks by running events in parallel. It will create a new thread by making main thread available for new user request. This is similar to web workers. Using worker thread is like creating a new event loop. We can pass messages between main and worker thread. Worker threads should be used only with CPU intensive tasks. For IO bound code like disk access or network calls, it is more efficient to use the async API’s.
 
-![node-js-worker-threads](./assets/images/node-js-worker-threads.png)
+![node-js-worker-threads](./src/assets/images/node-js-worker-threads.png)
 
 - Underneath all the http calls uses XML HTTP Request (XHR) object which is a javascript API to create AJAX requests. Its methods provide the ability to send network requests between the browser and a server.
 
@@ -747,7 +747,7 @@ myEmitter.on('TEST_EVENT', () => {
 
 - Use omitBy() function from lodash to send only the changed property with a PATCH request –
 
-![node-js-using-omitby-with-patch-request](./assets/images/node-js-using-omitby-with-patch-request.png)
+![node-js-using-omitby-with-patch-request](./src/assets/images/node-js-using-omitby-with-patch-request.png)
 
 - In case of wrong entity/data send from frontend and it fails the validation of server, then we should return 422 – Unprocessable entity status code. We should not send status 200 if the data is not valid.
 
@@ -757,7 +757,7 @@ myEmitter.on('TEST_EVENT', () => {
 
 - Sample REST API
 
-![node-js-sample-rest-api](./assets/images/node-js-sample-rest-api.png)
+![node-js-sample-rest-api](./src/assets/images/node-js-sample-rest-api.png)
 
 - We need to set the form attribute enctype as multipart/form-data for and input type as file.
 
@@ -765,7 +765,7 @@ myEmitter.on('TEST_EVENT', () => {
 
 - History of Node JS - New major versions gets released every 6 months of Node js.
 
-![node-js-history](./assets/images/node-js-history.png)
+![node-js-history](./src/assets/images/node-js-history.png)
 
 - For the https communication, the default port is 443 and for http the default port is 8080.
 
@@ -785,7 +785,7 @@ myEmitter.on('TEST_EVENT', () => {
 
 - The history of distributed APIs
 
-![node-js-history-of-distributed-api](./assets/images/node-js-history-of-distributed-api.png)
+![node-js-history-of-distributed-api](./src/assets/images/node-js-history-of-distributed-api.png)
 
 - Common formats of data - JSON, XML, JSONP, RSS, ATOM
 
@@ -797,7 +797,7 @@ myEmitter.on('TEST_EVENT', () => {
 
 - Functional APIs – they are not RESTful but sometimes we need to handle these operation like calculate premium or start a machine, etc. For these APIs we should use OPTIONS or LINK verbs.
 
-![node-js-functional-apis](./assets/images/node-js-functional-apis.png)
+![node-js-functional-apis](./src/assets/images/node-js-functional-apis.png)
 
 - If users rely on the API not changing, then we should use versioning. Types of design – URI path, Query String, with Headers, Accept header and versioning with Content Type. For simple APIs the query string is the recommended one, but for complex APIs the versioning with Content Type is recommended.
 
@@ -805,7 +805,7 @@ myEmitter.on('TEST_EVENT', () => {
 
 - OAuth - It uses trusted third-party to identify users. So the application which uses OAuth, never gets the credentials. User authenticates with third party and use token to confirm identity, it is safer for the application (don’t have to dealt with the user credential and authentication) and the user.
 
-![node-js-how-oauth-works](./assets/images/node-js-how-oauth-works.png)
+![node-js-how-oauth-works](./src/assets/images/node-js-how-oauth-works.png)
 
 - CSRF support is indirectly inbuilt in angular which will check any XSRF-TOKEN from the server response headers and set it to the request header automatically so that it will get match on the server side. We can override this behavior to provide a different token by using XSRF strategy service
 
@@ -813,7 +813,7 @@ myEmitter.on('TEST_EVENT', () => {
 
 - Require() Vs. Import statements –
 
-![node-js-require-vs-import-statements](./assets/images/node-js-require-vs-import-statements.png)
+![node-js-require-vs-import-statements](./src/assets/images/node-js-require-vs-import-statements.png)
 
 - Whenever an async function is called, it is sent to a browser API. These are APIs built into the browser. Based on the command received from the call stack, the API starts its own single-threaded operation.
 
@@ -827,7 +827,7 @@ myEmitter.on('TEST_EVENT', () => {
 
 - Artifact are the result of the build, if this process of creating artifacts doesn’t require any person to do anything for it to happen, other than make the change to source control, the you have continuous integration. If it also gets deployed automatically then I become continuous deployment as well.
 
-![markdown-cd-ci](./assets/images/markdown-cd-ci.png)
+![markdown-cd-ci](./src/assets/images/markdown-cd-ci.png)
 
 - For technical document writing reStructuredText is better than Markdown.
 
@@ -837,15 +837,15 @@ myEmitter.on('TEST_EVENT', () => {
 
 - Don’t be vague but be simple and user friendly. Don’t use passive sentence but use active sentences:
 
-![markdown-writing-tips1](./assets/images/markdown-writing-tips1.png)
+![markdown-writing-tips1](./src/assets/images/markdown-writing-tips1.png)
 
 - But sometimes we should use passive voice, which makes a sentence a bit soft -
 
-![markdown-writing-tips1](./assets/images/markdown-writing-tips2.png)
+![markdown-writing-tips1](./src/assets/images/markdown-writing-tips2.png)
 
-![markdown-writing-tips1](./assets/images/markdown-writing-tips3.png)
+![markdown-writing-tips1](./src/assets/images/markdown-writing-tips3.png)
 
-![markdown-writing-tips1](./assets/images/markdown-writing-tips4.png)
+![markdown-writing-tips1](./src/assets/images/markdown-writing-tips4.png)
 
 - Layout and Design
 
@@ -856,7 +856,7 @@ myEmitter.on('TEST_EVENT', () => {
 
 - Recommendation of uses -
 
-![markdown-recommendation-of-uses](./assets/images/markdown-recommendation-of-uses.png)
+![markdown-recommendation-of-uses](./src/assets/images/markdown-recommendation-of-uses.png)
 
 - If document is more than 10 pages then use table of contents. It will allow readers to locate information and pages quickly and easily.
 
@@ -864,11 +864,11 @@ myEmitter.on('TEST_EVENT', () => {
 
 - Create story stories as per below format -
 
-![markdown-user-story-format](./assets/images/markdown-user-story-format.png)
+![markdown-user-story-format](./src/assets/images/markdown-user-story-format.png)
 
 - Software design document (SDD) - A written description of a software product that gives a development team overall guidance to the architecture of the software project.
 
-![markdown-software-design-document-format](./assets/images/markdown-software-design-document-format.png)
+![markdown-software-design-document-format](./src/assets/images/markdown-software-design-document-format.png)
 
 - README Files – a file that helps users/other developers know how to do things with your software. Even we should write README file before we code.
 
@@ -884,11 +884,11 @@ myEmitter.on('TEST_EVENT', () => {
 
 - With Cypress, all related things are available out of the box –
 
-![cypress-things-available](./assets/images/cypress-things-available.png)
+![cypress-things-available](./src/assets/images/cypress-things-available.png)
 
 - Cypress command API – it is a chained API where subject is passed through the chain.
 
-![cypress-chained-api](./assets/images/cypress-chained-api.png)
+![cypress-chained-api](./src/assets/images/cypress-chained-api.png)
 
 - Test commands are executed in a deterministic manner, resulting in flake-free testing. Cypress will automatically wait for this assertion “.should” (4 seconds by default). So we don’t need to write code for wait and sleep until element is ready
 
@@ -922,11 +922,11 @@ myEmitter.on('TEST_EVENT', () => {
 
 - It only retries commands that query the DOM like get(), find() or contains(). Commands that are not retried are the ones that could potentially change the state of the application. Also, it will only retry the last command before the expression like in below it will do the several retry for the .find() but no retry for the get().
 
-![cypress-querying](./assets/images/cypress-querying.png)
+![cypress-querying](./src/assets/images/cypress-querying.png)
 
 - Types of commands – parent command start a new change and ignore previously yielded subject, child command cannot be directly used and need to apply on parent command or another child command. The dual commands can do both.
 
-![cypress-types-of-commands](./assets/images/cypress-types-of-commands.png)
+![cypress-types-of-commands](./src/assets/images/cypress-types-of-commands.png)
 
 - It is suggested to do the clean-up before and not after tests.
 
@@ -940,7 +940,7 @@ myEmitter.on('TEST_EVENT', () => {
 
 - Before and After Cypress –
 
-![cypress-before-and-after](./assets/images/cypress-before-and-after.png)
+![cypress-before-and-after](./src/assets/images/cypress-before-and-after.png)
 
 - While writing the plugins, they run in Cypress background tasks in Node, since they executed in Node not in the browser, we can’t use Cypress syntax while writing plugins code.
 
@@ -952,11 +952,11 @@ myEmitter.on('TEST_EVENT', () => {
 
 - Benefits of automated tests vs. manual human –
 
-![cypress-automation-vs-manual-tests](./assets/images/cypress-automation-vs-manual-tests.png)
+![cypress-automation-vs-manual-tests](./src/assets/images/cypress-automation-vs-manual-tests.png)
 
 - Subcutaneous tests – a level above than the unit and integration tests and just below the surface of the UI. In this we can test all the non-UI components working together.
 
-![cypress-functional-ui-tests](./assets/images/cypress-functional-ui-tests.png)
+![cypress-functional-ui-tests](./src/assets/images/cypress-functional-ui-tests.png)
 
 - We should write the smallest number of tests possible to reach the required level of quality or confidence in the system being developed.
 
@@ -1002,19 +1002,19 @@ myEmitter.on('TEST_EVENT', () => {
 
 - Peer to Peer Model -
 
-![git-peer-to-peer-model](./assets/images/git-peer-to-peer-model.png)
+![git-peer-to-peer-model](./src/assets/images/git-peer-to-peer-model.png)
 
 - Centralize Model -
 
-![git-centralized-model](./assets/images/git-centralized-model.png)
+![git-centralized-model](./src/assets/images/git-centralized-model.png)
 
 - Pull request model -
 
-![git-pull-request-model](./assets/images/git-pull-request-model.png)
+![git-pull-request-model](./src/assets/images/git-pull-request-model.png)
 
 - Dictator and Lieutenants model
 
-![git-dictator-and-lieutenants-model](./assets/images/git-dictator-and-lieutenants-model.png)
+![git-dictator-and-lieutenants-model](./src/assets/images/git-dictator-and-lieutenants-model.png)
 
 - In general, we have integration, release, feature and hotfix branches.
 
@@ -1030,9 +1030,9 @@ myEmitter.on('TEST_EVENT', () => {
 
 - Evolution of version control - Local computer -> local version control systems -> centralized version control systems -> distributed version control system
 
-![git-short-history](./assets/images/git-short-history.png)
+![git-short-history](./src/assets/images/git-short-history.png)
 
-![git-history](./assets/images/git-history.png)
+![git-history](./src/assets/images/git-history.png)
 
 - Git maintained integrity using check-summed generated by SHA1 hashing algorithm.
 
@@ -1040,7 +1040,7 @@ myEmitter.on('TEST_EVENT', () => {
 
 - Rewriting History - Rebase – it replays a set of commits on top of a specific base commits. D*and E* are new commits but with same messages:
 
-![git-visualizing-a-rebase](./assets/images/git-visualizing-a-rebase.png)
+![git-visualizing-a-rebase](./src/assets/images/git-visualizing-a-rebase.png)
 
 - Difference between collaborators (key people) and contributors (everyone outside from the core team and have lower permissions).
 
@@ -1054,7 +1054,7 @@ myEmitter.on('TEST_EVENT', () => {
 
 - GitHub calls it pull request instead of merge request because it let you tell others about the changes you pushed to a branch the action they would do is pull those changes in once that merged. Repo permissions related to pull requests.
 
-![git-repo-permissions](./assets/images/git-repo-permissions.png)
+![git-repo-permissions](./src/assets/images/git-repo-permissions.png)
 
 - By using cherry pick we can copy specific commit to another branch. It creates duplicate commit in each branch and can cause confusion. Just use command git cherry-pick `<commit>` by specify the commit sha.
 - Popular open source licenses – apache 2.0, bsd 2-caluse, bsd 3 clause, gnu gpl, gnu lgpl, mit (or expat license), Mozilla public license, cddl, eclipse public license version 2.0.
@@ -1065,11 +1065,11 @@ myEmitter.on('TEST_EVENT', () => {
 
 - History of accessibility
 
-![accessibility-history](./assets/images/accessibility-history.png)
+![accessibility-history](./src/assets/images/accessibility-history.png)
 
 - Who needs accessibility –
 
-![accessibility-who-needs-it.png](./assets/images/accessibility-who-needs-it.png)
+![accessibility-who-needs-it.png](./src/assets/images/accessibility-who-needs-it.png)
 
 - Create accessible forms – each control should have label or aria-labelled-by, use grouping of controls, provide clear notifications, break up long forms. We should avoid placeholder text in your forms. It is often low contrast and difficult to see.
 
@@ -1121,13 +1121,13 @@ myEmitter.on('TEST_EVENT', () => {
 
 - Node chains –
 
-![ds-node-chains](./assets/images/ds-node-chains.png)
+![ds-node-chains](./src/assets/images/ds-node-chains.png)
 
 - Linked list – single chain of nodes, head pointer, tail pointer, operations – add, remove, find, enumerate.
 
 - Doubly linked list – singly linked list works great when we need only forward access to the nodes, but for backwards compatibility as-well we need to use doubly linked list.
 
-![ds-doubly-linked-list](./assets/images/ds-doubly-linked-list.png)
+![ds-doubly-linked-list](./src/assets/images/ds-doubly-linked-list.png)
 
 - Stack - It is based on LIFO concept. Each pop reduces the stack depth.
 
@@ -1137,7 +1137,7 @@ myEmitter.on('TEST_EVENT', () => {
 
 - Postfix calculator – postfix notation also known as reverse polish notation in this approach operator follows the operands by this, we can avoid the ambiguity in operation order.
 
-![ds-postfix-calculator](./assets/images/ds-postfix-calculator.png)
+![ds-postfix-calculator](./src/assets/images/ds-postfix-calculator.png)
 
 - Undo implementation using Stack – we use stack to store the changes and to reverse the changes when undo is clicked.
 
@@ -1173,61 +1173,61 @@ myEmitter.on('TEST_EVENT', () => {
 
 - Bubble sort – simplest sorting algorithm. Consist of many passes until no swaps are performed in a pass. Performance is not good O(n2), not appropriate for large unsorted data sets. But for the best-case performance is very good i.e. O(n) also for the space requirement it is good i.e. O(n) as it directly operates on the input array and it is a candidate algorithm when minimizing space is paramount.
 
-![ds-bubble-sort1](./assets/images/ds-bubble-sort1.png)
+![ds-bubble-sort1](./src/assets/images/ds-bubble-sort1.png)
 
-![ds-bubble-sort2](./assets/images/ds-bubble-sort2.png)
+![ds-bubble-sort2](./src/assets/images/ds-bubble-sort2.png)
 
 - Insertion sort – sorts each item in the array as they are encountered. It uses only simple pass, everything left of the item is known to be sorted and everything to the right is unsorted. Performance and space matrixes are same as bubble sort.
 
-![ds-insertion-sort](./assets/images/ds-insertion-sort.png)
+![ds-insertion-sort](./src/assets/images/ds-insertion-sort.png)
 
 - Selection sort – another linear algorithm, hybrid between bubble and insertion sort. It sorts the data by finding the smallest item and swapping it into the array in the first unsorted location. Performance is similar to bubble and insertion sort. Best case performance is O(n2). It Is not appropriate for large unsorted data set. For a system where comparison is cheap and swaps are costly then we can use this algorithm.
 
-![ds-selection-sort1](./assets/images/ds-selection-sort1.png)
+![ds-selection-sort1](./src/assets/images/ds-selection-sort1.png)
 
-![ds-selection-sort2](./assets/images/ds-selection-sort2.png)
+![ds-selection-sort2](./src/assets/images/ds-selection-sort2.png)
 
 - Merge sort – it is a divide and conquer algorithm. They array is recursively split in half, and splitting continues until the array is in groups of 1, it is reconstructed in the sort order. Each reconstructed array is merged with the other half. Worst, average and best cases performance is O (n log n), data splitting means that the algorithm can be made parallel, that’s why it is appropriate for large datasets. Space required is O(n), merge can be, but is often not, performed in-place. These extra allocations increase the memory footprint required to sort data.
 
-![ds-merge-sort](./assets/images/ds-merge-sort.png)
+![ds-merge-sort](./src/assets/images/ds-merge-sort.png)
 
 - Quick sort – commonly used general purpose language and also based on divide and conquer. Pick a pivot value and partition the array.
 
-![ds-quick-sort1](./assets/images/ds-quick-sort1.png)
+![ds-quick-sort1](./src/assets/images/ds-quick-sort1.png)
 
-![ds-quick-sort2](./assets/images/ds-quick-sort2.png)
+![ds-quick-sort2](./src/assets/images/ds-quick-sort2.png)
 
-![ds-quick-sort3](./assets/images/ds-quick-sort3.png)
+![ds-quick-sort3](./src/assets/images/ds-quick-sort3.png)
 
 - Worst case is O (n2) not appropriate for large pathologically sorted (inverse sorted) data sets, average case performance is O (n log n) appropriate for large data sets, best case performance is O (n log n) very good best case performance and can efficiently sort small and nearly sorted data sets, space required O (n).
 
 - AVL Tree - Binary tree is a collection that stores data in a tree structure. AVL tree are self-balancing binary tree invented by Adelson-velsky and landis (1942). Only insertion and deletion differ in running the balance algorithm from binary tree. AVL tree new concepts are self-balancing, height, balance factor, right/left heavy. An unbalance binary tree can cause performance issues like reduce the search time; it might become a linked list as below, like loading a English dictionary –
 
-![ds-avl-unbalance-tree](./assets/images/ds-avl-unbalance-tree.png)
+![ds-avl-unbalance-tree](./src/assets/images/ds-avl-unbalance-tree.png)
 
 - Balanced binary tree – the tree remains balanced as nodes are inserted or deleted, height or left and right tree differ by at most 1.
 
-![ds-balance-tree](./assets/images/ds-balance-tree.png)
+![ds-balance-tree](./src/assets/images/ds-balance-tree.png)
 
 - Balancing is done using node rotation. Rotation changes the physical structure of the tree within the constraints of the binary tree, smaller values on the left and larger or equal on the right. Rotation algorithms are right rotation, left rotation, right-left rotation, left-right rotation.
 
 - AVL tree vs. Binary tree visualization – AVL tree won’t get much height and depth unlike binary tree. For bad 100 number, the binary tree will become the linked list like linear structure. Also, it is shows the difference between balanced tree and unbalanced trees.
 
-![ds-avl-tree-visualization](./assets/images/ds-avl-tree-visualization.png)
+![ds-avl-tree-visualization](./src/assets/images/ds-avl-tree-visualization.png)
 
-![ds-binary-tree-visualization](./assets/images/ds-binary-tree-visualization.png)
+![ds-binary-tree-visualization](./src/assets/images/ds-binary-tree-visualization.png)
 
 - String Searching Algorithms - API Overview – by using interface we can implement algorithms in a uniform manner and this will allow us to use them interchangeably.
 
 - Naïve Search - We can use run the loop till the string length minus the search string length to get some optimization. This algorithm is most appropriate when the string to search and find are both small.
 
-![ds-naive-search1](./assets/images/ds-naive-search1.png)
+![ds-naive-search1](./src/assets/images/ds-naive-search1.png)
 
-![ds-naive-search2](./assets/images/ds-naive-search2.png)
+![ds-naive-search2](./src/assets/images/ds-naive-search2.png)
 
 - Boyer Moore Horspool Search – it minimizes the overall cost of search by skipping as many characters as possible. This is appropriate as a general-purpose string search algorithm. It will also improve the performance if search string is longer.
 
-![ds-boyer-moore-horspool-search.png](./assets/images/ds-boyer-moore-horspool-search.png)
+![ds-boyer-moore-horspool-search.png](./src/assets/images/ds-boyer-moore-horspool-search.png)
 
 - Data structures is a way of storing data. Data structures and algorithms are heavily linked. DS typically use some sort of algorithm to perform their inner organization, and algorithms typically uses data structure to store internal states.
 
@@ -1241,7 +1241,7 @@ myEmitter.on('TEST_EVENT', () => {
 
 - Binary search – complexity in terms of Big O
 
-![ds-binary-search-big-o](./assets/images/ds-binary-search-big-o.png)
+![ds-binary-search-big-o](./src/assets/images/ds-binary-search-big-o.png)
 
 - Amortized complexity – it deals with the complexity of performing the same operation multiple times for varying inputs like inserting multiple elements in a data structure.
 
@@ -1251,39 +1251,39 @@ myEmitter.on('TEST_EVENT', () => {
 
 - By hash table we can quickly lookup the name of a certain user id and this makes hash tables ideal data structure for caches, fast insertion, fast lookup and fast deletion, but elements order as per we receive them can’t be possible in hash table unlike arrays.
 
-![ds-common-big-o-examples](./assets/images/ds-common-big-o-examples.png)
+![ds-common-big-o-examples](./src/assets/images/ds-common-big-o-examples.png)
 
 - Brute force and greedy algorithm – problem solving strategy where all possible combinations or solution candidates are tried out blindly until a solution is found is called brute force.
 
-![ds-brute-force-combinations](./assets/images/ds-brute-force-combinations.png)
+![ds-brute-force-combinations](./src/assets/images/ds-brute-force-combinations.png)
 
 - Greedy algorithms work smarter than brute faster, they may speed up the search for a solution, but they come with a catch of stalling at a local maximum or minimum if we search for a small solution.
 
-![ds-greedy-algorithms](./assets/images/ds-greedy-algorithms.png)
+![ds-greedy-algorithms](./src/assets/images/ds-greedy-algorithms.png)
 
 - Divide and conquer – key ingredient is to discover how to divide the larger, original problem into sub-problems. Once divided, each of the smaller and easier-to-understand sub-problems are solved, leaving us with sub-solutions. Finally, find a way to combine, or deduce these sub-solutions into a solution to the original and larger problem, thereby conquering it. We can also apply it recursively. Example – quicksort
 
-![ds-quick-sort-divide-and-conquer](./assets/images/ds-quick-sort-divide-and-conquer.png)
+![ds-quick-sort-divide-and-conquer](./src/assets/images/ds-quick-sort-divide-and-conquer.png)
 
 - Dynamic programming – this is also built on the core idea of divide and conquer. If sub problems cannot be separated but overlaps, then overlapping part would need to be solved in both sub-problems. We can cache the solved result of sub-problem. It will improve the performance.
 
 - The 0/1 Knapsack problem – using dynamic problem we can get the performance advantages as it has lower complexity.
 
-![ds-knapsack-problem](./assets/images/ds-knapsack-problem.png)
+![ds-knapsack-problem](./src/assets/images/ds-knapsack-problem.png)
 
 - Other examples – where to put line breaks to obtain a nice and even text justification, finding shortest paths, finding difference between two files, sequence alignment, various games
 
-![ds-knapsack-problem-other-examples.png](./assets/images/ds-knapsack-problem-other-examples.png)
+![ds-knapsack-problem-other-examples.png](./src/assets/images/ds-knapsack-problem-other-examples.png)
 
 - P vs. NP – exponential functions grow much faster than polynomials. The complexity category P covers problems that can be solved in polynomial time i.e. easy problems like sorting, traversing, lists, etc. But problems in NP category are decision problems (in which answer is yes or no) verifiable in polynomial time.
 
-![ds-p-vs-np1](./assets/images/ds-p-vs-np1.png)
+![ds-p-vs-np1](./src/assets/images/ds-p-vs-np1.png)
 
-![ds-p-vs-np2](./assets/images/ds-p-vs-np2.png)
+![ds-p-vs-np2](./src/assets/images/ds-p-vs-np2.png)
 
 - NP hard – at least as hard as NP complete, they don’t need to be decision problem, and they do not need to be verifiable in polynomial time like knapsack problem, halting problem, traveling salesman problem.
 
-![ds-np-hard](./assets/images/ds-np-hard.png)
+![ds-np-hard](./src/assets/images/ds-np-hard.png)
 
 - Heuristics and approximation algorithms – they are general techniques for dealing with computationally hard problems. Heuristics – wanted speed, trade with accuracy.
 
@@ -1291,25 +1291,25 @@ myEmitter.on('TEST_EVENT', () => {
 
 - Prefix-querying Sequences Efficiently with Tries - Tries – represent a number of strings in a single tree structure where the root node represents the enter string with no letters added yet and with each subsequent level of the tree corresponding to a pending one more letter to a string.
 
-![ds-tries](./assets/images/ds-tries.png)
+![ds-tries](./src/assets/images/ds-tries.png)
 
 - Radix tree – a compressed tries structure, it improves the performance. We can use it if read-only or read-mostly operations. Tries is useful for autocompletion, prefix only scenario.
 
-![ds-radix-trees](./assets/images/ds-radix-trees.png)
+![ds-radix-trees](./src/assets/images/ds-radix-trees.png)
 
 - Suffix trees also allows to search a pattern anywhere in a string.
 
-![ds-suffix-trees](./assets/images/ds-suffix-trees.png)
+![ds-suffix-trees](./src/assets/images/ds-suffix-trees.png)
 
 - Data structure is a method of organizing information so that the information can be stored and retrieved efficiently.
 
 - Big O notation – computer science defines performance by something called Big O notation. It shows how the data structure will perform as the data increase.
 
-![ds-big-o-notation](./assets/images/ds-big-o-notation.png)
+![ds-big-o-notation](./src/assets/images/ds-big-o-notation.png)
 
-![ds-big-o-notation2](./assets/images/ds-big-o-notation2.png)
+![ds-big-o-notation2](./src/assets/images/ds-big-o-notation2.png)
 
-![ds-big-o-notation3](./assets/images/ds-big-o-notation3.png)
+![ds-big-o-notation3](./src/assets/images/ds-big-o-notation3.png)
 
 - One of the problems with a hash structure is when we run into collisions when putting data into the hash. Collisions slow down the performance of the hash, which kind of defeats one of the main points of using the hash. We can reduce has collisions by increasing the has capacity or improve the hashCode() method quality to improve the uniqueness of hash value.
 
@@ -1319,15 +1319,15 @@ myEmitter.on('TEST_EVENT', () => {
 
 - Data transfer algorithms – physical vs. internet data transfer. We should pick the constant one because at some point it will be faster than linear complexity.
 
-![ds-physical-vs-internet-data-transfer](./assets/images/ds-physical-vs-internet-data-transfer.png)
+![ds-physical-vs-internet-data-transfer](./src/assets/images/ds-physical-vs-internet-data-transfer.png)
 
-![ds-physical-vs-internet-data-transfer2](./assets/images/ds-physical-vs-internet-data-transfer2.png)
+![ds-physical-vs-internet-data-transfer2](./src/assets/images/ds-physical-vs-internet-data-transfer2.png)
 
 - Stack overflow – if internal array to store stack values gets full, then push operation will cause it outside of stack area which is not owned by stack. In this case, we should throw an exception from code.
 
 - Arrays vs. linked lists – memory layout – direct fast element access by index not possible in linked list we have to traverse all the elements, also it is not cache friendly as it is not having continuous memory allocations. Linked list is good for inserting new item as all don’t have to shift. So, no reallocation overhead. The nodes of the linked list are stored in sparse memory locations. They are scattered all over computer’s memory.
 
-![ds-array-vs-linked-list](./assets/images/ds-array-vs-linked-list.png)
+![ds-array-vs-linked-list](./src/assets/images/ds-array-vs-linked-list.png)
 
 ## Angular JS
 
@@ -1355,7 +1355,7 @@ myEmitter.on('TEST_EVENT', () => {
 
 - Transclusion - It is like a picture frame. Like frame is completely separate from the picture inside of it. Just set the transclude property to true, and use the ng-transclude attribute inside the template html.
 
-![angular-js-transclusion](./assets/images/angular-js-transclusion.png)
+![angular-js-transclusion](./src/assets/images/angular-js-transclusion.png)
 
 - If we have some HTML content side a directive like below angular will not show it because it is replacing the `<collapsible>` tag with the HTML inside the template, so we need to use transude to true and in template need to specify where it needs to be shown
 
@@ -1393,14 +1393,14 @@ myEmitter.on('TEST_EVENT', () => {
 
 - Client side routing doesn’t replace the server side routing. But while using client side routing the call to server is for getting the little bit of information rather than complete webpages and all of it related resources. SPA need client side routing as a means of referring to different locations with the SPA. There still be interaction with server but for partial data.
 
-![angular-js-server-side-routing](./assets/images/angular-js-server-side-routing.png)
-![angular-js-client-side-routing](./assets/images/angular-js-client-side-routing.png)
+![angular-js-server-side-routing](./src/assets/images/angular-js-server-side-routing.png)
+![angular-js-client-side-routing](./src/assets/images/angular-js-client-side-routing.png)
 
 - Hashbang versus HTML5 Mode – this is the default mode. There will be “#” character after the domain name in the URL. All the text on URL after this character will be for client side routing and angular will handle it. The alternate to this mode is HTML mode
 
 - When angular is configured to run in HTML5 mode it attempts to use the browser’s HTML5 history API.
 
-![angular-js-hashbang-vs-html5mode](./assets/images/angular-js-hashbang-vs-html5mode.png)
+![angular-js-hashbang-vs-html5mode](./src/assets/images/angular-js-hashbang-vs-html5mode.png)
 
 - Jasmine is a behaviour driven development framework, it gives us mechanism to write and then execute the unit tests in javascript. The describe function provides the logical grouping of the multiple test cases, and the ‘it’ function state the name of the test cases.
 
@@ -1438,7 +1438,7 @@ myEmitter.on('TEST_EVENT', () => {
 
 - Key factors in building a line of business application – data is an asset, amount of data is significant, number of input/output data fields is significant, data integrity is critical, data visualization
 
-![angular-js-line-of-business-application-structure](./assets/images/angular-js-line-of-business-application-structure.png)
+![angular-js-line-of-business-application-structure](./src/assets/images/angular-js-line-of-business-application-structure.png)
 
 - Bootstrap is a framework for prettifying the web pages, help you build responsive web applications means responsive to changes in layout, it scales to multiple form factors – phones, tablets, laptops and desktops and handle browser differences. It is developed by twitter.
 
@@ -1452,7 +1452,7 @@ myEmitter.on('TEST_EVENT', () => {
 
 - We can organize our app using by feature or type. For large project ‘by feature’ would be better or mix with both types. The LIFT principle (locating our code is easy, identify code at a glance, flat structure as long as we can, try to stay DRY). Have below format while writing controller to have ‘above the fold’ concept, and should not have more than 3 level for folder, it should be flat.
 
-![angular-js-lift-principle](./assets/images/angular-js-lift-principle.png)
+![angular-js-lift-principle](./src/assets/images/angular-js-lift-principle.png)
 
 - 3 categories of modules – angular js modules, 3rd party modules, custom modules (which we create our self).
 
@@ -1464,11 +1464,11 @@ myEmitter.on('TEST_EVENT', () => {
 
 - Lifecycle - When the page loads it loads our static DOM. Angular JS is then loaded then we have our ‘on content ready’ event that’s fired. Which kicks off, that’s what Angular is listening for. That is the entry point. Then angular looks for the application within the HTML, so that is our ng-app. From there it goes through and compile all of our services, and controller and everything that we have declared on our model basically gets compiled. It then goes through the DOM and says what directives do I have, what are the angular js pieces within the HTML and generate the template. This is the compilation phase. Then it goes back through and it links it together says this template gets this scope, binds it together and we have our view.
 
-![angular-js-lifecycle](./assets/images/angular-js-lifecycle.png)
+![angular-js-lifecycle](./src/assets/images/angular-js-lifecycle.png)
 
 - $digest() processes all of the watchers of the current scope, $apply() is used to notify that something has happened outside of the Angular JS domain, $apply forces a $digest cycle.
 
-![angular-js-digest-loop](./assets/images/angular-js-digest-loop.png)
+![angular-js-digest-loop](./src/assets/images/angular-js-digest-loop.png)
 
 - If we use factory then it works on revealing module pattern, and service is worked with ‘.’ dot syntax pattern, in this we are attaching methods and properties to a ‘this’ object. Prefer to use factory.
 
@@ -1488,9 +1488,9 @@ myEmitter.on('TEST_EVENT', () => {
 
 - Creating stars ratings functionality:
 
-![angular-js-creating-starts-review1](./assets/images/angular-js-creating-starts-review1.png)
+![angular-js-creating-starts-review1](./src/assets/images/angular-js-creating-starts-review1.png)
 
-![angular-js-creating-starts-review2](./assets/images/angular-js-creating-starts-review2.png)
+![angular-js-creating-starts-review2](./src/assets/images/angular-js-creating-starts-review2.png)
 
 - Forms are always start off simple, but then the business wants to add rounded corners and cute icons to make the form look friendly and inviting, and the real complexity starts when the business starts adding validation rules to a form.
 

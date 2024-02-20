@@ -28,9 +28,9 @@ Interaction Design (IxD) – the process of designing interactive products, focu
 
 - In top 15 languages, only assembly language doesn’t support regular expression.
 
-![typescript-regex-basic-syntax](./assets/images/typescript-regex-basic-syntax.png)
+![typescript-regex-basic-syntax](./src/assets/images/typescript-regex-basic-syntax.png)
 
-![typescript-regex-short-codes](./assets/images/typescript-regex-short-codes.png)
+![typescript-regex-short-codes](./src/assets/images/typescript-regex-short-codes.png)
 
 ## Soft Skills
 
@@ -167,7 +167,7 @@ The “void 0” is a primitive value of undefined.
 
 - Path segment prefixing – we should use relative paths whenever possible to avoid large refactors if the parent URL structure changes. Also, we should define constant route tokens instead of using static strings across the application.
 
-![angular-path-route-prefixing](./assets/images/angular-path-route-prefixing.png)
+![angular-path-route-prefixing](./src/assets/images/angular-path-route-prefixing.png)
 
 - The navigateByUrl() method is not able to handle the query params or setting the relative URL, the navigate method is more versatile. The navigate() method is default to absolute route.
 
@@ -185,15 +185,15 @@ The “void 0” is a primitive value of undefined.
 
 - TypeScript by itself has no understanding of Angular template syntax and cannot type-check it directly. To perform this checking, the Angular compiler converts Angular templates into TypeScript code (known as a “Type Check Block”, or TCB) that expresses equivalent operations at the type level, and feeds this code to TypeScript for semantic checking. Any generated diagnostics are then mapped back and reported to the user in the context of the original template.
 
-![angular-life-cycle-steps-details](./assets/images/angular-life-cycle-steps-details.png)
+![angular-life-cycle-steps-details](./src/assets/images/angular-life-cycle-steps-details.png)
 
 Innovation is more like a system or network not a single moment.
 
 - Angular inspirations –
 
-![angular-inspirations](./assets/images/angular-inspirations.png)
+![angular-inspirations](./src/assets/images/angular-inspirations.png)
 
-![angular-angular-inspired-by](./assets/images/angular-angular-inspired-by.png)
+![angular-angular-inspired-by](./src/assets/images/angular-angular-inspired-by.png)
 
 - FormControl is an entity that tracks the value and validation status of an individual form control. A FormControl is always created regardless of whether you use template driven or reactive forms. Instead of a native form control like input, any custom form control can interact with a formControl. The number of native form controls is limited, but the variety of custom form controls can be potentially infinite. So, Angular needs a generic mechanism to stand between Angular’s formControl and a native/custom form control. This is where the ControlValueAccessor object comes into play. This is the object that stands between the Angular formControl and a native form control and synchronizes values between the two. A ControlValueAccessor acts as a bridge between the Angular forms API and a native element in the DOM.
 
@@ -277,36 +277,36 @@ Innovation is more like a system or network not a single moment.
 
 - As per below diagram, much of the work done by Node JS and libuv not by the javascript –
 
-![node-js-behind-the-scene](./assets/images/node-js-behind-the-scene.png)
+![node-js-behind-the-scene](./src/assets/images/node-js-behind-the-scene.png)
 
 ## Chrome
 
 - HTML is a parser language or abstract layer for C++ to parse on the browser. The browser are very good at networking and timers capabilities.
 
-![browser-behind-the-scene](./assets/images/browser-behind-the-scene.png)
+![browser-behind-the-scene](./src/assets/images/browser-behind-the-scene.png)
 
 - Browser works on simple working concept to display the data and provide interaction to the user. It converts the token into scattered objects which gets constructed into the Document Object Model.
 
-![browser-html-node-list](./assets/images/browser-html-node-list.png)
+![browser-html-node-list](./src/assets/images/browser-html-node-list.png)
 
 - Afterwards, to create the relations between them, it creates node list which is given by rendering engine.
 
-![browser-html-node-list-afterwards](./assets/images/browser-html-node-list-afterwards.png)
+![browser-html-node-list-afterwards](./src/assets/images/browser-html-node-list-afterwards.png)
 
 - Browser engine is very good at math to create render tree as per client screen size and components size based on CSS then it starts painting to actually showing elements on the UI.
   Whenever browser sees a script tag it will stop executing the DOM or whatever works it is doing, the first preference always goes to JS as JS has the capability to modify DOM or CSS so no point to painting before evaluating all the JS. That is why we should not first send the JS but the HTML and CSS so that browser will show the page without any delay on first load, then send the JS for interactivity. However in case of CSSOM, JS execution will be halted until CSSOM is ready.
 
-![browser-html-render-tree](./assets/images/browser-html-render-tree.png)
+![browser-html-render-tree](./src/assets/images/browser-html-render-tree.png)
 
 ## Database
 
 - ORM makes life easier. Various different database varieties focus on or good at different part of the database like cache (Reddis), utility, storage engine, etc.
 
-![database-behind-the-scene](./assets/images/database-behind-the-scene.png)
+![database-behind-the-scene](./src/assets/images/database-behind-the-scene.png)
 
 - History of database -
 
-![database-history](./assets/images/database-history.png)
+![database-history](./src/assets/images/database-history.png)
 
 >templates
 :git - goals and other updates for august 2023
