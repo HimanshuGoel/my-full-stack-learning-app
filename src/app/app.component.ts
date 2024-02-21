@@ -1,12 +1,11 @@
-import { Component, OnDestroy, OnInit, Signal, inject, signal } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { HttpClient, HttpEvent, HttpEventType, HttpResponse } from '@angular/common/http';
+import { filter, map, Observable, of, pipe, Subject, takeUntil, tap } from 'rxjs';
 
-import { Observable, Subject, filter, map, of, pipe, takeUntil, tap } from 'rxjs';
+import { HttpClient, HttpEvent, HttpEventType, HttpResponse } from '@angular/common/http';
+import { Component, inject, OnDestroy, OnInit, Signal, signal } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 import { ROUTER_TOKENS } from './app-routing.module';
-import { LoggerService } from './core/services/logging.service';
-import { requiredFileType } from './features/angular/file-upload/upload-file-validators';
+import { LoggerService } from './core/mocks/services/logging.service';
 
 @Component({
   selector: 'app-root',
@@ -32,7 +31,6 @@ export class AppComponent implements OnInit, OnDestroy {
   signup = new FormGroup({
     email: new FormControl(null, Validators.required),
     image: new FormControl(null)
-    // image: new FormControl(null, [Validators.required, requiredFileType('png')])
   });
 
   constructor(private http: HttpClient) {}

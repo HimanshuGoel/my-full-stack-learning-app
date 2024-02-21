@@ -79,5 +79,6 @@
     "zoomable"
   ],
   "markdown.extension.toc.updateOnSave": false,
-  "eslint.workingDirectories": ["frontend"]
+  "eslint.workingDirectories": ["frontend"],
+  "importSorter.generalConfiguration.sortOnBeforeSave": true
 }

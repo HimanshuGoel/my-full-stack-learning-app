@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+
 import { ExponentialStrengthPipe } from './pipes/exponential-strength.pipe';
 
 @NgModule({

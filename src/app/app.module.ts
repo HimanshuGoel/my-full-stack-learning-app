@@ -1,17 +1,20 @@
-import { EnvironmentProviders, NgModule, isDevMode, makeEnvironmentProviders } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 
 import { HttpClientModule } from '@angular/common/http';
+import { EnvironmentProviders, isDevMode, makeEnvironmentProviders, NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ServiceModule } from './core/services/service.module';
-import { APP_CONFIG, HERO_DI_CONFIG } from './core/services/injection-token';
-import { LOGGER_PROVIDERS, LogLevel, MIN_LOG_LEVEL } from './core/services/logging.service';
-import { ConsoleProvider, TimedConsoleProvider } from './core/services/logger-provider.service';
-import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryContactsApi } from './core/services/in-memory-contacts.service';
+import { InMemoryContactsApi } from './core/mocks/services/in-memory-contacts.service';
+import { APP_CONFIG, HERO_DI_CONFIG } from './core/mocks/services/injection-token';
+import {
+  ConsoleProvider,
+  TimedConsoleProvider
+} from './core/mocks/services/logger-provider.service';
+import { LOGGER_PROVIDERS, LogLevel, MIN_LOG_LEVEL } from './core/mocks/services/logging.service';
+import { ServiceModule } from './core/mocks/services/service.module';
 import { HomeComponent } from './shared/pages/home/home.component';
 import { NotFoundComponent } from './shared/pages/not-found/not-found.component';
 
@@ -37,18 +40,18 @@ function registerLoggerProviders(): EnvironmentProviders {
 @NgModule({
   declarations: [AppComponent, HomeComponent, NotFoundComponent],
   imports: [
-    FormsModule,
-    ReactiveFormsModule,
-    BrowserModule,
     AppRoutingModule,
+    BrowserModule,
+    FormsModule,
+    HttpClientInMemoryWebApiModule.forRoot(InMemoryContactsApi, { delay: 200 }),
     HttpClientModule,
-    ServiceModule,
-    HttpClientInMemoryWebApiModule.forRoot(InMemoryContactsApi, { delay: 200 })
+    ReactiveFormsModule,
+    ServiceModule
   ],
   bootstrap: [AppComponent],
   providers: [
-    { provide: APP_CONFIG, useValue: HERO_DI_CONFIG },
     registerLoggerProviders(),
+    { provide: APP_CONFIG, useValue: HERO_DI_CONFIG },
     {
       provide: MIN_LOG_LEVEL,
       useValue: isDevMode() ? LogLevel.INFO : LogLevel.NEVER
