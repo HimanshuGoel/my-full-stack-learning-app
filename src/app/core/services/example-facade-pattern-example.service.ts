@@ -5,16 +5,20 @@ interface Item {}
 @Injectable()
 export class AuthService {
   // Authentication logic
+  login(username: string, password: string) {}
 }
 
 @Injectable()
 export class CartService {
   // Shopping cart logic
+  addToCart(item: Item) {}
+  removeFromCart(item: Item) {}
 }
 
 @Injectable()
 export class PaymentService {
   // Payment logic
+  pay() {}
 }
 
 // The FacadeService provides a simplified interface to the complex system of services.

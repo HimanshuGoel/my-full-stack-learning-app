@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-import { ExamplesComponent } from './examples/examples.component';
+import { ExamplesComponent } from './angular.component';
 import { ROUTING_ROUTES } from './routing/routing.routes';
 import { ProductsComponent } from './routing/products/products.component';
 import { WidgetModule } from 'src/app/widget/widget.module';

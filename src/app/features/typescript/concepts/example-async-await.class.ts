@@ -1,4 +1,4 @@
-import { getMoviesByDirector } from './promise.class';
+import { getMoviesByDirector } from './example-promise.class';
 
 async function logSearchResults(directorId: number) {
   let foundMovies = await getMoviesByDirector(directorId);

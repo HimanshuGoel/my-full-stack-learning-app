@@ -1,7 +1,7 @@
 import { inject } from '@angular/core';
 import { Router, Routes } from '@angular/router';
 
-import { FeatureService } from '../../../core/services/feature.service';
+import { FeatureService } from '../../../core/services/example-can-use-feature.service';
 import { CartComponent } from './cart/cart.component';
 import { ProductsCustomizeComponent } from './products-customize/products-customize.component';
 import { ProductsNotAuthComponent } from './products-not-auth/products-not-auth.component';

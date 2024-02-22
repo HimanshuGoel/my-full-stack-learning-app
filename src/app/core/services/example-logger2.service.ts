@@ -1,5 +1,5 @@
 import { Injectable, InjectionToken, inject } from '@angular/core';
-import { LoggerProvider } from './logger-provider.service';
+import { LoggerProvider } from './example-logger.service';
 
 export enum LogLevel {
   NEVER = Number.MAX_SAFE_INTEGER,

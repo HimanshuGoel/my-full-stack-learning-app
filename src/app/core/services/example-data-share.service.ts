@@ -1,10 +1,11 @@
-import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
+
+import { Injectable } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
-export class SharedDataService {
+export class DataSharedDataService {
   private readonly currentCount$ = new BehaviorSubject<number>(1);
 
   public setCount(count: number): void {

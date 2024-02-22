@@ -1,7 +1,7 @@
-import { Injectable } from '@angular/core';
-import { Subject, Subscription, filter, map } from 'rxjs';
+import { filter, map, Subject, Subscription } from 'rxjs';
 
-// union instead of enum is encouraging
+import { Injectable } from '@angular/core';
+
 enum Events {}
 
 class EmitEvent {
@@ -9,7 +9,7 @@ class EmitEvent {
 }
 
 @Injectable({ providedIn: 'root' })
-class EventBus {
+export class EventBus {
   private subject = new Subject<any>();
 
   public emit(event: EmitEvent): void {

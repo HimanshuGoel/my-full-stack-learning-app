@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 
-import { ExponentialStrengthPipe } from './pipes/exponential-strength.pipe';
+import { ExponentialStrengthPipe } from './pipes/example.pipe';
 
 @NgModule({
   // Put commonly used directives, pipes, and components

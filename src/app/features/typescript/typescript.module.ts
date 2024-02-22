@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ExamplesComponent } from './examples/examples.component';
+import { ExamplesComponent } from './typescript.component';
 import { RouterModule, Routes } from '@angular/router';
 
 const TYPESCRIPT_ROUTES: Routes = [

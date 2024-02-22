@@ -20,7 +20,7 @@ This application has been deployed on Firebase at <https://frontend-learnings-75
 
 - [Roadmap](./ROADMAP.md)
 - [Changelog](./CHANGELOG.md)
-- [Key Learnings](./KEY_LEARNINGS.md)
+- [Key Concepts](./KEY_CONCEPTS.md)
 - [Best Practices](./BEST_PRACTICES.md)
 - [Troubleshooting](./TROUBLESHOOTING.md)
 - [Keyboard Shortcuts](./KEYBOARD_SHORTCUTS.md)

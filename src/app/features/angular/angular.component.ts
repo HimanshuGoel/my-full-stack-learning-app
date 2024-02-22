@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ANGULAR_ROUTER_TOKENS } from '../angular.module';
+import { ANGULAR_ROUTER_TOKENS } from './angular.module';
 
 @Component({
   selector: 'app-examples',

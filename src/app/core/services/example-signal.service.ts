@@ -1,21 +1,23 @@
-import { HttpClient } from '@angular/common/http';
-import { Injectable, computed, inject, signal } from '@angular/core';
 import {
-  Observable,
   catchError,
   filter,
   map,
+  Observable,
   of,
   shareReplay,
   switchMap,
   tap,
   throwError
 } from 'rxjs';
-import { Product, Result } from './product';
-import { HttpErrorService } from './http-error.service';
-import { ReviewService } from '../reviews/review.service';
-import { Review } from '../reviews/review';
+
+import { HttpClient } from '@angular/common/http';
+import { computed, inject, Injectable, signal } from '@angular/core';
 import { toObservable, toSignal } from '@angular/core/rxjs-interop';
+
+import { Review } from '../reviews/review';
+import { ReviewService } from '../reviews/review.service';
+import { HttpErrorService } from './example-http-error.service';
+import { Product, Result } from './product';
 
 @Injectable({
   providedIn: 'root'

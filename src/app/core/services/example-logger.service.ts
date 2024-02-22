@@ -39,3 +39,12 @@ export class TimedConsoleProvider implements LoggerProvider {
     console.error(this.#withDate(template), ...optionalParams);
   }
 }
+
+@Injectable({
+  providedIn: 'root'
+})
+export class LoggerService {
+  log(message: string) {
+    console.log(message);
+  }
+}
