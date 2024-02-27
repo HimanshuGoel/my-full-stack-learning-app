@@ -60,4 +60,4 @@ console.log(metadata);
 ## Java
 
 - java -version
-- javac -versionx
+- javac -version
