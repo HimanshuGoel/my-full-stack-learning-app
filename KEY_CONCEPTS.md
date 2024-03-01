@@ -2,6 +2,4 @@
 
 ## Angular
 
-- cachingInterceptor (caching.interceptor.ts)
-
 -
