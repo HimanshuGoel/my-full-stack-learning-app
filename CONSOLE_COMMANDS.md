@@ -6,6 +6,7 @@
 - [Git](#git)
 - [Node/NPM/NVM](#nodenpmnvm)
 - [Chrome](#chrome)
+- [Java](#java)
 
 ## Firebase
 
@@ -55,3 +56,8 @@ console.log(context);
 const metadata = ng.getDirectiveMetadata($0);
 console.log(metadata);
 ```
+
+## Java
+
+- java -version
+- javac -version
