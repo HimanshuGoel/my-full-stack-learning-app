@@ -18,7 +18,6 @@ export enum ANGULAR_ROUTER_TOKENS {
 const ANGULAR_ROUTES: Routes = [
   {
     path: '',
-    pathMatch: 'full',
     component: AngularComponent
   }
 ];

@@ -5,7 +5,7 @@ import { Component, inject, OnDestroy, OnInit, Signal, signal } from '@angular/c
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 import { ROUTER_TOKENS } from './app-routing.module';
-import { LoggerService } from './core/mocks/services/logging.service';
+import { Logger2Service } from './features/angular/concepts/example-logger2.service';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +15,7 @@ import { LoggerService } from './core/mocks/services/logging.service';
 export class AppComponent implements OnInit, OnDestroy {
   readonly ROUTER_TOKENS = ROUTER_TOKENS;
 
-  readonly #logger = inject(LoggerService);
+  readonly #logger = inject(Logger2Service);
 
   readonly title = 'Full Stack Learnings App';
   readonly angularLink = `./${ROUTER_TOKENS.ANGULAR}`;

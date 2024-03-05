@@ -7,6 +7,18 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import {
+  LOGGER_PROVIDERS,
+  LogLevel,
+  MIN_LOG_LEVEL
+} from './features/angular/concepts/example-logger2.service';
+import {
+  ConsoleProvider,
+  TimedConsoleProvider
+} from './features/angular/concepts/example-logger.service';
+import { InMemoryWebApiService } from './features/angular/concepts/example-in-memory-web-api.service';
+import { AngularModule } from './features/angular/angular.module';
+import { TypescriptModule } from './features/typescript/typescript.module';
 
 function registerLoggerProviders(): EnvironmentProviders {
   return makeEnvironmentProviders(
@@ -28,20 +40,20 @@ function registerLoggerProviders(): EnvironmentProviders {
 }
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, NotFoundComponent],
+  declarations: [AppComponent],
   imports: [
     AppRoutingModule,
+    AngularModule,
+    TypescriptModule,
     BrowserModule,
     FormsModule,
-    HttpClientInMemoryWebApiModule.forRoot(InMemoryContactsApi, { delay: 200 }),
     HttpClientModule,
     ReactiveFormsModule,
-    ServiceModule
+    HttpClientInMemoryWebApiModule.forRoot(InMemoryWebApiService, { delay: 200 })
   ],
   bootstrap: [AppComponent],
   providers: [
     registerLoggerProviders(),
-    { provide: APP_CONFIG, useValue: HERO_DI_CONFIG },
     {
       provide: MIN_LOG_LEVEL,
       useValue: isDevMode() ? LogLevel.INFO : LogLevel.NEVER

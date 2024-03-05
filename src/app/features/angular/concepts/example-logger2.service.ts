@@ -17,7 +17,7 @@ export const MIN_LOG_LEVEL = new InjectionToken<LogLevel>('Minimum log level');
 export const LOGGER_PROVIDERS = new InjectionToken<LoggerProvider[]>('Providers for the logger');
 
 @Injectable({ providedIn: 'root' })
-export class LoggerService {
+export class Logger2Service {
   readonly #minLogLevel = inject(MIN_LOG_LEVEL) ?? LogLevel.NEVER;
   readonly #providers = inject(LOGGER_PROVIDERS) ?? [];
 

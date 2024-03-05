@@ -1,11 +1,7 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
-import { HomeComponent } from './shared/pages/home/home.component';
-import { NotFoundComponent } from './shared/pages/not-found/not-found.component';
-
 export enum ROUTER_TOKENS {
-  HOME = 'home',
   ANGULAR = 'angular',
   TYPESCRIPT = 'typescript'
 }
@@ -13,12 +9,8 @@ export enum ROUTER_TOKENS {
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'angular',
     pathMatch: 'full'
-  },
-  {
-    path: ROUTER_TOKENS.HOME,
-    component: HomeComponent
   },
   {
     path: `${ROUTER_TOKENS.ANGULAR}`,
@@ -28,12 +20,12 @@ const routes: Routes = [
     path: `${ROUTER_TOKENS.TYPESCRIPT}`,
     loadChildren: () =>
       import('./features/typescript/typescript.module').then((m) => m.TypescriptModule)
-  },
-  {
-    path: '**',
-    pathMatch: 'prefix',
-    component: NotFoundComponent
   }
+  //   {
+  //     path: '**',
+  //     pathMatch: 'prefix',
+  //     component: NotFoundComponent
+  //   }
 ];
 
 @NgModule({

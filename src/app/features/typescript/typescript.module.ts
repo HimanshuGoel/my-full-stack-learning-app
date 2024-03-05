@@ -6,7 +6,6 @@ import { RouterModule, Routes } from '@angular/router';
 const TYPESCRIPT_ROUTES: Routes = [
   {
     path: '',
-    pathMatch: 'full',
     component: TypescriptComponent
   }
 ];
