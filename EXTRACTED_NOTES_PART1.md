@@ -88,11 +88,20 @@ These notes have been pulled out from various learnings acquired from various tr
   - ![ux-color-meaning-yellow](./src/assets/images/ux-color-meaning-yellow.png)
 
 - Color preferences
+
   - ![ux-color-preference-blue](./src/assets/images/ux-color-preference-blue.png)
   - ![ux-color-preference-green](./src/assets/images/ux-color-preference-green.png)
   - ![ux-color-preference-orange](./src/assets/images/ux-color-preference-orange.png)
   - ![ux-color-preference-red](./src/assets/images/ux-color-preference-red.png)
   - ![ux-color-preference-yellow](./src/assets/images/ux-color-preference-yellow.png)
+
+- Try to avoid the horizontal arrangement of radio buttons. Horizontal radio buttons can be difficult to scan — it can be challenging for users to tell which label the radio button corresponds to.
+
+- Toggle switch control is easier for the thumb. This property makes it suitable for mobile devices.
+
+- Dropdowns should be the last resort. Whenever possible, instead of dropdown, try to use alternative controls that help the user to complete the task but have better usability.
+
+- Interaction Design (IxD) – the process of designing interactive products, focusing on how users will interact with them. sometimes called “conversations design”. Interaction design dimensions – words, visual representations, physical objects or space, time, behavior.
 
 ## Unit Testing
 
@@ -816,6 +825,10 @@ myEmitter.on('TEST_EVENT', () => {
 ![node-js-require-vs-import-statements](./src/assets/images/node-js-require-vs-import-statements.png)
 
 - Whenever an async function is called, it is sent to a browser API. These are APIs built into the browser. Based on the command received from the call stack, the API starts its own single-threaded operation.
+
+- As per below diagram, much of the work done by Node JS and libuv not by the javascript –
+
+![node-js-behind-the-scene](./src/assets/images/node-js-behind-the-scene.png)
 
 ## Markdown
 

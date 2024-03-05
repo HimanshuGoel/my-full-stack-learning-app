@@ -3,6 +3,12 @@
 ## Table of Contents
 
 - [TypeScript](#typescript)
+- [Regular Expression](#regular-expression)
+- [Others](#others)
+- [Writing](#writing)
+- [Podman](#podman)
+- [Chrome](#chrome)
+- [Database](#database)
 
 ## TypeScript
 
@@ -563,3 +569,120 @@
 - We cannot add a property to interface declaration if it is private or protected. Only public properties can be added to the interface signature.
 
 - Module formats – es2015 syntax is in-built one which TypeScript adapted from JavaScript. Earlier ones were CommonJS, AMD (for browser), UMD, System JS formats.
+
+- JavaScript was originally called Live Script, Netscape changed its name to JavaScript, and it is believed that this was because of the hype of Java within the industry.
+
+- Types of errors – compile time errors, runtime errors, syntax error, logic error
+
+- Types of runtime error – SyntaxError, TypeError, ReferenceError, URIError, RangeError, EvalError, InternalError.
+
+- We can use String.raw() method if we don’t want special character to get render on the UI like ‘\t’, ‘\n’, etc, they will get printed as a raw string.
+
+- The length of the emoji is not 1 unlike normal string characters, it can vary from 1 to 7, etc. String a Unicode character can get fit into 16-bit unit, but not emoji.
+
+- The for and for-of are the constructs of the language itself, whereas the for-each is the method on the array, map and set objects and can access it on the interables.
+
+- The for-each loop skips absent values for absent value which got created while doing like below, these are not undefined or null values. The array will be called Sparse Array.
+
+- With for or for-each loops, we can’ use the “continue” or “break” keywords. For this, we should use “filter()” method then further chain the “forEach()” method. To convert and transform a value, we need to use the map() method.
+
+- The for-in loop produces indices instead of values unlike for-of loop. The for-in loop present from the start of the language but for-of has been introduced in ES6 version.
+
+- Also, with for-in loop the order of the iteration is not guaranteed also it will enumerated the inherited properties. We should not use for-in loop to iterate arrays or other iterables but use for-of loop. We should use for-in only to iterate the properties on a object, with for-of we will get an error that object is not iterable. To still make the use of for-of we can use Object.entries() or Object.keys() methods to iterate. So, we should use for-in only if we also want to iterate the inherited properties.
+
+- When ES6 was released, it was not able to run directly in browsers. To run it into the browser, this process is called transpilling to convert ES6 into ES5 before getting served to browser.
+
+- Unlike compiler transpilers transform the code of a language into another form of the same language. They are also referred to as source to source compilers. This process converts one higher level language to another higher level language.
+
+- Modern web browsers have good support for the latest versions of JS, including features that were introduced in newer versions of the language. But we still need transpiling for few advanced language feature that are not yet supported by all modern browsers might need transpiling.
+
+- Polyfills handles the cross browser feature gaps. It is a technique to add missing features to older browsers, allowing them to support newer features that are only available in modern browsers. It ensures that websites can run correctly across all browsers. It also support for deprecated features on newer browsers for older applications. The famous library for polyfills is core-js which includes methods like includes(), find(), findIndex(), flatMap(), sort(), padStart(), padEnd(), assign(), entries(), sing(), trunc(), promises, etc.
+
+- The “void 0” is a primitive value of undefined.
+
+## Regular Expression
+
+- In top 15 languages, only assembly language doesn’t support regular expression.
+
+![typescript-regex-basic-syntax](./src/assets/images/typescript-regex-basic-syntax.png)
+
+![typescript-regex-short-codes](./src/assets/images/typescript-regex-short-codes.png)
+
+## Others
+
+- Cloud learning path - docker -> kubernetes -> helm -> istio
+
+- Video game evaluation - game watch -> gameboy -> gameboy colour -> gameboy advance -> gameboy advance sp -> nintendo ds -> dsi -> 3ds -> switch
+
+- Low-code no-code (LCNC)
+
+- We should not create any features of functionality when we are carrying out the refactoring process.
+
+- Event based learnings (like office training) vs continuous learnings (like from pluralsight).
+
+- Young bright minds ready to snipe every job opportunity that comes their way.
+
+- Foley artists give life to shapes like footsteps, actors walking in leg chains. They reproduce every day sounds like waves crashing, rain coming down, cars passing by, punches, kicks, wind blowing, doors slamming. Three major kinds – feet, movement, specifies. Like roaring of a tiger in a scene or helicopters flying over the heads of the actors in a scene are produced by artists working on specifics.
+
+- Freemium – providing a free, basic version of the app with the option to upgrade to a premium, paid version.
+
+- SNES 8-bit games.
+
+- There is no need to defragment the SSD as they do not work the same way as traditional hard drives. In fact, defragmenting an SSD can cause unnecessary wear and tear on the drive.
+
+- To prevent screen burn-in, avoid displaying static images or leaving the monitor on for long periods of time. Use a screensaver or power-saving mode when monitor is not in use.
+
+- A good song will develop as it goes along, taking us on a familiar path sprinkled with surprises along the way to make sure we are listening. A bad song, on the other hand, will remain stagnant throughout its entirety.
+
+- Overclocking will make your phone run hotter and shorten your battery life, but I can squeeze every drop of power out of your device.
+
+- Stable diffusion is a latent text-to-image diffusion model capable of generating photo realistic images given any text input. The model employes a technique called diffusion modelling, which works by incrementally reducing the noise in a sample over several iterations, eventually producing a final output. Diffusion model is a type of model that generates a chain of increasingly noisy images by adding Gaussian noise to an image and then training a model to predict the noise added to an image from one step to following one. It uses a fixed and finite number of steps to generate images, resulting in a stable repeatable image generation.
+
+- Experience is the name everyone gives to their mistakes. Oscan Wilde.
+
+## Writing
+
+- Gobbledygook – intentionally meaningless language – we deliberately use unclear language so that general people don’t understand it and won’t raise any counter question.
+
+- Email should have amplification structure – beginning with a declared main idea, followed by supporting details and elaborations, and ending with logistics.
+
+- Email is asynchronous communication and instant messaging is synchronous communication.
+
+- Fast is fine, but accuracy is everything.
+
+- We should different visuals like screenshots, icons, symbols, table, graphs and charts, flowcharts to make it easy to understand and engaging.
+
+## Podman
+
+- The early 2000s was the era of the virtual machine. We are now firmly in the container era. They have much smaller footprint, quicker to download and a lot less resource needed to run them.
+
+- Container image – a file system bundle containing all files, packages, dependencies, and kernel needed to run a service. To the host this is a single process. Container run isolated from other containers so software and dependencies installed on one container do not affect other containers. It has small footprint because there is no complete operating system with a container making them are much less resource hungry than running virtual machines.
+
+## Chrome
+
+- HTML is a parser language or abstract layer for C++ to parse on the browser. The browser are very good at networking and timers capabilities.
+
+![browser-behind-the-scene](./src/assets/images/browser-behind-the-scene.png)
+
+- Browser works on simple working concept to display the data and provide interaction to the user. It converts the token into scattered objects which gets constructed into the Document Object Model.
+
+![browser-html-node-list](./src/assets/images/browser-html-node-list.png)
+
+- Afterwards, to create the relations between them, it creates node list which is given by rendering engine.
+
+![browser-html-node-list-afterwards](./src/assets/images/browser-html-node-list-afterwards.png)
+
+- Browser engine is very good at math to create render tree as per client screen size and components size based on CSS then it starts painting to actually showing elements on the UI.
+  Whenever browser sees a script tag it will stop executing the DOM or whatever works it is doing, the first preference always goes to JS as JS has the capability to modify DOM or CSS so no point to painting before evaluating all the JS. That is why we should not first send the JS but the HTML and CSS so that browser will show the page without any delay on first load, then send the JS for interactivity. However in case of CSSOM, JS execution will be halted until CSSOM is ready.
+
+![browser-html-render-tree](./src/assets/images/browser-html-render-tree.png)
+
+## Database
+
+- ORM makes life easier. Various different database varieties focus on or good at different part of the database like cache (Reddis), utility, storage engine, etc.
+
+![database-behind-the-scene](./src/assets/images/database-behind-the-scene.png)
+
+- History of database -
+
+![database-history](./src/assets/images/database-history.png)

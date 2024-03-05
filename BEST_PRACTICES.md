@@ -16,6 +16,7 @@ Not every practices herein has to be strictly followed, and even fewer will be u
 8. [Git](#git)
 9. [Markdown](#markdown)
 10. [Content Creation](#content-creation)
+11. [Others](#others)
 
 ## HTML
 
@@ -1947,3 +1948,18 @@ We should use numeric list, instead of alphabetic list as numeric lists are easi
 ### Presentation
 
 - share various links into one link by using <https://linkmix.co/en/> e.g. <https://linkmix.co/11386218>.
+
+### Others
+
+- Using AI tools -
+  - solves anything - chatgpt
+  - writes anything - copy.ai
+  - create art - midjourney
+  - create ppts - tome.app
+  - create music - soundraw.io
+  - create video - kaiber
+  - create 3d gif - leiapix converter
+  - create reels - fliki
+  - notetaking - fireflies
+  - edit videos - runway
+  - create avatars - anime ai

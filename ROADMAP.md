@@ -2,7 +2,6 @@
 
 ## Priority One
 
-- Rearrange `INTERVIEW_QUESTIONS.md` and `EXTRACTED_NOTES_PART4.md` files.
 - Learn and implement pluralsight course Containers and Images: The Big Picture
 - Learn and implement pluralsight course Developing Node.js Apps with Docker
 - Learn and implement pluralsight course Building and Running Your First Docker App
@@ -26,6 +25,6 @@
 - Learn and implement article <https://dev.to/this-is-angular/what-is-angular-query-276f>
 - Learn and implement article <https://dev.to/this-is-angular/template-level-lazy-loading-in-angular-4lgm>
 
-## Priority Future
+## Priority Second
 
 - TBD...
