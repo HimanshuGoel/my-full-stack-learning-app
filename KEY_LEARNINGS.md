@@ -1,0 +1,40 @@
+# Key Learnings
+
+## Angular
+
+1. Utility Service (utility.service.ts)
+2. Service Class (example-service.service.ts)
+3. Pipe Class (example-pipe.pipe.ts)
+4. Signal Class (example-signal.service.ts)
+5. Signal Class 2 (cart-list.component.ts)
+6. RxJS Service (example-rxjs.service.ts)
+7. Logger Service (example-logger.service.ts)
+8. Logger Service 2 (example-logger2.service.ts)
+9. Loading Service (example-loading.service.ts)
+10. In Memory Web API Service (example-in-memory-web-api.service.ts)
+11. HttpError Service (example-http-error.service.ts)
+12. Facade Pattern Service (example-facade-pattern.service.ts)
+13. Event Mediator Service (example-event-mediator.service.ts)
+14. Event Bus Service (example-event-bus.service.ts)
+15. Data Share Service (example-data-share.service.ts)
+16. Can use Feature Service (example-can-use-feature.service.ts)
+17. Caching Service (example-caching.service.ts)
+18. Caching Interceptor (example-caching.interceptor.ts)
+19. App Injection Token (example-app-injection.token.ts)
+20. API Handler Service (example-api-handler.service.ts)
+21. Sanitization (sanitization.component.ts)
+22. Ng Container (container.component.ts)
+23. Content Projection (pop-up-window.component.ts)
+24. Component Class (example-component.component.ts)
+
+## Typescript
+
+1. Utility Class (example-utility.class.ts)
+2. Promise Class (example-promise.class.ts)
+3. Interface (example-interface.interface.ts)
+4. Import Module (example-import.module.ts)
+5. Generic Class (example-generic.class.ts)
+6. Export Module (example-export.module.ts)
+7. Decorator Class (example-decorator.class.ts)
+8. Async-Await Class (example-async-await.class.ts)
+9. Abstract Class (example-abstract.class.ts)

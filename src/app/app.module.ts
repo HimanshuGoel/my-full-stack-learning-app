@@ -7,16 +7,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { InMemoryContactsApi } from './core/mocks/services/in-memory-contacts.service';
-import { APP_CONFIG, HERO_DI_CONFIG } from './core/mocks/services/injection-token';
-import {
-  ConsoleProvider,
-  TimedConsoleProvider
-} from './core/mocks/services/logger-provider.service';
-import { LOGGER_PROVIDERS, LogLevel, MIN_LOG_LEVEL } from './core/mocks/services/logging.service';
-import { ServiceModule } from './core/mocks/services/service.module';
-import { HomeComponent } from './shared/pages/home/home.component';
-import { NotFoundComponent } from './shared/pages/not-found/not-found.component';
 
 function registerLoggerProviders(): EnvironmentProviders {
   return makeEnvironmentProviders(

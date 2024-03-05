@@ -2,8 +2,7 @@ import { Observable, of, tap } from 'rxjs';
 
 import { HttpEvent, HttpHandlerFn, HttpInterceptorFn, HttpRequest } from '@angular/common/http';
 import { inject } from '@angular/core';
-
-import { CachingService } from '../services/example-caching.service';
+import { CachingService } from './example-caching.service';
 
 export const cachingInterceptor: HttpInterceptorFn = (
   req: HttpRequest<unknown>,

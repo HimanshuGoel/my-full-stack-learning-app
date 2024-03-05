@@ -5,7 +5,7 @@ interface Utility {
   logReview?: ReviewLogger;
 }
 
-interface extendedUtility extends Utility {
+interface ExtendedUtility extends Utility {
   volume: number;
 }
 

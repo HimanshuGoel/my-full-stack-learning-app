@@ -2,7 +2,7 @@ import { BehaviorSubject, EMPTY, iif, Observable, switchMap } from 'rxjs';
 
 import { Component, inject, Input } from '@angular/core';
 
-import { AlbumService, Photo } from './example.service';
+import { AlbumService, Photo } from './example-service.service';
 
 @Component({
   selector: 'app-root',

@@ -13,11 +13,8 @@ import {
 import { HttpClient } from '@angular/common/http';
 import { computed, inject, Injectable, signal } from '@angular/core';
 import { toObservable, toSignal } from '@angular/core/rxjs-interop';
-
-import { Review } from '../reviews/review';
-import { ReviewService } from '../reviews/review.service';
 import { HttpErrorService } from './example-http-error.service';
-import { Product, Result } from './product';
+import { Product, Result } from './example-signals/products/product';
 
 @Injectable({
   providedIn: 'root'
@@ -27,7 +24,7 @@ export class ProductService {
 
   private http = inject(HttpClient);
   private errorService = inject(HttpErrorService);
-  private reviewService = inject(ReviewService);
+  // private reviewService = inject(ReviewService);
 
   selectedProductId = signal<number | undefined>(undefined);
 
@@ -56,22 +53,22 @@ export class ProductService {
   //   }
   // });
 
-  private productResult1$ = toObservable(this.selectedProductId).pipe(
-    filter(Boolean),
-    switchMap((id) => {
-      const productUrl = this.productsUrl + '/' + id;
-      return this.http.get<Product>(productUrl).pipe(
-        switchMap((product) => this.getProductWithReviews(product)),
-        catchError((err) =>
-          of({
-            data: undefined,
-            error: this.errorService.formatError(err)
-          } as Result<Product>)
-        )
-      );
-    }),
-    map((p) => ({ data: p } as Result<Product>))
-  );
+  //   private productResult1$ = toObservable(this.selectedProductId).pipe(
+  //     filter(Boolean),
+  //     switchMap((id) => {
+  //       const productUrl = this.productsUrl + '/' + id;
+  //       return this.http.get<Product>(productUrl).pipe(
+  //         switchMap((product) => this.getProductWithReviews(product)),
+  //         catchError((err) =>
+  //           of({
+  //             data: undefined,
+  //             error: this.errorService.formatError(err)
+  //           } as Result<Product>)
+  //         )
+  //       );
+  //     }),
+  //     map((p) => ({ data: p } as Result<Product>))
+  //   );
 
   // Find the product in the existing array of products
   private foundProduct = computed(() => {
@@ -85,18 +82,19 @@ export class ProductService {
   });
 
   // Get the related set of reviews
-  private productResult$ = toObservable(this.foundProduct).pipe(
-    filter(Boolean),
-    switchMap((product) => this.getProductWithReviews(product)),
-    map((p) => ({ data: p } as Result<Product>)),
-    catchError((err) =>
-      of({
-        data: undefined,
-        error: this.errorService.formatError(err)
-      } as Result<Product>)
-    )
-  );
-  private productResult = toSignal(this.productResult$);
+  //   private productResult$ = toObservable(this.foundProduct).pipe(
+  //     filter(Boolean),
+  //     switchMap((product) => this.getProductWithReviews(product)),
+  //     map((p) => ({ data: p } as Result<Product>)),
+  //     catchError((err) =>
+  //       of({
+  //         data: undefined,
+  //         error: this.errorService.formatError(err)
+  //       } as Result<Product>)
+  //     )
+  //   );
+
+  private productResult = toSignal(this.productsResult$);
   product = computed(() => this.productResult()?.data);
   productError = computed(() => this.productResult()?.error);
 
@@ -104,13 +102,13 @@ export class ProductService {
     this.selectedProductId.set(selectedProductId);
   }
 
-  private getProductWithReviews(product: Product): Observable<Product> {
-    if (product.hasReviews) {
-      return this.http
-        .get<Review[]>(this.reviewService.getReviewUrl(product.id))
-        .pipe(map((reviews) => ({ ...product, reviews } as Product)));
-    } else {
-      return of(product);
-    }
-  }
+  //   private getProductWithReviews(product: Product): Observable<Product> {
+  //     if (product.hasReviews) {
+  //       return this.http
+  //         .get<Review[]>(this.reviewService.getReviewUrl(product.id))
+  //         .pipe(map((reviews) => ({ ...product, reviews } as Product)));
+  //     } else {
+  //       return of(product);
+  //     }
+  //   }
 }

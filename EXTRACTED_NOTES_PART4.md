@@ -398,3 +398,71 @@ albendazole tablet
 :create avatars - anime ai
 
 =======================================================================================================================================================
+
+>essential references - miscellaneous
+:beer is the worst drink to have.
+:do not drink any type of juice, always have whole fruit or vegetable.
+:to prevent cancer, simply avoid stress, tobacco and opt for a clean diet.
+:do not use dark bedsheet, 8-fit size and minimum 400 thread counts.
+:avoid travelling and stay indoors during month of january to avoid severe winter conditions and thick fog-related issues.
+:it is not the finances that should scare you, it is the loneliness and illness during your sunset years
+:bertrand russell: “the fundamental cause of the trouble is that in the modern world the stupid are cocksure while the intelligent are full of doubt.”
+:don’t interrupt the other person while they are speaking - by your interruption, you’re insinuating that your thoughts and ideas are more important than theirs.”
+:be tough on the process, but gentle on the output - you need to set aside time to write and that is where you cannot be easy on yourself. you need to follow the process. if you plan to write for two hours every day, do that. if you wake up at 5 and your process is to be at your desk by 5:30 and you feel like sleeping in, that’s the time to be tough on yourself. protect the process of writing every day.
+:you can go fast or go far. not both.
+:mind is made for processing of things not for remind them. so note down everything which are important to you.
+:we should never ask our children, instead we should tell them what they will be eating for dinner – a steady, simple and nutritious meal.
+:ayurveda rejects the stale, easy, ready-in-a-minute choices in the urban world and encourages all things natural.
+:the nature of water is dry and sharp. it slowly pulls natural oils from our skin, which is naturally unctuous in its healthy state. that is why ayurveda advises us to oil our bodies before rinsing with water.
+:we should have seven inner small bowls with one lid – mustard, jeera, kalonji, ajwain, turmeric, panchaparan and fennel.
+:life is very short and anxious for those who forget the past, neglect the present, and fear the future.
+:what would have happened, doctor if you died first, and your wife would have had to survive without you?
+:don’t try to see god. act in such a way that god will see you.
+:many japanese people never really retire – they keep doing what they love for as long as their health allows.
+:the greater the stress, the greater the degenerative effect on cells.
+:if you keep moving with your fingers working, 100 years will come to you.
+:put your hand on a hot stove for a minute and it seems like an hour. sit with a pretty girl for an hour, and it seems like a minute. that is relativity.
+:flow state is when pleasure, delight, creativity, and process when we are completely immersed in life.
+:we often think that combining tasks will save us time, but scientific evidence shows that it has the opposite effect.
+:food won’t help you live longer. the secret is smiling and having a good time. to live a long time you need to do three things: exercise to stay healthy, eat well and spend time with people.
+:the things we love are like the leaves of a tree: they can fall at any moment with a gust of wind.
+:surround yourself with good friends.
+:we should never forget what a privilege it is to be in the here and now in a world so full of possibilities.
+:the being john malkovich movie is based on body-mind problem
+:consciousness is a terrible curse. i think. i feel. i suffer
+:when you have power without responsiblity, that is a recipe for a bad governance
+:movies have time pressure as essense just like water and sky have blue as essense
+:walk (create manufacturing assembly line) -> run (create components) -> sprint (create own branding)
+:it's weird, i wouldn't recommend this movie to anyone but at the same time i would love that every single person watches this masterpiece.
+:india loves thrown body at problems - classic poor management strategy. engineering is quite the opposite.
+:avoid referring to colleagues or friends as family members; maintain the relationship as it is without altering it. for instance, let a father remain a father and not become a friend
+:those who are genuine and focused are not affected by the evil eye, whereas individuals who are insecure, show off, and lack authenticity may attract it.
+:the degree to which other people want to work with you is a direct indication of how successful you’ll be in your career as an engineer. be the engineer that everyone wants to work with.
+:i protect my weekends. i don’t engage in work-related stuff during those two days. i removed any work-related stuff from my smartphone. i try to reduce my computer screen time after work.
+:play long-term games with long-term people. all returns in life, whether in wealth, relationships, or knowledge, come from compound interest.
+:discipline may be necessary, as without discipline, there can be no order in society and no social progress would be possible. however, too much discipline tends to reduce human rationality and kills creativity, innovation, humanity, love and compassion. the best course is, therefore, to educate and develop rational thinking in the people to cultivate self-discipline so that they are driven to do the right things due to their inner conviction rather than due to the fear of authority.
+:i don't want heaven if it going to arrive into my life, if that heaven does not contain your soul - ramayana
+:don't compare with others like if you driving alto and someone land rover crosses you then you don't give that much importance.
+:consciousness and time are worlds biggest mistery.
+:atheletes have no taste buds.
+:when a company lays off individual workers, it doesn’t pick them at random. it lays off the least productive, least knowledgeable, and most senior (expensive, but also old) workers. these are workers which the company has unfortunate experience with, whose absence won’t be felt.
+:now a day, the technology and hardware are not the bottlenecks but the people skill sets.
+:many developers still behave like unskilled, unmotivated workers, providing very poor service to their employers and clients.
+:companies are demanding professional software developers and not just cheap coders who do whatever they are told to do.
+:software development should be qualified as art, craft, trade, engineering, or science.
+:well-crafted software means that , regardless of how old the application is, developers can understand it easily. the side effects are well known and controlled. it has high and reliable test coverage, clear and simple design, and business language well expressed in the code.
+:software craftsmanship is a mindset – a lifestyle that many professional developers adopt. software craftsmen live and breathe software. they see software as a craft and are committed to do whatever they can to master their craft.
+:when we say yes, people take that into account and make plans based on it. our bosses will make promises to their bosses, other teams, customers, or partners based on what we said. not being honest and transparent may cause huge damage to the entire team company.
+:always saying no is also not a professional attitude. every no, ideally, should be followed by a list of alternatives. remember the story of getting orange by two different persons with different approach.
+:craftsmen are gardeners. they are constantly looking after the code base, quickly refactoring it without fear – they are backed by a good battery of automated tests that can test the entire application in just few minutes.
+:use job description template provided at page #127. (software craftsman)
+:when a software craftsman makes recommendation, it is implied that the recommended developer is also a software craftsman, and that he or she shares the same passion, values, principles, and dedication.
+:a good interview is like a good and informal chat between passionate developers. it is an exchange of information: a good debate about techniques, tools, challenges, and approaches to software development.
+:clients may decide not to pay for quality and ask for a quick and cheap solution, but deep inside, they will always be expected quality and won’t be happy if they don’t get it.
+:well-crafted code is simple, small, testable, easy to understand, and most important, does the job.
+:software craftsmen are humble, always ready to learn from more-experienced developers and eager to help the less experienced.
+:if you act without thinking, you are wasting the very edge that you have over machines. you are a candidate to being replaced in the near future (either by a thoughtful human or for a cheaper dumb machine). always try to understand what’s the purpose of the task you’ve been assigned to. unless, of course, you want to become a bad developer.
+
+========================================================================================================================================================================================
+
+For me a good employee is one that is consistent. In other words they produce the same quality and quantity of work/results every day consistently. They are set and forget with little to no effort required from me or their supervisor. I don't need them to be a superstar. I am happy with them giving me 80% of what a superstar could give me in theory because I know I am always going to get it from them and I can more easily predict business/job outcomes as a result. The above employee tends to arrive on time and have less than average personal/sick leave too in my experience. By contrast, the mediocre employee is brilliant one day and off with the fairies for the next three days, then rounds out the week with a day off for a sprained eyelash! Mediocre employees work output is up and down and hard to predict resulting in far more time spent supervising them. This adds cost and complexity to the business as a result. So if you want to impress a boss - work consistently. Produce at the same level everyday and try and find ways to gradually improve or become more efficient.

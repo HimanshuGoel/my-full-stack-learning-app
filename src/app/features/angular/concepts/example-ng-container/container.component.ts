@@ -3,8 +3,8 @@ import { ActivatedRoute } from '@angular/router';
 import { timer } from 'rxjs';
 
 @Component({
-  selector: 'app-state-button',
-  templateUrl: './state-button.component.html'
+  selector: 'app-container',
+  templateUrl: './container.component.html'
 })
 export class StateButtonComponent implements OnInit {
   constructor(private route: ActivatedRoute) {}

@@ -1,6 +1,6 @@
 import { InMemoryDbService } from 'angular-in-memory-web-api';
 
-export class InMemoryContactsApi implements InMemoryDbService {
+export class InMemoryWebAPI implements InMemoryDbService {
   createDb() {
     let contacts: any[] = [
       {

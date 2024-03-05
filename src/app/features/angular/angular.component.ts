@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { ANGULAR_ROUTER_TOKENS } from './angular.module';
 
 @Component({
-  selector: 'app-examples',
-  templateUrl: './examples.component.html',
-  styleUrls: ['./examples.component.scss']
+  selector: 'app-angular',
+  templateUrl: './angular.component.html',
+  styleUrls: ['./angular.component.scss']
 })
-export class ExamplesComponent {
+export class AngularComponent {
   readonly ANGULAR_ROUTER_TOKENS = ANGULAR_ROUTER_TOKENS;
 
   readonly routingLink = `../${ANGULAR_ROUTER_TOKENS.ROUTING}`;

@@ -1,22 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ExamplesComponent } from './typescript.component';
+import { TypescriptComponent } from './typescript.component';
 import { RouterModule, Routes } from '@angular/router';
 
 const TYPESCRIPT_ROUTES: Routes = [
   {
     path: '',
-    redirectTo: 'examples',
-    pathMatch: 'full'
-  },
-  {
-    path: 'examples',
-    component: ExamplesComponent
+    pathMatch: 'full',
+    component: TypescriptComponent
   }
 ];
 
 @NgModule({
   imports: [CommonModule, RouterModule.forChild(TYPESCRIPT_ROUTES)],
-  declarations: [ExamplesComponent]
+  declarations: [TypescriptComponent]
 })
 export class TypescriptModule {}
