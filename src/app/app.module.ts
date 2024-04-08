@@ -19,6 +19,7 @@ import {
 import { InMemoryWebApiService } from './features/angular/concepts/example-in-memory-web-api.service';
 import { AngularModule } from './features/angular/angular.module';
 import { TypescriptModule } from './features/typescript/typescript.module';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 function registerLoggerProviders(): EnvironmentProviders {
   return makeEnvironmentProviders(
@@ -57,7 +58,8 @@ function registerLoggerProviders(): EnvironmentProviders {
     {
       provide: MIN_LOG_LEVEL,
       useValue: isDevMode() ? LogLevel.INFO : LogLevel.NEVER
-    }
+    },
+    provideAnimationsAsync()
   ]
 })
 export class AppModule {}

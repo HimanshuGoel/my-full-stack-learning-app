@@ -2,65 +2,14 @@
 
 - [General](#general)
 - [Angular](#angular)
-- [Angular Categorical Questions -](#angular-categorical-questions--)
 - [Angular Material](#angular-material)
-- [JavaScript](#javascript)
 - [TypeScript](#typescript)
-- [Unit / E2E Testing](#unit--e2e-testing)
+- [Unit Testing](#unit-testing)
 - [HTML](#html)
 - [CSS](#css)
 - [Backend](#backend)
-- [Feedbacks](#feedbacks)
-  - [Negative Points](#negative-points)
-  - [Positive Points](#positive-points)
+- [Feedback Templates](#feedback-templates)
 - [Programming Questions](#programming-questions)
-  - [Given a string, reverse each word in the sentence](#given-a-string-reverse-each-word-in-the-sentence)
-  - [How would you check if a number is an integer?](#how-would-you-check-if-a-number-is-an-integer)
-  - [Given two strings, return true if they are anagrams of one another](#given-two-strings-return-true-if-they-are-anagrams-of-one-another)
-  - [Refactor bad code to good code or give review comments](#refactor-bad-code-to-good-code-or-give-review-comments)
-  - [Largest Odd Number in String](#largest-odd-number-in-string)
-  - [Two Sum](#two-sum)
-  - [Palindrome Number](#palindrome-number)
-  - [Roman to Integer](#roman-to-integer)
-  - [Longest Common Prefix](#longest-common-prefix)
-  - [Valid Parentheses](#valid-parentheses)
-  - [Merge Two Sorted Lists](#merge-two-sorted-lists)
-  - [Remove Duplicates from Sorted Array](#remove-duplicates-from-sorted-array)
-  - [Find the Index of the First Occurrence in a String](#find-the-index-of-the-first-occurrence-in-a-string)
-  - [Length of Last Word](#length-of-last-word)
-  - [Sqrt(x)](#sqrtx)
-  - [Best Time to Buy and Sell Stock](#best-time-to-buy-and-sell-stock)
-  - [Single Number](#single-number)
-  - [Isomorphic Strings](#isomorphic-strings)
-  - [Power of Two](#power-of-two)
-  - [Reverse String](#reverse-string)
-  - [Reverse Vowels of a String](#reverse-vowels-of-a-string)
-  - [Intersection of Two Arrays](#intersection-of-two-arrays)
-  - [Valid Perfect Square](#valid-perfect-square)
-  - [First Unique Character in a String](#first-unique-character-in-a-string)
-  - [Longest Palindrome](#longest-palindrome)
-  - [Third Maximum Number](#third-maximum-number)
-  - [Number of Segments in a String](#number-of-segments-in-a-string)
-  - [Max Consecutive Ones](#max-consecutive-ones)
-  - [Perfect Number](#perfect-number)
-  - [Fibonacci Number](#fibonacci-number)
-  - [Reverse String II](#reverse-string-ii)
-  - [Reverse Words in a String III](#reverse-words-in-a-string-iii)
-  - [To Lower Case](#to-lower-case)
-  - [Find Common Characters](#find-common-characters)
-  - [Destination City](#destination-city)
-  - [Check if a String Is an Acronym of Words](#check-if-a-string-is-an-acronym-of-words)
-  - [Longest Substring Without Repeating Characters](#longest-substring-without-repeating-characters)
-  - [Reverse Integer](#reverse-integer)
-  - [Integer to Roman](#integer-to-roman)
-  - [Generate Parentheses](#generate-parentheses)
-  - [Multiply Strings](#multiply-strings)
-  - [Permutations](#permutations)
-  - [Subsets](#subsets)
-  - [Reverse Words in a String](#reverse-words-in-a-string)
-  - [Find the Duplicate Number](#find-the-duplicate-number)
-  - [Find All Duplicates in an Array](#find-all-duplicates-in-an-array)
-  - [Longest Substring Of All Vowels in Order](#longest-substring-of-all-vowels-in-order)
 
 ## General
 
@@ -186,8 +135,6 @@
 
 - switchMap (cancelable requests - searches), concatMap (run in sequence, when order is important), mergeMap (run parallel, when order is not important), exhaustMap (like for login when we don't want to make more request until initial one gets completed)
 
-## Angular Categorical Questions -
-
 - What are Angular directives - Component directives, Attribute directives, Structural directives
 
 - What is an AOT compilation? What are its benefits? Improved performance, Smaller bundle size, Early error detection
@@ -232,7 +179,7 @@ import { MatCardModule } from '@angular/material/card';
 
 - aria attributes like aria-busy, aria-disabled, aria-grabbed, aria-hidden, aria-invalid.
 
-## JavaScript
+## TypeScript
 
 - Can you discuss the differences between synchronous and asynchronous programming in JavaScript, and explain when you would use each approach?
 
@@ -297,8 +244,6 @@ interface HeadersResponse {
 
 - Object.create(null) - create an object that inherits nothing, not even from object.prototype. It will act much more like hash table.
 
-## TypeScript
-
 - What is compiler vs. transpiler (es6 to es5 for browser like 'user?.name')
 
 - What is "Duck Typing"
@@ -319,7 +264,7 @@ interface HeadersResponse {
 
 - Type Declaration Files
 
-## Unit / E2E Testing
+## Unit Testing
 
 - Benefits
 
@@ -379,9 +324,9 @@ interface HeadersResponse {
 
 - HATEOAS
 
-## Feedbacks
+## Feedback Templates
 
-### Negative Points
+**Negative Points** -
 
 - Lack of technical knowledge or skills: Highlight specific instances where the candidate demonstrated a lack of technical proficiency relevant to the job requirements.
 
@@ -435,7 +380,7 @@ interface HeadersResponse {
 
 - Inattention to detail: Highlight instances where the candidate made mistakes or failed to pay attention to important details, especially if the role requires precision.
 
-### Positive Points
+**Positive Points** -
 
 - Job-specific skills and knowledge: Assess whether the candidate possesses the necessary skills and knowledge directly related to the job requirements. Note any deficiencies in these areas.
 
@@ -513,13 +458,13 @@ interface HeadersResponse {
 
 ## Programming Questions
 
-### Given a string, reverse each word in the sentence
+**Given a string, reverse each word in the sentence** -
 
-### How would you check if a number is an integer?
+**How would you check if a number is an integer?** -
 
 If a number is a decimal or an integer is to check if there is a remainder when divided by 1.
 
-### Given two strings, return true if they are anagrams of one another
+**Given two strings, return true if they are anagrams of one another** -
 
 ```javascript
 a = a.split('').sort().join('');
@@ -527,7 +472,7 @@ b = b.split('').sort().join('');
 return a === b;
 ```
 
-### Refactor bad code to good code or give review comments
+**Refactor bad code to good code or give review comments** -
 
 ```typescript
 setTimeout(restart, 36000000);
@@ -618,7 +563,7 @@ function head<Element>(arr: Element[]): Element | undefined {
 }
 ```
 
-### Largest Odd Number in String
+**Largest Odd Number in String** -
 
 Example 1:
 
@@ -636,7 +581,7 @@ Input: num = "35427"
 Output: "35427"
 Explanation: "35427" is already an odd number.
 
-### Two Sum
+**Two Sum** -
 
 Example 1:
 
@@ -652,7 +597,7 @@ Example 3:
 Input: nums = [3,3], target = 6
 Output: [0,1]
 
-### Palindrome Number
+**Palindrome Number** -
 
 Example 1:
 
@@ -670,7 +615,7 @@ Input: x = 10
 Output: false
 Explanation: Reads 01 from right to left. Therefore it is not a palindrome.
 
-### Roman to Integer
+**Roman to Integer** -
 
 Symbol Value
 I 1
@@ -697,7 +642,7 @@ Input: s = "MCMXCIV"
 Output: 1994
 Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
 
-### Longest Common Prefix
+**Longest Common Prefix** -
 
 Example 1:
 
@@ -709,7 +654,7 @@ Input: strs = ["dog","racecar","car"]
 Output: ""
 Explanation: There is no common prefix among the input strings.
 
-### Valid Parentheses
+**Valid Parentheses** -
 
 Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
 
@@ -726,7 +671,7 @@ Example 3:
 Input: s = "(]"
 Output: false
 
-### Merge Two Sorted Lists
+**Merge Two Sorted Lists** -
 
 Example 1:
 
@@ -741,7 +686,7 @@ Example 3:
 Input: list1 = [], list2 = [0]
 Output: [0]
 
-### Remove Duplicates from Sorted Array
+**Remove Duplicates from Sorted Array** -
 
 Example 1:
 
@@ -753,7 +698,7 @@ Example 2:
 Input: nums = [0,0,1,1,1,2,2,3,3,4]
 Output: 5, nums = [0,1,2,3,4,_,_,_,_,_]
 
-### Find the Index of the First Occurrence in a String
+**Find the Index of the First Occurrence in a String** -
 
 Example 1:
 
@@ -767,7 +712,7 @@ Input: haystack = "leetcode", needle = "leeto"
 Output: -1
 Explanation: "leeto" did not occur in "leetcode", so we return -1.
 
-### Length of Last Word
+**Length of Last Word** -
 
 Example 1:
 
@@ -785,7 +730,7 @@ Input: s = "luffy is still joyboy"
 Output: 6
 Explanation: The last word is "joyboy" with length 6.
 
-### Sqrt(x)
+**Sqrt(x)** -
 
 Example 1:
 
@@ -798,7 +743,7 @@ Input: x = 8
 Output: 2
 Explanation: The square root of 8 is 2.82842..., and since we round it down to the nearest integer, 2 is returned.
 
-### Best Time to Buy and Sell Stock
+**Best Time to Buy and Sell Stock** -
 
 Example 1:
 
@@ -812,7 +757,7 @@ Input: prices = [7,6,4,3,1]
 Output: 0
 Explanation: In this case, no transactions are done and the max profit = 0.
 
-### Single Number
+**Single Number** -
 
 Example 1:
 
@@ -827,7 +772,7 @@ Example 3:
 Input: nums = [1]
 Output: 1
 
-### Isomorphic Strings
+**Isomorphic Strings** -
 
 Example 1:
 
@@ -842,7 +787,7 @@ Example 3:
 Input: s = "paper", t = "title"
 Output: true
 
-### Power of Two
+**Power of Two** -
 
 Example 1:
 
@@ -859,7 +804,7 @@ Example 3:
 Input: n = 3
 Output: false
 
-### Reverse String
+**Reverse String** -
 
 Example 1:
 
@@ -870,7 +815,7 @@ Example 2:
 Input: s = ["H","a","n","n","a","h"]
 Output: ["h","a","n","n","a","H"]
 
-### Reverse Vowels of a String
+**Reverse Vowels of a String** -
 
 Example 1:
 
@@ -881,7 +826,7 @@ Example 2:
 Input: s = "leetcode"
 Output: "leotcede"
 
-### Intersection of Two Arrays
+**Intersection of Two Arrays** -
 
 Example 1:
 
@@ -893,7 +838,7 @@ Input: nums1 = [4,9,5], nums2 = [9,4,9,8,4]
 Output: [9,4]
 Explanation: [4,9] is also accepted.
 
-### Valid Perfect Square
+**Valid Perfect Square** -
 
 Example 1:
 
@@ -906,7 +851,7 @@ Input: num = 14
 Output: false
 Explanation: We return false because 3.742 \* 3.742 = 14 and 3.742 is not an integer.
 
-### First Unique Character in a String
+**First Unique Character in a String** -
 
 Example 1:
 
@@ -921,7 +866,7 @@ Example 3:
 Input: s = "aabb"
 Output: -1
 
-### Longest Palindrome
+**Longest Palindrome** -
 
 Example 1:
 
@@ -934,7 +879,7 @@ Input: s = "a"
 Output: 1
 Explanation: The longest palindrome that can be built is "a", whose length is 1.
 
-### Third Maximum Number
+**Third Maximum Number** -
 
 Example 1:
 
@@ -961,7 +906,7 @@ The first distinct maximum is 3.
 The second distinct maximum is 2 (both 2's are counted together since they have the same value).
 The third distinct maximum is 1.
 
-### Number of Segments in a String
+**Number of Segments in a String** -
 
 Example 1:
 
@@ -973,7 +918,7 @@ Example 2:
 Input: s = "Hello"
 Output: 1
 
-### Max Consecutive Ones
+**Max Consecutive Ones** -
 
 Example 1:
 
@@ -985,7 +930,7 @@ Example 2:
 Input: nums = [1,0,1,1,0,1]
 Output: 2
 
-### Perfect Number
+**Perfect Number** -
 
 A perfect number is a positive integer that is equal to the sum of its positive divisors, excluding the number itself. A divisor of an integer x is an integer that can divide x evenly.
 Example 1:
@@ -999,7 +944,7 @@ Example 2:
 Input: num = 7
 Output: false
 
-### Fibonacci Number
+**Fibonacci Number** -
 
 Example 1:
 
@@ -1017,7 +962,7 @@ Input: n = 4
 Output: 3
 Explanation: F(4) = F(3) + F(2) = 2 + 1 = 3.
 
-### Reverse String II
+**Reverse String II** -
 
 Example 1:
 
@@ -1028,7 +973,7 @@ Example 2:
 Input: s = "abcd", k = 2
 Output: "bacd"
 
-### Reverse Words in a String III
+**Reverse Words in a String III** -
 
 Example 1:
 
@@ -1039,7 +984,7 @@ Example 2:
 Input: s = "Mr Ding"
 Output: "rM gniD"
 
-### To Lower Case
+**To Lower Case** -
 
 Example 1:
 
@@ -1054,7 +999,7 @@ Example 3:
 Input: s = "LOVELY"
 Output: "lovely"
 
-### Find Common Characters
+**Find Common Characters** -
 
 Example 1:
 
@@ -1065,7 +1010,7 @@ Example 2:
 Input: words = ["cool","lock","cook"]
 Output: ["c","o"]
 
-### Destination City
+**Destination City** -
 
 Example 1:
 
@@ -1083,7 +1028,7 @@ Explanation: All possible trips are:
 "A".
 Clearly the destination city is "A".
 
-### Check if a String Is an Acronym of Words
+**Check if a String Is an Acronym of Words** -
 
 Example 1:
 
@@ -1104,7 +1049,7 @@ Output: true
 Explanation: By concatenating the first character of the words in the array, we get the string "ngguoy".
 Hence, s = "ngguoy" is the acronym.
 
-### Longest Substring Without Repeating Characters
+**Longest Substring Without Repeating Characters** -
 
 Example 1:
 
@@ -1123,7 +1068,7 @@ Output: 3
 Explanation: The answer is "wke", with the length of 3.
 Notice that the answer must be a substring, "pwke" is a subsequence and not a substring.
 
-### Reverse Integer
+**Reverse Integer** -
 
 Example 1:
 
@@ -1138,7 +1083,7 @@ Example 3:
 Input: x = 120
 Output: 21
 
-### Integer to Roman
+**Integer to Roman** -
 
 Example 1:
 
@@ -1156,7 +1101,7 @@ Input: num = 1994
 Output: "MCMXCIV"
 Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
 
-### Generate Parentheses
+**Generate Parentheses** -
 
 Example 1:
 
@@ -1167,7 +1112,7 @@ Example 2:
 Input: n = 1
 Output: ["()"]
 
-### Multiply Strings
+**Multiply Strings** -
 
 Given two non-negative integers num1 and num2 represented as strings, return the product of num1 and num2, also represented as a string.
 
@@ -1182,7 +1127,7 @@ Example 2:
 Input: num1 = "123", num2 = "456"
 Output: "56088"
 
-### Permutations
+**Permutations** -
 
 Example 1:
 
@@ -1197,7 +1142,7 @@ Example 3:
 Input: nums = [1]
 Output: [[1]]
 
-### Subsets
+**Subsets** -
 
 Example 1:
 
@@ -1208,7 +1153,7 @@ Example 2:
 Input: nums = [0]
 Output: [[],[0]]
 
-### Reverse Words in a String
+**Reverse Words in a String** -
 
 Given an input string s, reverse the order of the words.
 
@@ -1233,7 +1178,7 @@ Input: s = "a good example"
 Output: "example good a"
 Explanation: You need to reduce multiple spaces between two words to a single space in the reversed string.
 
-### Find the Duplicate Number
+**Find the Duplicate Number** -
 
 Example 1:
 
@@ -1244,7 +1189,7 @@ Example 2:
 Input: nums = [3,1,3,4,2]
 Output: 3
 
-### Find All Duplicates in an Array
+**Find All Duplicates in an Array** -
 
 Example 1:
 
@@ -1259,7 +1204,7 @@ Example 3:
 Input: nums = [1]
 Output: []
 
-### Longest Substring Of All Vowels in Order
+**Longest Substring Of All Vowels in Order** -
 
 Example 1:
 

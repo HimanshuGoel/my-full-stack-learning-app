@@ -7,6 +7,7 @@
 - [Node/NPM/NVM](#nodenpmnvm)
 - [Chrome](#chrome)
 - [Java](#java)
+- [Docker](#docker)
 
 ## Firebase
 
@@ -49,7 +50,6 @@ console.log(component);
 const component = $0;
 ng.applyChanges(component);
 
-
 const context = ng.getContext($0);
 console.log(context);
 
@@ -61,3 +61,46 @@ console.log(metadata);
 
 - java -version
 - javac -version
+
+## Docker
+
+- `docker container run --rm -it -p 8080:80 nginx`
+- `wsl --list -v`
+- `docker version`
+- `docker container ls`
+- `docker container rm container_id`
+- `docker container stop container_id`
+- `docker compose up`
+- `docker compose down`
+- `docker compose ps`
+- `docker image inspect nginx | jq -C '.[].Config'`
+- `install the docker command auto completion module`
+- `giving a name to container and deattach for not to see logs - docker container run -i -t --name web1 -d -p 8080:80 nginx`
+- `docker container cp index.html web1:/usr/share/nginx/html/index.html`
+- `docker container ps -a`
+- `docker container commit web1 custom-nginx`
+- `docker container diff web1`
+- `docker image build -t custom-nginx:df .`
+- `docker container ps`
+- `docker container ps -a`
+- `docker compose run nmap -V`
+- `docker compose run --build nmap`
+- `docker system df`
+- `docker system prune`
+- `ng build --watch --delete-output-path false`
+- `docker system prune (to remove all stopped container, all network not used by at least one container, all dangling images, all build cache)`
+- `docker-compose build | docker-compose up | docker-compose down | docker-compose down -d`
+- `docker pull --help`
+- `docker run --help`
+- `docker volume ls`
+- `docker logs [container_id]`
+- `docker volume rm nameOfVolume`
+- `docker system prune --volumes`
+- removing volumes - `docker rm -v lastContainer`
+- filtered images - `docker images | grep custom-node`
+- to remove all images and volume - `docker compose down --rmi all --volumes`
+- docker logs `[container_id]`
+- docker compose logs [service_name]
+- docker compose logs --tail=5
+- docker compose logs --follow
+- docker compose logs --no-color
