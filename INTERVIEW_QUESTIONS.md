@@ -7,29 +7,32 @@
 - [Unit Testing](#unit-testing)
 - [HTML](#html)
 - [CSS](#css)
+- [Accessibility](#accessibility)
+- [User Experience](#user-experience)
+- [Security](#security)
 - [Backend](#backend)
 - [Feedback Templates](#feedback-templates)
 - [Programming Questions](#programming-questions)
 
 ## General
 
-- Pair programming interviews are better than take home test. Key skills to touch on angular, typescript, RxJS, javascript knowledge, ecosystem knowledge, front-end skills semantic html and CSS, version control, branching, PR review process, preferred tooling
+- Pair programming interviews are better than take home test.
 
-- Keep camera on and give self introduction - My name is Himanshu Goel, and I am having over a decade of experience in full-stack development. From the past four years, I've been working with Sopra Banking on a low-code framework development. My journey began with the Dotnet technology stack, including asp.net and C#. However, I soon transitioned into working with Angular.js and later versions of Angular (Angular 4+). Additionally, I have also worked in Node.js for creating RESTful APIs. Outside of work, I like to watch movies, reading books, writing blogs and playing video games during my free time
+- Key skills to touch on Angular, TypeScript, RxJS, JavaScript knowledge, Ecosystem knowledge, front-end skills Semantic HTML and CSS, Version Control, Branching, PR review process, preferred tooling
 
-- Organization introduction - Sopra Banking is a global leader in banking software solutions and great place to work certified.
+- Keep camera on and give self introduction - My name is Himanshu Goel, and I am having over a decade of experience in full-stack development. From the past four years, I've been working with Sopra Banking on a low-code framework development. My journey began with the .NET technology stack, including ASP.net and C#. However, I soon transitioned into working with Angular.js and later versions of Angular (Angular 4+). Additionally, I have also worked in Node.js for creating RESTful APIs. Outside of work, I like to watch movies, reading books, writing blogs and playing video games during my free time
 
-- About job profile, projects, team, company, attitude and responsibilities - We are hiring for our R&D vertical for an web-based financial application and includes technologies like angular, angular material, prime-ng, typescript, unit testing (karma, jasmine), cypress and java in backend. Someone will play a pivotal role in the development and implementation of our Angular-based solutions, working with the latest Angular versions, will also work like a mentor.
+- Explain about job profile, projects, team, company, attitude and responsibilities - We are hiring for our R&D vertical for an web-based financial application and includes technologies like angular, angular material, prime-ng, typescript, unit testing (karma, jasmine), cypress and java in backend. Someone will play a pivotal role in the development and implementation of our Angular-based solutions, working with the latest Angular versions, will also work like a mentor.
 
-- About candidate and his technical journey in stories, concise answer, thoughtful questions
+- Ask about candidate and his technical journey in stories, concise answer, thoughtful questions.
 
 - Don't ask many yes / no questions but open-ended questions like 'tell me about a time when', 'tell me more about that project' or 'how you solve this problem'.
 
-- Favorite vs code shortcuts or extension
+- Favorite VS Code shortcuts or extension.
 
 - How is your git workflow works?
 
-- Code best practices you use or refer while doing code reviews
+- Code best practices you use or refer while doing code reviews.
 
 - Have you done any open source contribution or written any blogs?
 
@@ -37,11 +40,7 @@
 
 - Have you mentored team members?
 
-- What is UX, some of its best practices or anti-patterns?
-
-- Application security best practices or OWASP top 10? - CSP, Cross-site scripting, Broken Authentication, Sensitive data exposure, Security Misconfiguration
-
-- Complex problem they have worked upon?
+- Recent complex problem they have worked upon?
 
 - Any new technology, how you will learn?
 
@@ -79,7 +78,7 @@
 
 - Query decorator - @ViewChild, @ViewChildren, @ContentChild, @ContentChildren
 
-- ng-container vs. div or span.
+- Difference between ng-container, div and span.
 
 - SkipSelf and Optional attributes
 
@@ -172,12 +171,6 @@ import { MatCardModule } from '@angular/material/card';
 // One entrypoint:
 // With secondary entrypoints:
 ```
-
-- Have you considered Accessibility during your development?
-
-- Web accessibility guidelines – WCAG (A, AA, AAA).
-
-- aria attributes like aria-busy, aria-disabled, aria-grabbed, aria-hidden, aria-invalid.
 
 ## TypeScript
 
@@ -311,6 +304,22 @@ interface HeadersResponse {
 - 12 column grid layout and visual breakpoints
 
 - Fallbacks and Polyfills – Fallback is to provide similar functionality as a native feature but maybe just with a different API. A Polyfills, on the other hand, is meant to replicate the exact same interface as well as functionality as how the native implementation would be built in the browser.
+
+## Accessibility
+
+- Have you considered Accessibility during your development?
+
+- Web accessibility guidelines – WCAG (A, AA, AAA).
+
+- aria attributes like aria-busy, aria-disabled, aria-grabbed, aria-hidden, aria-invalid.
+
+## User Experience
+
+- What is UX, some of its best practices or anti-patterns?
+
+## Security
+
+- Application security best practices or OWASP top 10? - CSP, Cross-site scripting, Broken Authentication, Sensitive data exposure, Security Misconfiguration
 
 ## Backend
 
@@ -458,13 +467,13 @@ interface HeadersResponse {
 
 ## Programming Questions
 
-**Given a string, reverse each word in the sentence** -
+- Given a string, reverse each word in the sentence
 
-**How would you check if a number is an integer?** -
+- How would you check if a number is an integer?
 
 If a number is a decimal or an integer is to check if there is a remainder when divided by 1.
 
-**Given two strings, return true if they are anagrams of one another** -
+- Given two strings, return true if they are anagrams of one another
 
 ```javascript
 a = a.split('').sort().join('');
@@ -472,7 +481,7 @@ b = b.split('').sort().join('');
 return a === b;
 ```
 
-**Refactor bad code to good code or give review comments** -
+- Refactor bad code to good code or give review comments
 
 ```typescript
 setTimeout(restart, 36000000);
@@ -563,59 +572,67 @@ function head<Element>(arr: Element[]): Element | undefined {
 }
 ```
 
-**Largest Odd Number in String** -
+- Largest Odd Number in String
 
-Example 1:
+```typescript
 
+// Example 1
 Input: num = "52"
 Output: "5"
 Explanation: The only non-empty substrings are "5", "2", and "52". "5" is the only odd number.
-Example 2:
 
+// Example 2:
 Input: num = "4206"
 Output: ""
 Explanation: There are no odd numbers in "4206".
-Example 3:
 
+// Example 3:
 Input: num = "35427"
 Output: "35427"
 Explanation: "35427" is already an odd number.
 
-**Two Sum** -
+```
 
-Example 1:
+- Two Sum
 
+```typescript
+
+// Example 1:
 Input: nums = [2,7,11,15], target = 9
 Output: [0,1]
 Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
-Example 2:
 
+// Example 2:
 Input: nums = [3,2,4], target = 6
 Output: [1,2]
-Example 3:
 
+// Example 3:
 Input: nums = [3,3], target = 6
 Output: [0,1]
+```
 
-**Palindrome Number** -
+- Palindrome Number
 
-Example 1:
+```typescript
 
+// Example 1:
 Input: x = 121
 Output: true
 Explanation: 121 reads as 121 from left to right and from right to left.
-Example 2:
 
+// Example 2:
 Input: x = -121
 Output: false
 Explanation: From left to right, it reads -121. From right to left, it becomes 121-. Therefore it is not a palindrome.
-Example 3:
 
+// Example 3:
 Input: x = 10
 Output: false
 Explanation: Reads 01 from right to left. Therefore it is not a palindrome.
 
-**Roman to Integer** -
+```
+
+- Roman to Integer
 
 Symbol Value
 I 1
@@ -626,279 +643,315 @@ C 100
 D 500
 M 1000
 
-Example 1:
+```typescript
 
+// Example 1:
 Input: s = "III"
 Output: 3
 Explanation: III = 3.
-Example 2:
 
+// Example 2:
 Input: s = "LVIII"
 Output: 58
 Explanation: L = 50, V= 5, III = 3.
-Example 3:
 
+// Example 3:
 Input: s = "MCMXCIV"
 Output: 1994
 Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
 
-**Longest Common Prefix** -
+```
 
-Example 1:
+- Longest Common Prefix
 
+```typescript
+
+// Example 1:
 Input: strs = ["flower","flow","flight"]
 Output: "fl"
-Example 2:
 
+// Example 2:
 Input: strs = ["dog","racecar","car"]
 Output: ""
 Explanation: There is no common prefix among the input strings.
 
-**Valid Parentheses** -
+```
+
+- Valid Parentheses
 
 Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
 
-Example 1:
+```typescript
+// Example 1:
+Input: s = '()';
+Output: true;
 
-Input: s = "()"
-Output: true
-Example 2:
+// Example 2:
+Input: s = '()[]{}';
+Output: true;
 
-Input: s = "()[]{}"
-Output: true
-Example 3:
+// Example 3:
+Input: s = '(]';
+Output: false;
+```
 
-Input: s = "(]"
-Output: false
+Merge Two Sorted Lists
 
-**Merge Two Sorted Lists** -
+```typescript
+// Example 1:
+Input: (list1 = [1, 2, 4]), (list2 = [1, 3, 4]);
+Output: [1, 1, 2, 3, 4, 4];
 
-Example 1:
+// Example 2:
+Input: (list1 = []), (list2 = []);
+Output: [];
 
-Input: list1 = [1,2,4], list2 = [1,3,4]
-Output: [1,1,2,3,4,4]
-Example 2:
+// Example 3:
+Input: (list1 = []), (list2 = [0]);
+Output: [0];
+```
 
-Input: list1 = [], list2 = []
-Output: []
-Example 3:
+- Remove Duplicates from Sorted Array
 
-Input: list1 = [], list2 = [0]
-Output: [0]
+```typescript
+// Example 1:
+Input: nums = [1, 1, 2];
+Output: 2, (nums = [1, 2, _]);
 
-**Remove Duplicates from Sorted Array** -
+// Example 2:
+Input: nums = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4];
+Output: 5, (nums = [0, 1, 2, 3, 4, _, _, _, _, _]);
+```
 
-Example 1:
+- Find the Index of the First Occurrence in a String
 
-Input: nums = [1,1,2]
-Output: 2, nums = [1,2,_]
+```typescript
 
-Example 2:
-
-Input: nums = [0,0,1,1,1,2,2,3,3,4]
-Output: 5, nums = [0,1,2,3,4,_,_,_,_,_]
-
-**Find the Index of the First Occurrence in a String** -
-
-Example 1:
-
+// Example 1:
 Input: haystack = "sadbutsad", needle = "sad"
 Output: 0
 Explanation: "sad" occurs at index 0 and 6.
 The first occurrence is at index 0, so we return 0.
-Example 2:
 
+// Example 2:
 Input: haystack = "leetcode", needle = "leeto"
 Output: -1
 Explanation: "leeto" did not occur in "leetcode", so we return -1.
 
-**Length of Last Word** -
+```
 
-Example 1:
+- Length of Last Word
 
+```typescript
+
+// Example 1:
 Input: s = "Hello World"
 Output: 5
 Explanation: The last word is "World" with length 5.
-Example 2:
 
+// Example 2:
 Input: s = " fly me to the moon "
 Output: 4
 Explanation: The last word is "moon" with length 4.
-Example 3:
 
+// Example 3:
 Input: s = "luffy is still joyboy"
 Output: 6
 Explanation: The last word is "joyboy" with length 6.
 
-**Sqrt(x)** -
+```
 
-Example 1:
+- Sqrt(x)
 
+```typescript
+
+// Example 1:
 Input: x = 4
 Output: 2
 Explanation: The square root of 4 is 2, so we return 2.
-Example 2:
 
+// Example 2:
 Input: x = 8
 Output: 2
 Explanation: The square root of 8 is 2.82842..., and since we round it down to the nearest integer, 2 is returned.
 
-**Best Time to Buy and Sell Stock** -
+```
 
-Example 1:
+- Best Time to Buy and Sell Stock
 
+```typescript
+
+// Example 1:
 Input: prices = [7,1,5,3,6,4]
 Output: 5
 Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.
 Note that buying on day 2 and selling on day 1 is not allowed because you must buy before you sell.
-Example 2:
 
+// Example 2:
 Input: prices = [7,6,4,3,1]
 Output: 0
 Explanation: In this case, no transactions are done and the max profit = 0.
 
-**Single Number** -
+```
 
-Example 1:
+- Single Number
 
-Input: nums = [2,2,1]
-Output: 1
-Example 2:
+```typescript
+// Example 1:
+Input: nums = [2, 2, 1];
+Output: 1;
 
-Input: nums = [4,1,2,1,2]
-Output: 4
-Example 3:
+// Example 2:
+Input: nums = [4, 1, 2, 1, 2];
+Output: 4;
 
-Input: nums = [1]
-Output: 1
+// Example 3:
+Input: nums = [1];
+Output: 1;
+```
 
-**Isomorphic Strings** -
+- Isomorphic Strings
 
-Example 1:
+```typescript
+// Example 1:
+Input: (s = 'egg'), (t = 'add');
+Output: true;
 
-Input: s = "egg", t = "add"
-Output: true
-Example 2:
+// Example 2:
+Input: (s = 'foo'), (t = 'bar');
+Output: false;
 
-Input: s = "foo", t = "bar"
-Output: false
-Example 3:
+// Example 3:
+Input: (s = 'paper'), (t = 'title');
+Output: true;
+```
 
-Input: s = "paper", t = "title"
-Output: true
+- Power of Two
 
-**Power of Two** -
+```typescript
+// Example 1:
+Input: n = 1;
+Output: true;
+Explanation: 20 = 1;
 
-Example 1:
+// Example 2:
+Input: n = 16;
+Output: true;
+Explanation: 24 = 16;
 
-Input: n = 1
-Output: true
-Explanation: 20 = 1
-Example 2:
+// Example 3:
+Input: n = 3;
+Output: false;
+```
 
-Input: n = 16
-Output: true
-Explanation: 24 = 16
-Example 3:
+- Reverse String
 
-Input: n = 3
-Output: false
+```typescript
+// Example 1:
+Input: s = ['h', 'e', 'l', 'l', 'o'];
+Output: ['o', 'l', 'l', 'e', 'h'];
 
-**Reverse String** -
+// Example 2:
+Input: s = ['H', 'a', 'n', 'n', 'a', 'h'];
+Output: ['h', 'a', 'n', 'n', 'a', 'H'];
+```
 
-Example 1:
+- Reverse Vowels of a String
 
-Input: s = ["h","e","l","l","o"]
-Output: ["o","l","l","e","h"]
-Example 2:
+```typescript
+// Example 1:
+Input: s = 'hello';
+Output: 'holle';
 
-Input: s = ["H","a","n","n","a","h"]
-Output: ["h","a","n","n","a","H"]
+// Example 2:
+Input: s = 'leetcode';
+Output: 'leotcede';
+```
 
-**Reverse Vowels of a String** -
+- Intersection of Two Arrays
 
-Example 1:
+```typescript
 
-Input: s = "hello"
-Output: "holle"
-Example 2:
-
-Input: s = "leetcode"
-Output: "leotcede"
-
-**Intersection of Two Arrays** -
-
-Example 1:
-
+// Example 1:
 Input: nums1 = [1,2,2,1], nums2 = [2,2]
 Output: [2]
-Example 2:
 
+// Example 2:
 Input: nums1 = [4,9,5], nums2 = [9,4,9,8,4]
 Output: [9,4]
 Explanation: [4,9] is also accepted.
 
-**Valid Perfect Square** -
+```
 
-Example 1:
+- Valid Perfect Square
 
+```typescript
+
+// Example 1:
 Input: num = 16
 Output: true
 Explanation: We return true because 4 \* 4 = 16 and 4 is an integer.
-Example 2:
 
+// Example 2:
 Input: num = 14
 Output: false
 Explanation: We return false because 3.742 \* 3.742 = 14 and 3.742 is not an integer.
 
-**First Unique Character in a String** -
+```
 
-Example 1:
+- First Unique Character in a String
 
-Input: s = "leetcode"
-Output: 0
-Example 2:
+```typescript
+// Example 1:
+Input: s = 'leetcode';
+Output: 0;
 
-Input: s = "loveleetcode"
-Output: 2
-Example 3:
+// Example 2:
+Input: s = 'loveleetcode';
+Output: 2;
 
-Input: s = "aabb"
-Output: -1
+// Example 3:
+Input: s = 'aabb';
+Output: -1;
+```
 
-**Longest Palindrome** -
+- Longest Palindrome
 
-Example 1:
+```typescript
 
+// Example 1:
 Input: s = "abccccdd"
 Output: 7
 Explanation: One longest palindrome that can be built is "dccaccd", whose length is 7.
-Example 2:
 
+// Example 2:
 Input: s = "a"
 Output: 1
 Explanation: The longest palindrome that can be built is "a", whose length is 1.
 
-**Third Maximum Number** -
+```
 
-Example 1:
+- Third Maximum Number
 
+```typescript
+
+// Example 1:
 Input: nums = [3,2,1]
 Output: 1
 Explanation:
 The first distinct maximum is 3.
 The second distinct maximum is 2.
 The third distinct maximum is 1.
-Example 2:
 
+// Example 2:
 Input: nums = [1,2]
 Output: 2
 Explanation:
 The first distinct maximum is 2.
 The second distinct maximum is 1.
 The third distinct maximum does not exist, so the maximum (2) is returned instead.
-Example 3:
 
+// Example 3:
 Input: nums = [2,2,3,1]
 Output: 1
 Explanation:
@@ -906,119 +959,138 @@ The first distinct maximum is 3.
 The second distinct maximum is 2 (both 2's are counted together since they have the same value).
 The third distinct maximum is 1.
 
-**Number of Segments in a String** -
+```
 
-Example 1:
+- Number of Segments in a String
 
+```typescript
+
+// Example 1:
 Input: s = "Hello, my name is John"
 Output: 5
 Explanation: The five segments are ["Hello,", "my", "name", "is", "John"]
-Example 2:
 
+// Example 2:
 Input: s = "Hello"
 Output: 1
+```
 
-**Max Consecutive Ones** -
+- Max Consecutive Ones
 
-Example 1:
+```typescript
 
+// Example 1:
 Input: nums = [1,1,0,1,1,1]
 Output: 3
 Explanation: The first two digits or the last three digits are consecutive 1s. The maximum number of consecutive 1s is 3.
-Example 2:
 
+// Example 2:
 Input: nums = [1,0,1,1,0,1]
 Output: 2
 
-**Perfect Number** -
+```
+
+- Perfect Number
 
 A perfect number is a positive integer that is equal to the sum of its positive divisors, excluding the number itself. A divisor of an integer x is an integer that can divide x evenly.
-Example 1:
 
+```typescript
+
+// Example 1:
 Input: num = 28
 Output: true
 Explanation: 28 = 1 + 2 + 4 + 7 + 14
 1, 2, 4, 7, and 14 are all divisors of 28.
-Example 2:
 
+// Example 2:
 Input: num = 7
 Output: false
 
-**Fibonacci Number** -
+```
 
-Example 1:
+- Fibonacci Number
 
+```typescript
+
+// Example 1:
 Input: n = 2
 Output: 1
 Explanation: F(2) = F(1) + F(0) = 1 + 0 = 1.
-Example 2:
 
+// Example 2:
 Input: n = 3
 Output: 2
 Explanation: F(3) = F(2) + F(1) = 1 + 1 = 2.
-Example 3:
 
+// Example 3:
 Input: n = 4
 Output: 3
 Explanation: F(4) = F(3) + F(2) = 2 + 1 = 3.
 
-**Reverse String II** -
+```
 
-Example 1:
+- Reverse String II
 
-Input: s = "abcdefg", k = 2
-Output: "bacdfeg"
-Example 2:
+```typescript
+// Example 1:
+Input: (s = 'abcdefg'), (k = 2);
+Output: 'bacdfeg';
 
-Input: s = "abcd", k = 2
-Output: "bacd"
+// Example 2:
+Input: (s = 'abcd'), (k = 2);
+Output: 'bacd';
+```
 
-**Reverse Words in a String III** -
+- Reverse Words in a String III
 
-Example 1:
+```typescript
+// Example 1:
+Input: s = "Let's take LeetCode contest";
+Output: "s'teL ekat edoCteeL tsetnoc";
 
-Input: s = "Let's take LeetCode contest"
-Output: "s'teL ekat edoCteeL tsetnoc"
-Example 2:
+// Example 2:
+Input: s = 'Mr Ding';
+Output: 'rM gniD';
+```
 
-Input: s = "Mr Ding"
-Output: "rM gniD"
+- To Lower Case
 
-**To Lower Case** -
+```typescript
+// Example 1:
+Input: s = 'Hello';
+Output: 'hello';
 
-Example 1:
+// Example 2:
+Input: s = 'here';
+Output: 'here';
 
-Input: s = "Hello"
-Output: "hello"
-Example 2:
+// Example 3:
+Input: s = 'LOVELY';
+Output: 'lovely';
+```
 
-Input: s = "here"
-Output: "here"
-Example 3:
+- Find Common Characters
 
-Input: s = "LOVELY"
-Output: "lovely"
+```typescript
+// Example 1:
+Input: words = ['bella', 'label', 'roller'];
+Output: ['e', 'l', 'l'];
 
-**Find Common Characters** -
+// Example 2:
+Input: words = ['cool', 'lock', 'cook'];
+Output: ['c', 'o'];
+```
 
-Example 1:
+- Destination City
 
-Input: words = ["bella","label","roller"]
-Output: ["e","l","l"]
-Example 2:
+```typescript
 
-Input: words = ["cool","lock","cook"]
-Output: ["c","o"]
-
-**Destination City** -
-
-Example 1:
-
+// Example 1:
 Input: paths = [["London","New York"],["New York","Lima"],["Lima","Sao Paulo"]]
 Output: "Sao Paulo"
 Explanation: Starting at "London" city you will reach "Sao Paulo" city which is the destination city. Your trip consist of: "London" -> "New York" -> "Lima" -> "Sao Paulo".
-Example 2:
 
+// Example 2:
 Input: paths = [["B","C"],["D","B"],["C","A"]]
 Output: "A"
 Explanation: All possible trips are:
@@ -1028,132 +1100,157 @@ Explanation: All possible trips are:
 "A".
 Clearly the destination city is "A".
 
-**Check if a String Is an Acronym of Words** -
+```
 
-Example 1:
+- Check if a String Is an Acronym of Words
 
+```typescript
+
+// Example 1:
 Input: words = ["alice","bob","charlie"], s = "abc"
 Output: true
 Explanation: The first character in the words "alice", "bob", and "charlie" are 'a', 'b', and 'c', respectively. Hence, s = "abc" is the acronym.
-Example 2:
 
+// Example 2:
 Input: words = ["an","apple"], s = "a"
 Output: false
 Explanation: The first character in the words "an" and "apple" are 'a' and 'a', respectively.
 The acronym formed by concatenating these characters is "aa".
 Hence, s = "a" is not the acronym.
-Example 3:
 
+// Example 3:
 Input: words = ["never","gonna","give","up","on","you"], s = "ngguoy"
 Output: true
 Explanation: By concatenating the first character of the words in the array, we get the string "ngguoy".
 Hence, s = "ngguoy" is the acronym.
 
-**Longest Substring Without Repeating Characters** -
+```
 
-Example 1:
+- Longest Substring Without Repeating Characters
 
+```typescript
+
+// Example 1:
 Input: s = "abcabcbb"
 Output: 3
 Explanation: The answer is "abc", with the length of 3.
-Example 2:
 
+// Example 2:
 Input: s = "bbbbb"
 Output: 1
 Explanation: The answer is "b", with the length of 1.
-Example 3:
 
+// Example 3:
 Input: s = "pwwkew"
 Output: 3
 Explanation: The answer is "wke", with the length of 3.
 Notice that the answer must be a substring, "pwke" is a subsequence and not a substring.
 
-**Reverse Integer** -
+```
 
-Example 1:
+- Reverse Integer
 
-Input: x = 123
-Output: 321
-Example 2:
+```typescript
+// Example 1:
+Input: x = 123;
+Output: 321;
 
-Input: x = -123
-Output: -321
-Example 3:
+// Example 2:
+Input: x = -123;
+Output: -321;
 
-Input: x = 120
-Output: 21
+// Example 3:
+Input: x = 120;
+Output: 21;
+```
 
-**Integer to Roman** -
+- Integer to Roman
 
-Example 1:
+```typescript
 
+// Example 1:
 Input: num = 3
 Output: "III"
 Explanation: 3 is represented as 3 ones.
-Example 2:
 
+// Example 2:
 Input: num = 58
 Output: "LVIII"
 Explanation: L = 50, V = 5, III = 3.
-Example 3:
 
+// Example 3:
 Input: num = 1994
 Output: "MCMXCIV"
 Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
+```
 
-**Generate Parentheses** -
+- Generate Parentheses
 
-Example 1:
+```typescript
+// Example 1:
+Input: n = 3;
+Output: ['((()))', '(()())', '(())()', '()(())', '()()()'];
 
-Input: n = 3
-Output: ["((()))","(()())","(())()","()(())","()()()"]
-Example 2:
+// Example 2:
+Input: n = 1;
+Output: ['()'];
+```
 
-Input: n = 1
-Output: ["()"]
-
-**Multiply Strings** -
+- Multiply Strings
 
 Given two non-negative integers num1 and num2 represented as strings, return the product of num1 and num2, also represented as a string.
 
 Note: You must not use any built-in BigInteger library or convert the inputs to integer directly.
 
-Example 1:
+```typescript
+// Example 1:
+Input: (num1 = '2'), (num2 = '3');
+Output: '6';
 
-Input: num1 = "2", num2 = "3"
-Output: "6"
-Example 2:
+// Example 2:
+Input: (num1 = '123'), (num2 = '456');
+Output: '56088';
+```
 
-Input: num1 = "123", num2 = "456"
-Output: "56088"
+- Permutations
 
-**Permutations** -
+```typescript
+// Example 1:
+Input: nums = [1, 2, 3];
+Output: [
+  [1, 2, 3],
+  [1, 3, 2],
+  [2, 1, 3],
+  [2, 3, 1],
+  [3, 1, 2],
+  [3, 2, 1]
+];
 
-Example 1:
+// Example 2:
+Input: nums = [0, 1];
+Output: [
+  [0, 1],
+  [1, 0]
+];
 
-Input: nums = [1,2,3]
-Output: [[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]]
-Example 2:
+// Example 3:
+Input: nums = [1];
+Output: [[1]];
+```
 
-Input: nums = [0,1]
-Output: [[0,1],[1,0]]
-Example 3:
+- Subsets
 
-Input: nums = [1]
-Output: [[1]]
+```typescript
+// Example 1:
+Input: nums = [1, 2, 3];
+Output: [[], [1], [2], [1, 2], [3], [1, 3], [2, 3], [1, 2, 3]];
 
-**Subsets** -
+// Example 2:
+Input: nums = [0];
+Output: [[], [0]];
+```
 
-Example 1:
-
-Input: nums = [1,2,3]
-Output: [[],[1],[2],[1,2],[3],[1,3],[2,3],[1,2,3]]
-Example 2:
-
-Input: nums = [0]
-Output: [[],[0]]
-
-**Reverse Words in a String** -
+- Reverse Words in a String
 
 Given an input string s, reverse the order of the words.
 
@@ -1163,61 +1260,69 @@ Return a string of the words in reverse order concatenated by a single space.
 
 Note that s may contain leading or trailing spaces or multiple spaces between two words. The returned string should only have a single space separating the words. Do not include any extra spaces.
 
-Example 1:
+```typescript
 
+// Example 1:
 Input: s = "the sky is blue"
 Output: "blue is sky the"
-Example 2:
 
+// Example 2:
 Input: s = " hello world "
 Output: "world hello"
 Explanation: Your reversed string should not contain leading or trailing spaces.
-Example 3:
 
+// Example 3:
 Input: s = "a good example"
 Output: "example good a"
 Explanation: You need to reduce multiple spaces between two words to a single space in the reversed string.
 
-**Find the Duplicate Number** -
+```
 
-Example 1:
+- Find the Duplicate Number
 
-Input: nums = [1,3,4,2,2]
-Output: 2
-Example 2:
+```typescript
+// Example 1:
+Input: nums = [1, 3, 4, 2, 2];
+Output: 2;
 
-Input: nums = [3,1,3,4,2]
-Output: 3
+// Example 2:
+Input: nums = [3, 1, 3, 4, 2];
+Output: 3;
+```
 
-**Find All Duplicates in an Array** -
+- Find All Duplicates in an Array
 
-Example 1:
+```typescript
+// Example 1:
+Input: nums = [4, 3, 2, 7, 8, 2, 3, 1];
+Output: [2, 3];
 
-Input: nums = [4,3,2,7,8,2,3,1]
-Output: [2,3]
-Example 2:
+// Example 2:
+Input: nums = [1, 1, 2];
+Output: [1];
 
-Input: nums = [1,1,2]
-Output: [1]
-Example 3:
+// Example 3:
+Input: nums = [1];
+Output: [];
+```
 
-Input: nums = [1]
-Output: []
+- Longest Substring Of All Vowels in Order
 
-**Longest Substring Of All Vowels in Order** -
+```typescript
 
-Example 1:
-
+// Example 1:
 Input: word = "aeiaaioaaaaeiiiiouuuooaauuaeiu"
 Output: 13
 Explanation: The longest beautiful substring in word is "aaaaeiiiiouuu" of length 13.
-Example 2:
 
+// Example 2:
 Input: word = "aeeeiiiioooauuuaeiou"
 Output: 5
 Explanation: The longest beautiful substring in word is "aeiou" of length 5.
-Example 3:
 
+// Example 3:
 Input: word = "a"
 Output: 0
 Explanation: There is no beautiful substring, so return 0.
+
+```
