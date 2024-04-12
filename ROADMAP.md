@@ -10,10 +10,7 @@
 - Complete recent pluralsight trainings for relative technologies
 - Complete code practices for shortlisted articles in relative technologies
 
-### Trainings
-
-- Developing Node.js Apps with Docker
-- Tactics and Tools for Troubleshooting Docker
+### Trainings - Part 1
 
 - Docker and Kubernetes: The Big Picture
 - Deploying Containerized Applications
@@ -43,16 +40,6 @@
 - Generative AI for Developers - <https://app.pluralsight.com/paths/skill/generative-ai-for-developers>
 - Generative AI for Enterprise Organizations - <https://app.pluralsight.com/paths/skill/generative-ai-for-enterprise-organizations>
 
-- My Browser Does What?
-- What's Going on in There?
-- A11y with React Components
-- Render Agnostic Architecture
-- Architecting for Accessibility
-- Lip Sync to the Async in JavaScript
-- The ABCs of Architecting Better CSS
-- Create Robust Deployments for your SPA and API
-- Anti-aging: Keeping Your Code Young and Thriving
-
 ### Articles
 
 - <https://dev.to/_n0rdy_/understanding-cors-583o>
@@ -65,7 +52,7 @@
 
 ## Version 2.0
 
-### Trainings
+### Trainings - Part 2
 
 - Java SE 17 - <https://app.pluralsight.com/paths/skill/java-se-17>
 - Java Unit Testing - <https://app.pluralsight.com/paths/skill/unit-testing-in-java>
@@ -93,3 +80,13 @@
 - Docker Mastery - <https://www.udemy.com/course/docker-mastery/learn/lecture/33241940>
 - Using Kubernetes as a Developer - <https://app.pluralsight.com/paths/skill/using-kubernetes-as-a-developer>
 - Docker Fundamentals for Developers - <https://app.pluralsight.com/paths/skill/docker-fundamentals-for-developers>
+
+- My Browser Does What?
+- What's Going on in There?
+- A11y with React Components
+- Render Agnostic Architecture
+- Architecting for Accessibility
+- Lip Sync to the Async in JavaScript
+- The ABCs of Architecting Better CSS
+- Create Robust Deployments for your SPA and API
+- Anti-aging: Keeping Your Code Young and Thriving
