@@ -21,11 +21,6 @@ const routes: Routes = [
     loadChildren: () =>
       import('./features/typescript/typescript.module').then((m) => m.TypescriptModule)
   }
-  //   {
-  //     path: '**',
-  //     pathMatch: 'prefix',
-  //     component: NotFoundComponent
-  //   }
 ];
 
 @NgModule({

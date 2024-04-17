@@ -104,3 +104,5 @@ console.log(metadata);
 - docker compose logs --tail=5
 - docker compose logs --follow
 - docker compose logs --no-color
+- docker system prune
+- docker network ls

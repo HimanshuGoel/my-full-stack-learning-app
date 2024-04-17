@@ -38,3 +38,7 @@
 7. Decorator Class (example-decorator.class.ts)
 8. Async-Await Class (example-async-await.class.ts)
 9. Abstract Class (example-abstract.class.ts)
+
+## Markdown
+
+1. ReadMe template file for Docker (README_DOCKER.md)

@@ -12,7 +12,6 @@
 
 ### Trainings - Part 1
 
-- Docker and Kubernetes: The Big Picture
 - Deploying Containerized Applications
 - Developing Docker Apps: Core Principles
 
