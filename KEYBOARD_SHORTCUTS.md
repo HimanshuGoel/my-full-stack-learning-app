@@ -19,8 +19,8 @@
 - ctrl + shift + up - move the current line
 - ctrl + shift + backspace - delete to the start of the line
 - ctrl + shift + delete - delete to the end of the line
-- ctrl + alt + enter - insert new unindented line above the current one
-- ctrl + alt + shift + enter - insert new unindented line below the current one
+- ctrl + alt + enter - insert new unindent line above the current one
+- ctrl + alt + shift + enter - insert new unindent line below the current one
 
 ## MS Teams
 
@@ -46,7 +46,7 @@
 
 - copy and paste line up and down - `alt + shift + down/up`
 
-- select all occurences to find match - `ctrl + d`
+- select all occurrences to find match - `ctrl + d`
 
 - run/pause/run to cursor - `f5`, stop - `shift + f5`, step over - `f10`
 
@@ -82,9 +82,9 @@
 
 - `hold k + j/l` - move one frame forward/backward
 
-- `up arror/down arrow` - next or previous shot
+- `up arrow/down arrow` - next or previous shot
 
-- `;/'` - end or begining of shot, `,/.` - nudge one frame left or right
+- `;/'` - end or beginning of shot, `,/.` - nudge one frame left or right
 
 - `shift + [/]` - trim/shuffle keys
 
@@ -93,3 +93,9 @@
 - `shift + f` - full view
 
 - `alt + d` - turning node off/on, `alt + f` - hide all except color codes and view, `alt + s` - add a serial node
+
+## Copilot
+
+- see next/previous suggestion - `Alt + ], Alt + [`
+
+- partially accepting suggestions - `Control + →`

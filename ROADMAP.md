@@ -4,17 +4,13 @@
 
 ### Objectives
 
-- Rearrange folder structure and content of this application
-- Move learning notes files to this application from google drive folder
-- Get basic understanding of Docker, Kubernetes, Istgio and Generative AI
-- Complete recent pluralsight trainings for relative technologies
-- Complete code practices for shortlisted articles in relative technologies
+- Add learning notes for Docker, Kubernetes, Istio and Generative AI
+- Add code examples for shortlisted articles
 
-### Trainings - Part 1
+### Learning Notes - Pluralsight Trainings
 
 - Deploying Containerized Applications
 - Developing Docker Apps: Core Principles
-
 - Getting Started with Kubernetes
 - Kubernetes for Developers: Moving from Docker Compose to Kubernetes
 - Kubernetes for Developers: Deploying Your Code
@@ -29,9 +25,11 @@
 - Internationalization in Angular
 - DOM Manipulation with TypeScript
 - TypeScript 5 Crash Course for JavaScript Developers
-- TypeScript 5 Crash Course for JavaScript Developers
 - Introduction to Developing Custom Components with ARIA 1
 - Meeting Web Accessibility Guidelines (Section 508/ WCAG 2.1)
+
+- Debugging in TypeScript 5 - <https://app.pluralsight.com/library/courses/typescript-5-debugging/table-of-contents>
+- How to Hire the Right People - <https://app.pluralsight.com/library/courses/hire-the-right-people/table-of-contents>
 
 - Exploring Generative AI - <https://app.pluralsight.com/paths/skill/exploring-generative-ai>
 - Generative AI First Look - <https://app.pluralsight.com/paths/skill/generative-ai-first-look>
@@ -39,7 +37,7 @@
 - Generative AI for Developers - <https://app.pluralsight.com/paths/skill/generative-ai-for-developers>
 - Generative AI for Enterprise Organizations - <https://app.pluralsight.com/paths/skill/generative-ai-for-enterprise-organizations>
 
-### Articles
+### Code Examples - Shortlisted Articles
 
 - <https://dev.to/_n0rdy_/understanding-cors-583o>
 - <https://dev.to/this-is-angular/what-is-angular-query-276f>
@@ -48,10 +46,11 @@
 - <https://dev.to/lukeskw/solid-principles-theyre-rock-solid-for-good-reason-31hn>
 - <https://dev.to/this-is-angular/diving-into-type-system-behind-angular-signal-inputs-2b88>
 - <https://angularindepth.com/posts/1521/useful-chrome-devtools-techniques-when-debugging-change-detection-in-angular>
+- <https://prosopo.io/articles/typescript-branding/>
 
 ## Version 2.0
 
-### Trainings - Part 2
+### Learning Notes - Pluralsight Trainings
 
 - Java SE 17 - <https://app.pluralsight.com/paths/skill/java-se-17>
 - Java Unit Testing - <https://app.pluralsight.com/paths/skill/unit-testing-in-java>

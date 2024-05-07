@@ -1598,6 +1598,21 @@ function head<Element>(arr: Element[]): Element | undefined {
 }
 ```
 
+### 1.50 Use new way of injecting dependencies using the inject() function
+
+It makes the code cleaner, more readable and consistent (even when injecting tokens vs services).The types will be automatically inferred and do not need to be manually specified and easier and less verbose inheritance (more details about this below).
+
+import { Component, inject } from '@angular/core';
+
+```typescript
+@Component({ /*...*/ })
+export class MyComponent {
+  private readonly someToken = inject(SOME_TOKEN);
+  private readonly myService = inject(MyService);
+  private readonly httpClient = inject(HttpClient);
+}
+```
+
 ## Node JS
 
 ### 1.1 Do not return the `plain text` as a response
