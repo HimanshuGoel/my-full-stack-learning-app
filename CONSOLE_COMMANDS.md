@@ -11,15 +11,15 @@
 
 ## Firebase
 
-- firebase login
-- firebase init (hosting)
-- firebase deploy
+- `firebase login`
+- `firebase init (hosting)`
+- `firebase deploy`
 
 ## Angular
 
-- ng g c home --standalone
-- ng add @angular-eslint/schematics
-- ng update @angular-eslint/schematics
+- `ng g c home --standalone`
+- `ng add @angular-eslint/schematics`
+- `ng update @angular-eslint/schematics`
 
 ## Regex
 
@@ -27,16 +27,16 @@
 
 ## Git
 
-- git tag
-- git config --list
+- `git tag`
+- `git config --list`
 
 ## Node/NPM/NVM
 
-- npm outdated, npm update
-- node -v, node --version, npm version
-- nvm install 6.9.2, nvm alias default 6.9.2, nvm use 6.9.1, nvm ls
-- npm list -all, npm list --depth 1, npm list --parseable, npm list --json, npm list -g, npm audit fix --force
-- npm install npm@latest -g, npm i -h, npm info package-name, npm repo package-name, npm i <package-name@1.x>, npm i package-name">2.1 < 2.3"
+- `npm outdated`, `npm update`
+- `node -v`, `node --version`, `npm version`
+- `nvm install 6.9.2`, `nvm alias default 6.9.2`, `nvm use 6.9.1`, `nvm ls`
+- `npm list -all`, `npm list --depth 1`, `npm list --parseable`, `npm list --json`, `npm list -g`, `npm audit fix --force`
+- `npm install npm@latest -g`, `npm i -h`, `npm info package-name`, `npm repo package-name`, `npm i <package-name@1.x>`, `npm i package-name">2.1 < 2.3"`
 - update to trivial version package is pre-appended with `^` in package.json file - `npm update package-name`
 
 ## Chrome
@@ -59,8 +59,11 @@ console.log(metadata);
 
 ## Java
 
-- java -version
-- javac -version
+- `javac -version`
+- Checking java version - `java --version`
+- Creating jar file - `jar cvf TitlecaseConverter.jar .`
+- Start jar file by invoking java virtual machine - `java -jar TitlecaseConverter.jar`
+- Creating a launchable jar file - `jar cvmf TC-MANIFEST.MF TitlecaseConverter.jar .`
 
 ## Docker
 
@@ -99,10 +102,10 @@ console.log(metadata);
 - removing volumes - `docker rm -v lastContainer`
 - filtered images - `docker images | grep custom-node`
 - to remove all images and volume - `docker compose down --rmi all --volumes`
-- docker logs `[container_id]`
-- docker compose logs [service_name]
-- docker compose logs --tail=5
-- docker compose logs --follow
-- docker compose logs --no-color
-- docker system prune
-- docker network ls
+- `docker logs '[container_id]'`
+- `docker compose logs [service_name]`
+- `docker compose logs --tail=5`
+- `docker compose logs --follow`
+- `docker compose logs --no-color`
+- `docker system prune`
+- `docker network ls`

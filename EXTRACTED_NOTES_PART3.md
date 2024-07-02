@@ -91,9 +91,10 @@
 - During presentation instead of saying word um… just use silence.
 
 - Update in a stand-up meeting is to talk about what you did yesterday, what you will do today, and if there are any blockers. Even if you don’t have any PR or documentation ready, don’t be afraid to discuss what you did yesterday. It includes telling the team that you are spending time trying to understand the new architecture or the product definition for the entire day. The manager wants to know whether or not you are blocked during this status update. However, most importantly, they want to hear the delta of what you did yesterday compared to today. A status update is a good environment to reiterate your efforts on the project and set timeline expectations, such as any delays in the project delivery. Create a short summary list before the status update.
+
   1. What did I do? - Research on System X and Product Spec Y. Found out that System X requires IT approval.
-  2. What will I do? - Look into the codebase of architecture X. Does anyone know which repository I should start with or who the owner of system X is?
-  3. Blockers - No Blockers for now
+  1. What will I do? - Look into the codebase of architecture X. Does anyone know which repository I should start with or who the owner of system X is?
+  1. Blockers - No Blockers for now
 
 - Gobbledygook – intentionally meaningless language – we deliberately use unclear language so that general people don’t understand it and won’t raise any counter question.
 
@@ -106,6 +107,10 @@
 - We should different visuals like screenshots, icons, symbols, table, graphs and charts, flowcharts to make it easy to understand and engaging.
 
 ## Miscellaneous Technical
+
+- Common full stack technology stack - Python + Django, PHP + Laravel, NextJs + React, Nuxt + Vue
+
+- URL segments - <https://example.logto.io:8080/blogs/index.html?param1=value1&param2=value2#introduction> - Scheme, Host, Port, Path, Query Parameters, Fragment Identifier
 
 - ORM makes life easier. Various different database varieties focus on or good at different part of the database like cache (Reddis), utility, storage engine, etc.
 
@@ -138,9 +143,9 @@
 
 - If you like ray tracing in your games, you would want to get an NVIDIA card. And if you primarily like to work on Linux, then an AMD card is what you should be looking to get.
 
-- Wired audio devices offer superior audio quality, are generally more reliable, and do not require charging. Wired peripharals continue to dominate in terms of reliability, low latency, and security.
+- Wired audio devices offer superior audio quality, are generally more reliable, and do not require charging. Wired peripherals continue to dominate in terms of reliability, low latency, and security.
 
-- Consider the task of finding a specific item in an unsorted database. A classical computer would need to check each item one by one, requiring, on average, N/2 checks for a database of N items. However, Grover's algorithm, a quantum algorithm, can find the item in roughly mod N operations, showcasing quantum computing's potentional for speedup in search problems.
+- Consider the task of finding a specific item in an unsorted database. A classical computer would need to check each item one by one, requiring, on average, N/2 checks for a database of N items. However, Grover's algorithm, a quantum algorithm, can find the item in roughly mod N operations, showcasing quantum computing's potential for speedup in search problems.
 
 - Engineers used to give complex names for the technology but under the hood it is very simple and have same base concept.
 
@@ -283,9 +288,71 @@
 
 - Overclocking will make your phone run hotter and shorten your battery life, but I can squeeze every drop of power out of your device.
 
-- Stable diffusion is a latent text-to-image diffusion model capable of generating photo realistic images given any text input. The model employes a technique called diffusion modelling, which works by incrementally reducing the noise in a sample over several iterations, eventually producing a final output. Diffusion model is a type of model that generates a chain of increasingly noisy images by adding Gaussian noise to an image and then training a model to predict the noise added to an image from one step to following one. It uses a fixed and finite number of steps to generate images, resulting in a stable repeatable image generation.
+- Stable diffusion is a latent text-to-image diffusion model capable of generating photo realistic images given any text input. The model employs a technique called diffusion modelling, which works by incrementally reducing the noise in a sample over several iterations, eventually producing a final output. Diffusion model is a type of model that generates a chain of increasingly noisy images by adding Gaussian noise to an image and then training a model to predict the noise added to an image from one step to following one. It uses a fixed and finite number of steps to generate images, resulting in a stable repeatable image generation.
 
 - Experience is the name everyone gives to their mistakes. Oscan Wilde.
+
+- Zero-day Exploits - Attacks exploiting vulnerabilities in software before the developer has issued a patch.
+
+- Types of MFA - SMS codes, authenticator apps, hardware tokens.
+
+- Writing clean code is what you must do in order to call yourself a professional. There is no reasonable excuse for doing anything less than your best.
+
+- A piece of code should be where you expect to find it - and, if not, you should re-factor to get it there.
+
+- The early bird catches the worm. Don't put off until tomorrow what you can do today.
+
+- YOu should name a variable using the same care wit which you name a first-born child.
+
+- It was the bad code that brought the company down.
+
+- it is unprofessional for programmers to bend to the will of managers who don't understand the risks of making messes.
+
+- Clean code reads like well-written prose.
+
+- It is not the language that makes programs appear simple. It is the programmer that make the language appear simple!
+
+- The length of a name should correspond to the size of its scope.
+
+- One difference between a smart programmer and a professional programmer is that the professional understands that clarity is king. Professionals use their powers for good and write code that others can understand.
+
+- Our real goal is to tell the story of the system, and that the function we write to fit cleanly together into a clear and precise language to help us with that telling.
+
+- when people look under the hood, we want them to be impressed with the neatness, consistency, and attention to detail that they perceive. We want them to struck by the orderliness. We want them to perceive that professionals have been at work.
+
+- The newspaper metaphor - think of a well-written newspaper article. you read it vertically. At the top you expect a headline that will tell you what the story is about and allows you to decide whether it is something you want to rad. the first paragraph gives you a synopsis of the whole story, hiding all the details while giving you broad-brush concepts. As you continue downward, the details increase until you have all the dates, names, quotes, claims, and other minutia. We would like a source file to be like a newspaper article.
+
+- There is a reason that we keep our variables private. We don't want anyone else to depend on them. We want to keep the freedom to change their type of implementation on a whim or an impulse.
+
+- Learning tests - in learning tests we call the third-party API, as we expect to use it in our application. we are essentially doing controlled experiments that check our understanding of that API. the tests focus on what we want out of the API.
+
+- Cohesion - classes could have a small number of instance variables.
+
+- Software systems are unique compared to physical systems. Their architectures can grow incrementally, if we maintain the proper separation of concerns.
+
+- Writing clean concurrent programs is hard - very hard. it is much easier to write code that executes in a single thread.
+
+- We should keep our concurrency-related code separator from other code.
+
+- Keep synchronized sections small - locks are expensive because they create delays and add overhead. Also, avoid calling one locked section from another. This requires a deep understanding of whether something is or is not shared.
+
+- Programming is a craft more than it is a science. To write clean code, you must first write dirty code and then clean it, it is called successive refinement. Most freshman programmers don't follow this advise particularly well. They believe that the primary goal is to get the program working. Once it is "working" they move on to the next task, leaving the "working" program in whatever state they finally to it to "work. Most seasoned programmers know that this is professional suicide.
+
+- Refactoring is a lot like solving a Rubik's cube. There are lots of little steps required to achieve a large goal. Each step enables the next.
+
+- Much of the good software design is simply about partitioning - creating appropriate places to put different kinds of code. This separation of concerns make the code much simpler to understand and maintain.
+
+- Each of us has the responsiblity to leave the code a little better than we found it.
+
+- We should take pains to minimize both the number and extend of extra languages in our source files.
+
+- You don't become a software craftsman by learning a list of heuristics. Professionalism and craftsmanship come from values that drive disciplines.
+
+- al killed the curious star - we are giving up our creativity to make things more convenient. it is what fast food did to us.
+
+- Keep your eyes open for new programming languages, tools, and ways of working that might improve your company’s development process. Don’t be afraid to ask the team to try new stuff, or to try it on your own so you can show them how valuable a new tool can be. Learn about the company’s business, who its customers are, how the product is sold, and what products you compete against. Competitors have good ideas too, ideas you can incorporate in your next feature.
+
+- Be a mentor to a new team member. Help everybody do their best work. The nail that sticks up, gets hammered down.” Don’t stick up. When the company considers employees to lay off, it’s the ones that require management that get let go. The easy ones get to stay. While doing this, keep up to date on tools and methods, because you never know when you will need to find a new job. This increases your value to the next employer.
 
 ## Miscellaneous Health, Fitness and Philosophies
 
@@ -351,7 +418,7 @@
 
 - when you have power without responsiblity, that is a recipe for a bad governance
 
-- movies have time pressure as essense just like water and sky have blue as essense
+- movies have time pressure as essence just like water and sky have blue as essence
 
 - walk (create manufacturing assembly line) -> run (create components) -> sprint (create own branding)
 
@@ -459,7 +526,7 @@
 
 - old age came a lot faster than i expected! now to answer when i started to feel old. i think it was when my body started to break down. first it was high blood pressure, and then knee replacements, hearing loss, a-fib, more heart problems, and weight gain. it became more and more difficult to go places and do things. if i were given the opportunity to live the last 10–15 years over, i would not allow myself to put on extra weight and i would not stop exercising, something i stopped doing when i retired. i am sure i would feel a lot younger even with my health problems.
 
-- europeans appreciate healthier and tastier food, better choices of shopping and travelling, higher quality of education and healthcare, etc.
+- europeans appreciate healthier and tastier food, better choices of shopping and traveling, higher quality of education and healthcare, etc.
 
 - Only those who become “spreadsheet managers” become redundant. Everyone should exercise (and I don’t just mean physical exercise). Always ask the following questions to yourself: Am I expensive? Is there anyone junior and cheaper who can do my job equally well? Do I bring value for the salary paid to me? Am I ready to take up a new role? Does the company believe that I can take up a new role? If you have positive responses to the above, you can last way beyong 45. Else you will not even last that long.
 
@@ -471,7 +538,7 @@
 
 - improve your mood: exercise, think more clearly: meditate, understand the world better: read, understand yourself: write, enjoy the process: have fun, grow faster: consistency, love others: love yourself
 
-- no scolding children on minor things, create memories together and use camera for special events, focus on their creative development through games or activities, take child opionion into consideration, educate them about money by giving them pocket money, hug children often
+- no scolding children on minor things, create memories together and use camera for special events, focus on their creative development through games or activities, take child opinion into consideration, educate them about money by giving them pocket money, hug children often
 
 - "Debuggers don’t remove bugs. They only show them in slow motion." Using a debugger doesn’t scale. Types and tools and tests do.
 
@@ -487,8 +554,8 @@
 
 - Life in US - Reality hits hard after few years: High likelihood monotony sets into life. Whatever seemed ideal, pristine could start looking like they are bland and boring. One might start missing the chaos, genuinely caring people, amazing food and the liveliness Indians are used to back home.
 
-- diabeties happnes not because sugar but high carbs food
+- Diabetes happens not because sugar but high carbs food
 
-- Keep your eyes open for new programming languages, tools, and ways of working that might improve your company’s development process. Don’t be afraid to ask the team to try new stuff, or to try it on your own so you can show them how valuable a new tool can be. Learn about the company’s business, who its customers are, how the product is sold, and what products you compete against. Competitors have good ideas too, ideas you can incorporate in your next feature.
+- Nobody starts from Scratch - Sometimes it is good to remember that nobody starts from scratch, not at least since the Big Bang event approx.13.8 Billion years ago. Everything, all adventures, stories, landscapes, trails, experiences and cultures builds on something, good or bad, something that was all-ready there.
 
-- Be a mentor to a new team member. Help everybody do their best work. The nail that sticks up, gets hammered down.” Don’t stick up. When the company considers employees to lay off, it’s the ones that require management that get let go. The easy ones get to stay. While doing this, keep up to date on tools and methods, because you never know when you will need to find a new job. This increases your value to the next employer.
+- Therefore, I advise foreigners who travel to China: China is not America, nor is it Europe. When traveling to China, you must abide by China's rules and do not bring your own domineering ways in other countries to China. Respecting the elderly is a part of Chinese Confucian culture. In China, you should respect the elderly. Don't push old people who are smaller than you. The elderly in China are different from the elderly in wheelchairs in your country. They have strong hands and feet, are healthy, and know Kung Fu.

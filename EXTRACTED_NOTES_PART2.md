@@ -217,7 +217,7 @@ x-xss-protection: 1; report=https://report.uri.com/xss/enforce
 
 - Cross-site scripting (XSS) – latest frameworks are helping to prevent this vulnerability.
 
-- Broken Authentication – passwords are very vulnerable and very in-secure. We can refer haveibeenpwned.com and avoid user to choose the password which were breached in history. The password rotation was never a good policy and it works against us as humans are terrible at passwords.
+- Broken Authentication – passwords are very vulnerable and very in-secure. We can refer `haveibeenpwned.com` and avoid user to choose the password which were breached in history. The password rotation was never a good policy and it works against us as humans are terrible at passwords.
 
 - Sensitive data exposure – SSN, credit cards information, addresses, religion, health records, political affiliation, birthday. Combination of these information can become dangerous.
 
@@ -270,7 +270,7 @@ Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
 
 - Using HTTPS will reduce the load on client and server both sides. As HTTP uses 1.1 protocol but HTTPS uses h2 protocol i.e. HTTP2, and HTTP2 allows for a binary stream of content, so lots of data coming down to the parallel. HTTP2 is only supported over TLS.
 
-- Getting new certificate and renewing it has very less cost involved. We can use letsencrypt.org for free certificate authority. We can use cerbot.eff.org for automatically renewal of the certificates.
+- Getting new certificate and renewing it has very less cost involved. We can use letsencrypt.org for free certificate authority. We can use `cerbot.eff.org` for automatically renewal of the certificates.
 
 - To avoid enumeration risk, show below message when login failed, like a generic message, don’t say that user doesn’t exist:
 

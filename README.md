@@ -38,4 +38,4 @@ This application has been deployed on Firebase at <https://frontend-learnings-75
 
 ## Any Feedback
 
-If you have any feedback or questions, feel free to email <himanshu.goel.mca@gmail.com>. If you encounter any problems, please create a GitHub ticket within this repository.
+If you have any feedback or questions, feel free to email <himanshu.goel.mca@gmail.com>. If you encounter any problems, please create a [GitHub Issue](https://github.com/HimanshuGoel/full-stack-learning-app/issues/new/choose) within this repository.

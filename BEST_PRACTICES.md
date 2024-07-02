@@ -7,16 +7,16 @@ Not every practices herein has to be strictly followed, and even fewer will be u
 ## Table of Contents
 
 1. [HTML](#html)
-2. [CSS](#css)
-3. [Angular](#angular)
-4. [Typescript](#typescript)
-5. [Node JS](#node-js)
-6. [User Experience](#user-experience)
-7. [Security](#security)
-8. [Git](#git)
-9. [Markdown](#markdown)
-10. [Content Creation](#content-creation)
-11. [Others](#others)
+1. [CSS](#css)
+1. [Angular](#angular)
+1. [Typescript](#typescript)
+1. [Node JS](#node-js)
+1. [User Experience](#user-experience)
+1. [Security](#security)
+1. [Git](#git)
+1. [Markdown](#markdown)
+1. [Content Creation](#content-creation)
+1. [Others](#others)
 
 ## HTML
 
@@ -221,10 +221,7 @@ Whenever we write an `ngFor` directive on an HTML element with children, conside
 **Code Example** - `Do`
 
 ```html
-<user-detail-component
-  *ngFor="let user of users"
-  [user]="user"
-></user-detail-component>
+<user-detail-component *ngFor="let user of users" [user]="user"></user-detail-component>
 ```
 
 **Code Example** - `Avoid`
@@ -256,8 +253,7 @@ Any logic other than checking straightforward conditions should be written in th
   [formGroup]="form"
   [ngClass]="{
           'has-error': (form.controls['firstName'].invalid && (submitted || form.controls['firstName'].touched))
-          }"
->
+          }">
   <input type="text" formControlName="firstName" />
 </div>
 ```
@@ -277,14 +273,20 @@ We use the `ngFor` directive to iterate arrays in Angular templates. When we cha
   `
 })
 export class App {
-  products:[];
-  {id:0, name: "product 1"},
-  {id:1, name: "product 2"}
+  products:[
+    {id:0, name: "product 1"},
+    {id:1, name: "product 2"}
   ];
   productById(index, product){
     return product.id;
   }
 ```
+
+### 1.12 In angular app avoid using enums as they can't be tree shaken
+
+### 1.13 Use image optimization technique by using "ngSrc" attribute instead of "src" also set the dimensions (width and height) to avoid content shifting
+
+### 1.14 Avoid creating large shared enums and barrel files
 
 #### 2.1 Use `Declarative Data Access` pattern
 
@@ -409,8 +411,7 @@ const msg = `Working in conjunction with humanitarian aid agencies,
 **Code Example** - `Avoid`
 
 ```typescript
-const winnerMsg =
-  'Congrats to the winner: ' + winnerName + ', you got a ' + gift;
+const winnerMsg = 'Congrats to the winner: ' + winnerName + ', you got a ' + gift;
 
 const msg =
   'Working in conjunction with humanitarian aid agencies,\n\t' +
@@ -1170,10 +1171,7 @@ We should use named parameters instead of using `options` object which makes it 
 **Code Example** - `Do`
 
 ```typescript
-function setPageThread(
-  name,
-  options = ({ popular, expires, activeClass } = {})
-) {
+function setPageThread(name, options = ({ popular, expires, activeClass } = {})) {
   console.log(popular);
   console.log(expires);
   console.log(activeClass);
@@ -1498,7 +1496,7 @@ await fetch('https://example.com/data.csv')
 
 Defining properties as optional that are sometimes there and sometimes not. We should clearly expressed,model which combinations exist and which don’t. Defining properties as optional in lieu of dividing types is easier and generates less code. It also needs a sound understanding of the product being developed and can limit usage of code if assumptions about the product change.
 
-**Avoid**
+**Avoid** -
 
 ```typescript
 interface Product {
@@ -1509,7 +1507,7 @@ interface Product {
 }
 ```
 
-**Prefer**
+**Prefer** -
 
 ```typescript
 interface Product {
@@ -1532,7 +1530,7 @@ interface PhysicalProduct extends Product {
 
 We should give a full descriptive type name.
 
-**Avoid**
+**Avoid** -
 
 ```typescript
 function head<T>(arr: T[]): T | undefined {
@@ -1540,7 +1538,7 @@ function head<T>(arr: T[]): T | undefined {
 }
 ```
 
-**Prefer**
+**Prefer** -
 
 ```typescript
 function head<Element>(arr: Element[]): Element | undefined {
@@ -1605,13 +1603,99 @@ It makes the code cleaner, more readable and consistent (even when injecting tok
 import { Component, inject } from '@angular/core';
 
 ```typescript
-@Component({ /*...*/ })
+@Component({
+  /*...*/
+})
 export class MyComponent {
   private readonly someToken = inject(SOME_TOKEN);
   private readonly myService = inject(MyService);
   private readonly httpClient = inject(HttpClient);
 }
 ```
+
+### 1.51 Class Names
+
+Classes and objects should have noun or noun phrase names like Customer, WikiPage, Account, and AddressParser. Avoid words like Manager, Processor, Data, or Info in the name of a class. A class name should not e a verb.
+
+### 1.52 Method Names
+
+Methods should have verb or verb phrase names like postPayment, deletePage, or save.
+
+### 1.53 Pick one word per concept
+
+Pick one word for one abstract concept and stick with it. For instances, it is confusing to have fetch, retrieve, and get as equivalent methods of different classes. Likewise, it is confusing to have a controller and a manager and a driver in the same codebase. A consistent lexicon is a great boon to the programmers who must use your code.
+
+### 1.54 Blocks and Indenting
+
+Blocks within if statements, else statements, while statements, and so on should be one line long. probably that line should be a function call. This also implies that functions should be large enough to hold nested structures. therefore, the indent level of a function should not be greater than one or two. This, ofcourse, makes the functions easier to read and understand.
+
+The smaller and more focused a function is, the easier it is to choose a descriptive name.
+
+### 1.55 Flag arguments
+
+Flag arguments are ugly. passing a boolean into a function is a truly terrible practice. it loudly pro-claiming that this function does more than one thing.
+
+### 1.56 Command query separation
+
+Functions should either do something or answer something, but not both. either your function should change the state of an object, or it should return some information about that object.
+
+### 1.57 Prefer exceptions to returning error codes
+
+When you return an error code, you create the problem that the caller must deal with the error immediately. on the other hand if you use exceptions instead of returned error codes, then the error processing code can be separated from the happy path code and can be simplified.
+
+Do not use a comment when you can use a function or a variable.
+
+### 1.58 Javadocs in Nonpublic code
+
+As useful as javadocs are for public API's, they are anathema to code that is not intended for public consumption.
+
+### 1.59 Vertical Density
+
+Lines of code that are tightly related should appear vertically dense.
+
+### 1.60 Vertical openness between concepts
+
+Each blank line is a visual cue that identifies a new and separate concept.
+
+### 1.61 Horizontal openness and density
+
+We don't put spaces between the function names and the opening parenthesis, this is because the function and its arguments are closely related.
+
+### 1.62 Provide context with exceptions
+
+Each exception that you throw should provide enough context to determine the source and location of an error. Crate informative error messages and pass them along with our exceptions.
+
+### 1.63 Don't return null
+
+All it takes is one missing null check to send an application spinning our of control. If you are tempted to return null from a method, consider throwing an exception or returning a special case object instead. If you are calling a null-returning method from a third-party API, consider wrapper that method with a method that either throws an exception or returns a special case object.
+
+### 1.64 Don't pass null
+
+Returning from methods is bad, but passing null into methods is worse. Unless you are working with an API which expects you to pass null, you should avoid passing null in your code wherever possible.
+
+### 1.65 FIRST Rule
+
+Clean test follow five other rules that form this acronym - Fast - Tests should be fast. Independent - tests should not depend on each other. Repeatable - Tests should be repeatable in any environment. Self-validating - the test should have a boolean output. Either they pass or fail. Timely - The tests need to be written in a timely fashion.
+
+### 1.66 Keep the design "simple" by following these rules
+
+Runs all the tests, contains no duplication, expresses the intent of the programmer, minimizes the number of classes and methods. Duplication is the primary enemy of a well-designed system.
+
+### 1.67 Too much information
+
+A well-defined interface does not offer very many functions to depend upon, so coupling is low. A poorly defined interface provides lots of functions that you must call, so coupling is high. Concentrate on keeping interfaces very tight and very small. Help keep coupling low by limiting information.
+
+### 1.68 In general it is better to have many functions that to pass some code into a function to select the behavior
+
+### 1.69 Prefer polymorphism to If/Else or Switch/Case - consider polymorphism before using a switch
+
+### 1.70 Use long names for long scopes
+
+The length of a name should be related to the length of the scope. You can use very short variable names for tiny scopes, but for big scopes you should use longer names
+
+### 1.71 Names should describe side-effects
+
+Names should describe everything that a function, variable, or class is or does like createOrReturnOos
 
 ## Node JS
 
@@ -1887,7 +1971,7 @@ To avoid this issue, you have to combine different types of buttons (filled, wit
 
 ![bp-ux-button-variations.webp](./src/assets/images/bp-ux-button-variations.webp)
 
-### 1.13 Use proper colours for positive and negative actions
+### 1.13 Use proper colors for positive and negative actions
 
 For example, a red button might be used to indicate a warning or a destructive action like "Delete", while a green button might be used to indicate a positive action such as saving or approving something. Moreover, you can add an icon to the context to make it even more prominent.
 
@@ -1935,6 +2019,11 @@ docs: message, feat: message, fix: message, perf: message, refactor: message, re
 
 ```shell
 chore: update npm dependency to the latest version
+refactor(core): add and move tests for `Dispatcher`.\
+fix(zone.js): store remove abort listener on the scheduled task.
+fix(docs-infra): remove config release from test scripts
+build: update io_bazel_rules_sass digest to 61dde52
+docs: resolve extra padding on tutorial editor (#54828)
 ```
 
 ### 1.3 Code review guidelines
@@ -1967,14 +2056,14 @@ We should use numeric list, instead of alphabetic list as numeric lists are easi
 ### Others
 
 - Using AI tools -
-  - solves anything - chatgpt
-  - writes anything - copy.ai
-  - create art - midjourney
-  - create ppts - tome.app
-  - create music - soundraw.io
-  - create video - kaiber
-  - create 3d gif - leiapix converter
-  - create reels - fliki
-  - notetaking - fireflies
-  - edit videos - runway
-  - create avatars - anime ai
+  - solves anything - `chatgpt`
+  - writes anything - `copy.ai`
+  - create art - `midjourney`
+  - create ppts - `tome.app`
+  - create music - `soundraw.io`
+  - create video - `kaiber`
+  - create 3d gif - `leiapix converter`
+  - create reels - `fliki`
+  - note taking - `fireflies`
+  - edit videos - `runway`
+  - create avatars - `anime ai`

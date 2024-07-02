@@ -436,7 +436,7 @@ CSS is the styling mechanism for the web. It is a standard of selectors, propert
 
 - For routing angular use fragment identifier because it gets processed on client side and doesn’t get submitted on server, so we assign a unique fragment identifier to each view. The ngRoute is based on fragment identifies while uiRouter is based on application states URL fragment identifier is optional in it. Nester routing can provide the navigation for a tab-based set of edit pages.
 
-- Controller should not have more than 5 collaborators means dependency. We can also use the façade class to arrogate the interaction with several collaborator sin to a single collaborator. Value provider can be used to create global data. Controller should be testable by following the guidelines like too many used collaborators will make it difficult, like manipulating the DOM or too many business logic, too much work it will be tough to test.
+- Controller should not have more than 5 collaborators means dependency. We can also use the facade class to arrogate the interaction with several collaborator sin to a single collaborator. Value provider can be used to create global data. Controller should be testable by following the guidelines like too many used collaborators will make it difficult, like manipulating the DOM or too many business logic, too much work it will be tough to test.
 
 - Avoid FOUC (flash of un-styled or un-compiled content) – we can avoid that by using ngCloak, ngBind or waiting image. The ng-bind gives us ability to do the same thing as {{}}.
 
@@ -616,7 +616,7 @@ CSS is the styling mechanism for the web. It is a standard of selectors, propert
 
 - Native element using cautions – it tight couple our back-end code with front-end presentation, it is unavailable in angular universal, and we cannot move any logic directly using nativeElement into a web worker. So, if we use it property then these problems will not arise. For this we should use Renderer2 class.
 
-- Building templates with ngTemplate – by default it’s just add an empty element as comment <!----> on DOM. We can also use it with ngIf-then-else condition:
+- Building templates with ngTemplate – by default it’s just add an empty element as comment `<!---->` on DOM. We can also use it with ngIf-then-else condition:
 
 ![angular-ng-template](./src/assets/images/angular-ng-template.png)
 
@@ -877,7 +877,7 @@ onOnInit() {
 
 - Inbuilt structural directives are `*ngFor`,`*ngIf` and attribute directives are `NgStyle` and `NgModel`
 
-- The main.js file contains all the code in our application, the polyfills.js file loads all the polyfill script to make sure it can be compatible with all the modern browsers. The runtime.js loads all the other files. The syltes.js file loads the styles as the name suggests and vendor.js file loads all the imported libraries.
+- The main.js file contains all the code in our application, the polyfills.js file loads all the polyfill script to make sure it can be compatible with all the modern browsers. The runtime.js loads all the other files. The styles.js file loads the styles as the name suggests and vendor.js file loads all the imported libraries.
 
 - The canLoad guards always blocks preloading, so if the canLoad guard is executed, preloading will not work. We can replace the canLoad guard with the canActivate guard, and the it works perfectly fine.
 
@@ -1120,7 +1120,7 @@ Innovation is more like a system or network not a single moment.
 
 - Naming design for CSS – SMACSS, OOCSS, Atomic Design, B.E.M.
 
-- B.E.M. is an acronym for block\_\_element--modifier. A modifier would be any variabtion on a block or element within a block.
+- B.E.M. is an acronym for `block__element--modifier`. A modifier would be any variation on a block or element within a block.
 
 - Single responsibility principle - Let’s say you have a component called Order that displays information about a customer’s order, including the customer’s name, order date, and order items. This component has two responsibilities: displaying the customer’s information and displaying the order information. According to the SRP, these two responsibilities should be separated into two separate components. By following the SRP, you can create a well-organized codebase that is easy to maintain and modify. This, in turn, makes your applications more scalable, flexible, and adaptable to changing requirements.
 
@@ -1308,7 +1308,7 @@ Innovation is more like a system or network not a single moment.
 
 - Using same method name at multiple levels in an object is called shadowing.
 
-- The [[prototype]] points to the prototype of the constructor used to create the object. It is a linkage from one object to another object. By this we can call a property or a method on an object reference , and it can’t handle that object or property, if it can’t handle that, it delegates up to prototype chain to a different object. We can find out where an object’s [[protogype]] points to using dunder proto, Object.getPrototypeOf, and “.constructor.prototype“.
+- The [[prototype]] points to the prototype of the constructor used to create the object. It is a linkage from one object to another object. By this we can call a property or a method on an object reference , and it can’t handle that object or property, if it can’t handle that, it delegates up to prototype chain to a different object. We can find out where an object’s [[prototype]] points to using dunder proto, Object.getPrototypeOf, and “.constructor.prototype“.
 
 - Inheritance vs. prototypical inheritance – they are opposite to each other, one of them is copy down, one of them is a delegation up the chain. We should say JavaScript has behavior delegation not inheritance.
 
@@ -2218,7 +2218,7 @@ myEmitter.on('TEST_EVENT', () => {
 
 - Marble testing is a technique where we draw marble diagrams using ACSII characters while writing unit test to visualize asynchronous observables behavior in a synchronous way. Benefits of marble testing – readable code, test synchronously and helps to find out race condition in our code. Marble syntax - -, |, #, ^, !, a, ()
 
-- For empty observable use |, for never use \_ or ----.
+- For empty observable use `|`, for never use `_` or `----`.
 
 - Hot observables start emitting the values before any subscribe method is called on. Any subscribers can subscribe at any time and they can get the latest values at the time of subscription. They are multicast means more than one subscriber can subscribe to this observable however they will listen to the same producer. Publish and share are used to make a hot observable like tune radio channel, cinema theater, mouse clicks, live movies, live cricket match, stock tickers, live life events.
 
@@ -2229,7 +2229,7 @@ myEmitter.on('TEST_EVENT', () => {
 ![unit-testing-jasmine-marble-cold-observable1](./src/assets/images/unit-testing-jasmine-marble-cold-observable1.png)
 ![unit-testing-jasmine-marble-cold-observable2](./src/assets/images/unit-testing-jasmine-marble-cold-observable2.png)
 
-- Frame – Jasmine-marbles convers observable sequence into frames. Frame is a JSON that consists of RxJs notification object that wraps the actual delivered value with additional metadata and message type.
+- Frame – Jasmine-marbles converts observable sequence into frames. Frame is a JSON that consists of RxJs notification object that wraps the actual delivered value with additional metadata and message type.
 
 ![unit-testing-jasmine-marble-frame](./src/assets/images/unit-testing-jasmine-marble-frame.png)
 

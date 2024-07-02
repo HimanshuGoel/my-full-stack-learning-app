@@ -1,26 +1,30 @@
 # Keyboard Shortcuts
 
+- [Pluralsight Video Player](#pluralsight-video-player)
+- [Notepad++](#notepad)
 - [MS Teams](#ms-teams)
 - [VS Code](#vs-code)
 - [Chrome](#chrome)
 - [DaVinci Resolve](#davinci-resolve)
+- [Copilot](#copilot)
+- [Windows](#windows)
 
 ## Pluralsight Video Player
 
-- k, spacebar (play, pause), f (full screen), c (toggle closed captions)
+- `k`, `spacebar` (play, pause), `f` (full screen), `c` (toggle closed captions)
 
 ## Notepad++
 
-- ctrl + numpad - navigate to the n-th document
-- ctrl + shift + t - copy the current line to the clipboard
-- shift + delete - cut
-- ctrl + d - duplicate the current line
-- ctrl + t - switch the current line position with the previous line position
-- ctrl + shift + up - move the current line
-- ctrl + shift + backspace - delete to the start of the line
-- ctrl + shift + delete - delete to the end of the line
-- ctrl + alt + enter - insert new unindent line above the current one
-- ctrl + alt + shift + enter - insert new unindent line below the current one
+- `ctrl + numpad` - navigate to the n-th document
+- `ctrl + shift + t` - copy the current line to the clipboard
+- `shift + delete` - cut
+- `ctrl + d` - duplicate the current line
+- `ctrl + t` - switch the current line position with the previous line position
+- `ctrl + shift + up` - move the current line
+- `ctrl + shift + backspace` - delete to the start of the line
+- `ctrl + shift + delete` - delete to the end of the line
+- `ctrl + alt + enter` - insert new unindent line above the current one
+- `ctrl + alt + shift + enter` - insert new unindent line below the current one
 
 ## MS Teams
 
@@ -99,3 +103,7 @@
 - see next/previous suggestion - `Alt + ], Alt + [`
 
 - partially accepting suggestions - `Control + →`
+
+## Windows
+
+- capture screenshot - `window + print screen`

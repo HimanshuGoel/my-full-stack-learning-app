@@ -3,10 +3,11 @@
   "useTabs": false,
   "singleQuote": true,
   "semi": true,
+  "htmlWhitespaceSensitivity": "ignore",
   "bracketSpacing": true,
   "bracketSameLine": true,
-  "trailingComma": "none",
-  "endOfLine": "auto",
+  "trailingComma": "es5",
+  "endOfLine": "lf",
   "printWidth": 100,
   "overrides": [
     {

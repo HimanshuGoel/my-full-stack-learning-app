@@ -1,33 +1,42 @@
 {
   "root": true,
-  "ignorePatterns": ["projects/**/*"],
+  "ignorePatterns": ["node_modules/*", "!**/*.ts"],
   "overrides": [
     {
       "files": ["*.ts"],
+      "parser": "@typescript-eslint/parser",
+      "extends": [
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking",
+        "plugin:@angular-eslint/recommended",
+        "plugin:rxjs/recommended",
+        "prettier",
+        "prettier/@typescript-eslint"
+      ],
       "parserOptions": {
-        "project": ["tsconfig.json"],
+        "ecmaVersion": 2020,
+        "sourceType": "module",
+        "project": ["tsconfig.json", "e2e/tsconfig.json"],
         "createDefaultProgram": true
       },
-      "extends": [
-        "plugin:@angular-eslint/recommended",
-        "plugin:@angular-eslint/template/process-inline-templates",
-        "plugin:prettier/recommended"
-      ],
       "rules": {
+        "@typescript-eslint/no-explicit-any": "error",
+        "@typescript-eslint/no-non-null-assertion": "error",
+        "@angular-eslint/no-output-native": "error",
+        "@angular-eslint/component-selector": [
+          "error",
+          {
+            "type": ["element", "attribute"],
+            "prefix": ["app"],
+            "style": "kebab-case"
+          }
+        ],
         "@angular-eslint/directive-selector": [
           "error",
           {
             "type": "attribute",
-            "prefix": "app",
+            "prefix": ["app"],
             "style": "camelCase"
-          }
-        ],
-        "@angular-eslint/component-selector": [
-          "error",
-          {
-            "type": "element",
-            "prefix": "app",
-            "style": "kebab-case"
           }
         ]
       }
@@ -35,20 +44,31 @@
     {
       "files": ["*.html"],
       "extends": ["plugin:@angular-eslint/template/recommended"],
-      "rules": {}
-    },
-    {
-      "files": ["*.html"],
-      "excludedFiles": ["*inline-template-*.component.html"],
-      "extends": ["plugin:prettier/recommended"],
       "rules": {
-        "prettier/prettier": [
-          "error",
-          {
-            "parser": "angular"
-          }
-        ]
+        "@angular-eslint/template/banana-in-box": "error",
+        "@angular-eslint/template/no-positive-tabindex": "error"
       }
     }
-  ]
+  ],
+  "settings": {
+    "angular-eslint": {
+      "ignoreTemplateLiterals": true,
+      "component-selector": [
+        "error",
+        {
+          "type": ["element", "attribute"],
+          "prefix": ["app"],
+          "style": "kebab-case"
+        }
+      ],
+      "directive-selector": [
+        "error",
+        {
+          "type": "attribute",
+          "prefix": ["app"],
+          "style": "camelCase"
+        }
+      ]
+    }
+  }
 }
