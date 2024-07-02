@@ -4,7 +4,7 @@
 
 - [Soft Skills](#soft-skills)
 - [Miscellaneous Technical](#miscellaneous-technical)
-- [Miscellaneous Health, Fitness and Philosophies](#miscellaneous-health-fitness-and-philosophies)
+- [Miscellaneous Health and Philosophies](#miscellaneous-health-and-philosophies)
 
 ## Soft Skills
 
@@ -354,7 +354,7 @@
 
 - Be a mentor to a new team member. Help everybody do their best work. The nail that sticks up, gets hammered down.” Don’t stick up. When the company considers employees to lay off, it’s the ones that require management that get let go. The easy ones get to stay. While doing this, keep up to date on tools and methods, because you never know when you will need to find a new job. This increases your value to the next employer.
 
-## Miscellaneous Health, Fitness and Philosophies
+## Miscellaneous Health and Philosophies
 
 - to prevent cancer, simply avoid stress, tobacco and opt for a clean diet
 
