@@ -354,6 +354,10 @@
 
 - Be a mentor to a new team member. Help everybody do their best work. The nail that sticks up, gets hammered down.” Don’t stick up. When the company considers employees to lay off, it’s the ones that require management that get let go. The easy ones get to stay. While doing this, keep up to date on tools and methods, because you never know when you will need to find a new job. This increases your value to the next employer.
 
+- We have now become a lego builder not a programmer after using so much of frameworks.
+
+- The code should be easy to modify as requirements change.
+
 ## Miscellaneous Health and Philosophies
 
 - to prevent cancer, simply avoid stress, tobacco and opt for a clean diet
@@ -559,3 +563,5 @@
 - Nobody starts from Scratch - Sometimes it is good to remember that nobody starts from scratch, not at least since the Big Bang event approx.13.8 Billion years ago. Everything, all adventures, stories, landscapes, trails, experiences and cultures builds on something, good or bad, something that was all-ready there.
 
 - Therefore, I advise foreigners who travel to China: China is not America, nor is it Europe. When traveling to China, you must abide by China's rules and do not bring your own domineering ways in other countries to China. Respecting the elderly is a part of Chinese Confucian culture. In China, you should respect the elderly. Don't push old people who are smaller than you. The elderly in China are different from the elderly in wheelchairs in your country. They have strong hands and feet, are healthy, and know Kung Fu.
+
+- Regarding dental health, I'm pretty good with the brushing and don't eat sweets or drink anything sugary. My usual issue is pocketing as I don't floss enough.
