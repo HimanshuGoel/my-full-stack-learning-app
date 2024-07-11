@@ -1,65 +1,27 @@
-import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-
-import { HttpClientModule } from '@angular/common/http';
-import { EnvironmentProviders, isDevMode, makeEnvironmentProviders, NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgModule, provideZoneChangeDetection } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
+import {
+  provideHttpClient,
+  withInterceptorsFromDi,
+} from '@angular/common/http';
+import { RouterModule } from '@angular/router';
+import { AppRoutingModule } from './app.routing';
+import { ComponentsModule } from './components/components.module';
 import { AppComponent } from './app.component';
-import {
-  LOGGER_PROVIDERS,
-  LogLevel,
-  MIN_LOG_LEVEL
-} from './features/angular/concepts/example-logger2.service';
-import {
-  ConsoleProvider,
-  TimedConsoleProvider
-} from './features/angular/concepts/example-logger.service';
-import { InMemoryWebApiService } from './features/angular/concepts/example-in-memory-web-api.service';
-import { AngularModule } from './features/angular/angular.module';
-import { TypescriptModule } from './features/typescript/typescript.module';
-import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-
-function registerLoggerProviders(): EnvironmentProviders {
-  return makeEnvironmentProviders(
-    isDevMode()
-      ? [
-          {
-            provide: LOGGER_PROVIDERS,
-            useClass: ConsoleProvider,
-            multi: true
-          },
-          {
-            provide: LOGGER_PROVIDERS,
-            useClass: TimedConsoleProvider,
-            multi: true
-          }
-        ]
-      : []
-  );
-}
+import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 
 @NgModule({
-  declarations: [AppComponent],
-  imports: [
-    AppRoutingModule,
-    AngularModule,
-    TypescriptModule,
-    BrowserModule,
-    FormsModule,
-    HttpClientModule,
-    ReactiveFormsModule,
-    HttpClientInMemoryWebApiModule.forRoot(InMemoryWebApiService, { delay: 200 })
-  ],
+  declarations: [AppComponent, AdminLayoutComponent],
   bootstrap: [AppComponent],
-  providers: [
-    registerLoggerProviders(),
-    {
-      provide: MIN_LOG_LEVEL,
-      useValue: isDevMode() ? LogLevel.INFO : LogLevel.NEVER
-    },
-    provideAnimationsAsync()
-  ]
+  imports: [
+    BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
+    ComponentsModule,
+    RouterModule,
+    AppRoutingModule,
+  ],
+  providers: [provideHttpClient(withInterceptorsFromDi())],
 })
 export class AppModule {}

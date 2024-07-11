@@ -1,52 +1,42 @@
 {
+  // For more information, visit: https://go.microsoft.com/fwlink/?LinkId=733558
+  "version": "2.0.0",
   "tasks": [
     {
-      "label": "start-app",
       "type": "npm",
       "script": "start",
-      "options": {
-        "cwd": "${workspaceFolder}"
-      },
-      "presentation": {
-        "reveal": "always"
-      },
-      "problemMatcher": ["$tsc"]
+      "isBackground": true,
+      "problemMatcher": {
+        "owner": "typescript",
+        "pattern": "$tsc",
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": {
+            "regexp": "(.*?)"
+          },
+          "endsPattern": {
+            "regexp": "bundle generation complete"
+          }
+        }
+      }
     },
     {
-      "label": "build-app",
       "type": "npm",
-      "script": "build-frontend",
-      "options": {
-        "cwd": "${workspaceFolder}"
-      },
-      "presentation": {
-        "reveal": "always"
-      },
-      "problemMatcher": ["$tsc"]
-    },
-    {
-      "label": "deploy-app",
-      "type": "npm",
-      "script": "deploy",
-      "options": {
-        "cwd": "${workspaceFolder}"
-      },
-      "presentation": {
-        "reveal": "always"
-      },
-      "problemMatcher": ["$tsc"]
-    },
-    {
-      "label": "verify-app",
-      "type": "npm",
-      "script": "verify",
-      "options": {
-        "cwd": "${workspaceFolder}"
-      },
-      "presentation": {
-        "reveal": "always"
-      },
-      "problemMatcher": ["$tsc"]
+      "script": "test",
+      "isBackground": true,
+      "problemMatcher": {
+        "owner": "typescript",
+        "pattern": "$tsc",
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": {
+            "regexp": "(.*?)"
+          },
+          "endsPattern": {
+            "regexp": "bundle generation complete"
+          }
+        }
+      }
     }
   ]
 }
