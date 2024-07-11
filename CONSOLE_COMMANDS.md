@@ -38,6 +38,7 @@
 - `npm list -all`, `npm list --depth 1`, `npm list --parseable`, `npm list --json`, `npm list -g`, `npm audit fix --force`
 - `npm install npm@latest -g`, `npm i -h`, `npm info package-name`, `npm repo package-name`, `npm i <package-name@1.x>`, `npm i package-name">2.1 < 2.3"`
 - update to trivial version package is pre-appended with `^` in package.json file - `npm update package-name`
+- update all dependencies through NCU package - npm install -g npm-check-updates -> ncu -u -> npm install
 
 ## Chrome
 

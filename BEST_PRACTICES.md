@@ -2030,6 +2030,51 @@ docs: resolve extra padding on tutorial editor (#54828)
 
 Checklist - readability, performance, reusability, test coverage (edge cases), maintainability
 
+### 1.4 Good issue title examples
+
+Use format `[Component] ([Project/Module]) - [Action] [Description]`. This format is detailed and structured, making it easy to understand the scope and context of the issue at a glance. It provides a balanced level of detail, is easy to understand, and helps in quickly identifying the scope and action required.
+
+  - routes (example-app) - add examples for all supported functionality
+  - ui (dashboard) - update styling for the new theme
+  - backend (auth-service) - fix token expiration issue
+  - API (user-profile) - remove deprecated endpoints
+  - docs (setup-guide) - update installation instructions
+  - database (orders) - optimize query performance
+  - middleware (security) - implement additional logging
+  - frontend (homepage) - redesign layout
+  - notifications (email-service) - fix delivery delays
+  - testing (unit-tests) - add coverage for new features
+  - authentication (login) - enhance error handling
+  - config (deployment) - update environment variables
+  - cache (redis) - clear stale data periodically
+  - analytics (tracking) - implement new metrics
+  - integration (payment-gateway) - fix transaction validation
+  - localization (translations) - add support for new languages
+  - access-control (roles) - update permissions for new role
+  - build (CI/CD) - fix pipeline failure
+  - dependencies (package) - update to latest version
+  - logging (monitoring) - reduce log verbosity
+  - directives (tooltip) - fix positioning issue
+  - pipes (date-format) - add custom date formats
+  - modules (shared) - reorganize and optimize imports
+  - styles (global) - update primary color palette
+  - routing (app) - fix navigation guard logic
+  - animations (modal) - enhance open/close transitions
+  - forms (user-registration) - add validation messages
+  - testing (unit-tests) - increase coverage for new components
+  - docs (api-reference) - update with latest changes
+  - examples (demos) - add example for dynamic forms
+  - config (angular.json) - update build configurations
+  - state-management (ngrx) - optimize store selectors
+  - i18n (translations) - add new language support
+  - build (webpack) - fix asset bundling issue
+  - dependency (package.json) - update Angular to latest version
+  - layout (grid) - improve responsive design
+  - security (auth) - fix token storage vulnerability
+  - performance (lazy-loading) - optimize module loading
+  - components (dropdown) - add multi-select functionality
+  - services (auth) - implement token refresh logic
+
 ## Markdown
 
 ### 1.1 Using `numeric` list, instead of `alphabetic` list
