@@ -11,7 +11,7 @@ import $ from 'jquery';
   styleUrls: ['./admin-layout.component.scss'],
 })
 export class AdminLayoutComponent implements OnInit {
-  private lastPoppedUrl: string;
+  private lastPoppedUrl: string = '';
   private yScrollStack: number[] = [];
 
   constructor(public location: Location, private router: Router) {}
@@ -35,7 +35,7 @@ export class AdminLayoutComponent implements OnInit {
     }
 
     this.location.subscribe((ev: PopStateEvent) => {
-      this.lastPoppedUrl = ev.url;
+      this.lastPoppedUrl = ev.url ?? '';
     });
 
     this.router.events.subscribe((event: any) => {
@@ -44,8 +44,8 @@ export class AdminLayoutComponent implements OnInit {
           this.yScrollStack.push(window.scrollY);
       } else if (event instanceof NavigationEnd) {
         if (event.url == this.lastPoppedUrl) {
-          this.lastPoppedUrl = undefined;
-          window.scrollTo(0, this.yScrollStack.pop());
+          this.lastPoppedUrl = '';
+          window.scrollTo(0, this.yScrollStack.pop() ?? 0);
         } else window.scrollTo(0, 0);
       }
     });
