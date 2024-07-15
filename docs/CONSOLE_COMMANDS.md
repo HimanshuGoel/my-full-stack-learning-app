@@ -4,7 +4,7 @@
 - [Angular](#angular)
 - [Regex](#regex)
 - [Git](#git)
-- [Node/NPM/NVM](#nodenpmnvm)
+- [Node](#node)
 - [Chrome](#chrome)
 - [Java](#java)
 - [Docker](#docker)
@@ -30,7 +30,7 @@
 - `git tag`
 - `git config --list`
 
-## Node/NPM/NVM
+## Node
 
 - `npm outdated`, `npm update`
 - `node -v`, `node --version`, `npm version`

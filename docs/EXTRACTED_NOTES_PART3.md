@@ -416,7 +416,7 @@
 
 - we should never forget what a privilege it is to be in the here and now in a world so full of possibilities.
 
-- the being john malkovich movie is based on body-mind problem
+- the Being John Malkovich movie is based on body-mind problem
 
 - consciousness is a terrible curse. I think. I feel. I suffer
 

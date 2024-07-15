@@ -307,7 +307,7 @@ X-Frame-Options: Deny
 - The frame-ancestors – to avoid click jacking attacks. Attacker would embed the targeting website in his website into an iframe, then making that target website transparent putting content the attacker provides under the target website and enticing the user to click what they think is a button the attacker’s website but instead clicking a button on the target website. We can avoid this by this header so that our websites won’t be framed into some other website.
 
 ```typescript
-frame-ancesors: 'none';
+frame-ancestors: 'none';
 ```
 
 - Security threats on server side - SQL injection, insufficient authorization, weak credential storage
