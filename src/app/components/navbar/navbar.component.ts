@@ -1,5 +1,5 @@
 import { Component, OnInit, ElementRef } from '@angular/core';
-import { ROUTES } from '../sidebar/sidebar.component';
+import { RouteInfo, ROUTES } from '../sidebar/sidebar.component';
 import { Location } from '@angular/common';
 import { Router } from '@angular/router';
 
@@ -10,10 +10,10 @@ import { Router } from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
   location: Location;
-  mobile_menu_visible: any = 0;
+  mobile_menu_visible = 0;
 
-  private listTitles: any[] = [];
-  private toggleButton: any;
+  private listTitles: RouteInfo[] = [];
+  private toggleButton!: Element;
   private sidebarVisible: boolean;
 
   constructor(location: Location, private element: ElementRef, private router: Router) {
@@ -27,9 +27,9 @@ export class NavbarComponent implements OnInit {
     const navbar: HTMLElement = this.element.nativeElement;
     this.toggleButton = navbar.getElementsByClassName('navbar-toggler')[0];
 
-    this.router.events.subscribe((event) => {
+    this.router.events.subscribe(() => {
       this.sidebarClose();
-      const $layer: any = document.getElementsByClassName('close-layer')[0];
+      const $layer = document.getElementsByClassName('close-layer')[0];
       if ($layer) {
         $layer.remove();
         this.mobile_menu_visible = 0;
@@ -109,7 +109,7 @@ export class NavbarComponent implements OnInit {
   }
 
   getTitle() {
-    let title = this.location.prepareExternalUrl(this.location.path());
+    const title = this.location.prepareExternalUrl(this.location.path());
     for (let item = 0; item < this.listTitles.length; item++) {
       if (this.listTitles[item].path === title) {
         return this.listTitles[item].title;

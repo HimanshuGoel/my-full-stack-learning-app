@@ -1,7 +1,7 @@
 import { TestBed, waitForAsync } from '@angular/core/testing';
 
 import { AppComponent } from './app.component';
-import { Router, RouterModule } from '@angular/router';
+import { RouterModule } from '@angular/router';
 
 describe('AppComponent', () => {
   beforeEach(waitForAsync(() => {

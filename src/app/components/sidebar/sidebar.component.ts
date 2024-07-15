@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
+// eslint-disable-next-line  @typescript-eslint/no-explicit-any
 declare const $: any;
 
-declare interface RouteInfo {
+export interface RouteInfo {
   path: string;
   title: string;
   icon: string;
@@ -25,7 +26,7 @@ export const ROUTES: RouteInfo[] = [
   styleUrls: ['./sidebar.component.scss'],
 })
 export class SidebarComponent implements OnInit {
-  menuItems: any[] = [];
+  menuItems: RouteInfo[] = [];
 
   ngOnInit() {
     this.menuItems = ROUTES.filter((menuItem) => menuItem);

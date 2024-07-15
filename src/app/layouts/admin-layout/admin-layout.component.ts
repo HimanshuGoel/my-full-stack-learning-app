@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { Location, PopStateEvent } from '@angular/common';
 import { Router, NavigationEnd, NavigationStart } from '@angular/router';
 import PerfectScrollbar from 'perfect-scrollbar';
@@ -10,7 +10,7 @@ import $ from 'jquery';
   templateUrl: './admin-layout.component.html',
   styleUrls: ['./admin-layout.component.scss'],
 })
-export class AdminLayoutComponent implements OnInit {
+export class AdminLayoutComponent implements OnInit, AfterViewInit {
   private lastPoppedUrl: string = '';
   private yScrollStack: number[] = [];
 
@@ -38,7 +38,7 @@ export class AdminLayoutComponent implements OnInit {
       this.lastPoppedUrl = ev.url ?? '';
     });
 
-    this.router.events.subscribe((event: any) => {
+    this.router.events.subscribe((event) => {
       if (event instanceof NavigationStart) {
         if (event.url != this.lastPoppedUrl)
           this.yScrollStack.push(window.scrollY);
@@ -61,8 +61,8 @@ export class AdminLayoutComponent implements OnInit {
         elemSidebar.scrollTop = 0;
       });
     if (window.matchMedia(`(min-width: 960px)`).matches && !this.isMac()) {
-      let ps = new PerfectScrollbar(elemMainPanel);
-      ps = new PerfectScrollbar(elemSidebar);
+      new PerfectScrollbar(elemMainPanel);
+      new PerfectScrollbar(elemSidebar);
     }
 
     $('.fixed-plugin a').click(function (event) {
@@ -75,8 +75,8 @@ export class AdminLayoutComponent implements OnInit {
       }
     });
 
-    let $sidebar = $('.sidebar');
-    let $sidebar_responsive = $('body > .navbar-collapse');
+    const $sidebar = $('.sidebar');
+    const $sidebar_responsive = $('body > .navbar-collapse');
     $('.fixed-plugin .badge').click(function () {
       $(this).siblings().removeClass('active');
       $(this).addClass('active');

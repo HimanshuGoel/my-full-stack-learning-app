@@ -108,12 +108,19 @@
               "node_modules/perfect-scrollbar/dist/perfect-scrollbar.min.js"
             ]
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": ["src/**/*.ts", "src/**/*.html"]
+          }
         }
       }
     }
   },
   "schematics": {},
   "cli": {
-    "analytics": false
+    "analytics": false,
+    "schematicCollections": ["@angular-eslint/schematics"]
   }
 }
