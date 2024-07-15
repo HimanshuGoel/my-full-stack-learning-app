@@ -20,15 +20,14 @@ This application has been deployed on Firebase at <https://frontend-learnings-75
 
 - [Roadmap](./ROADMAP.md)
 - [Changelog](./CHANGELOG.md)
-- [Best Practices](./BEST_PRACTICES.md)
-- [Troubleshooting](./TROUBLESHOOTING.md)
-- [Keyboard Shortcuts](./KEYBOARD_SHORTCUTS.md)
-- [Console Commands](./CONSOLE_COMMANDS.md)
-- [Extracted Notes - Part 1](./EXTRACTED_NOTES_PART1.md)
-- [Extracted Notes - Part 2](./EXTRACTED_NOTES_PART2.md)
-- [Extracted Notes - Part 3](./EXTRACTED_NOTES_PART3.md)
-- [Extracted Notes - Part 4](./EXTRACTED_NOTES_PART4.md)
-- [Interview Questions](./INTERVIEW_QUESTIONS.md)
+- [Best Practices](./docs/BEST_PRACTICES.md)
+- [Troubleshooting](./docs/TROUBLESHOOTING.md)
+- [Keyboard Shortcuts](./docs/KEYBOARD_SHORTCUTS.md)
+- [Console Commands](./docs/CONSOLE_COMMANDS.md)
+- [Extracted Notes - Part 1](./docs/EXTRACTED_NOTES_PART1.md)
+- [Extracted Notes - Part 2](./docs/EXTRACTED_NOTES_PART2.md)
+- [Extracted Notes - Part 3](./docs/EXTRACTED_NOTES_PART3.md)
+- [Interview Questions](./docs/INTERVIEW_QUESTIONS.md)
 
 ## Other Documents
 

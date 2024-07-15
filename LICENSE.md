@@ -1,3 +1,0 @@
-# License
-
-To be created...
