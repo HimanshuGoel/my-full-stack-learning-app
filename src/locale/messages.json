@@ -1,0 +1,11 @@
+{
+  "locale": "en-US",
+  "translations": {
+    "8854094932942190741": "Search...",
+    "3420399337887146878": "main logo",
+    "angularConceptTitle": "Angular",
+    "8396987225975818550": " Total number of {$ICU} ",
+    "8876993032982615034": "{VAR_PLURAL, plural, =0 {concept} , =1 {concept} other {concepts}}",
+    "typescriptConceptTitle": "TypeScript"
+  }
+}

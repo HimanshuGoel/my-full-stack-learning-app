@@ -7,12 +7,16 @@
             <div class="card-icon">
               <i class="material-icons">tag</i>
             </div>
-            <p class="card-category">Angular</p>
-            <h3 class="card-title">1</h3>
+            <p i18n="angular concepts title|Title for Angular concepts@@angularConceptTitle" class="card-category">Angular</p>
+            <h3 class="card-title">{{totalAngularConcepts}}</h3>
           </div>
           <div class="card-footer">
             <div class="stats">
-              <i class="material-icons">local_offer</i> Total number of concepts
+              <i class="material-icons">local_offer</i>
+              <span i18n>
+                Total number of {totalAngularConcepts, plural, =0 {concept}, =1 {concept} other
+                {concepts}}
+              </span>
             </div>
           </div>
         </div>
@@ -23,12 +27,13 @@
             <div class="card-icon">
               <i class="material-icons">code</i>
             </div>
-            <p class="card-category">TypeScript</p>
-            <h3 class="card-title">1</h3>
+            <p i18n="title concepts title|Title for Title concepts@@typescriptConceptTitle" class="card-category">TypeScript</p>
+            <h3 class="card-title">{{totalTypeScriptConcepts}}</h3>
           </div>
           <div class="card-footer">
             <div class="stats">
-              <i class="material-icons">local_offer</i> Total number of concepts
+              <i class="material-icons">local_offer</i>
+              Total number of concepts
             </div>
           </div>
         </div>

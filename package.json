@@ -17,6 +17,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "start-ja": "ng serve --configuration ja",
+    "extract": "ng extract-i18n --format json",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
@@ -56,6 +58,7 @@
     "@angular-eslint/template-parser": "18.1.0",
     "@angular/cli": "~18.1.0",
     "@angular/compiler-cli": "^18.1.0",
+    "@angular/localize": "^18.1.0",
     "@types/bootstrap": "5.2.10",
     "@types/jasmine": "~5.1.4",
     "@types/jquery": "3.5.30",
