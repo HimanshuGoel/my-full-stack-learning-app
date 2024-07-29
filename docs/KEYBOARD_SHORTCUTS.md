@@ -8,6 +8,7 @@
 - [DaVinci Resolve](#davinci-resolve)
 - [Copilot](#copilot)
 - [Windows](#windows)
+- [Github Copilot](#github-copilot)
 
 ## Pluralsight Video Player
 
@@ -107,3 +108,12 @@
 ## Windows
 
 - capture screenshot - `window + print screen`
+
+## Github Copilot
+
+- `esc` - dismiss suggestion
+- `tab` - accept suggestion
+- `alt + ]` - next suggestion
+- `ctrl + enter` - see 10 suggestions
+- `alt + \` - trigger suggestion
+- `ctrl + i` - ask copilot

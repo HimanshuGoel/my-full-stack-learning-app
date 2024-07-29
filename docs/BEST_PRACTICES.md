@@ -2081,6 +2081,30 @@ Use format `[Component] ([Project/Module]) - [Action] [Description]`. This forma
 
 We should use numeric list, instead of alphabetic list as numeric lists are easier to scan and read when the list is long.
 
+## Visual Studio Code
+
+- Better prompts
+
+`<!-- add a button for a power (or exponential) function -->`
+
+```javascript
+/* draw a brown wooden boat with a white sail on top of a blue ocean
+- the sky is light blue with on white cloud
+- the cloud has three different sized circles that overlap each other
+- the sun is a yellow circle inside a yellow-orange circle inside an orange circle in
+- the sail is a large white triangle connected to the top of the dark brown mast down
+- the boat is curved at the bottom and has a dark brown rectangle for the body
+*/
+```
+
+- `# please give me the code in YAML to deploy a WordPress container to a Kubernetes cluster`
+
+- `please document this code`
+
+- `please explain this code to me`
+
+- Provide query in steps like recipe instruction instead of single paragraph, keep relevant tab opened for a better context, provide one or two examples for a better context.
+
 ## Content Creation
 
 ### Video
