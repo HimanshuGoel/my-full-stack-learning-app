@@ -1993,6 +1993,18 @@ A multi-select field can be a good alternative to a checkbox with more than seve
 
 ![bp-ux-prefer-multiselect.webp](./src/assets/images/bp-ux-prefer-multiselect.webp)
 
+### 1.17 - Do not use Long dropdowns
+
+Have you ever tried to get to the needed item in a dropdown menu when it has to be scrolled? Believe us, this is not an easy task, especially for mobile users. Do not complicate their lives, this is not an easy thing, alas.
+
+![bp-ux-avoid-long-dropdowns.webp](./src/assets/images/bp-ux-avoid-long-dropdowns.webp)
+
+### 1.18 - Do not show Unneeded messages
+
+There is nothing worse than texting your boss that you want to quit, change your mind, hastily delete the message, and then try to explain what you wanted to write in it. We are talking about the example below. Many web solutions fall short of this approach. Unlike yours, if you follow our recommendations.
+
+![bp-ux-unneeded-message.webp](./src/assets/images/bp-ux-unneeded-message.webp)
+
 ## Security
 
 ### 1.1 Use `Guid ID's`

@@ -1770,6 +1770,208 @@ Innovation is more like a system or network not a single moment.
 
 ![typescript-regex-short-codes](./src/assets/images/typescript-regex-short-codes.png)
 
+- Solid Principles - It is an acronym for five design principles aimed at enhancing the understanding, development, and maintenance of software. By applying this set of principles, you should notice a reduction in bugs, improved code quality, the production of more organized code, decreased coupling, enhanced refactoring, and encouragement of code reuse.
+
+  - Single Responsibility Principle - one class should have one, and only one, reason to change. It also avoids Lack of cohesion, Too much information in one place, Challenges in implementing automated tests as it's hard to mock such a class. ou can (and should) apply it to methods and functions as well.
+
+    ```typescript
+    class AuthenticationManager {
+      authenticateUser(username: string, password: string): boolean {
+        // Authenticate logic
+      }
+    }
+
+    class UserProfileManager {
+      showUserProfile(username: string): UserProfile {
+        // Show user profile logic
+      }
+
+      updateUserProfile(username: string): UserProfile {
+        // Update user profile logic
+      }
+    }
+
+    class PermissionManager {
+      setUserPermissions(username: string): void {
+        // Set permission logic
+      }
+    }
+
+    // ❌
+    function processTasks(taskList: Task[]): void {
+      taskList.forEach((task) => {
+        // Processing logic involving multiple responsibilities
+        updateTaskStatus(task);
+        displayTaskDetails(task);
+        validateTaskCompletion(task);
+        verifyTaskExistence(task);
+      });
+    }
+
+    // ✅
+    function updateTaskStatus(task: Task): Task {
+      // Logic for updating task status
+      return { ...task, completed: true };
+    }
+
+    function displayTaskDetails(task: Task): void {
+      // Logic for displaying task details
+      console.log(`Task ID: ${task.id}, Description: ${task.description}`);
+    }
+
+    function validateTaskCompletion(task: Task): boolean {
+      // Logic for validating task completion
+      return task.completed;
+    }
+
+    function verifyTaskExistence(task: Task): boolean {
+      // Logic for verifying task existence
+      return tasks.some((t) => t.id === task.id);
+    }
+    ```
+
+    ![typescript-single-responsiblity](../docs-assets/images/typescript-single-responsiblity.avif)
+
+  - Open Closed Principle - Objects or entities should be open for extension but closed for modification. Modifying an existing class to add new behavior carries a serious risk of introducing bugs into something that was already working. Open for extension: You can add new functionality or behavior to the class without changing its source code. Closed for modification: If your class already has a functionality or behavior that works fine, don't change its source code to add something new.
+
+    ```typescript
+    interface Shape {
+      area(): number;
+    }
+
+    class Circle implements Shape {
+      radius: number;
+
+      constructor(radius: number) {
+        this.radius = radius;
+      }
+
+      area(): number {
+        return Math.PI * this.radius ** 2;
+      }
+    }
+
+    class Square implements Shape {
+      sideLength: number;
+
+      constructor(sideLength: number) {
+        this.sideLength = sideLength;
+      }
+
+      area(): number {
+        return this.sideLength ** 2;
+      }
+    }
+
+    class AreaCalculator {
+      totalArea(shapes: Shape[]): number {
+        let total = 0;
+
+        shapes.forEach((shape) => {
+          total += shape.area();
+        });
+
+        return total;
+      }
+    }
+    ```
+
+    ![typescript-open-closed](../docs-assets/images/typescript-open-closed.avif)
+
+    - Liskov Substitution Principle - A derived class must be substitutable for its base class. If S is a subtype of T, then objects of type T in a program can be replaced by objects of type S without altering the properties of this program.
+
+      ```typescript
+      class Person {
+        speakName() {
+          return 'I am a person!';
+        }
+      }
+
+      class Child extends Person {
+        speakName() {
+          return 'I am a child!';
+        }
+      }
+
+      const person = new Person();
+      const child = new Child();
+
+      function printName(message: string) {
+        console.log(message);
+      }
+
+      printName(person.speakName()); // I am a person!
+      printName(child.speakName()); // I am a child!
+      ```
+
+      ![typescript-liskov](../docs-assets/images/typescript-liskov.avif)
+
+  - Interface Segregation Principle - A class should not be forced to implement interfaces and methods it does not use. This way, the behavior is isolated correctly within our context, and we still respect the Interface Segregation Principle.
+
+    ```typescript
+    interface Readable {
+      read(): void;
+    }
+
+    interface Downloadable {
+      download(): void;
+    }
+
+    class OnlineBook implements Readable, Downloadable {
+      read(): void {
+        // does something
+      }
+
+      download(): void {
+        // does something
+      }
+    }
+
+    class PhysicalBook implements Readable {
+      read(): void {
+        // does something
+      }
+    }
+    ```
+
+    ![typescript-interface-segregation](../docs-assets/images/typescript-interface-segregation.avif)
+
+  - Dependency Inversion Principle - Depend on abstractions and not on implementations. High-level modules should not depend on low-level modules. Both should depend on abstractions. Abstractions should not depend on details. Details should depend on abstractions. In the above example, UserService directly depends on the concrete implementation of MySQLDatabase. This violates DIP since the high-level class UserService is directly dependent on a low-level class. If we want to switch to a different database system (e.g., PostgreSQL), we need to modify the UserService class, which is AWFUL! Let's fix this code using DIP. Instead of depending on concrete implementations, the high-level class UserService should depend on abstractions.
+
+    ```typescript
+    // Abstract interface (abstraction) for the low-level module
+    interface Database {
+      getUserData(id: number): string;
+    }
+
+    class MySQLDatabase implements Database {
+      getUserData(id: number): string {
+        // Logic to fetch user data from MySQL database
+      }
+    }
+
+    // Another low-level module implementing the Database interface
+    class PostgreSQLDatabase implements Database {
+      getUserData(id: number): string {
+        // Logic to fetch user data from PostgreSQL database
+      }
+    }
+
+    class UserService {
+      private database: Database;
+
+      constructor(database: Database) {
+        this.database = database;
+      }
+
+      getUser(id: number): string {
+        return this.database.getUserData(id);
+      }
+    }
+    ```
+
+    ![typescript-dependency-inversion](../docs-assets/images/typescript-dependency-inversion.png)
+
 ## Node JS
 
 - What is REST - REST means representational state transfer (ReST). If we are storing information about the request or about the client, then we are not writing a truly a restful service. We also need to tell the client of caching, means caching timeout so that next time client doesn’t to call server to fetch data. One more constraint is the uniform interface, we need to deal with resources those are nouns not actions so don’t name authorize or login but like books and authors. HTTP verbs defines actions, also use PUT for update the object.

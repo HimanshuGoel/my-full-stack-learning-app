@@ -16,7 +16,7 @@
   "author": "Himanshu Goel",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --port 4210",
     "start-ja": "ng serve --configuration ja",
     "extract": "ng extract-i18n --format json",
     "build": "ng build",

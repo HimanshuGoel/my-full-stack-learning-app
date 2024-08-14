@@ -13,6 +13,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatSelectModule } from '@angular/material/select';
 import { CoffeeListComponent } from '../../components/coffee-list/coffee-list.component';
 import { MemoryLeakSimulationComponent } from '../../components/memory-leak-simulation/memory-leak-simulation.component';
+import { DomManipulationComponent } from '../../components/dom-manipulation/dom-manipulation.component';
 
 @NgModule({
   imports: [
@@ -32,6 +33,8 @@ import { MemoryLeakSimulationComponent } from '../../components/memory-leak-simu
     ConceptsComponent,
     CoffeeListComponent,
     MemoryLeakSimulationComponent,
+    DomManipulationComponent,
+    CoffeeListComponent,
   ],
 })
 export class AdminLayoutModule {}

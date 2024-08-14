@@ -16,9 +16,10 @@ import { jsonCachingInterceptor } from './interceptors/caching-interceptor';
 import { loggingInterceptor } from './interceptors/logging-interceptor';
 import { retryInterceptor } from './interceptors/retry-interceptor';
 import { CoffeeApiService } from './services/coffee-api.service';
+import { NoPasteDirective } from './directives/no-paste.directive';
 
 @NgModule({
-  declarations: [AppComponent, AdminLayoutComponent],
+  declarations: [AppComponent, AdminLayoutComponent, NoPasteDirective],
   bootstrap: [AppComponent],
   imports: [
     BrowserAnimationsModule,
