@@ -238,34 +238,20 @@
 .btn-group > .mat-mdc-raised-button.btn:not(:first-child),
 .btn-group > .btn-group:not(:first-child) > .mat-raised-button.btn,
 .btn-group > .mat-raised-button.btn:not(:first-child) .mat-button-ripple,
-.btn-group
-  > .btn-group:not(:first-child)
-  > .mat-raised-button.btn
-  .mat-button-ripple,
+.btn-group > .btn-group:not(:first-child) > .mat-raised-button.btn .mat-button-ripple,
 .btn-group > .mat-raised-button.btn:not(:first-child) .mat-button-focus-overlay,
-.btn-group
-  > .btn-group:not(:first-child)
-  > .mat-raised-button.btn
-  .mat-button-focus-overlay {
+.btn-group > .btn-group:not(:first-child) > .mat-raised-button.btn .mat-button-focus-overlay {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
 .btn-group > .mat-mdc-raised-button.btn:not(:last-child):not(.dropdown-toggle),
 .btn-group > .btn-group:not(:last-child) > .mat-raised-button.btn,
-.btn-group
-  > .mat-raised-button.btn:not(:last-child):not(.dropdown-toggle)
-  .mat-button-ripple,
-.btn-group
-  > .btn-group:not(:last-child)
-  > .mat-raised-button.btn
-  .mat-button-ripple,
+.btn-group > .mat-raised-button.btn:not(:last-child):not(.dropdown-toggle) .mat-button-ripple,
+.btn-group > .btn-group:not(:last-child) > .mat-raised-button.btn .mat-button-ripple,
 .btn-group
   > .mat-raised-button.btn:not(:last-child):not(.dropdown-toggle)
   .mat-button-focus-overlay,
-.btn-group
-  > .btn-group:not(:last-child)
-  > .mat-raised-button.btn
-  .mat-button-focus-overlay {
+.btn-group > .btn-group:not(:last-child) > .mat-raised-button.btn .mat-button-focus-overlay {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }

@@ -196,7 +196,7 @@ import { MatCardModule } from '@angular/material/card';
 
 ```javascript
 const a = {
-  ...(someCondition && { b: 5 })
+  ...(someCondition && { b: 5 }),
 };
 ```
 
@@ -500,7 +500,7 @@ function createBlogPost(text: string, author: string, date?: Date) {
   return {
     text: text,
     author: author,
-    date: date || new Date()
+    date: date || new Date(),
   };
 }
 
@@ -540,7 +540,7 @@ function createBlogPost(text: string, author: string, date: Date = new Date()) {
   return {
     text: text,
     author: author,
-    date: date
+    date: date,
   };
 }
 
@@ -1223,14 +1223,14 @@ Output: [
   [2, 1, 3],
   [2, 3, 1],
   [3, 1, 2],
-  [3, 2, 1]
+  [3, 2, 1],
 ];
 
 // Example 2:
 Input: nums = [0, 1];
 Output: [
   [0, 1],
-  [1, 0]
+  [1, 0],
 ];
 
 // Example 3:

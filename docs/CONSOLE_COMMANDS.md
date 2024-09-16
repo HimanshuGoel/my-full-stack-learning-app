@@ -17,6 +17,11 @@
 
 ## Angular
 
+- `npx nx init --integrated`
+- `npx nx test`
+- `npx nx serve`
+- `npx nx graph`
+- `npx create-nx-workspace@latest`
 - `ng g c home --standalone`
 - `ng add @angular-eslint/schematics`
 - `ng update @angular-eslint/schematics`

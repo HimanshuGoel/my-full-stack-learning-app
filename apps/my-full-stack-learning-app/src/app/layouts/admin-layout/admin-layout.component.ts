@@ -18,20 +18,11 @@ export class AdminLayoutComponent implements OnInit, AfterViewInit {
 
   ngOnInit() {
     const isWindows = navigator.platform.indexOf('Win') > -1 ? true : false;
-    if (
-      isWindows &&
-      !document
-        .getElementsByTagName('body')[0]
-        .classList.contains('sidebar-mini')
-    ) {
+    if (isWindows && !document.getElementsByTagName('body')[0].classList.contains('sidebar-mini')) {
       // if we are on windows OS we activate the perfectScrollbar function
-      document
-        .getElementsByTagName('body')[0]
-        .classList.add('perfect-scrollbar-on');
+      document.getElementsByTagName('body')[0].classList.add('perfect-scrollbar-on');
     } else {
-      document
-        .getElementsByTagName('body')[0]
-        .classList.remove('perfect-scrollbar-off');
+      document.getElementsByTagName('body')[0].classList.remove('perfect-scrollbar-off');
     }
 
     this.location.subscribe((ev: PopStateEvent) => {
@@ -40,8 +31,7 @@ export class AdminLayoutComponent implements OnInit, AfterViewInit {
 
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationStart) {
-        if (event.url != this.lastPoppedUrl)
-          this.yScrollStack.push(window.scrollY);
+        if (event.url != this.lastPoppedUrl) this.yScrollStack.push(window.scrollY);
       } else if (event instanceof NavigationEnd) {
         if (event.url == this.lastPoppedUrl) {
           this.lastPoppedUrl = '';
@@ -51,15 +41,11 @@ export class AdminLayoutComponent implements OnInit, AfterViewInit {
     });
 
     const elemMainPanel = <HTMLElement>document.querySelector('.main-panel');
-    const elemSidebar = <HTMLElement>(
-      document.querySelector('.sidebar .sidebar-wrapper')
-    );
-    this.router.events
-      .pipe(filter((event) => event instanceof NavigationEnd))
-      .subscribe(() => {
-        elemMainPanel.scrollTop = 0;
-        elemSidebar.scrollTop = 0;
-      });
+    const elemSidebar = <HTMLElement>document.querySelector('.sidebar .sidebar-wrapper');
+    this.router.events.pipe(filter((event) => event instanceof NavigationEnd)).subscribe(() => {
+      elemMainPanel.scrollTop = 0;
+      elemSidebar.scrollTop = 0;
+    });
     if (window.matchMedia(`(min-width: 960px)`).matches && !this.isMac()) {
       new PerfectScrollbar(elemMainPanel);
       new PerfectScrollbar(elemSidebar);

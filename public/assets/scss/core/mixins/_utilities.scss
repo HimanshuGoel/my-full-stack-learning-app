@@ -37,10 +37,7 @@
 
 @function brightness($color) {
   @if type-of($color) == color {
-    @return math.div(
-        red($color) * 0.299 + green($color) * 0.587 + blue($color) * 0.114,
-        255
-      ) * 100%;
+    @return math.div(red($color) * 0.299 + green($color) * 0.587 + blue($color) * 0.114, 255) * 100%;
   } @else {
     @return unquote('brightness(#{$color})');
   }
@@ -48,21 +45,9 @@
 
 @mixin linear-gradient($color1, $color2) {
   background: $color1; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(
-    60deg,
-    $color1,
-    $color2
-  ); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(
-    60deg,
-    $color1,
-    $color2
-  ); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(
-    60deg,
-    $color1,
-    $color2
-  ); /* For Firefox 3.6 to 15 */
+  background: -webkit-linear-gradient(60deg, $color1, $color2); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(60deg, $color1, $color2); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(60deg, $color1, $color2); /* For Firefox 3.6 to 15 */
   background: linear-gradient(60deg, $color1, $color2); /* Standard syntax */
 }
 
@@ -101,11 +86,7 @@
     $center-color 0%,
     $extern-color 100%
   ); /* IE10+ */
-  background: radial-gradient(
-    ellipse at center,
-    $center-color 0%,
-    $extern-color 100%
-  ); /* W3C */
+  background: radial-gradient(ellipse at center, $center-color 0%, $extern-color 100%); /* W3C */
   background-size: 550% 450%;
 }
 @mixin badges-color($color) {

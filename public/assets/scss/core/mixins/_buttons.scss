@@ -169,12 +169,7 @@
     );
   }
   &.btn-outline-info {
-    @include bmd-flat-button-variant(
-      $btn-info-bg,
-      $btn-info-bg,
-      $btn-info-bg,
-      $btn-info-bg
-    );
+    @include bmd-flat-button-variant($btn-info-bg, $btn-info-bg, $btn-info-bg, $btn-info-bg);
   }
   &.btn-outline-success {
     @include bmd-flat-button-variant(
@@ -204,11 +199,7 @@
 
 @mixin bmd-raised-button-variant($color, $background, $border) {
   // FIXME: SPEC - this should be the 600 color, how can we get that programmatically if at all? Or are we limited to the color palette only?
-  $focus-background: contrast-color(
-    $background,
-    darken($background, 3%),
-    lighten($background, 3%)
-  );
+  $focus-background: contrast-color($background, darken($background, 3%), lighten($background, 3%));
   //$focus-background: darken($background, 10%);  // default bootstrap
   $focus-border: darken($border, 12%);
 
@@ -265,11 +256,7 @@
     );
   }
   &.btn-info {
-    @include bmd-raised-button-variant(
-      $btn-info-color,
-      $btn-info-bg,
-      $btn-info-border-color
-    );
+    @include bmd-raised-button-variant($btn-info-color, $btn-info-bg, $btn-info-border-color);
   }
   &.btn-success {
     @include bmd-raised-button-variant(
@@ -286,18 +273,10 @@
     );
   }
   &.btn-danger {
-    @include bmd-raised-button-variant(
-      $btn-danger-color,
-      $btn-danger-bg,
-      $btn-danger-border-color
-    );
+    @include bmd-raised-button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border-color);
   }
   &.btn-rose {
-    @include bmd-raised-button-variant(
-      $btn-rose-color,
-      $btn-rose-bg,
-      $btn-rose-border-color
-    );
+    @include bmd-raised-button-variant($btn-rose-color, $btn-rose-bg, $btn-rose-border-color);
   }
   &,
   &.btn-default {
@@ -311,59 +290,31 @@
 
 @mixin bmd-social-buttons() {
   &.btn-facebook {
-    @include bmd-raised-button-variant(
-      $white,
-      $social-facebook,
-      $social-facebook
-    );
+    @include bmd-raised-button-variant($white, $social-facebook, $social-facebook);
   }
   &.btn-twitter {
-    @include bmd-raised-button-variant(
-      $white,
-      $social-twitter,
-      $social-twitter
-    );
+    @include bmd-raised-button-variant($white, $social-twitter, $social-twitter);
   }
   &.btn-pinterest {
-    @include bmd-raised-button-variant(
-      $white,
-      $social-pinterest,
-      $social-pinterest
-    );
+    @include bmd-raised-button-variant($white, $social-pinterest, $social-pinterest);
   }
   &.btn-google {
     @include bmd-raised-button-variant($white, $social-google, $social-google);
   }
   &.btn-linkedin {
-    @include bmd-raised-button-variant(
-      $white,
-      $social-linkedin,
-      $social-linkedin
-    );
+    @include bmd-raised-button-variant($white, $social-linkedin, $social-linkedin);
   }
   &.btn-dribbble {
-    @include bmd-raised-button-variant(
-      $white,
-      $social-dribbble,
-      $social-dribbble
-    );
+    @include bmd-raised-button-variant($white, $social-dribbble, $social-dribbble);
   }
   &.btn-github {
     @include bmd-raised-button-variant($white, $social-github, $social-github);
   }
   &.btn-youtube {
-    @include bmd-raised-button-variant(
-      $white,
-      $social-youtube,
-      $social-youtube
-    );
+    @include bmd-raised-button-variant($white, $social-youtube, $social-youtube);
   }
   &.btn-instagram {
-    @include bmd-raised-button-variant(
-      $white,
-      $social-instagram,
-      $social-instagram
-    );
+    @include bmd-raised-button-variant($white, $social-instagram, $social-instagram);
   }
   &.btn-reddit {
     @include bmd-raised-button-variant($white, $social-reddit, $social-reddit);
@@ -372,11 +323,7 @@
     @include bmd-raised-button-variant($white, $social-tumblr, $social-tumblr);
   }
   &.btn-behance {
-    @include bmd-raised-button-variant(
-      $white,
-      $social-behance,
-      $social-behance
-    );
+    @include bmd-raised-button-variant($white, $social-behance, $social-behance);
   }
 }
 
@@ -413,21 +360,18 @@ $opacity-2: rgba(255, 255, 255, 0.2) !default;
 }
 
 @mixin shadow-big-navbar() {
-  box-shadow: 0 10px 20px -12px rgba(0, 0, 0, $mdb-shadow-key-penumbra-opacity *
-          3),
+  box-shadow: 0 10px 20px -12px rgba(0, 0, 0, $mdb-shadow-key-penumbra-opacity * 3),
     0 3px 20px 0px rgba(0, 0, 0, $mdb-shadow-ambient-shadow-opacity),
     0 8px 10px -5px rgba(0, 0, 0, $mdb-shadow-key-umbra-opacity);
 }
 
 @mixin shadow-big-color($color) {
   // new box shadow optimized for Tablets and Phones
-  box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14),
-    0 7px 10px -5px rgba($color, 0.4);
+  box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba($color, 0.4);
 }
 
 @mixin shadow-alert-color($color) {
-  box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14),
-    0 7px 10px -5px rgba($color, 0.4);
+  box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba($color, 0.4);
 }
 
 @mixin btn-styles($btn-color) {

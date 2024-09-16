@@ -56,20 +56,19 @@
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   border-radius: 6px;
-  -webkit-transition: background-color 0.2s linear, height 0.2s linear,
-    width 0.2s ease-in-out, -webkit-border-radius 0.2s ease-in-out;
-  transition: background-color 0.2s linear, height 0.2s linear,
-    width 0.2s ease-in-out, -webkit-border-radius 0.2s ease-in-out;
-  -o-transition: background-color 0.2s linear, height 0.2s linear,
-    width 0.2s ease-in-out, border-radius 0.2s ease-in-out;
-  -moz-transition: background-color 0.2s linear, height 0.2s linear,
-    width 0.2s ease-in-out, border-radius 0.2s ease-in-out,
+  -webkit-transition: background-color 0.2s linear, height 0.2s linear, width 0.2s ease-in-out,
+    -webkit-border-radius 0.2s ease-in-out;
+  transition: background-color 0.2s linear, height 0.2s linear, width 0.2s ease-in-out,
+    -webkit-border-radius 0.2s ease-in-out;
+  -o-transition: background-color 0.2s linear, height 0.2s linear, width 0.2s ease-in-out,
+    border-radius 0.2s ease-in-out;
+  -moz-transition: background-color 0.2s linear, height 0.2s linear, width 0.2s ease-in-out,
+    border-radius 0.2s ease-in-out, -moz-border-radius 0.2s ease-in-out;
+  transition: background-color 0.2s linear, height 0.2s linear, width 0.2s ease-in-out,
+    border-radius 0.2s ease-in-out;
+  transition: background-color 0.2s linear, height 0.2s linear, width 0.2s ease-in-out,
+    border-radius 0.2s ease-in-out, -webkit-border-radius 0.2s ease-in-out,
     -moz-border-radius 0.2s ease-in-out;
-  transition: background-color 0.2s linear, height 0.2s linear,
-    width 0.2s ease-in-out, border-radius 0.2s ease-in-out;
-  transition: background-color 0.2s linear, height 0.2s linear,
-    width 0.2s ease-in-out, border-radius 0.2s ease-in-out,
-    -webkit-border-radius 0.2s ease-in-out, -moz-border-radius 0.2s ease-in-out;
   bottom: 2px;
   /* there must be 'bottom' for ps-scrollbar-x */
   height: 6px;
@@ -98,20 +97,19 @@
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   border-radius: 6px;
-  -webkit-transition: background-color 0.2s linear, height 0.2s linear,
-    width 0.2s ease-in-out, -webkit-border-radius 0.2s ease-in-out;
-  transition: background-color 0.2s linear, height 0.2s linear,
-    width 0.2s ease-in-out, -webkit-border-radius 0.2s ease-in-out;
-  -o-transition: background-color 0.2s linear, height 0.2s linear,
-    width 0.2s ease-in-out, border-radius 0.2s ease-in-out;
-  -moz-transition: background-color 0.2s linear, height 0.2s linear,
-    width 0.2s ease-in-out, border-radius 0.2s ease-in-out,
+  -webkit-transition: background-color 0.2s linear, height 0.2s linear, width 0.2s ease-in-out,
+    -webkit-border-radius 0.2s ease-in-out;
+  transition: background-color 0.2s linear, height 0.2s linear, width 0.2s ease-in-out,
+    -webkit-border-radius 0.2s ease-in-out;
+  -o-transition: background-color 0.2s linear, height 0.2s linear, width 0.2s ease-in-out,
+    border-radius 0.2s ease-in-out;
+  -moz-transition: background-color 0.2s linear, height 0.2s linear, width 0.2s ease-in-out,
+    border-radius 0.2s ease-in-out, -moz-border-radius 0.2s ease-in-out;
+  transition: background-color 0.2s linear, height 0.2s linear, width 0.2s ease-in-out,
+    border-radius 0.2s ease-in-out;
+  transition: background-color 0.2s linear, height 0.2s linear, width 0.2s ease-in-out,
+    border-radius 0.2s ease-in-out, -webkit-border-radius 0.2s ease-in-out,
     -moz-border-radius 0.2s ease-in-out;
-  transition: background-color 0.2s linear, height 0.2s linear,
-    width 0.2s ease-in-out, border-radius 0.2s ease-in-out;
-  transition: background-color 0.2s linear, height 0.2s linear,
-    width 0.2s ease-in-out, border-radius 0.2s ease-in-out,
-    -webkit-border-radius 0.2s ease-in-out, -moz-border-radius 0.2s ease-in-out;
   right: 2px;
   /* there must be 'right' for ps-scrollbar-y */
   width: 6px;
@@ -124,9 +122,7 @@
   background-color: #eee;
   opacity: 0.9;
 }
-.ps-container:hover.ps-in-scrolling.ps-x
-  > .ps-scrollbar-x-rail
-  > .ps-scrollbar-x {
+.ps-container:hover.ps-in-scrolling.ps-x > .ps-scrollbar-x-rail > .ps-scrollbar-x {
   background-color: #999;
   height: 11px;
 }
@@ -134,9 +130,7 @@
   background-color: #eee;
   opacity: 0.9;
 }
-.ps-container:hover.ps-in-scrolling.ps-y
-  > .ps-scrollbar-y-rail
-  > .ps-scrollbar-y {
+.ps-container:hover.ps-in-scrolling.ps-y > .ps-scrollbar-y-rail > .ps-scrollbar-y {
   background-color: #999;
   width: 11px;
 }

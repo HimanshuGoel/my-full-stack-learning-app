@@ -64,8 +64,8 @@
   }
 
   &.dropdown-with-icons .dropdown-item {
-    padding: $dropdown-item-padding-y + 0.125 $dropdown-item-padding-x
-      $dropdown-item-padding-y + 0.125 $dropdown-item-padding-y + 0.125;
+    padding: $dropdown-item-padding-y + 0.125 $dropdown-item-padding-x $dropdown-item-padding-y +
+      0.125 $dropdown-item-padding-y + 0.125;
 
     & .material-icons {
       vertical-align: middle;

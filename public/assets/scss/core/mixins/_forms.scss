@@ -68,12 +68,7 @@
   }
 }
 
-@mixin bmd-form-color(
-  $label-color,
-  $label-color-focus,
-  $border-color,
-  $line-color
-) {
+@mixin bmd-form-color($label-color, $label-color-focus, $border-color, $line-color) {
   [class^='bmd-label'],
   [class*=' bmd-label'] {
     color: $label-color;
@@ -154,11 +149,7 @@
     // on focus set borders and labels to the validation color
 
     // Use the BS provided mixin for the bulk of the color
-    @include form-validation-state(
-      'valid',
-      $label-color,
-      $form-feedback-icon-valid
-    );
+    @include form-validation-state('valid', $label-color, $form-feedback-icon-valid);
 
     [class^='bmd-label'],
     [class*=' bmd-label'] {
@@ -200,17 +191,14 @@
   $variant-line-height,
   $form-group-context: null
 ) {
-  $variant-input-height: (
-    ($font-size * $variant-line-height) + ($variant-padding-y * 2)
-  );
+  $variant-input-height: (($font-size * $variant-line-height) + ($variant-padding-y * 2));
   // $static-font-size: ($bmd-bmd-label-static-size-ratio * $font-size);
   $floating-font-size: 0.6875rem;
   $static-font-size: 0.875rem;
   $help-font-size: ($bmd-help-size-ratio * $font-size);
 
   $label-static-top: $label-top-margin;
-  $label-placeholder-top: $label-top-margin + $static-font-size +
-    $variant-padding-y;
+  $label-placeholder-top: $label-top-margin + $static-font-size + $variant-padding-y;
 
   //@debug "font-size: #{$font-size} static-font-size: #{$static-font-size} help-font-size: #{$help-font-size} form-group-context: #{$form-group-context} ";
 

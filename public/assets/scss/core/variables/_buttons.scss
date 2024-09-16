@@ -11,19 +11,10 @@ $bmd-btn-border: #ccc !default;
 
 $bmd-btn-focus-bg: rgba(#999, 0.2) !default; // spec: bg Hover: 20% #999999
 $bmd-btn-active-bg: rgba(#999, 0.4) !default; // spec: bg Pressed: 40% #999999
-$bmd-btn-disabled: rgba(
-  $black,
-  0.26
-) !default; // spec: light theme: Disabled text: 26% $black
+$bmd-btn-disabled: rgba($black, 0.26) !default; // spec: light theme: Disabled text: 26% $black
 
-$bmd-inverse-btn-focus-bg: rgba(
-  #ccc,
-  0.15
-) !default; // spec: dark bg Hover: 15% #CCCCCC
-$bmd-inverse-btn-active-bg: rgba(
-  #ccc,
-  0.25
-) !default; // spec: dark Pressed: 25% #CCCCCC
+$bmd-inverse-btn-focus-bg: rgba(#ccc, 0.15) !default; // spec: dark bg Hover: 15% #CCCCCC
+$bmd-inverse-btn-active-bg: rgba(#ccc, 0.25) !default; // spec: dark Pressed: 25% #CCCCCC
 $bmd-inverse-btn-disabled: rgba(
   $white,
   0.3

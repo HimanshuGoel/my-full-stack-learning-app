@@ -98,30 +98,15 @@ form {
 );
 
 .has-success {
-  @include bmd-form-color(
-    $brand-success,
-    $brand-success,
-    $brand-success,
-    $input-border-color
-  );
+  @include bmd-form-color($brand-success, $brand-success, $brand-success, $input-border-color);
 }
 
 .has-info {
-  @include bmd-form-color(
-    $brand-info,
-    $brand-info,
-    $brand-info,
-    $input-border-color
-  );
+  @include bmd-form-color($brand-info, $brand-info, $brand-info, $input-border-color);
 }
 
 .has-white {
-  @include bmd-form-color(
-    $white-color,
-    $white-color,
-    $white-color,
-    $input-border-color-white
-  );
+  @include bmd-form-color($white-color, $white-color, $white-color, $input-border-color-white);
 
   .form-control {
     &:focus {
@@ -131,30 +116,15 @@ form {
 }
 
 .has-warning {
-  @include bmd-form-color(
-    $brand-warning,
-    $brand-warning,
-    $brand-warning,
-    $input-border-color
-  );
+  @include bmd-form-color($brand-warning, $brand-warning, $brand-warning, $input-border-color);
 }
 
 .has-danger {
-  @include bmd-form-color(
-    $brand-danger,
-    $brand-danger,
-    $brand-danger,
-    $input-border-color
-  );
+  @include bmd-form-color($brand-danger, $brand-danger, $brand-danger, $input-border-color);
 }
 
 .has-rose {
-  @include bmd-form-color(
-    $brand-rose,
-    $brand-rose,
-    $brand-rose,
-    $input-border-color
-  );
+  @include bmd-form-color($brand-rose, $brand-rose, $brand-rose, $input-border-color);
 }
 
 // Reference http://www.google.com/design/spec/components/text-fields.html

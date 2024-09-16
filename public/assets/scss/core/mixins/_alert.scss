@@ -57,13 +57,7 @@
 // $variation-color-text ---> rgba(255,255,255,0.84), rgba(0,0,0,0.84), rgba(255,255,255,0.84) ...
 //
 
-@mixin generic-variations(
-  $component,
-  $selector-suffix,
-  $color-default,
-  $mixin-name,
-  $mdb-param-1
-) {
+@mixin generic-variations($component, $selector-suffix, $color-default, $mixin-name, $mdb-param-1) {
   //setup map to pass parameters (instead of the incredibly long-error-prone list for each and every @include)
   $args: (
     //extra: $selector-suffix,

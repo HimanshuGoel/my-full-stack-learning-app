@@ -452,14 +452,7 @@
 
       .sidebar-wrapper {
         > .nav [data-toggle='collapse'] ~ div > ul > li > a .sidebar-normal,
-        .user
-          .user-info
-          [data-toggle='collapse']
-          ~ div
-          > ul
-          > li
-          > a
-          .sidebar-normal,
+        .user .user-info [data-toggle='collapse'] ~ div > ul > li > a .sidebar-normal,
         .user .user-info > a > span,
         > .nav li > a p {
           @include transform-translate-x(-25px);
@@ -483,14 +476,7 @@
 
         > .nav li > a p,
         > .nav [data-toggle='collapse'] ~ div > ul > li > a .sidebar-normal,
-        .user
-          .user-info
-          [data-toggle='collapse']
-          ~ div
-          > ul
-          > li
-          > a
-          .sidebar-normal,
+        .user .user-info [data-toggle='collapse'] ~ div > ul > li > a .sidebar-normal,
         .user .user-info > a > span {
           @include transform-translate-x(0px);
           opacity: 1;
