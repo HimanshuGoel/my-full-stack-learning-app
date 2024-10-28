@@ -126,6 +126,7 @@
 ## Maven
 - `java -version`
 - `mvn -version`
+- `mvn clean compile -P dev` - maven running profile
 
 ## Common
 - `net stop winnat`
@@ -137,5 +138,5 @@
 - `LOC (Lock Height)`: Press the "M" button until "S-" is displayed, then press and hold the "M" button for 5 seconds until "LOC" appears to lock the desk height.
 
 ## IntelliJ Idea IDE
-: `ctrl + n` - Maven artifacts search
+- `ctrl + n` - Maven artifacts search
 
