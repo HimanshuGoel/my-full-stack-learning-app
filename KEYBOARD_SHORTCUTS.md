@@ -242,3 +242,29 @@ console.log(metadata);
 - `docker compose logs --no-color`
 - `docker system prune`
 - `docker network ls`
+
+## Windows
+
+- `windows logo key + prtscn button` - quick screenshot
+- `ctrl + shift + enter` - open an application in admin mode
+
+## Maven
+
+- `java -version`
+- `mvn -version`
+- `mvn clean compile -P dev` - maven running profile
+
+## Common
+
+- `net stop winnat`
+- `net start winnat`
+
+## Standing Desk
+
+- `E07-E09 (Reset)`: Press and hold the down arrow for 5 seconds until "RST" appears on the display.
+- `E01 (Remove Load)`: Ensure all objects are removed from the desk.
+- `LOC (Lock Height)`: Press the "M" button until "S-" is displayed, then press and hold the "M" button for 5 seconds until "LOC" appears to lock the desk height.
+
+## IntelliJ Idea IDE
+
+- `ctrl + n` - Maven artifacts search
