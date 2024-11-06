@@ -1,4 +1,4 @@
-# Full Stack Learnings App
+# My Full Stack Learning App
 
 ## Overview
 
@@ -7,6 +7,43 @@ This is an application to showcase a range of various frontend and backend skill
 It contains learnings for frontend development like `Angular`, `TypeScript`, `SCSS`, `HTML`, Jasmine, `Cypress`, `User Experience`, `Accessibility`, etc.
 
 It also contains learnings for backend development like `Node JS`, `Express Framework`, `MongoDB`, etc.
+
+## Project Structure
+
+```shell
+my-full-stack-learning-app/
+├── app-core/                  # Core shared assets & configurations
+│   ├── config/                # Global configuration (e.g., shared environment variables)
+│   ├── common/                # Common utilities, shared services, types, and models
+│   └── docs/                  # Documentation for both frontend & backend setup, usage, and APIs
+│
+├── backend-service/           # Backend service with Spring Boot
+│   ├── src/                   # Backend source code
+│   │   ├── main/
+│   │   │   ├── java/          # Java source code for business logic, controllers, etc.
+│   │   │   └── resources/     # Application config files like application.properties
+│   ├── config/                # Backend-specific config (CORS, security, database)
+│   ├── db/                    # Database setup scripts (optional)
+│   └── build.gradle           # Gradle build file (or pom.xml if using Maven)
+│
+├── frontend-ui/               # Frontend with Angular
+│   ├── src/                   # Angular source code
+│   │   ├── app/               # Angular app code (components, services, modules)
+│   │   ├── assets/            # Static assets (images, icons)
+│   ├── styles/                # Shared styles, themes, and custom design system
+│   ├── environments/          # Environment configurations for dev, prod
+│   ├── angular.json           # Angular CLI config
+│   └── package.json           # Node dependencies for Angular
+│
+├── deployment/                # Deployment configurations and scripts
+│   ├── docker/                # Dockerfiles and Docker Compose for containerizing backend and frontend
+│   ├── k8s/                   # Kubernetes manifests, if deploying to a K8s cluster
+│   ├── scripts/               # Helper scripts for CI/CD (build, deploy, test)
+│   └── README.md              # Documentation for deployment procedures
+│
+├── README.md                  # Main project overview and instructions
+└── .gitignore                 # Ignore files for Git version control
+```
 
 ## Development server
 

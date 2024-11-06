@@ -1,0 +1,5 @@
+<ng-container *ngIf="coffees$ | async as coffees" class="container mt-5">
+  <ng-container *ngIf="coffees.length">
+    <span>{{coffees.length}}</span>
+  </ng-container>
+</ng-container>

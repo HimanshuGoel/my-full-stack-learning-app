@@ -1,0 +1,145 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-8 col-md-12">
+        <div class="card">
+          <div class="card-header card-header-tabs card-header-info">
+            <div class="nav-tabs-navigation">
+              <div class="nav-tabs-wrapper">
+                <span class="nav-tabs-title">Topics:</span>
+                <ul class="nav nav-tabs" data-tabs="tabs">
+                  <li class="nav-item">
+                    <a mat-button class="nav-link active" href="#angular" data-toggle="tab">
+                      <i class="material-icons">tag</i>
+                      Angular
+                      <div class="ripple-container"></div>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a mat-button class="nav-link" href="#typescript" data-toggle="tab">
+                      <i class="material-icons">code</i>
+                      TypeScript
+                      <div class="ripple-container"></div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="tab-content">
+              <div class="tab-pane active" id="angular">
+                <table class="table">
+                  <tbody>
+                    <tr>
+                      <td>
+                        Concept 1: internationalization (i18n) and localization (l10n)
+                        (dashboard.html)
+                        <span>{{2500 | currency}}</span>
+                      </td>
+                      <td class="td-actions text-right">
+                        <button
+                          mat-raised-button
+                          type="button"
+                          matTooltip="View Details"
+                          [matTooltipPosition]="'above'"
+                          class="btn btn-primary btn-link btn-sm btn-just-icon">
+                          <i class="material-icons">visibility</i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Concept 2: Angular HttpClient service and interceptors
+                        (coffee-list.component.html, coffee-api.service.ts, logging-interceptor.ts)
+                        <app-coffee-list></app-coffee-list>
+                      </td>
+                      <td class="td-actions text-right">
+                        <button
+                          mat-raised-button
+                          type="button"
+                          matTooltip="View Details"
+                          [matTooltipPosition]="'above'"
+                          class="btn btn-primary btn-link btn-sm btn-just-icon">
+                          <i class="material-icons">visibility</i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Concept 3: Debugging TypeScript in Visual Studio Code (launch.json,
+                        tasks.json)
+                      </td>
+                      <td class="td-actions text-right">
+                        <button
+                          mat-raised-button
+                          type="button"
+                          matTooltip="View Details"
+                          [matTooltipPosition]="'above'"
+                          class="btn btn-primary btn-link btn-sm btn-just-icon">
+                          <i class="material-icons">visibility</i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Concept 4: JavaScript Performance and Memory Leaks (launch.json, tasks.json)
+                        <app-memory-leak-simulation></app-memory-leak-simulation>
+                      </td>
+                      <td class="td-actions text-right">
+                        <button
+                          mat-raised-button
+                          type="button"
+                          matTooltip="View Details"
+                          [matTooltipPosition]="'above'"
+                          class="btn btn-primary btn-link btn-sm btn-just-icon">
+                          <i class="material-icons">visibility</i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Concept 5: DOM Manipulation with TypeScript - document, node, querySelector,
+                        textContent, style (dom-manipulation.component.ts)
+                        <!-- <app-dom-manipulation></app-dom-manipulation> -->
+                      </td>
+                      <td class="td-actions text-right">
+                        <button
+                          mat-raised-button
+                          type="button"
+                          matTooltip="View Details"
+                          [matTooltipPosition]="'above'"
+                          class="btn btn-primary btn-link btn-sm btn-just-icon">
+                          <i class="material-icons">visibility</i>
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="tab-pane" id="typescript">
+                <table class="table">
+                  <tbody>
+                    <tr>
+                      <td>Concept 2: To be created...</td>
+                      <td class="td-actions text-right">
+                        <button
+                          mat-raised-button
+                          type="button"
+                          matTooltip="View Details"
+                          [matTooltipPosition]="'above'"
+                          class="btn btn-primary btn-link btn-sm btn-just-icon">
+                          <i class="material-icons">visibility</i>
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
