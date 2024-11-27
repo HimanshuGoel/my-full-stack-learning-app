@@ -1,0 +1,17 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# Logs
+logs
+*.log
+
+# Compiled binary addons (http://nodejs.org/api/addons.html)
+/build
+
+# Dependency directories
+node_modules/
+
+# Downloads directory for ui-config
+downloads
+
+# Environment files
+.env.production
