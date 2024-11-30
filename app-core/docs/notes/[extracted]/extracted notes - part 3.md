@@ -66,15 +66,15 @@
 
 - Whether you are young professional, a student, or a CEO, understanding yourself is critical for becoming a better professional. It will help you enhance your strengths and improve your weakness to make you a better boss and a better colleague.
 
-![soft-skills-johari-window](./src/assets/images/soft-skills-johari-window.png)
+![soft-skills-johari-window](../../images/soft-skills-johari-window.png)
 
 - Values act as our personal compass, helping us to navigate choices and decisions, both personally and professionally. Values are formed by your life experience.
 
-![soft-skills-4-factors-of-trust](./src/assets/images/soft-skills-4-factors-of-trust.png)
+![soft-skills-4-factors-of-trust](../../images/soft-skills-4-factors-of-trust.png)
 
 - Credibility is essential for hiring, promoting and trusting people. Those who end up establishing expertise are confident about showcasing their qualifications and achievements. The more we care about the success of others around us, the more they will trust us, paving the way for collaboration.
 
-![soft-skill-trust-factors](./src/assets/images/soft-skill-trust-factors.png)
+![soft-skill-trust-factors](../../images/soft-skill-trust-factors.png)
 
 - Just being chatty is not same as being open. The attributes of openness are vulnerability, transparency and maintaining confidentiality.
 
@@ -114,28 +114,28 @@
 
 - ORM makes life easier. Various different database varieties focus on or good at different part of the database like cache (Reddis), utility, storage engine, etc.
 
-![database-behind-the-scene](./src/assets/images/database-behind-the-scene.png)
+![database-behind-the-scene](../../images/database-behind-the-scene.png)
 
 - History of database -
 
-![database-history](./src/assets/images/database-history.png)
+![database-history](../../images/database-history.png)
 
 - HTML is a parser language or abstract layer for C++ to parse on the browser. The browser are very good at networking and timers capabilities.
 
-![browser-behind-the-scene](./src/assets/images/browser-behind-the-scene.png)
+![browser-behind-the-scene](../../images/browser-behind-the-scene.png)
 
 - Browser works on simple working concept to display the data and provide interaction to the user. It converts the token into scattered objects which gets constructed into the Document Object Model.
 
-![browser-html-node-list](./src/assets/images/browser-html-node-list.png)
+![browser-html-node-list](../../images/browser-html-node-list.png)
 
 - Afterwards, to create the relations between them, it creates node list which is given by rendering engine.
 
-![browser-html-node-list-afterwards](./src/assets/images/browser-html-node-list-afterwards.png)
+![browser-html-node-list-afterwards](../../images/browser-html-node-list-afterwards.png)
 
 - Browser engine is very good at math to create render tree as per client screen size and components size based on CSS then it starts painting to actually showing elements on the UI.
   Whenever browser sees a script tag it will stop executing the DOM or whatever works it is doing, the first preference always goes to JS as JS has the capability to modify DOM or CSS so no point to painting before evaluating all the JS. That is why we should not first send the JS but the HTML and CSS so that browser will show the page without any delay on first load, then send the JS for interactivity. However in case of CSSOM, JS execution will be halted until CSSOM is ready.
 
-![browser-html-render-tree](./src/assets/images/browser-html-render-tree.png)
+![browser-html-render-tree](../../images/browser-html-render-tree.png)
 
 - The early 2000s was the era of the virtual machine. We are now firmly in the container era. They have much smaller footprint, quicker to download and a lot less resource needed to run them.
 
@@ -167,7 +167,7 @@
 
 - JWE has 5 distinct section instead of 3 of JWT –
 
-![misc-technical-jwe](./src/assets/images/misc-technical-jwe.png)
+![misc-technical-jwe](../../images/misc-technical-jwe.png)
 
 - When to use JWE – if we use PII (personally identifiable information) like names, email address street address, IP address, account number, telephone number etc., if token needs to be passed through multiple systems (including the 3rd party).
 
@@ -177,7 +177,7 @@
 
 - It has two style – block (human readable) and flow (less human readable like JSON)
 
-![misc-technical-block-vs-flow-style](./src/assets/images/misc-technical-block-vs-flow-style.png)
+![misc-technical-block-vs-flow-style](../../images/misc-technical-block-vs-flow-style.png)
 
 - Building blocks – sequence (arrays), mapping (key-value) and scalar (string, number, boolean and dates). We should do indentation with spaces not with tabs.
 
@@ -187,31 +187,31 @@
 
 - One YAML file can contain multiple documents. The documents can be separated by 3 hyphens (---).
 
-![misc-technical-yaml-key-value-and-array](./src/assets/images/misc-technical-yaml-key-value-and-array.png)
+![misc-technical-yaml-key-value-and-array](../../images/misc-technical-yaml-key-value-and-array.png)
 
-![misc-technical-yaml-nested-array](./src/assets/images/misc-technical-yaml-nested-array.png)
+![misc-technical-yaml-nested-array](../../images/misc-technical-yaml-nested-array.png)
 
-![misc-technical-yaml-nested-mappings](./src/assets/images/misc-technical-yaml-nested-mappings.png)
+![misc-technical-yaml-nested-mappings](../../images/misc-technical-yaml-nested-mappings.png)
 
 - Explicit typing – by using like !!str is an explicit typing which will convert the date into a string type.
 
-![misc-technical-yaml-explicit-typing](./src/assets/images/misc-technical-yaml-explicit-typing.png)
+![misc-technical-yaml-explicit-typing](../../images/misc-technical-yaml-explicit-typing.png)
 
 - Repeated nodes – to avoid code repeat.
 
-![misc-technical-repeated-nodes](./src/assets/images/misc-technical-repeated-nodes.png)
+![misc-technical-repeated-nodes](../../images/misc-technical-repeated-nodes.png)
 
 - Processing of YAML –
 
-![misc-technical-processing-of-yaml](./src/assets/images/misc-technical-processing-of-yaml.png)
+![misc-technical-processing-of-yaml](../../images/misc-technical-processing-of-yaml.png)
 
 - YAML vs. JSON – YAML is standard for configuration and JSON is standard for service API.
 
-![misc-technical-yaml-vs-json](./src/assets/images/misc-technical-yaml-vs-json.png)
+![misc-technical-yaml-vs-json](../../images/misc-technical-yaml-vs-json.png)
 
 - YAML vs. XML
 
-![misc-technical-yaml-vs-xmsl](./src/assets/images/misc-technical-yaml-vs-xmsl.png)
+![misc-technical-yaml-vs-xmsl](../../images/misc-technical-yaml-vs-xmsl.png)
 
 - GitLab is a single platform that provides entire DevOps toolchain for organizations of any scale and size.
 
@@ -223,7 +223,7 @@
 
 - We can run a workflow on any Github event –
 
-![misc-technical-github-events](./src/assets/images/misc-technical-github-events.png)
+![misc-technical-github-events](../../images/misc-technical-github-events.png)
 
 - WordPress is an open-source, free platform for building and developing websites. WordPress is the most user-friendly and efficient blogging and website builder on the market right now.
 

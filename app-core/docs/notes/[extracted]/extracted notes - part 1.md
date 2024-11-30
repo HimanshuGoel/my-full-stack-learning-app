@@ -30,7 +30,7 @@
 
 - History of HTML5 – WHATWG accounted that it will no longer work on named versions of HTML so there will be no HTML6, HTML7, but the HTML spec is now a living standard. So HTML 5 no longer exists as new features are found in living standard.
 
-![html-history](./src/assets/images/html-history.png)
+![html-history](../../images/html-history.png)
 
 - Standard Bodies for HTML – W3C, WHATWG, ECMASCRIPT
 
@@ -59,25 +59,25 @@
 
 - Web real time communication lets us incorporate peer to peer video, audio and data communication in the browser without any plug-ins. Use cases and inspiration of WebRTC
 
-![html-webrtc-use-cases](./src/assets/images/html-webrtc-use-cases.png)
+![html-webrtc-use-cases](../../images/html-webrtc-use-cases.png)
 
 - History of web
 
-![html-history-of-web](./src/assets/images/html-history-of-web.png)
+![html-history-of-web](../../images/html-history-of-web.png)
 
 - What is WWW – is an information space where documents and other web resources are identified by URL in linked by hypertext links and can be accessed via the internet. The internet has been around since the 80s and the web has been around since the 90s.
 
-![html-history-of-html](./src/assets/images/html-history-of-html.png)
+![html-history-of-html](../../images/html-history-of-html.png)
 
 - History of css
 
-![html-history-of-css](./src/assets/images/html-history-of-css.png)
+![html-history-of-css](../../images/html-history-of-css.png)
 
 CSS is the styling mechanism for the web. It is a standard of selectors, properties and attributes. As it is just a standard so it doesn’t do anything, it just tells the people of created the web browsers how to interpret the CSS language and how to style HTML with it.
 
 - History of JavaScript
 
-![html-history-of-javascript](./src/assets/images/html-history-of-javascript.png)
+![html-history-of-javascript](../../images/html-history-of-javascript.png)
 
 - Html file naming conventions – always start with a lowercase letter, no special characters, no spaces, hyphens, underscores, or camel case can be used for file names with multiple word. Index.html is the standard name for a home page, browser looks for this name page to display as your lading or home page.
 
@@ -89,7 +89,7 @@ CSS is the styling mechanism for the web. It is a standard of selectors, propert
 
 - ID vs Class attributes – use class attribute for styling instead of id.
 
-![html-id-vs-class-attribute](./src/assets/images/html-id-vs-class-attribute.png)
+![html-id-vs-class-attribute](../../images/html-id-vs-class-attribute.png)
 
 - If images are deemed as part of the content, we should add it as HTML. If its is there for presentation and style, it should be added using CSS.
 
@@ -108,13 +108,13 @@ CSS is the styling mechanism for the web. It is a standard of selectors, propert
 
 - Web worker – a script running int the background. It initiated from the main document, runs separately from main document and doesn’t have access to the DOM. It is often used as a programmable network proxy which lets you control incoming and outgoing network request. We can combine it with the cache API to serve requests from the cache. Specially if network request fails from server, it can handle it
 
-![html-service-worker-life-cycle](./src/assets/images/html-service-worker-life-cycle.png)
+![html-service-worker-life-cycle](../../images/html-service-worker-life-cycle.png)
 
 - Web workers – it brings background threading as a first-class citizen to web browsers. We can splice an intensive process logic into a worker and it will run independent of the UI thread.
 
 - Workbox caching strategies –
 
-![html-workbox-cache-strategies](./src/assets/images/html-workbox-cache-strategies.png)
+![html-workbox-cache-strategies](../../images/html-workbox-cache-strategies.png)
 
 - Browser cache, if files are already in browser cache then it will not make request to sever for them. In application, all the cache files will be in grouped to a single manifest file. We should not mix browser caching and application caching. In browser, we can specify when a file will be expired, but in application cache we can only send updated files if we change the manifest file.
 
@@ -133,7 +133,7 @@ CSS is the styling mechanism for the web. It is a standard of selectors, propert
 - The term progressive enhancement refers to the use of newer features that add to the experience in modern browsers that support those features, but doesn’t detract from the experience in older browsers.
 - URL part composition
 
-![html-url-parts-composition](./src/assets/images/html-url-parts-composition.png)
+![html-url-parts-composition](../../images/html-url-parts-composition.png)
 
 - ARIA full form - Accessible rich internet applications
 
@@ -141,7 +141,7 @@ CSS is the styling mechanism for the web. It is a standard of selectors, propert
 
 - types of selectors - The pseudo classes are just something that the browser will implicitly apply.
 
-![css-types-of-selectors](./src/assets/images/css-types-of-selectors.png)
+![css-types-of-selectors](../../images/css-types-of-selectors.png)
 
 - The 1.0em; states for the size which is default to the page. If we say width: 50%; then it will be half of its parent width.
 
@@ -159,7 +159,7 @@ CSS is the styling mechanism for the web. It is a standard of selectors, propert
 
 - Specificity – the higher is the specificity number the more important the rule is. It contains 3 parts ABC like below:
 
-![css-specificity](./src/assets/images/css-specificity.png)
+![css-specificity](../../images/css-specificity.png)
 
 - Inheritance – some property values of an element will be inherited form the elements parents. Like text in div which is inside paragraph will inherit paragraph font size. But border, margin, paddings will not inherited form the parents. So, border set on paragraph will not have border on div or em or other tags inside it.
 
@@ -167,11 +167,11 @@ CSS is the styling mechanism for the web. It is a standard of selectors, propert
 
 - Width – when we specify the exact width it will specify of the content area. Any border, margin, or padding that we add will add to the width and require more space.
 
-![css-width](./src/assets/images/css-width.png)
+![css-width](../../images/css-width.png)
 
 - Layout with CSS - default position value is static. it stacked up elements one after the other down the page. relative position moves an element from its default position in some direction. we can set the top and left properties values. fixed and absolute removes the elements from the flow of documents. Absolute position moves an element to a specific position relative to the body of the document the top and left will be consider from the body element. while fixed position is relative to the window itself. When we apply relative position, we can set top or left kind of properties on it, it is unlike the padding and margin. It will sit on top on the element instead of just pushing them around.
 
-![css-position](./src/assets/images/css-position.png)
+![css-position](../../images/css-position.png)
 
 - Fixed positioning – it fixes the position of an element relative to the browser window. The element always stays fixed in place, even when scrolling. Generally, we use this in menu bar or navigation.
 
@@ -189,17 +189,17 @@ CSS is the styling mechanism for the web. It is a standard of selectors, propert
 
 - Visual break points in Bootstrap
 
-![css-bootstrap-visual-break-points](./src/assets/images/css-bootstrap-visual-break-points.png)
+![css-bootstrap-visual-break-points](../../images/css-bootstrap-visual-break-points.png)
 
 - types of selectors - relational, attribute, structural
 
 - Relational selectors
 
-![css-relational-selectors](./src/assets/images/css-relational-selectors.png)
+![css-relational-selectors](../../images/css-relational-selectors.png)
 
 - Other selectors
 
-![css-other-selectors](./src/assets/images/css-other-selectors.png)
+![css-other-selectors](../../images/css-other-selectors.png)
 
 - Earlier we use table-based layout, then fluid-based layout came, now flexbox is the latest layout technique.
 
@@ -209,13 +209,13 @@ CSS is the styling mechanism for the web. It is a standard of selectors, propert
 
 - Flexbox controls how items flow in one dimension, where the grid controls how items flow in two dimensions. Flexbox is great in handling alignment, distribution and order of content in space. CSS grid on the other hand is suited to lay items out in both dimensions. CSS grid, like flexbox, is all about the relationship between parent container and child items, grid-container, grid-items. It establishes a grid context for its children.
 
-![css-flex-layout-vs-grid](./src/assets/images/css-flex-layout-vs-grid.png)
+![css-flex-layout-vs-grid](../../images/css-flex-layout-vs-grid.png)
 
 - Responsive web design is a technique for creating a website that adapts to accommodate various device widths. It involves Fluid Grid, media queries, flexible images.
 
 - raster vs. vector images
 
-![css-raster-vs-vector-images](./src/assets/images/css-raster-vs-vector-images.png)
+![css-raster-vs-vector-images](../../images/css-raster-vs-vector-images.png)
 
 - JPEG format usage: progressive JPEG means it will render with the lowest quality first then get improved over time, unlike normal JPEG which gets render line by line paint with full quality. It is a best format for photos, lossy compression and progressive.
 
@@ -231,7 +231,7 @@ CSS is the styling mechanism for the web. It is a standard of selectors, propert
 
 - We should follow mobile first approach, then add media queries rules medium and large screen as required. So, we don’t have to add media queries in CSS reset and small screen. Due to this maximum CSS style rules will in small.css, then fewer in medium.css and few in large.css:
 
-![css-mobile-first-approach-style-files](./src/assets/images/css-mobile-first-approach-style-files.png)
+![css-mobile-first-approach-style-files](../../images/css-mobile-first-approach-style-files.png)
 
 - In progressive enhancement we first apply rule for small screen then by media query apply rules for medium screen and then finally for large screen.
 
@@ -267,25 +267,25 @@ CSS is the styling mechanism for the web. It is a standard of selectors, propert
 
 - Fonts of a typeface –
 
-![css-fonts-of-a-typeface](./src/assets/images/css-fonts-of-a-typeface.png)
+![css-fonts-of-a-typeface](../../images/css-fonts-of-a-typeface.png)
 
 - Anatomy of typeface –
 
-![css-anatomy-of-a-typeface](./src/assets/images/css-anatomy-of-a-typeface.png)
+![css-anatomy-of-a-typeface](../../images/css-anatomy-of-a-typeface.png)
 
 - Hyphenation – dividing words at the end of a line. Doesn’t look clean. No clear advantage. On digital application do not hyphenate.
 
-![css-hyphenation](./src/assets/images/css-hyphenation.png)
+![css-hyphenation](../../images/css-hyphenation.png)
 
 - Don’t put indent first paragraph in digital world –
 
-![css-indent](./src/assets/images/css-indent.png)
+![css-indent](../../images/css-indent.png)
 
 - Use all caps sparingly – instead of this try to use title cases
 
 - Pull quotes – it should not be a copy of original text.
 
-![css-pull-quotes](./src/assets/images/css-pull-quotes.png)
+![css-pull-quotes](../../images/css-pull-quotes.png)
 
 - Use maximum two different typefaces in the application like serif and sans-serif. Like one for header and another for content. We can use website fontjoy.com and fontinuse.com for font pairing.
 
@@ -295,11 +295,11 @@ CSS is the styling mechanism for the web. It is a standard of selectors, propert
 
 - CSS grid properties –
 
-![css-grid-properties](./src/assets/images/css-grid-properties.png)
+![css-grid-properties](../../images/css-grid-properties.png)
 
 - Building colors in RGB
 
-![css-rgb-colors](./src/assets/images/css-rgb-colors.png)
+![css-rgb-colors](../../images/css-rgb-colors.png)
 
 - Different ways to represent colors – RGB, CYMK, HSL, HSV and Pantone. RGB rules the world.
 
@@ -309,7 +309,7 @@ CSS is the styling mechanism for the web. It is a standard of selectors, propert
 
 - Rater vs. vector based images – for vector we use .svg files -
 
-![css-raster-vs-vector-images2](./src/assets/images/css-raster-vs-vector-images2.png)
+![css-raster-vs-vector-images2](../../images/css-raster-vs-vector-images2.png)
 
 - CSS filters – we can apply effects on images or other elements. Supported filters – blur, brightness, contrast, drop-shadow, gray-scale, hue-rotate, invert, opacity, saturate, sepie
 
@@ -319,7 +319,7 @@ CSS is the styling mechanism for the web. It is a standard of selectors, propert
 
 - Theme colors –
 
-![css-theme-colors](./src/assets/images/css-theme-colors.png)
+![css-theme-colors](../../images/css-theme-colors.png)
 
 ## Angular JS
 
@@ -347,7 +347,7 @@ CSS is the styling mechanism for the web. It is a standard of selectors, propert
 
 - Transclusion - It is like a picture frame. Like frame is completely separate from the picture inside of it. Just set the transclude property to true, and use the ng-transclude attribute inside the template html.
 
-![angular-js-transclusion](./src/assets/images/angular-js-transclusion.png)
+![angular-js-transclusion](../../images/angular-js-transclusion.png)
 
 - If we have some HTML content side a directive like below angular will not show it because it is replacing the `<collapsible>` tag with the HTML inside the template, so we need to use transude to true and in template need to specify where it needs to be shown
 
@@ -385,14 +385,14 @@ CSS is the styling mechanism for the web. It is a standard of selectors, propert
 
 - Client side routing doesn’t replace the server side routing. But while using client side routing the call to server is for getting the little bit of information rather than complete webpages and all of it related resources. SPA need client side routing as a means of referring to different locations with the SPA. There still be interaction with server but for partial data.
 
-![angular-js-server-side-routing](./src/assets/images/angular-js-server-side-routing.png)
-![angular-js-client-side-routing](./src/assets/images/angular-js-client-side-routing.png)
+![angular-js-server-side-routing](../../images/angular-js-server-side-routing.png)
+![angular-js-client-side-routing](../../images/angular-js-client-side-routing.png)
 
 - Hashbang versus HTML5 Mode – this is the default mode. There will be “#” character after the domain name in the URL. All the text on URL after this character will be for client side routing and angular will handle it. The alternate to this mode is HTML mode
 
 - When angular is configured to run in HTML5 mode it attempts to use the browser’s HTML5 history API.
 
-![angular-js-hashbang-vs-html5mode](./src/assets/images/angular-js-hashbang-vs-html5mode.png)
+![angular-js-hashbang-vs-html5mode](../../images/angular-js-hashbang-vs-html5mode.png)
 
 - Jasmine is a behaviour driven development framework, it gives us mechanism to write and then execute the unit tests in javascript. The describe function provides the logical grouping of the multiple test cases, and the ‘it’ function state the name of the test cases.
 
@@ -430,7 +430,7 @@ CSS is the styling mechanism for the web. It is a standard of selectors, propert
 
 - Key factors in building a line of business application – data is an asset, amount of data is significant, number of input/output data fields is significant, data integrity is critical, data visualization
 
-![angular-js-line-of-business-application-structure](./src/assets/images/angular-js-line-of-business-application-structure.png)
+![angular-js-line-of-business-application-structure](../../images/angular-js-line-of-business-application-structure.png)
 
 - Bootstrap is a framework for prettifying the web pages, help you build responsive web applications means responsive to changes in layout, it scales to multiple form factors – phones, tablets, laptops and desktops and handle browser differences. It is developed by twitter.
 
@@ -444,7 +444,7 @@ CSS is the styling mechanism for the web. It is a standard of selectors, propert
 
 - We can organize our app using by feature or type. For large project ‘by feature’ would be better or mix with both types. The LIFT principle (locating our code is easy, identify code at a glance, flat structure as long as we can, try to stay DRY). Have below format while writing controller to have ‘above the fold’ concept, and should not have more than 3 level for folder, it should be flat.
 
-![angular-js-lift-principle](./src/assets/images/angular-js-lift-principle.png)
+![angular-js-lift-principle](../../images/angular-js-lift-principle.png)
 
 - 3 categories of modules – angular js modules, 3rd party modules, custom modules (which we create our self).
 
@@ -456,11 +456,11 @@ CSS is the styling mechanism for the web. It is a standard of selectors, propert
 
 - Lifecycle - When the page loads it loads our static DOM. Angular JS is then loaded then we have our ‘on content ready’ event that’s fired. Which kicks off, that’s what Angular is listening for. That is the entry point. Then angular looks for the application within the HTML, so that is our ng-app. From there it goes through and compile all of our services, and controller and everything that we have declared on our model basically gets compiled. It then goes through the DOM and says what directives do I have, what are the angular js pieces within the HTML and generate the template. This is the compilation phase. Then it goes back through and it links it together says this template gets this scope, binds it together and we have our view.
 
-![angular-js-lifecycle](./src/assets/images/angular-js-lifecycle.png)
+![angular-js-lifecycle](../../images/angular-js-lifecycle.png)
 
 - $digest() processes all of the watchers of the current scope, $apply() is used to notify that something has happened outside of the Angular JS domain, $apply forces a $digest cycle.
 
-![angular-js-digest-loop](./src/assets/images/angular-js-digest-loop.png)
+![angular-js-digest-loop](../../images/angular-js-digest-loop.png)
 
 - If we use factory then it works on revealing module pattern, and service is worked with ‘.’ dot syntax pattern, in this we are attaching methods and properties to a ‘this’ object. Prefer to use factory.
 
@@ -480,9 +480,9 @@ CSS is the styling mechanism for the web. It is a standard of selectors, propert
 
 - Creating stars ratings functionality:
 
-![angular-js-creating-starts-review1](./src/assets/images/angular-js-creating-starts-review1.png)
+![angular-js-creating-starts-review1](../../images/angular-js-creating-starts-review1.png)
 
-![angular-js-creating-starts-review2](./src/assets/images/angular-js-creating-starts-review2.png)
+![angular-js-creating-starts-review2](../../images/angular-js-creating-starts-review2.png)
 
 - Forms are always start off simple, but then the business wants to add rounded corners and cute icons to make the form look friendly and inviting, and the real complexity starts when the business starts adding validation rules to a form.
 
@@ -522,7 +522,7 @@ CSS is the styling mechanism for the web. It is a standard of selectors, propert
 
 - Zone.js is a wrapper on the things which can change the state change like user interactions, http and timers, it knows when these things gets completed. Angular then subscribed to notification from zone.js so that it can run the change detection and re-render the display.
 
-![Angular Zone](./src/assets/images/angular-zone.png)
+![Angular Zone](../../images/angular-zone.png)
 
 - Rendering targets provided by angular – browser/DOM, server-side, native mobile apps, native desktop apps.
 
@@ -568,7 +568,7 @@ CSS is the styling mechanism for the web. It is a standard of selectors, propert
 
 - Using debug element – debugEl has a query method which we can use to select from the root node using “By” predicate.
 
-![angular-debug-element](./src/assets/images/angular-debug-element.png)
+![angular-debug-element](../../images/angular-debug-element.png)
 
 - Tree shaking removes the properties and functions from production build code that is never called.
 
@@ -578,7 +578,7 @@ CSS is the styling mechanism for the web. It is a standard of selectors, propert
 
 - Optimistic bundle download – eager lazy loading of the module. It will download it as soon as there is available download. We do not want to wait to render the application until it is downloaded.
 
-![angular-preload-all-modules](./src/assets/images/angular-preload-all-modules.png)
+![angular-preload-all-modules](../../images/angular-preload-all-modules.png)
 
 - If we set schemas: [NO_ERRORS_SCHEMA], it means we are testing shallow components, so angular won’t give error any error as it won’t render the child components. In provider if we use useClass or useValue then while doing dependency injection it will pass the instance of that class or value.
 
@@ -608,35 +608,35 @@ CSS is the styling mechanism for the web. It is a standard of selectors, propert
 
 - Query decorator - if template is inside view then use @ViewChild otherwise @ContentChild if template is inside component
 
-![angular-query-decorator](./src/assets/images/angular-query-decorator.png)
+![angular-query-decorator](../../images/angular-query-decorator.png)
 
 - Directive selectors
 
-![angular-directive-selectors](./src/assets/images/angular-directive-selectors.png)
+![angular-directive-selectors](../../images/angular-directive-selectors.png)
 
 - Native element using cautions – it tight couple our back-end code with front-end presentation, it is unavailable in angular universal, and we cannot move any logic directly using nativeElement into a web worker. So, if we use it property then these problems will not arise. For this we should use Renderer2 class.
 
 - Building templates with ngTemplate – by default it’s just add an empty element as comment `<!---->` on DOM. We can also use it with ngIf-then-else condition:
 
-![angular-ng-template](./src/assets/images/angular-ng-template.png)
+![angular-ng-template](../../images/angular-ng-template.png)
 
 - NgTempalteOutlet – by this we can decide the position of template to display on the DOM, other use-cases can be alternate UI, repeated UI elements, dynamic UI placement:
 
-![angular-ng-template-outlet](./src/assets/images/angular-ng-template-outlet.png)
+![angular-ng-template-outlet](../../images/angular-ng-template-outlet.png)
 
 - ngTemplateOutlet Context: we can pass some JSON which will alter the templateOutlet, it is useful for simple template modification scenarios:
 
-![angular-ng-template-outlet-context](./src/assets/images/angular-ng-template-outlet-context.png)
+![angular-ng-template-outlet-context](../../images/angular-ng-template-outlet-context.png)
 
 - Dynamic component creation - `*ngComponentOutlet`, `ComponentFactoryResolver`, `resolveComponentFactory`
 
 - Use ng-container wherever possible instead of div or span.
 
-![angular-ng-container](./src/assets/images/angular-ng-container.png)
+![angular-ng-container](../../images/angular-ng-container.png)
 
 - ngSwitch Bloat – instead of this use NgTemplateOutlet:
 
-![angular-avoid-switch-bloat](./src/assets/images/angualr-avoid-switch-bloat.png)
+![angular-avoid-switch-bloat](../../images/angualr-avoid-switch-bloat.png)
 
 - A pipe shouldn’t do a lot, for this a component will be a better choice. All built-in pipe are pure, except - splice, json, async
 
@@ -644,11 +644,11 @@ CSS is the styling mechanism for the web. It is a standard of selectors, propert
 
 - Angular lifecycle hooks – the blue blocks hooks don’t available in directives only in components:
 
-![angular-lifecycle-hooks](./src/assets/images/angular-lifecycle-hooks.png)
+![angular-lifecycle-hooks](../../images/angular-lifecycle-hooks.png)
 
-![angular-lifecycle-hooks-playground](./src/assets/images/angular-lifecycle-hooks-playground.png)
+![angular-lifecycle-hooks-playground](../../images/angular-lifecycle-hooks-playground.png)
 
-![angular-lifecycle-hooks-playground2](./src/assets/images/angular-lifecycle-hooks-playground2.png)
+![angular-lifecycle-hooks-playground2](../../images/angular-lifecycle-hooks-playground2.png)
 
 - Angular treats the UI as a DMZ, accessible to anyone untrusted and un-trustable. Angular treats all values as untrusted by default. Angular only trusts template HTML, binding expressions, and attributes. It will sanitize or cleanse any content it doesn’t trust before adding it to the DOM. It will still display it like a script by converting first into simple string text so that browser doesn’t parse it.
 
@@ -668,25 +668,25 @@ onOnInit() {
 
 - angular communication approaches
 
-![angular-communication-approaches](./src/assets/images/angular-communication-approaches.png)
+![angular-communication-approaches](../../images/angular-communication-approaches.png)
 
 - Angular Material is a reference implementation of Google’s material design specification. It provides a set of reusables, well tested, and accessible UI components based on Material Design. It supports Asymmetric acceleration and deceleration which create more natural and delightful motion than symmetric motion:
 
-![angular-asymmetric-acceleration-and-deceleration](./src/assets/images/angular-asymmetric-acceleration-and-deceleration.png)
+![angular-asymmetric-acceleration-and-deceleration](../../images/angular-asymmetric-acceleration-and-deceleration.png)
 
 - The goal of angular CDK is to give developers more tools to build awesome components for the web. This will be especially useful for projects that want to take advantage of the features of Angular Material without adopting the material design visual language.
 
-![angular-flex-layout-model](./src/assets/images/angular-flex-layout-model.png)
+![angular-flex-layout-model](../../images/angular-flex-layout-model.png)
 
 - AOT Compiler – improve performance, earlier JIT process compile the functions in DOM functions it takes time. But now using AOT it directly sends the DOM function without compiler.
 
-![angular-jit-process](./src/assets/images/angular-jit-process.png)
+![angular-jit-process](../../images/angular-jit-process.png)
 
-![angular-jit-process](./src/assets/images/angular-aot-process.png)
+![angular-jit-process](../../images/angular-aot-process.png)
 
 - We get the below CORS error unless the URL’s match, including the ports themselves:
 
-![angular-cors-error](./src/assets/images/angular-cors-error.png)
+![angular-cors-error](../../images/angular-cors-error.png)
 
 - Pure and impure pipe performance – pipes are pure by default means they do not work with data mutation, they only get re-evaluated if the object reference got changes that the pipes is applied to. We can resolve this by making the pipe impure but it will impact the performance. Like even initial loading of page this sorting pipe will be called many times due to object changes
 
@@ -700,15 +700,15 @@ onOnInit() {
 
 - Module organization – Core module should contain single use classes or singleton for the entire application, it should be imported only once in app module. We should have one more module i.e. AppRoutingModule for containing routing related information. Shared module should contain modules which are re-exported and shared throughout the app.
 
-![angular-module-organization](./src/assets/images/angular-module-organization.png)
+![angular-module-organization](../../images/angular-module-organization.png)
 
 - Unit Test – jasmine is main testing framework, and karma is the framework that executes our tests.
 
 - If we want to take up the control while newing up the instance of the recipe class, we need to create a factory that will be executed to create a new service instance. By this we will have more control for how it is created:
 
-![angular-use-factory](./src/assets/images/angular-use-factory.png)
+![angular-use-factory](../../images/angular-use-factory.png)
 
-![angular-use-factory2](./src/assets/images/angular-use-factory2.png)
+![angular-use-factory2](../../images/angular-use-factory2.png)
 
 - SkipSelf decorators to make sure it is properly checking for a separate input of the core.module. SkipSelf tells the injection system to begin looking for an existing instance of the module in the parent injector. Optional instructs the injector to pass in null if no other instance is found.
 
@@ -732,8 +732,8 @@ onOnInit() {
 
 - Understanding Schedulers and the Event loop: microtask queue has high priority than async task queue.
 
-![angular-scheduler-and-event-loop1](./src/assets/images/angular-scheduler-and-event-loop1.png)
-![angular-scheduler-and-event-loop](./src/assets/images/angular-scheduler-and-event-loop.png)
+![angular-scheduler-and-event-loop1](../../images/angular-scheduler-and-event-loop1.png)
+![angular-scheduler-and-event-loop](../../images/angular-scheduler-and-event-loop.png)
 
 - Using flatMap to process inner observables – flatMap operator is more sophisticated than map operation, it will also subscribe to the returning observable and deliver it throughout the rest of the pipeline.
 
@@ -747,7 +747,7 @@ onOnInit() {
 
 - RXJS operators
 
-![angular-rxjs-operators](./src/assets/images/angular-rxjs-operators.png)
+![angular-rxjs-operators](../../images/angular-rxjs-operators.png)
 
 - Types of observables – cold (Netflix / movie @ home) and hot (movie theatre)
 
@@ -759,7 +759,7 @@ onOnInit() {
 
 - Core and shared module – core or common module is designed for singleton type of services, which will be shared throughout the service like logging service, error service and data service. Service that are specific to a feature can go in the feature’s folder. Shared folder should contain reusable components, pipes and directives like calendar component, auto complete component. Shared module will be imported many times in different modules, but core module should be imported only one time into root module.
 
-![angular-module-organization2](./src/assets/images/angular-module-organization2.png)
+![angular-module-organization2](../../images/angular-module-organization2.png)
 
 - Change detection strategies – in case of container presentation pattern, we don’t want the child component changing the state of the data at all, because that is the job of the parent or container component. When using OnPush detectors, then the framework will check an OnPush component when any of its input properties changes, when it fires and event, or when an observable fire an event.
 
@@ -773,7 +773,7 @@ onOnInit() {
 
 - General architecture of application with libraries
 
-![angular-general-architecture-with-libraries](./src/assets/images/angular-general-architecture-with-libraries.png)
+![angular-general-architecture-with-libraries](../../images/angular-general-architecture-with-libraries.png)
 
 - The best way to test our angular library is to use npm pack command which is used to change directory into the library dist folder. We need to type command cd my-folder/dist then npm pack. It will create a tarball file (`*.tgz`) then we can install it using npm install my-folder/dist/package.tgz. other alternatives to test the library on local are npm install, npm link, but npm pack is best approach.
 
@@ -795,9 +795,9 @@ onOnInit() {
 
 - Now we can use `changeDetectionStrategy` onPush, it will optimize our view performance. It means that the change detector’s mode will be initially set to CheckOnce. Any asynchronous API events like XHR or promise based events will not trigger change detection once we change to this strategy of OnPush and the components template will not get updated. In default strategy it will every time changes in our application as a result of any user events, timers, XHR requests, promises, etc change detection will run on all components.
 
-![angular-without-change-detection-on-push-approach](./src/assets/images/angular-without-change-detection-on-push-approach.png)
+![angular-without-change-detection-on-push-approach](../../images/angular-without-change-detection-on-push-approach.png)
 
-![angular-without-change-detection-on-push-approach](./src/assets/images/angular-without-change-detection-on-push-approach.png)
+![angular-without-change-detection-on-push-approach](../../images/angular-without-change-detection-on-push-approach.png)
 
 - Now above component will be changed only if new input reference is passed or a dom event is raised in our component or its children otherwise the view will not get updated.
 
@@ -807,7 +807,7 @@ onOnInit() {
 
 - On console if we type ‘ng’ it will give us below methods –
 
-![angular-ng-console-functions](./src/assets/images/angular-ng-console-functions.png)
+![angular-ng-console-functions](../../images/angular-ng-console-functions.png)
 
 - Angular CLI Builders - Builder are wrongly given name, they just know that they are just given a set of options, run a function and return the results.
 
@@ -835,11 +835,11 @@ onOnInit() {
 
 - Anyone below we can use in effects. Exhaust map will discard any additional emission until one that is currently working on is complete, it is like going to postoffice and the front person is taking too much time and leave in-between. switchMap is opposite of exhaustMap, it will cancel the current work if new effect comes up. mergeMap, exhaustMap and switchMap can lead to raise condition as they are either cancelling the requests or discarding the new runs so concatMap is the safest operator but there is risk of back pressure and it will keep the emissions in order, it will lead to bad user experience of waiting. It is like waiting in a queue to get food, and we will only get the food when priors persons received the food.
 
-![angular-map-use-case2](./src/assets/images/angular-map-use-case2.png)
+![angular-map-use-case2](../../images/angular-map-use-case2.png)
 
 - Usage of RxJS operators in different scenario –
 
-![angular-rxjs-operators-different-scenarios](./src/assets/images/angular-rxjs-operators-different-scenarios.png)
+![angular-rxjs-operators-different-scenarios](../../images/angular-rxjs-operators-different-scenarios.png)
 
 - takeUntil is like throwing a person out of lunch line but everyone else will just continue. exhaustMap is like no line will ever perform, if someone is buying a lunch the other will just went away from there and never comes back.
 
@@ -847,7 +847,7 @@ onOnInit() {
 
 - Monorepos – everything that belongs to a system should get in there and it should have one version for all of these libraries not different version for different libraries by this we won’t have version conflicts, no burden with distributing lists
 
-![angular-monorepos](./src/assets/images/angular-monorepos.png)
+![angular-monorepos](../../images/angular-monorepos.png)
 
 - Earlier compiler used to build the packages also if someone changes something in a project file, but now ngcc compiler will compile the package separately to make the build process faster. No more JSON conversion of typescript components.
 
@@ -855,7 +855,7 @@ onOnInit() {
 
 - HttpBackend will be last interceptor –
 
-![angular-interceptor-sequence](./src/assets/images/angular-interceptor-sequence.png)
+![angular-interceptor-sequence](../../images/angular-interceptor-sequence.png)
 
 - Firebase was initial created to integrate online chat functionality. Google acquired it into 2014. Cloud functions can be triggered from different firebase services, google cloud services or even third parties through web hooks.
 
@@ -895,7 +895,7 @@ onOnInit() {
 
 - Service worker expands on web worker, this means that it has no access to the DOM, isn’t tied to a particular page and run on its own global script context, works only with HTTPS, run without a page and is event-driven, it also triggered again even when in inactive state.
 
-![angular-service-worker-lifecycle](./src/assets/images/angular-service-worker-lifecycle.png)
+![angular-service-worker-lifecycle](../../images/angular-service-worker-lifecycle.png)
 
 - What Is an "App"? - Application Richness and Reachability evolution, native app like IOS has increased the richness but reduced the availability.
 
@@ -909,7 +909,7 @@ onOnInit() {
 
 - The smart component will pass the updated data towards the dumb components
 
-![angular-smart-component-data-passing](./src/assets/images/angular-smart-component-data-passing.png)
+![angular-smart-component-data-passing](../../images/angular-smart-component-data-passing.png)
 
 - We should only use behaviors like logging in the tap operator, we should not use side-effects in it.
 
@@ -927,11 +927,11 @@ onOnInit() {
 
 - The difference between ElementRef, TemplateRef, and viewContainerRef with examples.
 
-![angular-element-ref-template-ref-vs-view-container-ref](./src/assets/images/angular-element-ref-template-ref-vs-view-container-ref.png)
+![angular-element-ref-template-ref-vs-view-container-ref](../../images/angular-element-ref-template-ref-vs-view-container-ref.png)
 
-![angular-ng-content-ng-template-ng-container](./src/assets/images/angular-ng-content-ng-template-ng-container.png)
+![angular-ng-content-ng-template-ng-container](../../images/angular-ng-content-ng-template-ng-container.png)
 
-![angular-ng-content-ng-template-outlet](./src/assets/images/angular-ng-content-ng-template-outlet.png)
+![angular-ng-content-ng-template-outlet](../../images/angular-ng-content-ng-template-outlet.png)
 
 - Angular 2 we have structural directive which are indicated by the prefix `*` because it is changing the structure of our DOM.
 
@@ -971,13 +971,13 @@ onOnInit() {
 
 - Different types of modules which we can have: root application module (AppModule), feature modules, shared modules, core module, routing modules
 
-![angular-for-root-vs-for-child](./src/assets/images/angular-for-root-vs-for-child.png)
+![angular-for-root-vs-for-child](../../images/angular-for-root-vs-for-child.png)
 
 - We need to use query parameters to retain the user setting when navigating to the different navigation. To define parameters that work across multiple routes. Like on product list user has some search data, then navigated to the details page then coming to the product list page. Just like optional parameter we use query parameters to pass optimal or complex information. Unlike optional parameters they can be retained across routing paths. Like optional parameters, query parameters are not part of the route configuration and are not involved with matching route paths.
 
 - We can use child routes to display routes within other routes for better route hierarchy, encapsulate and navigate through our application. Also makes easier to lazy load routes.
 
-![angular-lazy-loading-vs-preloading](./src/assets/images/angular-lazy-loading-vs-preloading.png)
+![angular-lazy-loading-vs-preloading](../../images/angular-lazy-loading-vs-preloading.png)
 
 - A form model is the data structure that represents the HTML form – it retains the form state, form value, child controls.
 
@@ -1005,7 +1005,7 @@ onOnInit() {
 
 - For data caching we can use shareReplay and share operators.
 
-![angular-life-cycle-steps](./src/assets/images/angular-life-cycle-steps.png)
+![angular-life-cycle-steps](../../images/angular-life-cycle-steps.png)
 
 - Angular is a tool to help you build interactive websites, you can call it a framework. It provides tools to communicate with the server and to improve the performance, package application, maintain state, organize code/logic, ease display of data, synchronize state as it changes.
 
@@ -1044,7 +1044,7 @@ ngOnDestroy() {}
 
 - We can understand the lifecycle hooks by splitting the process into two steps,” first-time hooks”, and “in every change detection cycle hooks”. “first-time hooks”, the triggered hooks are: onChanges, onInit, doCheck, afterContentInit, afterContentChecked, afterViewInit, afterViewChecked. “in every change detection cycle hooks”, the triggered hooks are: onChanges, doCheck, afterContentChecked, afterViewChecked.
 
-![angular-lifecycle-hooks-workflow](./src/assets/images/angular-lifecycle-hooks-workflow.png)
+![angular-lifecycle-hooks-workflow](../../images/angular-lifecycle-hooks-workflow.png)
 
 - How the Angular Compiler Works - The Angular Compiler (which we call ngc) is the tool used to compile Angular applications and libraries. ngc is built on the TypeScript compiler (called tsc) and extends the process of compiling TypeScript code to add additional code generation related to Angular’s capabilities.
 
@@ -1068,7 +1068,7 @@ ng new my-app --create-application=false | ng new my-app --createApplication=fal
 
 - Path segment prefixing – we should use relative paths whenever possible to avoid large refactors if the parent URL structure changes. Also, we should define constant route tokens instead of using static strings across the application.
 
-![angular-path-route-prefixing](./src/assets/images/angular-path-route-prefixing.png)
+![angular-path-route-prefixing](../../images/angular-path-route-prefixing.png)
 
 - The navigateByUrl() method is not able to handle the query params or setting the relative URL, the navigate method is more versatile. The navigate() method is default to absolute route.
 
@@ -1086,15 +1086,15 @@ ng new my-app --create-application=false | ng new my-app --createApplication=fal
 
 - TypeScript by itself has no understanding of Angular template syntax and cannot type-check it directly. To perform this checking, the Angular compiler converts Angular templates into TypeScript code (known as a “Type Check Block”, or TCB) that expresses equivalent operations at the type level, and feeds this code to TypeScript for semantic checking. Any generated diagnostics are then mapped back and reported to the user in the context of the original template.
 
-![angular-life-cycle-steps-details](./src/assets/images/angular-life-cycle-steps-details.png)
+![angular-life-cycle-steps-details](../../images/angular-life-cycle-steps-details.png)
 
 Innovation is more like a system or network not a single moment.
 
 - Angular inspirations –
 
-![angular-inspirations](./src/assets/images/angular-inspirations.png)
+![angular-inspirations](../../images/angular-inspirations.png)
 
-![angular-angular-inspired-by](./src/assets/images/angular-angular-inspired-by.png)
+![angular-angular-inspired-by](../../images/angular-angular-inspired-by.png)
 
 - FormControl is an entity that tracks the value and validation status of an individual form control. A FormControl is always created regardless of whether you use template driven or reactive forms. Instead of a native form control like input, any custom form control can interact with a formControl. The number of native form controls is limited, but the variety of custom form controls can be potentially infinite. So, Angular needs a generic mechanism to stand between Angular’s formControl and a native/custom form control. This is where the ControlValueAccessor object comes into play. This is the object that stands between the Angular formControl and a native form control and synchronizes values between the two. A ControlValueAccessor acts as a bridge between the Angular forms API and a native element in the DOM.
 
@@ -1230,7 +1230,7 @@ Innovation is more like a system or network not a single moment.
 
 - Ways in which we can define JavaScript function, last one is preferred and myObject name should be like a namespace name for your application. Function 2 and function 5 will be available on the global scope.
 
-![typescript-function-defining-ways](./src/assets/images/typescript-function-defining-ways.png)
+![typescript-function-defining-ways](../../images/typescript-function-defining-ways.png)
 
 - Event handlers are not supposed to return any value at all. But if we return false it will tell browser to stop any subsequent processing associated with that event. But we should use a JavaScript function by name preventDefault() to cancel and event because all browser do not support to cancel the event if we return as false. Example scenario if we apply double click event on div which contains text then it will by default also select the text.
 
@@ -1258,11 +1258,11 @@ Innovation is more like a system or network not a single moment.
 
 - Arrow functions are used to make ‘this’ easier to understand. Below code will return the window object, not the document object which would be the case if we do not use arrow function. So, we are no more limited to have access only object which called the function means context of the function:
 
-![typescript-arrow-function-issue](./src/assets/images/typescript-arrow-function-issue.png)
+![typescript-arrow-function-issue](../../images/typescript-arrow-function-issue.png)
 
 - Below code as well will return the window object not the invoice object:
 
-![typescript-arrow-function-issue2](./src/assets/images/typescript-arrow-function-issue2.png)
+![typescript-arrow-function-issue2](../../images/typescript-arrow-function-issue2.png)
 
 - Symbols is a concept in ES6 to provide some unique string. It is a unique and immutable data type and may be used as an identifier for object properties. There is no way to access its unique ID value. Well-known symbols used in meta programming, meta programming involves looking more deeply in objects or functions even how JavaScript operates.
 
@@ -1335,7 +1335,7 @@ Innovation is more like a system or network not a single moment.
 
 - Module formats are just a syntax which is used to define a module, module loaders are generally JS library which we can include in our project that understand the module format we have decided to use and how to load and execute the modules we define in that format. This relationship is similar to JS and browser and itself.
 
-![typescript-module-type-format](./src/assets/images/typescript-module-type-format.png)
+![typescript-module-type-format](../../images/typescript-module-type-format.png)
 
 - Common JS format is used mostly with server side, Universal module definition (UMD) is a single format that attempts to be compatible with both the AMD and Common JS formats. We might consider using this format if we need to same module on the server in a node application and as part of a browser application. It would be supported by the CommonJS module loader in Node, as well as an AMD loader in the browser like RequireJS.
 
@@ -1393,9 +1393,9 @@ Innovation is more like a system or network not a single moment.
 
 - Crude computation bug – below will make the infinite loop. JavaScript only has 1 number type and it is IEEE 754 double-precision floating point, by this we can represent wide range of values but downside is that some of the precession can be lost in the process.
 
-![typescript-number-type](./src/assets/images/typescript-number-type.png)
+![typescript-number-type](../../images/typescript-number-type.png)
 
-![javascript-number-type-2](./src/assets/images/typescript-number-type-2.png)
+![javascript-number-type-2](../../images/typescript-number-type-2.png)
 
 - To make overloading work in javascript, instead of creating different methods, we should handle it manually in same method by taking consideration of arguments length or types
 
@@ -1403,9 +1403,9 @@ Innovation is more like a system or network not a single moment.
 
 - Value of ‘this’ in function for different cases invocation. We need to use call, bind or prototype to control this context –
 
-![typescript-value-of-this-based-on-context](./src/assets/images/typescript-value-of-this-based-on-context.png)
+![typescript-value-of-this-based-on-context](../../images/typescript-value-of-this-based-on-context.png)
 
-![typescript-value-of-this-based-on-context2](./src/assets/images/typescript-value-of-this-based-on-context2.png)
+![typescript-value-of-this-based-on-context2](../../images/typescript-value-of-this-based-on-context2.png)
 
 - We cannot compare NaN with NaN, it will give false. So we need to call isNaN(NaN) function instead
 
@@ -1419,7 +1419,7 @@ Innovation is more like a system or network not a single moment.
 
 - Issues with using Objects as Maps – when using objects as maps, its key are always converted to strings. We should stop using the object, but use Map objects which is a simple key/value data structure. Any value may be used as either a key or a value, and the objects are not converted to strings. Also, we can use maps when keys are unknown until runtime, use objects if keys are predefined. We should also use maps when keys are of same type and all values are of same type. Maps are iterable, so they can be used in a for-of loop. Each run of the loops returns a [key, value] pair for an entry in the Map.
 
-![typescript-using-maps-instead-of-objects](./src/assets/images/typescript-using-maps-instead-of-objects.png)
+![typescript-using-maps-instead-of-objects](../../images/typescript-using-maps-instead-of-objects.png)
 
 - The WeakMap is a type of Map where only objects can be passed as keys, primitive data types such as strings, numbers, Booleans, etc. are not allowed. WeekMaps are not iterable, so they can’t be used with for-of loop. Weakmaps are better with memory, they can be garbage collected. Individual entries in a weakmap can be garbage collected, while the weakmap itself still exists.
 
@@ -1449,7 +1449,7 @@ Innovation is more like a system or network not a single moment.
 
 - Webpack process –
 
-![typescript-webpack-process](./src/assets/images/typescript-webpack-process.png)
+![typescript-webpack-process](../../images/typescript-webpack-process.png)
 
 - In JS constructor functions are used to create new objects. When we use the new keyword the function gets a branch new empty context, here we store the properties and functions for this object on ‘this’. By using prototype property we can create a function directly on function without having duplicate copies on every object. Prototype also helps us to extend an objects to add new functionalities to the instance of that object. Polyfills also uses prototypes for their working.
 
@@ -1457,7 +1457,7 @@ Innovation is more like a system or network not a single moment.
 
 - Window is a global object in JS, we can access it from anywhere. Important key things are below –
 
-![typescript-important-document-api](./src/assets/images/typescript-important-document-api.png)
+![typescript-important-document-api](../../images/typescript-important-document-api.png)
 
 - By using eval() keyword, it will open our application for injection attacks. Like the string is coming from database or web api which might be compromised, then eval will execute then string as a javascript script.
 
@@ -1469,7 +1469,7 @@ Innovation is more like a system or network not a single moment.
 
 - The event queue – if at a time only person can go to the teller, then there has to be a queue to hold the other people, this queue is a part of event loop in JS. This is where work is stored until the current operation or task is done executing.
 
-![typescript-event-queue](./src/assets/images/typescript-event-queue.png)
+![typescript-event-queue](../../images/typescript-event-queue.png)
 
 - The javascript engine will only execute one piece of JS code at a time, behind the scenes there are a pool of threads that are used for things like making web requests. This pool of threads can have multiple connections open to multiple different servers to request data for multiple different requests at the same time. This is all hidden behind the scenes, this is how we can still achieve parallelism within JS. We still have behind the scenes the ability for multithreading, it is not just applied to our JS code itself.
 
@@ -1481,12 +1481,12 @@ Innovation is more like a system or network not a single moment.
 
 - The JS engine and the browser tab that we are working has a separate event loop dedicated just to our application, this event loop contains a queue, inside of this queue work can be placed that will be eventually executed when whatever is running is complete. In addition to this queue, there is a call stack it contains whatever is executing at this current time, a call stack is like a todo list while performing a task. Work will be pushed on call stack and then once it is done it will vanish. A todo item can also have sub-task like to create a hamburger we might need to find many items to look for same with the work, it will be further pushed to the stack only, as usual after completion of that subtask, it will be removed from the stack and controls get back to the earlier item on the stack.
 
-![typescript-event-loop2](./src/assets/images/typescript-event-loop2.png)
+![typescript-event-loop2](../../images/typescript-event-loop2.png)
 
 - The black box items will be handle by browser behind the scenes for us, and a mechanism in browser will also listen for the their responses as-well, after getting the response it will push those response inside the queue. Behind the scene the browser is handling these requests not the JS engine, so that multiple threads handling multiple request at the same time. So it is possible while our single-
   threaded JS engine is doing work that behind the scenes other things can be happening, we just don’t have those things happening inside of our JS engine –
 
-![typescript-event-loop3](./src/assets/images/typescript-event-loop3.png)
+![typescript-event-loop3](../../images/typescript-event-loop3.png)
 
 - In setTimeout() function there is not guarantee that our function will be called at exactly at the mentioned time, at that time elapse the function will be pushed in the queue, but it will called once all other prior work in the queue gets completed. Also when we say 0 milliseconds the browser is putting in as 4.
 
@@ -1584,7 +1584,7 @@ Innovation is more like a system or network not a single moment.
 
 - Meta object API – a property is a named collection of attributes, earlier this api wasn’t exposed for outside world.
 
-![typescript-meta-object-api](./src/assets/images/typescript-meta-object-api.png)
+![typescript-meta-object-api](../../images/typescript-meta-object-api.png)
 
 - We can stop object extensibility by using preventExtensions() method, the object won’t accept new property assignment. The freeze() stop its extension and also make all property as read-only and immutable. By this we can pass this object to third party and be confident that third party can’t be able to corrupt this object
 
@@ -1594,7 +1594,7 @@ Innovation is more like a system or network not a single moment.
 
 - Event driven model was inspired by HyperCard
 
-![typescript-hyper-card](./src/assets/images/typescript-hyper-card.png)
+![typescript-hyper-card](../../images/typescript-hyper-card.png)
 
 - In node.js we got non-blocking file i/o which is the main advantage. Node.js implements a web server in a JS event loop. It is a high-performance event pump.
 
@@ -1610,7 +1610,7 @@ Innovation is more like a system or network not a single moment.
 
 - In 40s when the first Von Neumann machines start coming online they are integer-only machines, but most of the programmers are mathematicians and they are trying to figure out how to do read computation and it is hard, they were trying to do stuff with scaled integers and it is lot of work, and it is error prone. And someone figures out floating point, that we will have two numbers per number, one is the number itself and other is a scale factor, which tells us how many positions to move the decimal point. Then we can just give it to a subroutine, and subroutine will figure out how to add these things. And it worked and it made programming much easier to do. Unfortunately, those libraries were really slow. So, when we get to the 50s, there is now interest in putting floating point into hardware, but we were making out stuff of tubes, and it is hard to do. Someone has figured it out that if we use binary floating pinot instead of decimal floating point, we don’t have to implement a dive by 10 in order to do a scaling, we can just shift 1 bit, which is free. That worked great for scientific computing because in scientific computing, our lower digits are probably wrong anyway, but it doesn’t work for business processing because they are adding up money and they need to be exact. They have to give the cents exact. So, even successor like java is not good with business types, that is the tragedy we are in now. The solution might be below, this might be only 1 number system which a future language needs to be adopt –
 
-![typescript-dec-64](./src/assets/images/typescript-dec-64.png)
+![typescript-dec-64](../../images/typescript-dec-64.png)
 
 - If we are adding integers in a software implementation, it can add two integers and five instructions, in a hardware implementation adding integers should happen in once cycle, which means we don’t need to have int as a separate type in order to get performance. We can get performance and range of values that we need in one number type.
 
@@ -1626,7 +1626,7 @@ Innovation is more like a system or network not a single moment.
 
 - TypeScript implements structural type system, so in below the object developer can be directly treated as interface as it has all the interface properties. As long as the structure match, we can treat the object as the type with that structure event if it wasn’t explicitly declared with that type. This is also called duck typing:
 
-![typescript-duck-typing](./src/assets/images/typescript-duck-typing.png)
+![typescript-duck-typing](../../images/typescript-duck-typing.png)
 
 - Static members are a nice way to add utility or helper methods that are related to the purpose of class but aren’t dependent on any data that might be stored in instances of the class.
 
@@ -1634,7 +1634,7 @@ Innovation is more like a system or network not a single moment.
 
 - There is different module syntax like AMD, Common JS, TS has adapted ES2015 module syntax by default. Benefits – encapsulation, reusability, create higher-level abstraction. We will also need module loader/bundler to run our code. Webpack will prepare our modules to execute in a browser as part of a build step.
 
-![typescript-supported-technologies](./src/assets/images/typescript-supported-technologies.png)
+![typescript-supported-technologies](../../images/typescript-supported-technologies.png)
 
 - Relative vs. non-relative imports – ‘./’, ‘/’, ‘../’ all are same for current directive. We should give relative reference when giving our own modules and non-relative paths when referring third party modules.
 
@@ -1654,7 +1654,7 @@ Innovation is more like a system or network not a single moment.
 
 - Duck Typing – in below we don’t need to specify the probablyADuck variable as a Duck type, it is considered automatically as it has all its methods.
 
-![typescript-duck-typing2](./src/assets/images/typescript-duck-typing2.png)
+![typescript-duck-typing2](../../images/typescript-duck-typing2.png)
 
 - Abstract class are created with the abstract keyword, we cannot directly instantiate this class but they can contain the implementation details but also can have abstract methods which are not implemented but these methods must be implemented in derived classes.
 
@@ -1666,11 +1666,11 @@ Innovation is more like a system or network not a single moment.
 
 - Ambient modules – large JS libraries could potentially have lots of modules in them. Each module in a large library would have its own d.ts file and that would quickly become unwieldy and inconvenient. The solution is to declare ambient modules inside a single d.ts file. Ambient modules don’t provide any implementation details. In type definition files they are just the wrapper aournd an implementing that defined in the actual library. Since there aren’t any top-level exports, it can’t be imported directly. We first need to add a triple slash reference to the d.ts file, then we can write the import statement, we don’t need to define the path for the module to import but just the name of the module in the double quote exactly it was defined in d.ts file.
 
-![typescript-ambient-modules](./src/assets/images/typescript-ambient-modules.png)
+![typescript-ambient-modules](../../images/typescript-ambient-modules.png)
 
 - Babel is a second stage transpiler and provides a handy backup plan just in case Typescript doesn’t transpile something as we expected.
 
-![typescript-babel-working](./src/assets/images/typescript-babel-working.png)
+![typescript-babel-working](../../images/typescript-babel-working.png)
 
 - Nested arrow functions share the same ‘this’ instance, the ‘this’ value is always the containing code which is also called Lexical Binding.
 
@@ -1680,15 +1680,15 @@ Innovation is more like a system or network not a single moment.
 
 - Declaration merging - The compiler merges two seperate declarations declared with the same same into a single definition. allowed merges - interfaces, enums, namespaces with classes/functions/enums. disallowed - classes with classes. We can use declaration merging to implement module augmentation. It is a technique that allows us to extend existing modules with new members. It is a nice way to extend modules that we might not maintain or to extend the 3rd party code that we may not be responsible for maintaining.
 
-![typescript-declaration-merging](./src/assets/images/typescript-declaration-merging.png)
+![typescript-declaration-merging](../../images/typescript-declaration-merging.png)
 
 - Type Guards – they are a way for us to check the type of a variable. They are a way for the compiler to narrow a variable to a specific type. By this the compiler can check more error based on type. The typeof type guard, instanceof guard, user-defined type guards
 
 - Symbols – they are new primitive data type, they are unique and immutable. Every symbol we create is different from every other symbol. Once we created them we can’t change them. Use case for them – to make good unique constants, enum like behaviour, computer property declarations to avoid name collisions, customize internal language behaviour. The string passed below in symbol is just for debugging purpose.
 
-![typescript-symbol1](./src/assets/images/typescript-symbol1.png)
+![typescript-symbol1](../../images/typescript-symbol1.png)
 
-![typescript-symbol2](./src/assets/images/typescript-symbol2.png)
+![typescript-symbol2](../../images/typescript-symbol2.png)
 
 - Decorators - They are like annotations in java and attributes in c#. In JS they are implemented as functions.
 
@@ -1696,7 +1696,7 @@ Innovation is more like a system or network not a single moment.
 
 - An interface defines the shape of data. It is like a mold used to create baked goods such as muffins. It drives consistency across the objects. Unlike Interface, Type can also be used to represent primary types not just object like data structure.
 
-![typescript-interface-vs-types](./src/assets/images/typescript-interface-vs-types.png)
+![typescript-interface-vs-types](../../images/typescript-interface-vs-types.png)
 
 - The ‘typeof null’ will return generic ‘object’ value.
 
@@ -1704,7 +1704,7 @@ Innovation is more like a system or network not a single moment.
 
 - A closure wraps up an entire environment, binding necessary variable from other scope. It is unlike a function’s local variables as they aren’t available once the function’s scope is closed. Closures are very useful in creating function ‘construction zones’, a closure can make the creation of very similar functions ultra-efficient. We should aware that bound variables won’t be evident in the stored function, examining the contents of our new variables doesn’t reveal closures.
 
-![typescript-closure](./src/assets/images/typescript-closure.png)
+![typescript-closure](../../images/typescript-closure.png)
 
 - Order of operations – PEMDAS.
 
@@ -1714,11 +1714,11 @@ Innovation is more like a system or network not a single moment.
 
 - Iterables return an iterator object. This object knows how to access items from a collection 1 at a time, while keeping track of its current position within the same sequence.
 
-![typescript-iterables](./src/assets/images/typescript-iterables.png)
+![typescript-iterables](../../images/typescript-iterables.png)
 
 - Proxies and reflection are both forms of meta programming generally to know information about itself or for a program to control how is executing while it is executing other programs. Reflection is getting information about the program and proxy is changing how the program execute during execution. Proxy object sits between other code and target object. Proxies are slower than regular object. Revocable proxies allow the system to recover resources – use in very large applications with lots of data.
 
-![typescript-proxy-and-reflection](./src/assets/images/typescript-proxy-and-reflection.png)
+![typescript-proxy-and-reflection](../../images/typescript-proxy-and-reflection.png)
 
 - Typescript also support new features of ECMAScript and other features which even didn’t introduced yet in ECMAScript like interface.
 
@@ -1766,9 +1766,9 @@ Innovation is more like a system or network not a single moment.
 
 - In top 15 languages, only assembly language doesn’t support regular expression.
 
-![typescript-regex-basic-syntax](./src/assets/images/typescript-regex-basic-syntax.png)
+![typescript-regex-basic-syntax](../../images/typescript-regex-basic-syntax.png)
 
-![typescript-regex-short-codes](./src/assets/images/typescript-regex-short-codes.png)
+![typescript-regex-short-codes](../../images/typescript-regex-short-codes.png)
 
 - Solid Principles - It is an acronym for five design principles aimed at enhancing the understanding, development, and maintenance of software. By applying this set of principles, you should notice a reduction in bugs, improved code quality, the production of more organized code, decreased coupling, enhanced refactoring, and encouragement of code reuse.
 
@@ -2004,13 +2004,13 @@ req.book.save((err) => {
 
 - Middleware – It is going to inject itself in between the calls and this route.
 
-![node-js-middleware](./src/assets/images/node-js-middleware.png)
+![node-js-middleware](../../images/node-js-middleware.png)
 
 - HATEOAS - Using hypermedia to building self-documenting API, it is very easy for someone to navigate and understand what options are available to them anytime while they are using our API. HATEOAS means that list of links available to us that help us navigate the API.
 
 - Node.js provides a wrapper around V8 JS Runtime engine to provide additional functionalities for building network applications. It is fast because all written in C language. We can build WebSocket server, fast file uploading client, Ad Server, Any real-time data apps. Node.js is not a multi-threaded application. Benefits of non-blocking code – files will be read in parallel
 
-![node-js-blocking-vs-non-blocking](./src/assets/images/node-js-blocking-vs-non-blocking.png)
+![node-js-blocking-vs-non-blocking](../../images/node-js-blocking-vs-non-blocking.png)
 
 - We use javascript with Node.js because javascript makes easy to do event programming using the event loop and makes the code non-blocking.
 
@@ -2020,29 +2020,29 @@ req.book.save((err) => {
 
 - Execution of javascript on the server is not done by Node, but it is done with a virtual machine, VM like V8 or Chakra. Node is just the coordinator, it is the one who instructs a VM like V8 to execute our javascript. So Node.js is a wrapper around a VM like V8. V8 will tell the results to Node and Node will tell this result to us. Node comes with built-in modules providing rich features through easy-to-use asynchronous API’s. this works great because V8 itself is single threaded, this is also true for browser.
 
-![node-js-event-loop](./src/assets/images/node-js-event-loop.png)
+![node-js-event-loop](../../images/node-js-event-loop.png)
 
-![node-js-event-loop-extra](./src/assets/images/node-js-event-loop-extra.png)
+![node-js-event-loop-extra](../../images/node-js-event-loop-extra.png)
 
 - REST is not a framework nor HTTP pattern or protocol. Its full name is representational state transfer. The request should be stateless, it should not pass around the information about previous requests or next one. It should transfer data in JSON or XML. We should design the routes to access the resource like business modal.
 
 - Blueprint of a restful service -
 
-![node-js-restful-services-blueprint](./src/assets/images/node-js-restful-services-blueprint.png)
+![node-js-restful-services-blueprint](../../images/node-js-restful-services-blueprint.png)
 
 - Use express.static to serve everything within client as a static resource, and it will serve the index.html on the root of that directly on a GET to `/`
 
-![node-js-express-static](./src/assets/images/node-js-express-static.png)
+![node-js-express-static](../../images/node-js-express-static.png)
 
 - We should run our node process under PM2 tool, it will automatically use all the available cores in our server and it will automatically create a new process every time an active process crashes and exits. It will also reload our application without any downtime. This tool is must in production.
 
 - Node's architecture – V8 and libuv
 
-![node-js-architecture](./src/assets/images/node-js-architecture.png)
+![node-js-architecture](../../images/node-js-architecture.png)
 
 - Javascript Event loop – Javascript is a single threaded due to which we can execute only one chunk of code at a time i.e. a function. It executes a synchronous task in “Sync Task Queue” this is a callstack for our application. The callback functions which needs to be executed in asynchronously, they needs to be added in the “Async Task Queue” by “Sync Task Queue” and when “Sync Task Queue” is done with execution the Synchronous task, it will pick the async task from the “Async Task Queue. There is also a “Async Micro Task Queue”, it will contains asynchronous micro-task which will have higher priority than normal asynchronous tasks resides in “Async Task Queue”. We should not block the event loop, so wherever possible we should write the asynchronous code using async and await keywords.
 
-![node-js-javascript-event-loop](./src/assets/images/node-js-javascript-event-loop.png)
+![node-js-javascript-event-loop](../../images/node-js-javascript-event-loop.png)
 
 - NPM is not really part of node, it is just come packaged with node since it is the default and most popular package manager.
 
@@ -2060,7 +2060,7 @@ req.book.save((err) => {
 
 - The event loop facilitates this process; it constantly checks whether or not the call stack is empty. If it is empty, new functions are added from the event queue. If it is not, then the current function call is processed.
 
-![node-js-event-loop](./src/assets/images/node-js-event-loop.png)
+![node-js-event-loop](../../images/node-js-event-loop.png)
 
 - If you call setTimeOut with 0ms and resolve a promise immediately, which would console log first? The answer is Promises and the reason is that Job queue gets more priority than Event Queue.
 
@@ -2070,11 +2070,11 @@ req.book.save((err) => {
 
 - Think of NodeJS as a waiter taking the customer's orders while the I/O chefs prepare them in the kitchen. Other systems have multiple chefs, who take a customer's order, prepare the meal, clear the table and only then attend to the next customer.
 
-![node-js-event-loop2](./src/assets/images/node-js-event-loop2.png)
+![node-js-event-loop2](../../images/node-js-event-loop2.png)
 
 - Sample Node JS architecture -
 
-![node-js-sample-architecture](./src/assets/images/node-js-sample-architecture.png)
+![node-js-sample-architecture](../../images/node-js-sample-architecture.png)
 
 - Node js shines in I/O intensive uses that is in network applications. In order for event loop to function properly, our code can’t spend too much time doing anything of its own, this includes works that requires heavy use of CPU.
 
@@ -2084,7 +2084,7 @@ req.book.save((err) => {
 
 - How call stack actually works: event queue will only send the callbacks to call stack once call stack is empty otherwise it will wait until it gets empty.
 
-![node-js-callstack-working](./src/assets/images/node-js-callstack-working.png)
+![node-js-callstack-working](../../images/node-js-callstack-working.png)
 
 - Node JS server can simultaneously handle uploading of two files, one of main reason of Node JS creation is to handle the file upload. Other web apps try to load entire file into memory before writing it to the disk which can cause all sorts of issue at server side, also tricky to provide the progress of file uploads, but in Node JS we can do it very simply.
 
@@ -2125,7 +2125,7 @@ myEmitter.on('TEST_EVENT', () => {
 
 - Middleware – we can use router.all() for using middleware.
 
-![node-js-router-all-middleware](./src/assets/images/node-js-router-all-middleware.png)
+![node-js-router-all-middleware](../../images/node-js-router-all-middleware.png)
 
 - Using passport for user authentication and authorization, this is a default option for express library, and a simple way to implement. It manages user object in the session. It also deals with dropping it in a cookie, and pulling it out of a cookie and applying it to the session. We also need to use cookie-parser and express-session package for this
 
@@ -2135,7 +2135,7 @@ myEmitter.on('TEST_EVENT', () => {
 
 - While using PUT request to update the object, use assign / extend function like below -
 
-![node-js-update-data-put-request](./src/assets/images/node-js-update-data-put-request.png)
+![node-js-update-data-put-request](../../images/node-js-update-data-put-request.png)
 
 - If we are building API for our application then don’t return all other unnecessary details from API, but if we are building API as a service then we can return all the information.
 
@@ -2143,7 +2143,7 @@ myEmitter.on('TEST_EVENT', () => {
 
 - We should group our folder based on feature not types, also contain config and utils folder
 
-![node-js-folder-structure-group-by-feature](./src/assets/images/node-js-folder-structure-group-by-feature.png)
+![node-js-folder-structure-group-by-feature](../../images/node-js-folder-structure-group-by-feature.png)
 
 - Middleware is more tied to routes, validations are more tied to models, so we should bake the validation logic into the model itself using mongoose.
 
@@ -2157,7 +2157,7 @@ myEmitter.on('TEST_EVENT', () => {
 
 - Before deploying checklist -
 
-![node-js-pre-deployment-checklist](./src/assets/images/node-js-pre-deployment-checklist.png)
+![node-js-pre-deployment-checklist](../../images/node-js-pre-deployment-checklist.png)
 
 - Factors we can use for two-factor authentication - something you know (password), something you have (badge, id card, token), something you are (biometric)
 
@@ -2167,7 +2167,7 @@ myEmitter.on('TEST_EVENT', () => {
 
 - Parsing URLs and query strings – components of a parsed URL. Use url.parse for parsing an URL and other helper methods -
 
-![node-js-url-components](./src/assets/images/node-js-url-components.png)
+![node-js-url-components](../../images/node-js-url-components.png)
 
 - Working with big amounts of data in node js means working with streams. Streams are simple collection of data that might not be available all at once and don’t have to fit in memory. Types of streams – readable, writable, duplex, transform.
 
@@ -2177,7 +2177,7 @@ myEmitter.on('TEST_EVENT', () => {
 
 - The cluster module can be used to enable load balancing over an environment multiple CPU core. It is based on form function, it basically allows us to fork our main application process as many times as we have CPU cores, and then it will take over and load balance all request to the main process across all forked processes. This module is a helper for implementing cloning strategies but only on one machine. We can use process manager like PM2.
 
-![node-js-load-balancing](./src/assets/images/node-js-load-balancing.png)
+![node-js-load-balancing](../../images/node-js-load-balancing.png)
 
 - Load balancing and HTTP server – if a machine has 8 cores, it will start the 8 processes. These are completely different node js processes, each worker process will have its own even loop and memory space. The loaded will be distribute among different worker process.
 
@@ -2189,7 +2189,7 @@ myEmitter.on('TEST_EVENT', () => {
 
 - In cluster setup stateful communication also become a problem. Since the communication is not guaranteed to be with the same worker, creating a stateful channel on any one worker is not an option, like problem in authentication to one worker and next time sending its request to another worker which doesn’t know its authentication status. This problem can be solved by simply share the state across the many workers we have by storing these session’s information in a shared database or a Redis node, or better way is using sticky load balancing in this we send the same user request to same worker process but by this we don’t really get the full benefits of load balancing for authenticated users -
 
-![node-js-state-share](./src/assets/images/node-js-state-share.png)
+![node-js-state-share](../../images/node-js-state-share.png)
 
 - Pruning – to remove unused package from the project, it gives extraneous error if package is installed but not mentioned in package.json file. We can use npm prune, npm prune grunt it will match the installed the package with package.json file and remove the non-specified ones. We can use npm prune –production to remove dev dependencies package before going to production.
 
@@ -2197,11 +2197,11 @@ myEmitter.on('TEST_EVENT', () => {
 
 - Transpilers - Babel, TypeScript, Elm
 
-![node-js-transpilers-typescript-vs-babel](./src/assets/images/node-js-transpilers-typescript-vs-babel.png)
+![node-js-transpilers-typescript-vs-babel](../../images/node-js-transpilers-typescript-vs-babel.png)
 
 - ECMAScript versions -
 
-![node-js-ecmascript-versions](./src/assets/images/node-js-ecmascript-versions.png)
+![node-js-ecmascript-versions](../../images/node-js-ecmascript-versions.png)
 
 - Module formats - IIFE, Asynchronous Module Definition (AMD), CommonJS (CJS), Universal Module Definition (UMD), ES6 Modules
 
@@ -2225,7 +2225,7 @@ myEmitter.on('TEST_EVENT', () => {
 
 - Worker threads helps us to write CPU intensive tasks by running events in parallel. It will create a new thread by making main thread available for new user request. This is similar to web workers. Using worker thread is like creating a new event loop. We can pass messages between main and worker thread. Worker threads should be used only with CPU intensive tasks. For IO bound code like disk access or network calls, it is more efficient to use the async API’s.
 
-![node-js-worker-threads](./src/assets/images/node-js-worker-threads.png)
+![node-js-worker-threads](../../images/node-js-worker-threads.png)
 
 - Underneath all the http calls uses XML HTTP Request (XHR) object which is a javascript API to create AJAX requests. Its methods provide the ability to send network requests between the browser and a server.
 
@@ -2233,7 +2233,7 @@ myEmitter.on('TEST_EVENT', () => {
 
 - Use omitBy() function from lodash to send only the changed property with a PATCH request –
 
-![node-js-using-omitby-with-patch-request](./src/assets/images/node-js-using-omitby-with-patch-request.png)
+![node-js-using-omitby-with-patch-request](../../images/node-js-using-omitby-with-patch-request.png)
 
 - In case of wrong entity/data send from frontend and it fails the validation of server, then we should return 422 – Unprocessable entity status code. We should not send status 200 if the data is not valid.
 
@@ -2243,7 +2243,7 @@ myEmitter.on('TEST_EVENT', () => {
 
 - Sample REST API
 
-![node-js-sample-rest-api](./src/assets/images/node-js-sample-rest-api.png)
+![node-js-sample-rest-api](../../images/node-js-sample-rest-api.png)
 
 - We need to set the form attribute enctype as multipart/form-data for and input type as file.
 
@@ -2251,7 +2251,7 @@ myEmitter.on('TEST_EVENT', () => {
 
 - History of Node JS - New major versions gets released every 6 months of Node js.
 
-![node-js-history](./src/assets/images/node-js-history.png)
+![node-js-history](../../images/node-js-history.png)
 
 - For the https communication, the default port is 443 and for http the default port is 8080.
 
@@ -2271,7 +2271,7 @@ myEmitter.on('TEST_EVENT', () => {
 
 - The history of distributed APIs
 
-![node-js-history-of-distributed-api](./src/assets/images/node-js-history-of-distributed-api.png)
+![node-js-history-of-distributed-api](../../images/node-js-history-of-distributed-api.png)
 
 - Common formats of data - JSON, XML, JSONP, RSS, ATOM
 
@@ -2283,7 +2283,7 @@ myEmitter.on('TEST_EVENT', () => {
 
 - Functional APIs – they are not RESTful but sometimes we need to handle these operation like calculate premium or start a machine, etc. For these APIs we should use OPTIONS or LINK verbs.
 
-![node-js-functional-apis](./src/assets/images/node-js-functional-apis.png)
+![node-js-functional-apis](../../images/node-js-functional-apis.png)
 
 - If users rely on the API not changing, then we should use versioning. Types of design – URI path, Query String, with Headers, Accept header and versioning with Content Type. For simple APIs the query string is the recommended one, but for complex APIs the versioning with Content Type is recommended.
 
@@ -2291,7 +2291,7 @@ myEmitter.on('TEST_EVENT', () => {
 
 - OAuth - It uses trusted third-party to identify users. So the application which uses OAuth, never gets the credentials. User authenticates with third party and use token to confirm identity, it is safer for the application (don’t have to dealt with the user credential and authentication) and the user.
 
-![node-js-how-oauth-works](./src/assets/images/node-js-how-oauth-works.png)
+![node-js-how-oauth-works](../../images/node-js-how-oauth-works.png)
 
 - CSRF support is indirectly inbuilt in angular which will check any XSRF-TOKEN from the server response headers and set it to the request header automatically so that it will get match on the server side. We can override this behavior to provide a different token by using XSRF strategy service
 
@@ -2299,13 +2299,13 @@ myEmitter.on('TEST_EVENT', () => {
 
 - Require() Vs. Import statements –
 
-![node-js-require-vs-import-statements](./src/assets/images/node-js-require-vs-import-statements.png)
+![node-js-require-vs-import-statements](../../images/node-js-require-vs-import-statements.png)
 
 - Whenever an async function is called, it is sent to a browser API. These are APIs built into the browser. Based on the command received from the call stack, the API starts its own single-threaded operation.
 
 - As per below diagram, much of the work done by Node JS and libuv not by the javascript –
 
-![node-js-behind-the-scene](./src/assets/images/node-js-behind-the-scene.png)
+![node-js-behind-the-scene](../../images/node-js-behind-the-scene.png)
 
 ## Unit Testing
 
@@ -2313,7 +2313,7 @@ myEmitter.on('TEST_EVENT', () => {
 
 - Actually, legacy code is the one which doesn’t have automated test for it. It makes the code more brittle and harder to maintain and extend.
 
-- ![TDD History](./src/assets/images/unit-testing-tdd-history.png)
+- ![TDD History](../../images/unit-testing-tdd-history.png)
 
 - Types of testing - unit testing, integration testing, acceptance testing (user interface).
 
@@ -2323,11 +2323,11 @@ myEmitter.on('TEST_EVENT', () => {
 
 - Fake – building on a stub and adding a bit more sophistication is the idea of fake. It contains a bit more complex implementation by having state but not functional implementation. Like below we actually add and delete the list.
 
-![unit-testing-fake](./src/assets/images/unit-testing-fake.png)
+![unit-testing-fake](../../images/unit-testing-fake.png)
 
 - Spy – it records the information about the interaction that it has with the SUT. This information can be available for assertion purpose by the test itself.
 
-![unit-testing-spy](./src/assets/images/unit-testing-spy.png)
+![unit-testing-spy](../../images/unit-testing-spy.png)
 
 - Mock – can be used to simulate complex behavior. We should not develop mock our self, we should use mock libraries which allows us to configure mock behavior. Libraries example – type mock, rhino mock and MOQ.
 
@@ -2361,7 +2361,7 @@ myEmitter.on('TEST_EVENT', () => {
 
 - We should handle exceptions like below -
 
-![handling-of-exceptions](./src/assets/images/unit-testing-how-to-handle-exceptions.png)
+![handling-of-exceptions](../../images/unit-testing-how-to-handle-exceptions.png)
 
 - Styles of unit testing – output verification or functional verification, state verification, collaboration verification.
 
@@ -2400,15 +2400,15 @@ myEmitter.on('TEST_EVENT', () => {
 
 - We can have separate build environment for acceptance test running and can trigger once a day. We can also share it reports to business for progress:
 
-![unit-testing-acceptance-testing-progress-report](./src/assets/images/unit-testing-acceptance-testing-progress-report.png)
+![unit-testing-acceptance-testing-progress-report](../../images/unit-testing-acceptance-testing-progress-report.png)
 
 - Prudent code coverage – 100% code coverage doesn’t mean no defects. Use code coverage as a developer tool not a performance metric. Let the code coverage find things that are important enough to add test, but realize that it is only contextually important and it is very rare that we need to strive for any sort of code coverage numbers up around 90 and 100%.
 
 - Devi’s advocate, Gollum style and Ping Pong technique to write unit test case:
 
-![unit-testing-devils-advocate](./src/assets/images/unit-testing-devils-advocate.png)
+![unit-testing-devils-advocate](../../images/unit-testing-devils-advocate.png)
 
-![unit-testing-ping-pong](./src/assets/images/unit-testing-ping-pong.png)
+![unit-testing-ping-pong](../../images/unit-testing-ping-pong.png)
 
 - While creating an interface it should either contains all properties or all functions not both.
 
@@ -2424,16 +2424,16 @@ myEmitter.on('TEST_EVENT', () => {
 
 - Hot observables start emitting the values before any subscribe method is called on. Any subscribers can subscribe at any time and they can get the latest values at the time of subscription. They are multicast means more than one subscriber can subscribe to this observable however they will listen to the same producer. Publish and share are used to make a hot observable like tune radio channel, cinema theater, mouse clicks, live movies, live cricket match, stock tickers, live life events.
 
-![unit-testing-jasmine-marble-hot-observable](./src/assets/images/unit-testing-jasmine-marble-hot-observable.png)
+![unit-testing-jasmine-marble-hot-observable](../../images/unit-testing-jasmine-marble-hot-observable.png)
 
 - Cold Observable – In RxJs the observables are cold by nature. Cold is when the producer is owned by the observable. Observable creates and activates the producer at the time of subscription only. The data is created from the observable itself. Will produce data only when subscribe method has been called. Subscriber get their own copy of values and they are unicast i.e. one subscriber per producer like of, from, interval, timers. Real life example – watching downloaded movies, recorded podcast or song, snapshot movies in which each have their own copy.
 
-![unit-testing-jasmine-marble-cold-observable1](./src/assets/images/unit-testing-jasmine-marble-cold-observable1.png)
-![unit-testing-jasmine-marble-cold-observable2](./src/assets/images/unit-testing-jasmine-marble-cold-observable2.png)
+![unit-testing-jasmine-marble-cold-observable1](../../images/unit-testing-jasmine-marble-cold-observable1.png)
+![unit-testing-jasmine-marble-cold-observable2](../../images/unit-testing-jasmine-marble-cold-observable2.png)
 
 - Frame – Jasmine-marbles converts observable sequence into frames. Frame is a JSON that consists of RxJs notification object that wraps the actual delivered value with additional metadata and message type.
 
-![unit-testing-jasmine-marble-frame](./src/assets/images/unit-testing-jasmine-marble-frame.png)
+![unit-testing-jasmine-marble-frame](../../images/unit-testing-jasmine-marble-frame.png)
 
 - RxJS schedulers are centre to control the time for any operator or observables in our project. Also, RxJS has made this schedulers injectable so that we can mock these schedulers and control the time in our test cases.
 
