@@ -7,16 +7,10 @@ Not every practices herein has to be strictly followed, and even fewer will be u
 ## Table of Contents
 
 1. [HTML](#html)
-1. [CSS](#css)
+1. [SCSS](#scss)
 1. [Angular](#angular)
 1. [Typescript](#typescript)
-1. [Node JS](#node-js)
-1. [User Experience](#user-experience)
-1. [Security](#security)
-1. [Git](#git)
-1. [Markdown](#markdown)
-1. [Content Creation](#content-creation)
-1. [Others](#others)
+1. [Node.js](#nodejs)
 
 ## HTML
 
@@ -34,7 +28,7 @@ We should not have plan text into HTML it should be enclosed in some element lik
 
 If `buttons` are outside of the form then we should use `links` instead of `buttons`.
 
-## CSS
+## SCSS
 
 ### 1.1 Don't write `inline styles`
 
@@ -316,6 +310,216 @@ product$ = this.http.get<Product[]>(this.url).pipe(
 ### 2.2 Use `adapter pattern`
 
 We should use `adapter pattern` while consuming the `3rd party library` so that we can replace them later-on without any issue.
+
+### 1.1 Use `Typeahead` or `Combobox`
+
+If a `lookup` has lots of values then make it `Typeahead` component or `combobox`. It will give `select` and `textbox` both to the user.
+
+**Otherwise:** User might have bad user experience while scanning all the value.
+
+### 1.2 `Forms` should be `one column`
+
+One-column forms are more comfortable to scan and conform better to mobile displays.
+
+**Otherwise:** Multiple columns can strain a user and cause them to skip fields accidentally.
+
+### 1.3 Present `checkboxes` and `radios` vertically
+
+It's easier to scan checkbox and radio options when presented vertically. However, presenting options with associated graphics can add an extra dimension to the design that negates the need for a vertical presentation.
+
+![image](./images/bp-ux-show-vertically.jpeg)
+
+### 1.4 Show all `selection options` if < `6`
+
+Use a drop-down selector when there are over 5 options and incorporate search within the drop-down when greater than 25 options otherwise we should use radio-box. However, it's okay to use a drop-down selector for under 6 options if space is limited, like in certain inline editing situations.
+
+**Otherwise:** Placing options in a drop-down selector hides choices and requires two clicks to choose an option.
+
+![image](./images/bp-ux-show-radio-instead-selections.jpeg)
+
+### 1.5 Size the `modal` window appropriately
+
+The size of modal window shouldn't be too large. The modal window shouldn't take the entire screen. Ideally, it shouldn't take more than 25% of the screen for the overlay. If you cannot fit your content in a window and want to use a scroll bar, its' probably better to create a separate page for that purpose.
+
+### 1.6 Don't use `nested modals`
+
+Never design a modal window that triggers a modal window.
+
+**Otherwise:** It will add visual complexity to your design.
+
+### 1.7 Use `flat` buttons on modals
+
+To unify the button action with the dialog content.
+
+![image](./images/bp-ux-flat-buttons-on-modals.png)
+
+### 1.8 Use `Raised` and `Ghost` buttons
+
+For primary actions, use raised buttons and for secondary or tertiary content we can use ghost buttons.
+
+![image](./images/bp-ux-primary-and-ghost-buttons.png)
+
+### 1.9 Provide meaningful placeholder
+
+Use placeholder text to give the user a hint about the data they need to provide. For example, if you ask the user to provide a tracking number, you can add a placeholder with an example of a tracking number).
+
+![user-experience-meaningful-placeholder](./images/bp-ux-user-experience-meaningful-placeholder.png)
+
+### 1.10 Add a help icon (“?” or “i”) next to the field to help the user enter the data
+
+A tooltip with helpful information becomes visible when the user hovers over the icon. This feature will be helpful when you want to provide a quick guide on data input ( i.e., you ask the user to provide social security number, but they might know where to find it) or when you collect personal information (i.e., you ask the user to provide a phone number, and want to explain how you will use it).
+
+![user-experience-help-icon.png](./images/bp-ux-user-experience-help-icon.png)
+
+### 1.11 Use toggle if you have two options, and they are yes or no instead of `radio` or `select`
+
+### 1.12 Make one primary button
+
+It is generally not a good idea to place a few primary buttons next to each other, as this can confuse users and make it difficult for them to understand which button to click at first sight.
+
+To avoid this issue, you have to combine different types of buttons (filled, with border, plain) if you use them together.
+
+![bp-ux-button-variations.webp](./images/bp-ux-button-variations.webp)
+
+### 1.13 Use proper colors for positive and negative actions
+
+For example, a red button might be used to indicate a warning or a destructive action like "Delete", while a green button might be used to indicate a positive action such as saving or approving something. Moreover, you can add an icon to the context to make it even more prominent.
+
+![bp-ux-colored-button.webp](./images/bp-ux-colored-button.webp)
+
+### 1.14 Make it clear
+
+It is generally not a good idea to use “Yes” or “No” labels for buttons, as these labels do not provide enough context for users to understand the action that the button initiates.
+
+Your button labels should push users to act with action verbs. When users read an action verb, they know what the button will do like "Save", "Discard" instead of "Yes", "No".
+
+### 1.15 Place checkbox vertically, not horizontally
+
+Vertical alignment can make the options easier to read and understand. Vertical alignment can also make the checkbox group more compact and save space. Placing checkboxes vertically can also make the group more visually distinct.
+
+### 1.16 Use multi-select field if you have more than 7 values
+
+A multi-select field can be a good alternative to a checkbox with more than seven options (The rule of 5 plus minus 2). This allows the user to easily select and deselect multiple options without having to check and uncheck a large number of checkboxes individually.
+
+![bp-ux-prefer-multiselect.webp](./images/bp-ux-prefer-multiselect.webp)
+
+### 1.17 - Do not use Long dropdowns
+
+Have you ever tried to get to the needed item in a dropdown menu when it has to be scrolled? Believe us, this is not an easy task, especially for mobile users. Do not complicate their lives, this is not an easy thing, alas.
+
+![bp-ux-avoid-long-dropdowns.webp](./images/bp-ux-avoid-long-dropdowns.webp)
+
+### 1.18 - Do not show Unneeded messages
+
+There is nothing worse than texting your boss that you want to quit, change your mind, hastily delete the message, and then try to explain what you wanted to write in it. We are talking about the example below. Many web solutions fall short of this approach. Unlike yours, if you follow our recommendations.
+
+![bp-ux-unneeded-message.webp](./images/bp-ux-unneeded-message.webp)
+
+### 1.1 Use `Guid ID's`
+
+We should use `Guid ID's` as a random ID generator instead of using the `Sequential ID's`.
+
+**Otherwise:** It might lead to the Broken object level authorization security issue.
+
+### 1.2 Harden the `environment`
+
+We should keep all software and its components up-to-date, remove unused features or dependencies.
+
+### 1. General -
+
+### 1.1 Use prefixes for message
+
+```shell
+docs: message, feat: message, fix: message, perf: message, refactor: message, revert: message, style: message, test: message, build: message, ci: message, chore: message
+```
+
+### 1.2 Good message examples
+
+```shell
+chore: update npm dependency to the latest version
+refactor(core): add and move tests for `Dispatcher`.\
+fix(zone.js): store remove abort listener on the scheduled task.
+fix(docs-infra): remove config release from test scripts
+build: update io_bazel_rules_sass digest to 61dde52
+docs: resolve extra padding on tutorial editor (#54828)
+```
+
+### 1.3 Code review guidelines
+
+Checklist - readability, performance, reusability, test coverage (edge cases), maintainability
+
+### 1.4 Good issue title examples
+
+Use format `[Component] ([Project/Module]) - [Action] [Description]`. This format is detailed and structured, making it easy to understand the scope and context of the issue at a glance. It provides a balanced level of detail, is easy to understand, and helps in quickly identifying the scope and action required.
+
+- routes (example-app) - add examples for all supported functionality
+- ui (dashboard) - update styling for the new theme
+- backend (auth-service) - fix token expiration issue
+- API (user-profile) - remove deprecated endpoints
+- docs (setup-guide) - update installation instructions
+- database (orders) - optimize query performance
+- middleware (security) - implement additional logging
+- frontend (homepage) - redesign layout
+- notifications (email-service) - fix delivery delays
+- testing (unit-tests) - add coverage for new features
+- authentication (login) - enhance error handling
+- config (deployment) - update environment variables
+- cache (redis) - clear stale data periodically
+- analytics (tracking) - implement new metrics
+- integration (payment-gateway) - fix transaction validation
+- localization (translations) - add support for new languages
+- access-control (roles) - update permissions for new role
+- build (CI/CD) - fix pipeline failure
+- dependencies (package) - update to latest version
+- logging (monitoring) - reduce log verbosity
+- directives (tooltip) - fix positioning issue
+- pipes (date-format) - add custom date formats
+- modules (shared) - reorganize and optimize imports
+- styles (global) - update primary color palette
+- routing (app) - fix navigation guard logic
+- animations (modal) - enhance open/close transitions
+- forms (user-registration) - add validation messages
+- testing (unit-tests) - increase coverage for new components
+- docs (api-reference) - update with latest changes
+- examples (demos) - add example for dynamic forms
+- config (angular.json) - update build configurations
+- state-management (ngrx) - optimize store selectors
+- i18n (translations) - add new language support
+- build (webpack) - fix asset bundling issue
+- dependency (package.json) - update Angular to latest version
+- layout (grid) - improve responsive design
+- security (auth) - fix token storage vulnerability
+- performance (lazy-loading) - optimize module loading
+- components (dropdown) - add multi-select functionality
+- services (auth) - implement token refresh logic
+
+### 1.1 Using `numeric` list, instead of `alphabetic` list
+
+We should use numeric list, instead of alphabetic list as numeric lists are easier to scan and read when the list is long.
+
+## Visual Studio Code
+
+- Better prompts
+
+`<!-- add a button for a power (or exponential) function -->`
+
+```javascript
+/* draw a brown wooden boat with a white sail on top of a blue ocean
+- the sky is light blue with on white cloud
+- the cloud has three different sized circles that overlap each other
+- the sun is a yellow circle inside a yellow-orange circle inside an orange circle in
+- the sail is a large white triangle connected to the top of the dark brown mast down
+- the boat is curved at the bottom and has a dark brown rectangle for the body
+*/
+```
+
+- `# please give me the code in YAML to deploy a WordPress container to a Kubernetes cluster`
+
+- `please document this code`
+
+- `please explain this code to me`
+
+- Provide query in steps like recipe instruction instead of single paragraph, keep relevant tab opened for a better context, provide one or two examples for a better context.
 
 ## Typescript
 
@@ -1697,7 +1901,7 @@ The length of a name should be related to the length of the scope. You can use v
 
 Names should describe everything that a function, variable, or class is or does like createOrReturnOos
 
-## Node JS
+## Node.js
 
 ### 1.1 Do not return the `plain text` as a response
 
@@ -1898,253 +2102,3 @@ app.get('/', function (req, res) {
 ### 1.16 Use `util.inspect()` to debug an `object`
 
 To debug the code we can use `util.inspect(object, showHidden=false, depth=2, colorize=true);` method. It returns a string representation of an object.
-
-## User Experience
-
-### 1.1 Use `Typeahead` or `Combobox`
-
-If a `lookup` has lots of values then make it `Typeahead` component or `combobox`. It will give `select` and `textbox` both to the user.
-
-**Otherwise:** User might have bad user experience while scanning all the value.
-
-### 1.2 `Forms` should be `one column`
-
-One-column forms are more comfortable to scan and conform better to mobile displays.
-
-**Otherwise:** Multiple columns can strain a user and cause them to skip fields accidentally.
-
-### 1.3 Present `checkboxes` and `radios` vertically
-
-It's easier to scan checkbox and radio options when presented vertically. However, presenting options with associated graphics can add an extra dimension to the design that negates the need for a vertical presentation.
-
-![image](./images/bp-ux-show-vertically.jpeg)
-
-### 1.4 Show all `selection options` if < `6`
-
-Use a drop-down selector when there are over 5 options and incorporate search within the drop-down when greater than 25 options otherwise we should use radio-box. However, it's okay to use a drop-down selector for under 6 options if space is limited, like in certain inline editing situations.
-
-**Otherwise:** Placing options in a drop-down selector hides choices and requires two clicks to choose an option.
-
-![image](./images/bp-ux-show-radio-instead-selections.jpeg)
-
-### 1.5 Size the `modal` window appropriately
-
-The size of modal window shouldn't be too large. The modal window shouldn't take the entire screen. Ideally, it shouldn't take more than 25% of the screen for the overlay. If you cannot fit your content in a window and want to use a scroll bar, its' probably better to create a separate page for that purpose.
-
-### 1.6 Don't use `nested modals`
-
-Never design a modal window that triggers a modal window.
-
-**Otherwise:** It will add visual complexity to your design.
-
-### 1.7 Use `flat` buttons on modals
-
-To unify the button action with the dialog content.
-
-![image](./images/bp-ux-flat-buttons-on-modals.png)
-
-### 1.8 Use `Raised` and `Ghost` buttons
-
-For primary actions, use raised buttons and for secondary or tertiary content we can use ghost buttons.
-
-![image](./images/bp-ux-primary-and-ghost-buttons.png)
-
-### 1.9 Provide meaningful placeholder
-
-Use placeholder text to give the user a hint about the data they need to provide. For example, if you ask the user to provide a tracking number, you can add a placeholder with an example of a tracking number).
-
-![user-experience-meaningful-placeholder](./images/bp-ux-user-experience-meaningful-placeholder.png)
-
-### 1.10 Add a help icon (“?” or “i”) next to the field to help the user enter the data
-
-A tooltip with helpful information becomes visible when the user hovers over the icon. This feature will be helpful when you want to provide a quick guide on data input ( i.e., you ask the user to provide social security number, but they might know where to find it) or when you collect personal information (i.e., you ask the user to provide a phone number, and want to explain how you will use it).
-
-![user-experience-help-icon.png](./images/bp-ux-user-experience-help-icon.png)
-
-### 1.11 Use toggle if you have two options, and they are yes or no instead of `radio` or `select`
-
-### 1.12 Make one primary button
-
-It is generally not a good idea to place a few primary buttons next to each other, as this can confuse users and make it difficult for them to understand which button to click at first sight.
-
-To avoid this issue, you have to combine different types of buttons (filled, with border, plain) if you use them together.
-
-![bp-ux-button-variations.webp](./images/bp-ux-button-variations.webp)
-
-### 1.13 Use proper colors for positive and negative actions
-
-For example, a red button might be used to indicate a warning or a destructive action like "Delete", while a green button might be used to indicate a positive action such as saving or approving something. Moreover, you can add an icon to the context to make it even more prominent.
-
-![bp-ux-colored-button.webp](./images/bp-ux-colored-button.webp)
-
-### 1.14 Make it clear
-
-It is generally not a good idea to use “Yes” or “No” labels for buttons, as these labels do not provide enough context for users to understand the action that the button initiates.
-
-Your button labels should push users to act with action verbs. When users read an action verb, they know what the button will do like "Save", "Discard" instead of "Yes", "No".
-
-### 1.15 Place checkbox vertically, not horizontally
-
-Vertical alignment can make the options easier to read and understand. Vertical alignment can also make the checkbox group more compact and save space. Placing checkboxes vertically can also make the group more visually distinct.
-
-### 1.16 Use multi-select field if you have more than 7 values
-
-A multi-select field can be a good alternative to a checkbox with more than seven options (The rule of 5 plus minus 2). This allows the user to easily select and deselect multiple options without having to check and uncheck a large number of checkboxes individually.
-
-![bp-ux-prefer-multiselect.webp](./images/bp-ux-prefer-multiselect.webp)
-
-### 1.17 - Do not use Long dropdowns
-
-Have you ever tried to get to the needed item in a dropdown menu when it has to be scrolled? Believe us, this is not an easy task, especially for mobile users. Do not complicate their lives, this is not an easy thing, alas.
-
-![bp-ux-avoid-long-dropdowns.webp](./images/bp-ux-avoid-long-dropdowns.webp)
-
-### 1.18 - Do not show Unneeded messages
-
-There is nothing worse than texting your boss that you want to quit, change your mind, hastily delete the message, and then try to explain what you wanted to write in it. We are talking about the example below. Many web solutions fall short of this approach. Unlike yours, if you follow our recommendations.
-
-![bp-ux-unneeded-message.webp](./images/bp-ux-unneeded-message.webp)
-
-## Security
-
-### 1.1 Use `Guid ID's`
-
-We should use `Guid ID's` as a random ID generator instead of using the `Sequential ID's`.
-
-**Otherwise:** It might lead to the Broken object level authorization security issue.
-
-### 1.2 Harden the `environment`
-
-We should keep all software and its components up-to-date, remove unused features or dependencies.
-
-## Git
-
-### 1. General -
-
-### 1.1 Use prefixes for message
-
-```shell
-docs: message, feat: message, fix: message, perf: message, refactor: message, revert: message, style: message, test: message, build: message, ci: message, chore: message
-```
-
-### 1.2 Good message examples
-
-```shell
-chore: update npm dependency to the latest version
-refactor(core): add and move tests for `Dispatcher`.\
-fix(zone.js): store remove abort listener on the scheduled task.
-fix(docs-infra): remove config release from test scripts
-build: update io_bazel_rules_sass digest to 61dde52
-docs: resolve extra padding on tutorial editor (#54828)
-```
-
-### 1.3 Code review guidelines
-
-Checklist - readability, performance, reusability, test coverage (edge cases), maintainability
-
-### 1.4 Good issue title examples
-
-Use format `[Component] ([Project/Module]) - [Action] [Description]`. This format is detailed and structured, making it easy to understand the scope and context of the issue at a glance. It provides a balanced level of detail, is easy to understand, and helps in quickly identifying the scope and action required.
-
-- routes (example-app) - add examples for all supported functionality
-- ui (dashboard) - update styling for the new theme
-- backend (auth-service) - fix token expiration issue
-- API (user-profile) - remove deprecated endpoints
-- docs (setup-guide) - update installation instructions
-- database (orders) - optimize query performance
-- middleware (security) - implement additional logging
-- frontend (homepage) - redesign layout
-- notifications (email-service) - fix delivery delays
-- testing (unit-tests) - add coverage for new features
-- authentication (login) - enhance error handling
-- config (deployment) - update environment variables
-- cache (redis) - clear stale data periodically
-- analytics (tracking) - implement new metrics
-- integration (payment-gateway) - fix transaction validation
-- localization (translations) - add support for new languages
-- access-control (roles) - update permissions for new role
-- build (CI/CD) - fix pipeline failure
-- dependencies (package) - update to latest version
-- logging (monitoring) - reduce log verbosity
-- directives (tooltip) - fix positioning issue
-- pipes (date-format) - add custom date formats
-- modules (shared) - reorganize and optimize imports
-- styles (global) - update primary color palette
-- routing (app) - fix navigation guard logic
-- animations (modal) - enhance open/close transitions
-- forms (user-registration) - add validation messages
-- testing (unit-tests) - increase coverage for new components
-- docs (api-reference) - update with latest changes
-- examples (demos) - add example for dynamic forms
-- config (angular.json) - update build configurations
-- state-management (ngrx) - optimize store selectors
-- i18n (translations) - add new language support
-- build (webpack) - fix asset bundling issue
-- dependency (package.json) - update Angular to latest version
-- layout (grid) - improve responsive design
-- security (auth) - fix token storage vulnerability
-- performance (lazy-loading) - optimize module loading
-- components (dropdown) - add multi-select functionality
-- services (auth) - implement token refresh logic
-
-## Markdown
-
-### 1.1 Using `numeric` list, instead of `alphabetic` list
-
-We should use numeric list, instead of alphabetic list as numeric lists are easier to scan and read when the list is long.
-
-## Visual Studio Code
-
-- Better prompts
-
-`<!-- add a button for a power (or exponential) function -->`
-
-```javascript
-/* draw a brown wooden boat with a white sail on top of a blue ocean
-- the sky is light blue with on white cloud
-- the cloud has three different sized circles that overlap each other
-- the sun is a yellow circle inside a yellow-orange circle inside an orange circle in
-- the sail is a large white triangle connected to the top of the dark brown mast down
-- the boat is curved at the bottom and has a dark brown rectangle for the body
-*/
-```
-
-- `# please give me the code in YAML to deploy a WordPress container to a Kubernetes cluster`
-
-- `please document this code`
-
-- `please explain this code to me`
-
-- Provide query in steps like recipe instruction instead of single paragraph, keep relevant tab opened for a better context, provide one or two examples for a better context.
-
-## Content Creation
-
-### Video
-
-- Sounds editing - voice over should should be loudest then music then sound effects, we should use b-roll.
-- Create folders for footage, music, sound effects, images, graphics, keep these folder into a folder with that video name.
-- Editing steps - plan your edit (timeline rough idea). assembly (just rough cut of a-roll, no visual, music, images or b-roll), visuals (image, b-roll, graphics, color correction on a-roll), music (70% volume dialogue, 30% volume music), sound effects (sfx).
-- Video recording tips - don't shoot in back-lighting but in front-lighting or find a flat lighting, do not shoot with front camera but back camera.
-
-### Blogs
-
-- bold formatting might be more appropriate for a call to action, while italic formatting might be more suitable for a quote or a scientific term.
-
-### Presentation
-
-- share various links into one link by using <https://linkmix.co/en/> e.g. <https://linkmix.co/11386218>.
-
-### Others
-
-- Using AI tools -
-  - solves anything - `chatgpt`
-  - writes anything - `copy.ai`
-  - create art - `midjourney`
-  - create ppts - `tome.app`
-  - create music - `soundraw.io`
-  - create video - `kaiber`
-  - create 3d gif - `leiapix converter`
-  - create reels - `fliki`
-  - note taking - `fireflies`
-  - edit videos - `runway`
-  - create avatars - `anime ai`
