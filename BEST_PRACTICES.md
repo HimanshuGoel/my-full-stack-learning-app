@@ -215,7 +215,10 @@ Whenever we write an `ngFor` directive on an HTML element with children, conside
 **Code Example** - `Do`
 
 ```html
-<user-detail-component *ngFor="let user of users" [user]="user"></user-detail-component>
+<user-detail-component
+  *ngFor="let user of users"
+  [user]="user"
+></user-detail-component>
 ```
 
 **Code Example** - `Avoid`
@@ -247,7 +250,8 @@ Any logic other than checking straightforward conditions should be written in th
   [formGroup]="form"
   [ngClass]="{
           'has-error': (form.controls['firstName'].invalid && (submitted || form.controls['firstName'].touched))
-          }">
+          }"
+>
   <input type="text" formControlName="firstName" />
 </div>
 ```
@@ -521,6 +525,37 @@ We should use numeric list, instead of alphabetic list as numeric lists are easi
 
 - Provide query in steps like recipe instruction instead of single paragraph, keep relevant tab opened for a better context, provide one or two examples for a better context.
 
+1. Use `inject()` function for dependency injection instead of using a `constructor`.
+
+```typescript
+import { inject } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+
+export const fetchData = () => {
+  const http = inject(HttpClient);
+  return http.get('https://api.example.com/data');
+};
+```
+
+2. Use `Standalone Component` which will keep our modules lightweight. They also supports better modularity, especially for reusable UI components or features with fewer dependencies. -
+
+```typescript
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-input-demo',
+  standalone: true,
+  template: `
+    <input [(ngModel)]="name" placeholder="Enter your name" />
+    <p>Hello, {{ name }}!</p>
+  `,
+  imports: [FormsModule],
+})
+export class InputDemoComponent {
+  name: string = '';
+}
+```
+
 ## Typescript
 
 ### 1.1 No `Mental Mapping`
@@ -615,7 +650,8 @@ const msg = `Working in conjunction with humanitarian aid agencies,
 **Code Example** - `Avoid`
 
 ```typescript
-const winnerMsg = 'Congrats to the winner: ' + winnerName + ', you got a ' + gift;
+const winnerMsg =
+  'Congrats to the winner: ' + winnerName + ', you got a ' + gift;
 
 const msg =
   'Working in conjunction with humanitarian aid agencies,\n\t' +
@@ -1375,7 +1411,10 @@ We should use named parameters instead of using `options` object which makes it 
 **Code Example** - `Do`
 
 ```typescript
-function setPageThread(name, options = ({ popular, expires, activeClass } = {})) {
+function setPageThread(
+  name,
+  options = ({ popular, expires, activeClass } = {})
+) {
   console.log(popular);
   console.log(expires);
   console.log(activeClass);

@@ -1570,3 +1570,101 @@ Public-Key-Pins: pin-sha256=[pin 1]; pin-sha256=[pin 2]; max-age=2592000; report
 - README Files – a file that helps users/other developers know how to do things with your software. Even we should write README file before we code.
 
 - Release notes – documents the differences between two versions of the same software.
+
+- Dynamic Components with ComponentFactory, also we should also avoid
+
+```typescript
+
+export abstract class Widget {
+  abstract render(data: any): Component;
+}
+
+export class ChartWidget extends Widget {
+  render(data: any): Component {
+    return ChartComponent;
+  }
+}
+
+export class TableWidget extends Widget {
+  render(data: any): Component {
+    return TableComponent;
+  }
+}
+
+export class FormWidget extends Widget {
+  render(data: any): Component {
+    return FormComponent;
+  }
+}
+
+@Injectable({ providedIn: 'root' })
+export class WidgetFactory {
+  getWidget(type: string): Widget {
+    switch (type) {
+      case 'chart':
+        return new ChartWidget();
+      case 'table':
+        return new TableWidget();
+      case 'form':
+        return new FormWidget();
+      default:
+        throw new Error('Unsupported widget type');
+    }
+  }
+}
+
+@Component({
+  selector: 'app-widget-renderer',
+  template: `
+    <ng-container *ngComponentOutlet="widgetComponent"></ng-container>
+  `,
+})
+export class WidgetRendererComponent {
+  @Input() widget!: { type: string; data: any };
+  widgetComponent!: Type<any>;
+
+  constructor(private widgetFactory: WidgetFactory) {}
+
+  ngOnInit() {
+    const widget = this.widgetFactory.getWidget(this.widget.type);
+    this.widgetComponent = widget.render(this.widget.data);
+  }
+}
+
+@Component({
+  selector: 'app-dynamic',
+  standalone: true,
+  template: `<ng-container #container></ng-container>`,
+})
+export class DynamicComponent {
+  constructor(private viewContainerRef: ViewContainerRef) {}
+
+  createComponent(component: any): ComponentRef<any> {
+    this.viewContainerRef.clear();
+    return this.viewContainerRef.createComponent(component);
+  }
+}
+```
+
+- Error Handling with Global Interceptors
+
+```typescript
+@Injectable()
+export class ErrorInterceptor implements HttpInterceptor {
+  intercept(
+    req: HttpRequest<any>,
+    next: HttpHandler
+  ): Observable<HttpEvent<any>> {
+    return next.handle(req).pipe(
+      catchError((error) => {
+        console.error('HTTP Error:', error);
+        return throwError(() => new Error('Something went wrong!'));
+      })
+    );
+  }
+}
+```
+
+- Real world Use cases of -
+  - Implement APP_INITIALIZER to load configuration information. Suppose, you have to load API endpoints, application static contents like images/texts which are kept in different repo.
+  - Implement APP_INITIALIZER to load authentication information. Suppose, you need to check login status before opening the application. Only if login is authorized then only aplication will be opened, other will display unauthorized error.
