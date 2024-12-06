@@ -1668,3 +1668,13 @@ export class ErrorInterceptor implements HttpInterceptor {
 - Real world Use cases of -
   - Implement APP_INITIALIZER to load configuration information. Suppose, you have to load API endpoints, application static contents like images/texts which are kept in different repo.
   - Implement APP_INITIALIZER to load authentication information. Suppose, you need to check login status before opening the application. Only if login is authorized then only aplication will be opened, other will display unauthorized error.
+
+- We can debug the instance of the injected service in console with below code -
+
+```typescript
+import { ApplicationRef } from '@angular/core';
+
+const appRef = inject(ApplicationRef);
+const root = appRef.components[0].injector;
+console.log(root);
+```

@@ -556,6 +556,17 @@ export class InputDemoComponent {
 }
 ```
 
+3. Use ngTemplateOutlet to reuse the template which will pass templates dynamically -
+
+```html
+
+<ng-template #template let-name="name">
+  <h1>Hello {{ name }}</h1>
+</ng-template>
+
+<div *ngTemplateOutlet="template; context: { name: 'Angular' }"></div>
+```
+
 ## Typescript
 
 ### 1.1 No `Mental Mapping`
@@ -1255,6 +1266,67 @@ enum GamePadInput {
   Down = 'DOWN',
   Left = 'LEFT',
   Right = 'RIGHT',
+}
+```
+
+Instead of this
+
+```
+export enum HttpStatusCode {
+    OK = 200,
+    BAD_REQUEST = 400,
+    UNAUTHORIZED = 401,
+    FORBIDDEN = 403,
+    NOT_FOUN = 404,
+    INTERNAL_SERVER_ERROR = 500,
+};
+```
+
+Use
+
+```
+
+export const HttpStatusCode_OK = 200;
+export const HttpStatusCode_BAD_REQUEST = 400;
+export const HttpStatusCode_UNAUTHORIZED = 401;
+export const HttpStatusCode_FORBIDDEN = 403;
+export const HttpStatusCode_NOT_FOUND = 404;
+export const HttpStatusCode_INTERNAL_SERVER_ERROR = 500;
+
+export const ALL_HTTP_STATUS_CODES = [
+  HttpStatusCode_OK,
+  HttpStatusCode_BAD_REQUEST,
+  HttpStatusCode_UNAUTHORIZED,
+  HttpStatusCode_FORBIDDEN,
+  HttpStatusCode_NOT_FOUND,
+  HttpStatusCode_INTERNAL_SERVER_ERROR,
+] as const;
+
+export type HttpStatusCodes = typeof ALL_HTTP_STATUS_CODES[number]
+// same as type HttpStatusCode = 200 | 400 | 401 | 403 | 404 | 500
+
+
+const someFn = (someValue: HttpStatusCodes) => {...}
+
+someFn(200); // This Works ✅
+someFn(HttpStatusCode_OK); // This Works too ✅
+someFn(300); // Does not work ❌
+```
+
+Last but not least HttpStatusCodes also works with any kind of exhaustiveness check. Looking at a code example like this:
+
+```
+const isValidResponse = (status: HttpStatusCodes) => {
+  switch(status) {
+    case HttpStatusCode_OK:
+      return true;
+    case HttpStatusCode_BAD_REQUEST:
+    case HttpStatusCode_UNAUTHORIZED:
+    case HttpStatusCode_FORBIDDEN:
+    case HttpStatusCode_NOT_FOUND:
+    case HttpStatusCode_INTERNAL_SERVER_ERROR:
+      return false;
+  }
 }
 ```
 
