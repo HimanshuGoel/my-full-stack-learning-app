@@ -576,6 +576,33 @@ TBD...
 
 - display technologies - lcd, led and micro led
 
+- details - day-to-day responsibilities
+  - define and maintain architectural vision - ensure alignment with long-term business goals
+  - ownership of front-end architecture - take ownership of the front-end architecture, particularly angular, while contributing to full-stack solutions using node.js and java
+  - monitor team progress in stand-ups - participate in daily stand-ups to monitor team progress, identify blockers, and resolve challenges
+  - collaborate with product managers and stakeholders - prioritize tasks and ensure technical feasibility
+  - review designs and code - review designs and code for critical components, focusing on scalability, performance, and maintainability
+  - address technical debt - evaluate and address technical debts, proposing strategies for improvement
+  - lead system design discussions - lead or participate in system design discussions to refine architecture and ensure compatibility across teams
+  - create and update architectural documents - create and update architectural blueprints, technical guidelines, and best practices
+  - develop prototypes and pocs - develop prototypes, proofs-of-concept, or write and review code for critical components
+  - optimize responsive web applications - optimize responsive web applications using angular and integrate with back-end services
+  - provide technical mentorship - provide technical mentorship to team members and guide them through complex design decisions
+  - resolve development team challenges - assist in resolving technical challenges faced by the development team
+  - design deployment strategies - work closely with devops to design deployment strategies and ensure seamless ci/cd pipelines
+  - collaborate with qa - collaborate with qa to address performance, security, and accessibility concerns
+  - stay updated on technology trends - stay updated with the latest technology trends in angular, back-end systems, cloud platforms (aws, azure, gcp), and devops tools like docker and kubernetes
+  - experiment with new frameworks or tools - experiment with new frameworks or tools that can benefit the project
+  - present technical progress - present technical progress, challenges, and trade-offs to leadership and stakeholders
+  - advocate for technical investments - advocate for technical investments to improve scalability and innovation
+  - optimize applications for performance - optimize applications for performance and scalability
+  - troubleshoot and debug issues - troubleshoot and debug issues to ensure smooth operation
+  - lead and mentor junior developers - lead and mentor junior developers, conducting code reviews and promoting best practices
+  - encourage team efforts - encourage and acknowledge team efforts to foster a positive environment
+  - deploy using aws or azure - use aws or azure for deployments and ensure adherence to cloud architecture standards
+  - attend workshops and complete certifications - attend workshops, complete certifications (togaf, aws solutions architect), and participate in architectural case studies
+  - summarize achievements and plan for the next day - summarize the day’s achievements and plan priorities for the next day. address urgent issues as needed
+
 ## Soft Skills
 
 - LinkedIn - A place to find and be found. Profile pic should be a head shot with proper background color.
