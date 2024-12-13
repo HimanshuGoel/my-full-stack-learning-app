@@ -115,6 +115,8 @@
 ## Windows
 
 - capture screenshot - `window + print screen`
+- `net stop winnat`
+- `net start winnat`
 
 ## Github Copilot
 
@@ -163,7 +165,7 @@
 - `git config --list`
 
 ## Node
-
+- `npm cache clean --force`
 - `npm outdated`, `npm update`
 - `node -v`, `node --version`, `npm version`
 - `nvm install 6.9.2`, `nvm alias default 6.9.2`, `nvm use 6.9.1`, `nvm ls`
