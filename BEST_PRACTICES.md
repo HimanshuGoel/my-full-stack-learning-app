@@ -6,13 +6,11 @@ Not every practices herein has to be strictly followed, and even fewer will be u
 
 ## Table of Contents
 
-1. [HTML](#html)
-1. [SCSS](#scss)
 1. [Angular](#angular)
 1. [Typescript](#typescript)
 1. [Node.js](#nodejs)
 
-## HTML
+## Angular
 
 ### 1.1 Do not use `placeholder` if it same as `label`
 
@@ -27,8 +25,6 @@ We should not have plan text into HTML it should be enclosed in some element lik
 ### 1.3 Use `links` instead of `buttons`
 
 If `buttons` are outside of the form then we should use `links` instead of `buttons`.
-
-## SCSS
 
 ### 1.1 Don't write `inline styles`
 
@@ -65,8 +61,6 @@ To hide a DOM element, you don't need JavaScript. A native HTML attribute is eno
 ```html
 <p hidden>This paragraphs is not visible on page</p>
 ```
-
-## Angular
 
 ### 1.1 Use proper `file namings`
 
@@ -500,8 +494,6 @@ Use format `[Component] ([Project/Module]) - [Action] [Description]`. This forma
 ### 1.1 Using `numeric` list, instead of `alphabetic` list
 
 We should use numeric list, instead of alphabetic list as numeric lists are easier to scan and read when the list is long.
-
-## Visual Studio Code
 
 - Better prompts
 

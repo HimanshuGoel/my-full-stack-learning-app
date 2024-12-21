@@ -797,3 +797,20 @@
     ```
 
     ![typescript-dependency-inversion](../docs-assets/images/typescript-dependency-inversion.png)
+
+What Are Timestamps? 🤔
+A timestamp represents the time elapsed since January 1st, 1970, at midnight (UTC). This is also called the Unix Epoch.
+
+📏 It’s measured in milliseconds (1 second = 1000 milliseconds).
+🗓️ Timestamps are absolute values, meaning they’re great for calculations like finding time differences.
+
+Timestamps are super handy because they’re precise and easy to work with, especially for:
+
+Generating unique IDs 🆔
+Setting expiration times (like cookies) 🍪
+Calculating differences between dates 🕒
+
+Timestamps are simple numbers that represent milliseconds since 1970.
+Use them for unique IDs, date calculations, or expiration logic.
+JavaScript provides multiple methods to work with timestamps.
+Absolute values make timestamps great for finding differences between times.
