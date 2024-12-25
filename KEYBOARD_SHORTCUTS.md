@@ -7,8 +7,6 @@
 - [VS Code](#vs-code)
 - [Chrome](#chrome)
 - [GitHub Copilot](#github-copilot)
-- [Standing Desk](#standing-desk)
-- [IntelliJ IDEA IDE](#intellij-idea-ide)
 
 ## **Windows**
 
@@ -71,13 +69,3 @@
 - See 10 Suggestions: `Ctrl + Enter`
 - Trigger Suggestion: `Alt + \`
 - Ask Copilot: `Ctrl + I`
-
-## **Standing Desk**
-
-- **E07-E09 (Reset):** Press and hold the down arrow for 5 seconds until "RST" appears.
-- **E01 (Remove Load):** Ensure all objects are removed from the desk.
-- **LOC (Lock Height):** Press the "M" button until "S-" appears, then press and hold the "M" button for 5 seconds until "LOC" is displayed.
-
-## **IntelliJ IDEA IDE**
-
-- Maven Artifacts Search: `Ctrl + N`
