@@ -612,3 +612,35 @@
   - deploy using aws or azure - use aws or azure for deployments and ensure adherence to cloud architecture standards
   - attend workshops and complete certifications - attend workshops, complete certifications (togaf, aws solutions architect), and participate in architectural case studies
   - summarize achievements and plan for the next day - summarize the day’s achievements and plan priorities for the next day. address urgent issues as needed
+
+>ARM-based processors are known for their power efficiency, which is a crucial  factor hyperscalers who are manaing thousands or even millons of servers.
+
+>local LLMs are advanced AI models that have been optimized to run on personal devices without the need for contatnt internet connectivity like GPT-2 Mobile, ALBERT, DistilBERT.
+
+>Headphone Form Factor - Over-Ear Headphone, On-Ear Headphone, In-Ear Monitors and True Wireless Earbuds
+
+>High frequencies contribute to the sparkle and detail in music.
+
+>surround sound fomrats - dolby digital, dts, dolby atmos, dts:x
+
+>Java is a bluprint for a building, specifying every detail. The blueprint (bytecode) is then interpretd by a skilled builder (JVM) to construct the building (application) on any plot of land (platform). JS, on the other hand is like flexible LEGO bricks. You can build various structures (web features) on the fly, without a rigid plan.
+
+>jargon words - smartphones - system on chip, led, universal flash storage, ingress protection, bokeh, optical image stabilization, hight dynamic range, sampling rate, priscope camera
+
+audio - bass rolll-off, bit depth, crossover frequency, driver, dynamic range, equalization, flat response, soundstage, low-frequency effects
+
+wearables - lte connectivity, strap material
+
+TVs - high dynamic range, organic light emitting diode, dolby vision, audio return channel, high-definition multimedia interface
+
+ai - augmented intelligence, edge ai, explainable ai, neural architecture search, reinforcement learning
+
+mouse and keyboard - acceleration, angle snapping, glide pads, jitter, paracord cable, 60% keyboard, abs keycaps, actution point, clicky switches, keycap legends, lnear switches,
+
+cpu & gpu - avx instructions, cinebench, clock speed, overclocking, anti-aliasing, directx raytracing, deep learning super sampling, fidelityFX super resolution, OpenGL/DirectX/Vulkan, VSync/G-Sync/FreeSync
+
+Monitor - Adaptive SYnc, Aspect Ratio, Curved Monitors, Loal DImming, Response Time
+
+Storage and RAm - Cold Storage, Hot Swapping, NAND Flash Memmoery, Redundent Array of Independent Disks, Double Data Rate, Error-Correcting Code, Extreme Memory Profile
+
+Power Supply & Motherboard - Brownout Protection, Form Factor, Hold-up Time, Inrush Current, ATX, BIOS/UEFI, Clear CMOS Button, Firmware Updates, NIC, Socket Type
