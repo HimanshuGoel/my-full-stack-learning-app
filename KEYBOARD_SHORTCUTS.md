@@ -62,10 +62,6 @@
 - Open Command Menu: `Ctrl + Shift + P`
 - Toggle Select Mode On/Off: `F7`
 
-## **Copilot**
-
-
-
 ## **GitHub Copilot**
 
 - Dismiss Suggestion: `Esc`
