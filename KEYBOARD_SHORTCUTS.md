@@ -25,7 +25,7 @@
 ## **Notepad++**
 
 - Navigate to the n-th Document: `Ctrl + Numpad`
-- Copy Current Line: `Ctrl + Shift + T`
+- Copy Current Line: `Ctrl + Shift + X`
 - Cut: `Shift + Delete`
 - Duplicate Current Line: `Ctrl + D`
 - Switch Current Line with Previous: `Ctrl + T`
