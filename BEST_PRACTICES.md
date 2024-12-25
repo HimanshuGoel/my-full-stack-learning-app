@@ -551,7 +551,6 @@ export class InputDemoComponent {
 3. Use ngTemplateOutlet to reuse the template which will pass templates dynamically -
 
 ```html
-
 <ng-template #template let-name="name">
   <h1>Hello {{ name }}</h1>
 </ng-template>
@@ -2004,17 +2003,23 @@ The length of a name should be related to the length of the scope. You can use v
 
 Names should describe everything that a function, variable, or class is or does like createOrReturnOos
 
+Here’s a simplified and more readable version of your Node.js best practices document:
+
+---
+
 ## Node.js
 
-### 1.1 Do not return the `plain text` as a response
+### 1.1 Avoid Returning Plain Text
 
-We should not return the plain text as a response from the API. Although this is not imposed or mandated by any REST architectural style, most REST APIs by convention use `JSON` as the data format.
+Don't return plain text as an API response. While not mandatory, it’s a common practice to use JSON as the data format.
 
-### 1.2 Return the `error details` in the `response body`
+---
 
-We should return the error details in the response body. Even better if you include which fields were affected by the error.
+### 1.2 Include Error Details in Responses
 
-**Code Example** -
+Always include error details in the response body. Mention the affected fields if possible.
+
+**Example**:
 
 ```json
 {
@@ -2025,103 +2030,82 @@ We should return the error details in the response body. Even better if you incl
 }
 ```
 
-### 1.3 Use `kebab-case` for `URLs`
+---
 
-We should use kebab-case for URLs - For example, if you want to get the list of orders.
+### 1.3 Use `kebab-case` for URLs
 
-**Code Example** -`Do`
+Write URLs in `kebab-case` for readability.
 
-```url
-/system-orders
-```
+**Do**:
+`/system-orders`
 
-**Code Example** - `Avoid`
+**Avoid**:
+`/systemOrders` or `/system_orders`
 
-```url
-/systemOrders or /system_orders
-```
+---
 
-### 1.4 Use `camelCase` for `Parameters`
+### 1.4 Use `camelCase` for Parameters
 
-We should use camelCase for parameters. For example, if you want to get products from a particular shop.
+Use `camelCase` for route parameters.
 
-**Code Example** - `Do`
+**Do**:
+`/system-orders/{orderId}`
 
-```url
-/system-orders/{orderId}
-```
+**Avoid**:
+`/system-orders/{order_id}` or `/system-orders/{OrderId}`
 
-**Code Example** - `Avoid`
+---
 
-```url
-/system-orders/{order_id} or /system-orders/{OrderId}
-```
+### 1.5 Use Plural Names for Collections
 
-### 1.5 Use `Plural Name` to Point to a `Collection`
+Point to collections using plural names.
 
-We should use Plural Name to Point to a Collection.
+**Do**:
+`GET /users`
 
-**Code Example** - `Do`
+**Avoid**:
+`GET /user`
 
-```url
-GET /users
-```
+---
 
-**Code Example** -`Avoid`
+### 1.6 URLs Should Point to Properties
 
-```url
-GET /user or GET /User
-```
+Structure URLs to start with a collection and end with an identifier.
 
-### 1.6 `URL` Should point to a `property` instead of a `resource`
+**Do**:
+`GET /shops/:shopId`
 
-URL should starts with a collection and ends with an identifier to keep the concept singular and consistent.
+**Avoid**:
+`GET /shops/:shopId/category/:categoryId/price`
 
-**Code Example** -`Do`
+---
 
-```url
-GET /shops/:shopId/ or GET /category/:categoryId
-```
+### 1.7 Avoid Verbs in Resource URLs
 
-**Code Example** -`Avoid`
+Use HTTP methods to describe actions, not verbs in the URL.
 
-```url
-GET /shops/:shopId/category/:categoryId/price
-```
+**Do**:
+`PUT /users/{userId}`
 
-### 1.7 Keep `Verbs` out of `Resource URL`
+**Avoid**:
+`POST /updateUser/{userId}` or `GET /getUsers`
 
-We should not use verbs to express our intention in the URL. Instead, use proper HTTP methods to describe the operation.
+---
 
-**Code Example** -`Do`
+### 1.8 Use Verbs for Non-Resource URLs
 
-```url
-PUT /users/{userId}
-```
+For non-CRUD operations, verbs in URLs are acceptable.
 
-**Code Example** -`Avoid`
+**Example**:
+`POST /alerts/245743/resend`
 
-```url
-POST /updateUser/{userId} or GET /getUsers
-```
+---
 
-### 1.8 Use `Verbs` for `Non-Resource URL`
+### 1.9 Use `camelCase` for JSON Properties
 
-If we have an endpoint that returns nothing but an operation. In this case, we can use verbs. These are not our CRUD operations but considered as functions that do a specific job in our system.
+Always use `camelCase` for JSON keys.
 
-**Code Example** -
-
-If you want to resend the alert to a user.
-
-```url
-POST /alerts/245743/resend
-```
-
-### 1.9 Use `camelCase` for `JSON` property
-
-If we are building a system in which the request body or response is JSON, the property names should be in camelCase
-
-**Code Example** - `Do`
+**Do**:
 
 ```json
 {
@@ -2130,7 +2114,7 @@ If we are building a system in which the request body or response is JSON, the p
 }
 ```
 
-**Code Example** - `Avoid`
+**Avoid**:
 
 ```json
 {
@@ -2139,11 +2123,13 @@ If we are building a system in which the request body or response is JSON, the p
 }
 ```
 
-### 1.10 Include the `total` number of `resources` in the response
+---
 
-If an `API` returns a list of objects always include the total number of resources in the response. We can use the total property for this.
+### 1.10 Include Totals in Responses
 
-**Code Example** - `Do`
+When returning a list, include the total number of items.
+
+**Do**:
 
 ```json
 {
@@ -2152,7 +2138,7 @@ If an `API` returns a list of objects always include the total number of resourc
 }
 ```
 
-**Code Example** - `Avoid`
+**Avoid**:
 
 ```json
 {
@@ -2160,48 +2146,60 @@ If an `API` returns a list of objects always include the total number of resourc
 }
 ```
 
-### 1.11 Validate the `Content-Type`
+---
 
-The server should not assume the content type. Always validate the content-type and if we want to go with a default one then use `content-type: application/json`
+### 1.11 Validate Content-Type
 
-**Otherwise:** For example, if you accept `application/x-www-form-urlencoded` then an attacker can create a form and trigger a simple POST request.
+Always validate the `Content-Type` header. Use `application/json` as the default format.
 
-### 1.12 Use correct `HTTP Methods`
+**Why**:
+Invalid `Content-Type` can open security risks like unwanted POST requests.
 
-We should use correct HTTP Methods for CRUD Functions. HTTP methods serve the purpose of explaining CRUD functionality.
+---
 
-- `GET`: To retrieve a representation of a resource.
-- `POST`: To create new resources and sub-resources.
-- `PUT`: To update existing resources.
-- `PATCH`: To update existing resources. It only updates the fields that were supplied, leaving the others alone
-- `DELETE`: To delete existing resources.
+### 1.12 Use Correct HTTP Methods
 
-### 1.13 Return correct `Status Code`
+Stick to standard HTTP methods for clarity:
 
-We should return the correct status code against the verbs. A response’s status is specified by its status code: `1xx` for information, `2xx` for success, `3xx` for redirection, `4xx` for client errors and `5xx` for server errors
+- **GET**: Fetch data.
+- **POST**: Create data.
+- **PUT**: Replace data.
+- **PATCH**: Update part of the data.
+- **DELETE**: Remove data.
 
-- `GET`: 200 OK
-- `PUT`: 200 OK
-- `POST`: 201 Created
-- `PATCH`: 200 OK
-- `DELETE`: 204 No Content
+---
 
-### 1.14 Use `Async/Await`
+### 1.13 Return Correct Status Codes
 
-We should use `Async/Await` instead of callbacks as it makes code more readable.
+Match HTTP methods with appropriate status codes:
 
-### 1.15 Use `__dirname` variable and `path()` function
+- **200 OK**: GET, PUT, PATCH.
+- **201 Created**: POST.
+- **204 No Content**: DELETE.
 
-We should use `__dirname` variable and `path()` function to avoid different window inconsistency while defining path of a file.
+---
 
-**Code Example** -
+### 1.15 Use `__dirname` and `path()`
 
-```typescript
-app.get('/', function (req, res) {
-  res.sendFile(path.join(_dirname, 'views/index.html'));
-});
+For file paths, use `__dirname` and `path()` to avoid OS inconsistencies.
+
+**Example**:
+
+```javascript
+res.sendFile(path.join(__dirname, 'views/index.html'));
 ```
 
-### 1.16 Use `util.inspect()` to debug an `object`
+---
 
-To debug the code we can use `util.inspect(object, showHidden=false, depth=2, colorize=true);` method. It returns a string representation of an object.
+### 1.16 Debug with `util.inspect()`
+
+To debug objects, use `util.inspect()` for detailed information.
+
+**Example**:
+
+```javascript
+const util = require('util');
+console.log(
+  util.inspect(object, { showHidden: false, depth: 2, colors: true })
+);
+```
