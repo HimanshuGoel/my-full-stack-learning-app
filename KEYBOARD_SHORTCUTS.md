@@ -6,7 +6,6 @@
 - [MS Teams](#ms-teams)
 - [VS Code](#vs-code)
 - [Chrome](#chrome)
-- [Copilot](#copilot)
 - [GitHub Copilot](#github-copilot)
 - [Standing Desk](#standing-desk)
 - [IntelliJ IDEA IDE](#intellij-idea-ide)
@@ -65,14 +64,14 @@
 
 ## **Copilot**
 
-- Next/Previous Suggestion: `Alt + ]`, `Alt + [`
-- Partially Accept Suggestion: `Ctrl + →`
+
 
 ## **GitHub Copilot**
 
 - Dismiss Suggestion: `Esc`
 - Accept Suggestion: `Tab`
 - Next Suggestion: `Alt + ]`
+- Partially Accept Suggestion: `Ctrl + Right Arrow`
 - See 10 Suggestions: `Ctrl + Enter`
 - Trigger Suggestion: `Alt + \`
 - Ask Copilot: `Ctrl + I`
