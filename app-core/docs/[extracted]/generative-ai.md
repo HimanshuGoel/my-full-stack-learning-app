@@ -1,0 +1,3 @@
+# Extracted Notes - Generative AI
+
+To be created...
