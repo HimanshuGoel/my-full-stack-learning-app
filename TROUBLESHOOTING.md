@@ -11,7 +11,7 @@ net start winnat
 
 ## Issue `No matching version found for @abc@1.2.3`
 
-It means npm can't find the stable version you're looking for, even though it's on GitLab innersource. This usually happens if you started with a beta-xxxx version for testing and now need the stable version that came out after testing. To fix this, cleaning the npm cache usually does the trick.
+It means npm can't find the stable version you're looking for, even though it's on GitLab innersource. This usually happens if you started with a beta-xxx version for testing and now need the stable version after testing. To fix this, cleaning the npm cache usually does the trick.
 
 ```shell
 npm cache clean --force
