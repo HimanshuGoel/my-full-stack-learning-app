@@ -2,14 +2,14 @@
 
 ## Version 1.0
 
-- Refactor BEST_PRACTICES.md and docs folder
-- Refactor frontend-ui and backend-service folders
-- Deploy application on amazon cloud web server
-- Create a POC by using LLM and Stable Diffusion
+- Update **BEST_PRACTICES.md** and reorganize the `docs` folder.  
+- Refactor the `frontend-ui` and `backend-service` folders.  
+- Deploy the application on an Amazon cloud web server.  
+- Develop a proof of concept (POC) using LLMs and Stable Diffusion.  
 
-## Future
+## Future Goals
 
-- Write more articles or blogs
-- Contribute to open-source projects
-- Create more websites and mobile apps for known connections
-- Participate in coding challenges, hackathons and other competitions
+- Publish additional articles and blogs.  
+- Make contributions to open-source projects.  
+- Develop more websites and mobile applications for connections.  
+- Engage in coding challenges, hackathons, and similar competitions.  
