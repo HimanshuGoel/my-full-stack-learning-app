@@ -50,7 +50,7 @@
 - Install/update npm:
   - `npm install npm@latest -g`
   - `npm audit fix --force`
-- Update packages with `npm-check-updates`:
+- Update packages with `npm-check-updates` (ncu):
   1. Install: `npm install -g npm-check-updates`
   1. Update: `ncu -u`
   1. Install: `npm install`
