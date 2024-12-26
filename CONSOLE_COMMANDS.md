@@ -7,7 +7,6 @@
 - [Chrome](#chrome)
 - [Java](#java)
 - [Docker](#docker)
-- [Maven](#maven)
 
 ## Firebase
 
@@ -81,6 +80,8 @@ console.log(metadata);
 - Create a JAR file: `jar cvf TitlecaseConverter.jar .`
 - Run a JAR file: `java -jar TitlecaseConverter.jar`
 - Create a launchable JAR file: `jar cvmf TC-MANIFEST.MF TitlecaseConverter.jar .`
+- Check Maven version: `mvn -version`
+- Run Maven with profile: `mvn clean compile -P dev`
 
 ## Docker
 
@@ -110,10 +111,4 @@ console.log(metadata);
   - Remove volume: `docker volume rm <name>`
   - `docker pc`
   - `docker exec -it mss-api-gateway sh` then `curl -vvv fop-authentication-ldap:2389`
-
-## Maven
-
-- Check versions:
-  - Java: `java -version`
-  - Maven: `mvn -version`
-- Run Maven with profile: `mvn clean compile -P dev`
+  
