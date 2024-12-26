@@ -9,30 +9,31 @@ Not every practices herein has to be strictly followed, and even fewer will be u
 1. [Angular](#angular)
 1. [Typescript](#typescript)
 1. [Node.js](#nodejs)
+1. [Generative AI](#generative-ai)
 
 ## Angular
 
-### 1.1 Do not use `placeholder` if it same as `label`
+### 1. Do not use `placeholder` if it same as `label`
 
 Do not use `placeholder` if it same as `label`. The placeholder should be used to provide `hints and tips`.
 
 **Otherwise:** It will cause duplication.
 
-### 1.2 Do not use `plain text`
+### 2. Do not use `plain text`
 
 We should not have plan text into HTML it should be enclosed in some element like `div` or `span`.
 
-### 1.3 Use `links` instead of `buttons`
+### 3. Use `links` instead of `buttons`
 
 If `buttons` are outside of the form then we should use `links` instead of `buttons`.
 
-### 1.1 Don't write `inline styles`
+### 4. Don't write `inline styles`
 
 We should not write inline styles. We should use external stylesheets.
 
 **Otherwise:** You cannot reuse the styles anywhere else. Also, it the html markup of the page becomes cumbersome, and tough to parse.
 
-### 1.2 Use `class` selectors instead of `id`
+### 5. Use `class` selectors instead of `id`
 
 Instead of using the `id` selector we should use the `class` selectors as they are reusable.
 
@@ -52,7 +53,7 @@ Instead of using the `id` selector we should use the `class` selectors as they a
 </header>
 ```
 
-### 1.3 Use `hidden` attribute
+### 6. Use `hidden` attribute
 
 To hide a DOM element, you don't need JavaScript. A native HTML attribute is enough hidden. The effect is similar to adding a style `display: none;`. The element simply disappears from the page.
 
@@ -62,7 +63,7 @@ To hide a DOM element, you don't need JavaScript. A native HTML attribute is eno
 <p hidden>This paragraphs is not visible on page</p>
 ```
 
-### 1.1 Use proper `file namings`
+### 7. Use proper `file namings`
 
 The Angular official style guide is pretty straight forward in providing the best way to name the files that contain the building blocks of Angular.
 
@@ -75,7 +76,7 @@ The Angular official style guide is pretty straight forward in providing the bes
 - `Routing` Modules should be suffixed with `-routing.module.ts`
 - `Other files` should be named according to what they do, for example a file containing `utility filter` functions should be stored in a file named `filtering.ts` inside a `utils` folder at the `src` level.
 
-### 1.2 Avoid using `nested subscriptions`
+### 8. Avoid using `nested subscriptions`
 
 We should use `higher-order` observables like `switchMap()` to flatten or join the inner observables.
 
@@ -101,7 +102,7 @@ this.todoStore.todos.subscribe({todo: Todd[]} => {
 }
 ```
 
-### 1.3 Naming convention for `subject` and `observable`
+### 9. Naming convention for `subject` and `observable`
 
 We should postfix `subject` with `subject` and observable with `$`
 
@@ -113,7 +114,7 @@ We should postfix `subject` with `subject` and observable with `$`
 );
 ```
 
-### 1.4 Do not use `functions` in the `templates`
+### 10. Do not use `functions` in the `templates`
 
 We should use functions in the templates as they are bad for performance. Instead of this, we use `pipes` for smoother code execution.
 
@@ -132,11 +133,11 @@ We should use functions in the templates as they are bad for performance. Instea
 <span> {{ getSourceDetails(travelDetailsJson); }} </span>
 ```
 
-### 1.5 Use `asapSchedule` instead of `setTimeOut`
+### 11. Use `asapSchedule` instead of `setTimeOut`
 
 We should use `asapSchedule` from `rxjs` instead of `setTimeOut` for adding delay.
 
-### 1.6 Use `takeUntil` or `take(1)`
+### 12. Use `takeUntil` or `take(1)`
 
 Instead of writing the code for `unsubscribe` from an `observable` on a specific event like on destroying of a component, we should use `takeUntil`, `take(1)`.
 
@@ -163,7 +164,7 @@ public ngOnDestroy (): void {
 
 ```
 
-### 1.7 Avoid `logic` inside the `subscribe` function
+### 13. Avoid `logic` inside the `subscribe` function
 
 By this, our code become more functional from imperative and even looks cleaner.
 
@@ -192,7 +193,7 @@ pokemon$.subscribe((pokemon: Pokemon) => {
 });
 ```
 
-### 1.8 Use `json` pipe for debugging
+### 14. Use `json` pipe for debugging
 
 We should use `json` pipe to see the `data` on the `template` which is useful for debugging purpose.
 
@@ -202,7 +203,7 @@ We should use `json` pipe to see the `data` on the `template` which is useful fo
 <div><pre> {{profileForm | json}}</pre></div>
 ```
 
-### 1.9 Use `child component` when using `ngFor`
+### 15. Use `child component` when using `ngFor`
 
 Whenever we write an `ngFor` directive on an HTML element with children, consider separating that element into a dependent component. This makes for lesser code in the parent component and allows to delegate any repeating logic to the child components
 
@@ -225,7 +226,7 @@ Whenever we write an `ngFor` directive on an HTML element with children, conside
 </div>
 ```
 
-### 1.10 Delegate harder than `primitive logic` from `templates` to `component methods`
+### 16. Delegate harder than `primitive logic` from `templates` to `component methods`
 
 Any logic other than checking straightforward conditions should be written in the component's class method, not in the template directly. It is, writing `*ngIf="someVariable === 1"` in our template is OK, anything longer should be moved away.
 
@@ -250,7 +251,7 @@ Any logic other than checking straightforward conditions should be written in th
 </div>
 ```
 
-### 1.11 Use `ngFor` with `trackBy`
+### 17. Use `ngFor` with `trackBy`
 
 We use the `ngFor` directive to iterate arrays in Angular templates. When we change an array, the complete `DOM tree` gets re-renders, which is not performance-wise. To solve this, we must use `ngFor` with `trackBy`, which uniquely identifies each DOM element and enables Angular to re-render only the modified element
 
@@ -274,13 +275,11 @@ export class App {
   }
 ```
 
-### 1.12 In angular app avoid using enums as they can't be tree shaken
+### 18. Avoid using `enums` as they can't be tree shaken
 
-### 1.13 Use image optimization technique by using "ngSrc" attribute instead of "src" also set the dimensions (width and height) to avoid content shifting
+### 19. Use image optimization technique by using `ngSrc` attribute instead of `src` also set the dimensions (width and height) to avoid content shifting
 
-### 1.14 Avoid creating large shared enums and barrel files
-
-#### 2.1 Use `Declarative Data Access` pattern
+### 20. Use `Declarative Data Access` pattern
 
 We should use this pattern from getting the data from service to showing it on the UI. The advantage is that we don't have to use the 'subscribe' and 'unsubscribe' code block as we use the 'async' pipe.
 
@@ -305,29 +304,29 @@ product$ = this.http.get<Product[]>(this.url).pipe(
 );
 ```
 
-### 2.2 Use `adapter pattern`
+### 21. Use `adapter pattern`
 
 We should use `adapter pattern` while consuming the `3rd party library` so that we can replace them later-on without any issue.
 
-### 1.1 Use `Typeahead` or `Combobox`
+### 22. Use `Typeahead` or `Combobox`
 
 If a `lookup` has lots of values then make it `Typeahead` component or `combobox`. It will give `select` and `textbox` both to the user.
 
 **Otherwise:** User might have bad user experience while scanning all the value.
 
-### 1.2 `Forms` should be `one column`
+### 23. `Forms` should be `one column`
 
 One-column forms are more comfortable to scan and conform better to mobile displays.
 
 **Otherwise:** Multiple columns can strain a user and cause them to skip fields accidentally.
 
-### 1.3 Present `checkboxes` and `radios` vertically
+### 24. Present `checkboxes` and `radios` vertically
 
 It's easier to scan checkbox and radio options when presented vertically. However, presenting options with associated graphics can add an extra dimension to the design that negates the need for a vertical presentation.
 
 ![image](./images/bp-ux-show-vertically.jpeg)
 
-### 1.4 Show all `selection options` if < `6`
+### 25. Show all `selection options` if < `6`
 
 Use a drop-down selector when there are over 5 options and incorporate search within the drop-down when greater than 25 options otherwise we should use radio-box. However, it's okay to use a drop-down selector for under 6 options if space is limited, like in certain inline editing situations.
 
@@ -335,43 +334,43 @@ Use a drop-down selector when there are over 5 options and incorporate search wi
 
 ![image](./images/bp-ux-show-radio-instead-selections.jpeg)
 
-### 1.5 Size the `modal` window appropriately
+### 26. Size the `modal` window appropriately
 
 The size of modal window shouldn't be too large. The modal window shouldn't take the entire screen. Ideally, it shouldn't take more than 25% of the screen for the overlay. If you cannot fit your content in a window and want to use a scroll bar, its' probably better to create a separate page for that purpose.
 
-### 1.6 Don't use `nested modals`
+### 27. Don't use `nested modals`
 
 Never design a modal window that triggers a modal window.
 
 **Otherwise:** It will add visual complexity to your design.
 
-### 1.7 Use `flat` buttons on modals
+### 28. Use `flat` buttons on modals
 
 To unify the button action with the dialog content.
 
 ![image](./images/bp-ux-flat-buttons-on-modals.png)
 
-### 1.8 Use `Raised` and `Ghost` buttons
+### 29. Use `Raised` and `Ghost` buttons
 
 For primary actions, use raised buttons and for secondary or tertiary content we can use ghost buttons.
 
 ![image](./images/bp-ux-primary-and-ghost-buttons.png)
 
-### 1.9 Provide meaningful placeholder
+### 30. Provide meaningful `placeholder`
 
 Use placeholder text to give the user a hint about the data they need to provide. For example, if you ask the user to provide a tracking number, you can add a placeholder with an example of a tracking number).
 
 ![user-experience-meaningful-placeholder](./images/bp-ux-user-experience-meaningful-placeholder.png)
 
-### 1.10 Add a help icon (“?” or “i”) next to the field to help the user enter the data
+### 31. Add a help icon ('?' or 'i') next to the field to help the user enter the data
 
 A tooltip with helpful information becomes visible when the user hovers over the icon. This feature will be helpful when you want to provide a quick guide on data input ( i.e., you ask the user to provide social security number, but they might know where to find it) or when you collect personal information (i.e., you ask the user to provide a phone number, and want to explain how you will use it).
 
 ![user-experience-help-icon.png](./images/bp-ux-user-experience-help-icon.png)
 
-### 1.11 Use toggle if you have two options, and they are yes or no instead of `radio` or `select`
+### 32. Use toggle if you have two options, and they are yes or no instead of `radio` or `select`
 
-### 1.12 Make one primary button
+### 33. Make one primary button
 
 It is generally not a good idea to place a few primary buttons next to each other, as this can confuse users and make it difficult for them to understand which button to click at first sight.
 
@@ -379,59 +378,57 @@ To avoid this issue, you have to combine different types of buttons (filled, wit
 
 ![bp-ux-button-variations.webp](./images/bp-ux-button-variations.webp)
 
-### 1.13 Use proper colors for positive and negative actions
+### 34. Use proper colors for positive and negative actions
 
 For example, a red button might be used to indicate a warning or a destructive action like "Delete", while a green button might be used to indicate a positive action such as saving or approving something. Moreover, you can add an icon to the context to make it even more prominent.
 
 ![bp-ux-colored-button.webp](./images/bp-ux-colored-button.webp)
 
-### 1.14 Make it clear
+### 35. Make it clear
 
-It is generally not a good idea to use “Yes” or “No” labels for buttons, as these labels do not provide enough context for users to understand the action that the button initiates.
+It is generally not a good idea to use 'Yes' or 'No' labels for buttons, as these labels do not provide enough context for users to understand the action that the button initiates.
 
 Your button labels should push users to act with action verbs. When users read an action verb, they know what the button will do like "Save", "Discard" instead of "Yes", "No".
 
-### 1.15 Place checkbox vertically, not horizontally
+### 36. Place checkbox vertically, not horizontally
 
 Vertical alignment can make the options easier to read and understand. Vertical alignment can also make the checkbox group more compact and save space. Placing checkboxes vertically can also make the group more visually distinct.
 
-### 1.16 Use multi-select field if you have more than 7 values
+### 37. Use multi-select field if you have more than 7 values
 
 A multi-select field can be a good alternative to a checkbox with more than seven options (The rule of 5 plus minus 2). This allows the user to easily select and deselect multiple options without having to check and uncheck a large number of checkboxes individually.
 
 ![bp-ux-prefer-multiselect.webp](./images/bp-ux-prefer-multiselect.webp)
 
-### 1.17 - Do not use Long dropdowns
+### 38. Do not use Long dropdowns
 
 Have you ever tried to get to the needed item in a dropdown menu when it has to be scrolled? Believe us, this is not an easy task, especially for mobile users. Do not complicate their lives, this is not an easy thing, alas.
 
 ![bp-ux-avoid-long-dropdowns.webp](./images/bp-ux-avoid-long-dropdowns.webp)
 
-### 1.18 - Do not show Unneeded messages
+### 39. Do not show Unneeded messages
 
 There is nothing worse than texting your boss that you want to quit, change your mind, hastily delete the message, and then try to explain what you wanted to write in it. We are talking about the example below. Many web solutions fall short of this approach. Unlike yours, if you follow our recommendations.
 
 ![bp-ux-unneeded-message.webp](./images/bp-ux-unneeded-message.webp)
 
-### 1.1 Use `Guid ID's`
+### 40. Use `Guid ID's`
 
 We should use `Guid ID's` as a random ID generator instead of using the `Sequential ID's`.
 
 **Otherwise:** It might lead to the Broken object level authorization security issue.
 
-### 1.2 Harden the `environment`
+### 41. Harden the `environment`
 
 We should keep all software and its components up-to-date, remove unused features or dependencies.
 
-### 1. General -
-
-### 1.1 Use prefixes for message
+### 42. While committing the code, use prefixes for message
 
 ```shell
 docs: message, feat: message, fix: message, perf: message, refactor: message, revert: message, style: message, test: message, build: message, ci: message, chore: message
 ```
 
-### 1.2 Good message examples
+### 43. Good message examples
 
 ```shell
 chore: update npm dependency to the latest version
@@ -442,11 +439,11 @@ build: update io_bazel_rules_sass digest to 61dde52
 docs: resolve extra padding on tutorial editor (#54828)
 ```
 
-### 1.3 Code review guidelines
+### 44. Code review guidelines
 
 Checklist - readability, performance, reusability, test coverage (edge cases), maintainability
 
-### 1.4 Good issue title examples
+### 45. Good issue title examples
 
 Use format `[Component] ([Project/Module]) - [Action] [Description]`. This format is detailed and structured, making it easy to understand the scope and context of the issue at a glance. It provides a balanced level of detail, is easy to understand, and helps in quickly identifying the scope and action required.
 
@@ -491,33 +488,11 @@ Use format `[Component] ([Project/Module]) - [Action] [Description]`. This forma
 - components (dropdown) - add multi-select functionality
 - services (auth) - implement token refresh logic
 
-### 1.1 Using `numeric` list, instead of `alphabetic` list
+### 46. Using `numeric` list, instead of `alphabetic` list
 
-We should use numeric list, instead of alphabetic list as numeric lists are easier to scan and read when the list is long.
+We should use numeric list, instead of alphabetic list as numeric lists are easier to scan and read when the list is long while writing documentation content.
 
-- Better prompts
-
-`<!-- add a button for a power (or exponential) function -->`
-
-```javascript
-/* draw a brown wooden boat with a white sail on top of a blue ocean
-- the sky is light blue with on white cloud
-- the cloud has three different sized circles that overlap each other
-- the sun is a yellow circle inside a yellow-orange circle inside an orange circle in
-- the sail is a large white triangle connected to the top of the dark brown mast down
-- the boat is curved at the bottom and has a dark brown rectangle for the body
-*/
-```
-
-- `# please give me the code in YAML to deploy a WordPress container to a Kubernetes cluster`
-
-- `please document this code`
-
-- `please explain this code to me`
-
-- Provide query in steps like recipe instruction instead of single paragraph, keep relevant tab opened for a better context, provide one or two examples for a better context.
-
-1. Use `inject()` function for dependency injection instead of using a `constructor`.
+### 47. Use `inject()` function for dependency injection instead of using a `constructor`
 
 ```typescript
 import { inject } from '@angular/core';
@@ -529,7 +504,7 @@ export const fetchData = () => {
 };
 ```
 
-2. Use `Standalone Component` which will keep our modules lightweight. They also supports better modularity, especially for reusable UI components or features with fewer dependencies. -
+### 48. Use `Standalone Component` which will keep our modules lightweight. They also supports better modularity, especially for reusable UI components or features with fewer dependencies. -
 
 ```typescript
 import { Component } from '@angular/core';
@@ -548,7 +523,7 @@ export class InputDemoComponent {
 }
 ```
 
-3. Use ngTemplateOutlet to reuse the template which will pass templates dynamically -
+### 49. Use ngTemplateOutlet to reuse the template which will pass templates dynamically -
 
 ```html
 <ng-template #template let-name="name">
@@ -2013,7 +1988,7 @@ Here’s a simplified and more readable version of your Node.js best practices d
 
 Always validate the `Content-Type` header. Use `application/json` as the default format.
 
-**Why**:  
+**Why**:
 Invalid `Content-Type` can open security risks like unwanted POST requests.
 
 ---
@@ -2092,10 +2067,10 @@ When returning a list, include the total number of items.
 
 Stick to standard HTTP methods for clarity:
 
-- **GET**: Fetch data.  
-- **POST**: Create data.  
-- **PUT**: Replace data.  
-- **PATCH**: Update part of the data.  
+- **GET**: Fetch data.
+- **POST**: Create data.
+- **PUT**: Replace data.
+- **PATCH**: Update part of the data.
 - **DELETE**: Remove data.
 
 ---
@@ -2104,8 +2079,8 @@ Stick to standard HTTP methods for clarity:
 
 Match HTTP methods with appropriate status codes:
 
-- **200 OK**: GET, PUT, PATCH.  
-- **201 Created**: POST.  
+- **200 OK**: GET, PUT, PATCH.
+- **201 Created**: POST.
 - **204 No Content**: DELETE.
 
 ---
@@ -2114,10 +2089,10 @@ Match HTTP methods with appropriate status codes:
 
 Use HTTP methods to describe actions, not verbs in the URL.
 
-**Do**:  
-`PUT /users/{userId}`  
+**Do**:
+`PUT /users/{userId}`
 
-**Avoid**:  
+**Avoid**:
 `POST /updateUser/{userId}` or `GET /getUsers`
 
 ---
@@ -2126,10 +2101,10 @@ Use HTTP methods to describe actions, not verbs in the URL.
 
 Point to collections using plural names.
 
-**Do**:  
-`GET /users`  
+**Do**:
+`GET /users`
 
-**Avoid**:  
+**Avoid**:
 `GET /user`
 
 ---
@@ -2138,10 +2113,10 @@ Point to collections using plural names.
 
 Structure URLs to start with a collection and end with an identifier.
 
-**Do**:  
-`GET /shops/:shopId`  
+**Do**:
+`GET /shops/:shopId`
 
-**Avoid**:  
+**Avoid**:
 `GET /shops/:shopId/category/:categoryId/price`
 
 ---
@@ -2150,10 +2125,10 @@ Structure URLs to start with a collection and end with an identifier.
 
 Write URLs in `kebab-case` for readability.
 
-**Do**:  
-`/system-orders`  
+**Do**:
+`/system-orders`
 
-**Avoid**:  
+**Avoid**:
 `/systemOrders` or `/system_orders`
 
 ---
@@ -2162,10 +2137,10 @@ Write URLs in `kebab-case` for readability.
 
 Use `camelCase` for route parameters.
 
-**Do**:  
-`/system-orders/{orderId}`  
+**Do**:
+`/system-orders/{orderId}`
 
-**Avoid**:  
+**Avoid**:
 `/system-orders/{order_id}` or `/system-orders/{OrderId}`
 
 ---
@@ -2174,7 +2149,7 @@ Use `camelCase` for route parameters.
 
 For non-CRUD operations, verbs in URLs are acceptable.
 
-**Example**:  
+**Example**:
 `POST /alerts/245743/resend`
 
 ---
@@ -2202,4 +2177,32 @@ For file paths, use `__dirname` and `path()` to avoid OS inconsistencies.
 
 ```javascript
 res.sendFile(path.join(__dirname, 'views/index.html'));
+```
+
+## Generative AI
+
+### 1. Better prompts
+
+```javascript
+/* draw a brown wooden boat with a white sail on top of a blue ocean
+- the sky is light blue with on white cloud
+- the cloud has three different sized circles that overlap each other
+- the sun is a yellow circle inside a yellow-orange circle inside an orange circle in
+- the sail is a large white triangle connected to the top of the dark brown mast down
+- the boat is curved at the bottom and has a dark brown rectangle for the body
+*/
+```
+
+```html
+<!-- add a button for a power (or exponential) function -->
+```
+
+```shell
+# please give me the code in YAML to deploy a WordPress container to a Kubernetes cluster`
+
+please document this code
+
+please explain this code to me
+
+Provide query in steps like recipe instruction instead of single paragraph, keep relevant tab opened for a better context, provide one or two examples for a better context.
 ```
