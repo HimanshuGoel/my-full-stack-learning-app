@@ -2009,99 +2009,22 @@ Here’s a simplified and more readable version of your Node.js best practices d
 
 ## Node.js
 
-### 1.1 Avoid Returning Plain Text
+### 1. Validate Content-Type
+
+Always validate the `Content-Type` header. Use `application/json` as the default format.
+
+**Why**:  
+Invalid `Content-Type` can open security risks like unwanted POST requests.
+
+---
+
+### 2. Avoid Returning Plain Text
 
 Don't return plain text as an API response. While not mandatory, it’s a common practice to use JSON as the data format.
 
 ---
 
-### 1.2 Include Error Details in Responses
-
-Always include error details in the response body. Mention the affected fields if possible.
-
-**Example**:
-
-```json
-{
-  "error": "Invalid payload.",
-  "detail": {
-    "name": "This field is required."
-  }
-}
-```
-
----
-
-### 1.3 Use `kebab-case` for URLs
-
-Write URLs in `kebab-case` for readability.
-
-**Do**:
-`/system-orders`
-
-**Avoid**:
-`/systemOrders` or `/system_orders`
-
----
-
-### 1.4 Use `camelCase` for Parameters
-
-Use `camelCase` for route parameters.
-
-**Do**:
-`/system-orders/{orderId}`
-
-**Avoid**:
-`/system-orders/{order_id}` or `/system-orders/{OrderId}`
-
----
-
-### 1.5 Use Plural Names for Collections
-
-Point to collections using plural names.
-
-**Do**:
-`GET /users`
-
-**Avoid**:
-`GET /user`
-
----
-
-### 1.6 URLs Should Point to Properties
-
-Structure URLs to start with a collection and end with an identifier.
-
-**Do**:
-`GET /shops/:shopId`
-
-**Avoid**:
-`GET /shops/:shopId/category/:categoryId/price`
-
----
-
-### 1.7 Avoid Verbs in Resource URLs
-
-Use HTTP methods to describe actions, not verbs in the URL.
-
-**Do**:
-`PUT /users/{userId}`
-
-**Avoid**:
-`POST /updateUser/{userId}` or `GET /getUsers`
-
----
-
-### 1.8 Use Verbs for Non-Resource URLs
-
-For non-CRUD operations, verbs in URLs are acceptable.
-
-**Example**:
-`POST /alerts/245743/resend`
-
----
-
-### 1.9 Use `camelCase` for JSON Properties
+### 3. Use `camelCase` for JSON Properties
 
 Always use `camelCase` for JSON keys.
 
@@ -2125,7 +2048,24 @@ Always use `camelCase` for JSON keys.
 
 ---
 
-### 1.10 Include Totals in Responses
+### 4. Include Error Details in Responses
+
+Always include error details in the response body. Mention the affected fields if possible.
+
+**Example**:
+
+```json
+{
+  "error": "Invalid payload.",
+  "detail": {
+    "name": "This field is required."
+  }
+}
+```
+
+---
+
+### 5. Include Totals in Responses
 
 When returning a list, include the total number of items.
 
@@ -2148,50 +2088,98 @@ When returning a list, include the total number of items.
 
 ---
 
-### 1.11 Validate Content-Type
-
-Always validate the `Content-Type` header. Use `application/json` as the default format.
-
-**Why**:
-Invalid `Content-Type` can open security risks like unwanted POST requests.
-
----
-
-### 1.12 Use Correct HTTP Methods
+### 6. Use Correct HTTP Methods
 
 Stick to standard HTTP methods for clarity:
 
-- **GET**: Fetch data.
-- **POST**: Create data.
-- **PUT**: Replace data.
-- **PATCH**: Update part of the data.
+- **GET**: Fetch data.  
+- **POST**: Create data.  
+- **PUT**: Replace data.  
+- **PATCH**: Update part of the data.  
 - **DELETE**: Remove data.
 
 ---
 
-### 1.13 Return Correct Status Codes
+### 7. Return Correct Status Codes
 
 Match HTTP methods with appropriate status codes:
 
-- **200 OK**: GET, PUT, PATCH.
-- **201 Created**: POST.
+- **200 OK**: GET, PUT, PATCH.  
+- **201 Created**: POST.  
 - **204 No Content**: DELETE.
 
 ---
 
-### 1.15 Use `__dirname` and `path()`
+### 8. Avoid Verbs in Resource URLs
 
-For file paths, use `__dirname` and `path()` to avoid OS inconsistencies.
+Use HTTP methods to describe actions, not verbs in the URL.
 
-**Example**:
+**Do**:  
+`PUT /users/{userId}`  
 
-```javascript
-res.sendFile(path.join(__dirname, 'views/index.html'));
-```
+**Avoid**:  
+`POST /updateUser/{userId}` or `GET /getUsers`
 
 ---
 
-### 1.16 Debug with `util.inspect()`
+### 9. Use Plural Names for Collections
+
+Point to collections using plural names.
+
+**Do**:  
+`GET /users`  
+
+**Avoid**:  
+`GET /user`
+
+---
+
+### 10. URLs Should Point to Properties
+
+Structure URLs to start with a collection and end with an identifier.
+
+**Do**:  
+`GET /shops/:shopId`  
+
+**Avoid**:  
+`GET /shops/:shopId/category/:categoryId/price`
+
+---
+
+### 11. Use `kebab-case` for URLs
+
+Write URLs in `kebab-case` for readability.
+
+**Do**:  
+`/system-orders`  
+
+**Avoid**:  
+`/systemOrders` or `/system_orders`
+
+---
+
+### 12. Use `camelCase` for Parameters
+
+Use `camelCase` for route parameters.
+
+**Do**:  
+`/system-orders/{orderId}`  
+
+**Avoid**:  
+`/system-orders/{order_id}` or `/system-orders/{OrderId}`
+
+---
+
+### 13. Use Verbs for Non-Resource URLs
+
+For non-CRUD operations, verbs in URLs are acceptable.
+
+**Example**:  
+`POST /alerts/245743/resend`
+
+---
+
+### 14. Debug with `util.inspect()`
 
 To debug objects, use `util.inspect()` for detailed information.
 
@@ -2202,4 +2190,16 @@ const util = require('util');
 console.log(
   util.inspect(object, { showHidden: false, depth: 2, colors: true })
 );
+```
+
+---
+
+### 15. Use `__dirname` and `path()`
+
+For file paths, use `__dirname` and `path()` to avoid OS inconsistencies.
+
+**Example**:
+
+```javascript
+res.sendFile(path.join(__dirname, 'views/index.html'));
 ```
