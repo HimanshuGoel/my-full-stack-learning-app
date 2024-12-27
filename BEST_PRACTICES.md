@@ -1831,13 +1831,19 @@ function head<T>(arr: T[]): T | undefined {
 }
 ```
 
+---
+
 ### 1.51 Class Names
 
 Use **noun** or **noun phrase** names for classes, such as `Customer`, `WikiPage`, `Account`, or `AddressParser`. Avoid using terms like `Manager`, `Processor`, `Data`, or `Info`. A class name should not be a verb.
 
+---
+
 ### 1.52 Method Names
 
 Methods should have **verb** or **verb phrase** names, such as `postPayment`, `deletePage`, or `save`.
+
+---
 
 ### 1.53 Pick One Word Per Concept
 
@@ -1847,15 +1853,21 @@ Maintain consistency by using one word for a single concept throughout the codeb
 - Do not use varied terms like `controller`, `manager`, or `driver` interchangeably.
   A consistent lexicon simplifies understanding and usage.
 
+---
+
 ### 1.54 Blocks and Indenting
 
 - Code blocks (e.g., `if`, `else`, `while`) should typically contain one line of code, ideally a function call.
 - Keep function indentation shallow (one or two levels) for better readability and maintainability.
 - Smaller, focused functions are easier to name descriptively and understand.
 
+---
+
 ### 1.55 Avoid Flag Arguments
 
 Passing a boolean (flag) to a function is a poor practice. It indicates the function is doing more than one thing, reducing clarity.
+
+---
 
 ### 1.56 Command-Query Separation
 
@@ -1864,31 +1876,45 @@ A function should either, It should not do both:
 1. Perform an action (change the state of an object).
 1. Return information about an object.
 
+---
+
 ### 1.57 Prefer Exceptions Over Error Codes
 
 - Returning error codes forces the caller to handle errors immediately.
 - Using exceptions allows error handling to be separate from the primary logic, simplifying the code.
 
+---
+
 ### 1.58 Avoid Javadocs in Non-Public Code
 
 Javadocs are useful for public APIs but unnecessary for internal or non-public code.
+
+---
 
 ### 1.59 Vertical Density
 
 Place lines of code that are closely related together to improve readability.
 
+---
+
 ### 1.60 Vertical Openness Between Concepts
 
 Use blank lines to separate distinct concepts, making the code easier to navigate.
+
+---
 
 ### 1.61 Horizontal Openness and Density
 
 - Avoid spaces between function names and opening parentheses, as the function and its arguments are closely related.
 
+---
+
 ### 1.62 Provide Context with Exceptions
 
 - Include detailed context in error messages to identify the source and nature of the problem.
 - Always pass meaningful messages with exceptions.
+
+---
 
 ### 1.63 Don't Return Null
 
@@ -1896,10 +1922,14 @@ Use blank lines to separate distinct concepts, making the code easier to navigat
 - Instead, throw an exception or return a special-case object.
 - For third-party APIs that return `null`, wrap such methods to handle this explicitly.
 
+---
+
 ### 1.64 Don't Pass Null
 
 - Passing `null` to methods is worse than returning `null`.
 - Avoid it unless explicitly required by an external API.
+
+---
 
 ### 1.65 FIRST Rule for Clean Tests
 
@@ -1908,6 +1938,8 @@ Use blank lines to separate distinct concepts, making the code easier to navigat
 - **Repeatable**: Tests should work in any environment.
 - **Self-validating**: Tests should yield a boolean result (pass/fail).
 - **Timely**: Write tests early during development.
+
+---
 
 ### 1.66 Keep Design Simple
 
@@ -1918,28 +1950,38 @@ A "simple" design:
 1. Clearly expresses intent.
 1. Minimizes the number of classes and methods.
 
+---
+
 ### 1.67 Avoid Overloading Interfaces
 
 - Tight, small interfaces reduce coupling.
 - Avoid defining interfaces with too many functions to depend on.
 
+---
+
 ### 1.68 Favor Many Small Functions Over Complex Behavior Flags
 
 It’s better to have multiple specialized functions than a single function with behavior dictated by flags or code passed as arguments.
 
+---
+
 ### 1.69 Prefer Polymorphism Over Conditional Statements
 
 Where applicable, use polymorphism instead of `if/else` or `switch/case`.
+
+---
 
 ### 1.70 Use Long Names for Long Scopes
 
 - Short variable names are fine for small scopes.
 - Use descriptive, longer names for variables in larger scopes.
 
+---
+
 ### 1.71 Names Should Describe Side Effects
 
 - Function, variable, and class names should clearly indicate their purpose and behavior.
-- Example: A function named `createOrReturnOos` explicitly describes its dual behavior.
+- Example: A function named `createOrReturns` explicitly describes its dual behavior.
 
 ---
 
@@ -2009,8 +2051,8 @@ When returning a list, include the total number of items.
 
 ```json
 {
-  "users": [{}, {}, ...],
-  "total": 34
+  "users": [{}, {}],
+  "total": 2
 }
 ```
 
@@ -2018,7 +2060,7 @@ When returning a list, include the total number of items.
 
 ```json
 {
-  "users": [{}, {}, ...]
+  "users": [{}, {}]
 }
 ```
 
@@ -2159,11 +2201,11 @@ res.sendFile(path.join(__dirname, 'views/index.html'));
 ```
 
 ```shell
-# please give me the code in YAML to deploy a WordPress container to a Kubernetes cluster`
+# Please give me the code in YAML to deploy a WordPress container to a Kubernetes cluster`
 
-please document this code
+# Please document this code
 
-please explain this code to me
+# Please explain this code to me
 
-Provide query in steps like recipe instruction instead of single paragraph, keep relevant tab opened for a better context, provide one or two examples for a better context.
+# Please provide a query in steps like recipe instruction instead of a single paragraph, keep the relevant tab opened for a better context, and provide one or two examples for a better context.
 ```
