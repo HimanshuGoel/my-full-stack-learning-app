@@ -399,12 +399,6 @@ Avoid vague labels like "Yes" or "No." Use clear, action-oriented text such as "
 
 ---
 
-### 36. Align Checkboxes Vertically
-
-Arrange checkboxes vertically for better readability and to save space. Vertical alignment also enhances the visual clarity of grouped options.
-
----
-
 ### 37. Use Multi-Select Fields for Over Seven Options
 
 For lists with more than seven values, consider using a multi-select field to simplify the selection process.
@@ -426,12 +420,6 @@ Long dropdowns can be challenging, especially for mobile users. Limit the number
 Avoid showing irrelevant or unclear messages that might confuse users or lead to misunderstandings.
 
 ![bp-ux-unneeded-message.webp](./app-core/docs/[extracted]/images/bp-ux-unneeded-message.webp)
-
----
-
-### 40. Use `GUIDs` for IDs
-
-Adopt `GUIDs` as random ID generators instead of sequential IDs to prevent Broken Object Level Authorization (BOLA) vulnerabilities.
 
 ---
 
@@ -567,7 +555,7 @@ Example:
 
 Here's the rewritten version with improved logical structure:
 
-### 1.1 Avoid Mental Mapping
+### 1 Avoid Mental Mapping
 
 When coding quickly, we often make assumptions that are clear to us in the moment but may not be easily understood by others or our future selves. Always aim to make your code as readable as possible for anyone who may encounter it.
 
@@ -587,7 +575,7 @@ names.forEach((u) => {
 });
 ```
 
-### 1.2 Functions Should Do One Thing
+### 2 Functions Should Do One Thing
 
 A function should focus on a single responsibility. It should have a clear, descriptive name that conveys its purpose and what the arguments represent. A function that does only one thing is easier to maintain and reuse.
 
@@ -623,7 +611,7 @@ function createFile(name, isPublic) {
 }
 ```
 
-### 1.3 Use `includes()` Instead of Multiple Conditions
+### 3 Use `includes()` Instead of Multiple Conditions
 
 Instead of using multiple `||` conditions to check for several values, use an array and the `includes()` method. This approach is cleaner and more efficient.
 
@@ -643,7 +631,7 @@ if (x === 'orange' || x === 'red' || x === 'gray') {
 }
 ```
 
-### 1.4 Use Template Literals for String Concatenation
+### 4 Use Template Literals for String Concatenation
 
 Template literals allow you to concatenate strings and variables in a cleaner and more readable manner than using the `+` operator.
 
@@ -667,7 +655,7 @@ const msg =
   'we have supported programmes to help alleviate human suffering. \n\t';
 ```
 
-### 1.5 Avoid Magic Numbers
+### 5 Avoid Magic Numbers
 
 Magic numbers are hard-coded values without clear meaning. Always assign such numbers to a well-named variable to clarify their purpose.
 
@@ -688,7 +676,7 @@ for (let i = 0; i < 50; i++) {
 }
 ```
 
-### 1.6 Avoid Deep Nesting
+### 6 Avoid Deep Nesting
 
 Deeply nested loops can be difficult to understand. Instead of nesting too many levels, extract them into separate functions for clarity and reuse.
 
@@ -718,7 +706,7 @@ array.forEach((firstArr) => {
 });
 ```
 
-### 1.7 Avoid Large Functions
+### 7 Avoid Large Functions
 
 Large functions can be overwhelming and hard to maintain. Break them down into smaller, focused functions to enhance readability, reusability, and testability.
 
@@ -748,7 +736,7 @@ const addSub = (a, b) => {
 };
 ```
 
-### 1.8 Favor Descriptive Over Concise Naming
+### 8 Favor Descriptive Over Concise Naming
 
 Always use descriptive names for functions, variables, and constants. This avoids ambiguity and improves code readability, especially when there are multiple similar functions.
 
@@ -768,7 +756,7 @@ const searchUser = (phone) => {
 };
 ```
 
-### 1.9 Capitalize Constant Values (SNAKE CASE)
+### 9 Capitalize Constant Values (SNAKE CASE)
 
 Constant values should be in uppercase with words separated by underscores. This is a widely accepted convention to differentiate constants from regular variables.
 
@@ -778,7 +766,7 @@ Constant values should be in uppercase with words separated by underscores. This
 const DAYS_IN_A_YEAR = 365;
 ```
 
-### 1.10 Avoid Inlining Function Types
+### 10 Avoid Inlining Function Types
 
 Instead of inlining function types directly within the function signature, define them separately for clarity and better maintainability.
 
@@ -827,7 +815,7 @@ const getBooks = (searchParams: {
 
 ---
 
-### 1.11 Use `strong type checks`
+### . 11 Use `strong type checks`
 
 Always use `===` (strict equality) instead of `==` (loose equality) to avoid unexpected type coercion.
 
@@ -849,7 +837,7 @@ if (val == 123) {
 
 ---
 
-### 1.12 Use proper `variable naming`
+### 12. Use proper `variable naming`
 
 Variables should be named clearly to convey their purpose. Avoid unnecessary words or context in variable names.
 
@@ -915,7 +903,7 @@ product.productName;
 
 ---
 
-### 1.13 Use proper `function naming`
+### 13. Use proper `function naming`
 
 Function names should be long and descriptive, reflecting their behavior and the intent of the arguments. Avoid excessive arguments (ideally no more than two) to keep the function simple and testable. Default arguments should be used instead of conditionals where possible.
 
@@ -976,7 +964,7 @@ function createShape(type) {
 
 ---
 
-### 1.14 Use `scan` instead of `reduce` operator
+### 14. Use `scan` instead of `reduce` operator
 
 Use `scan` instead of `reduce` for streams, as it emits an intermediate result at each step, making it more useful for real-time processing.
 
@@ -996,7 +984,7 @@ source$
 
 ---
 
-### 1.15 Place most of the code outside the `conditional branch`
+### 15. Place most of the code outside the `conditional branch`
 
 Avoid placing too much logic inside conditional branches. This can make the code difficult to follow. Instead, execute the main logic outside the condition and return early if necessary.
 
@@ -1036,7 +1024,7 @@ function drawRectangle(e) {
 
 ---
 
-### 1.16 Use `Optional Chaining`
+### 16. Use `Optional Chaining`
 
 Optional chaining (`?.`) helps prevent runtime errors when accessing deeply nested properties in objects that may not exist.
 
@@ -1069,7 +1057,7 @@ if (data && data.test) {
 
 ---
 
-### 1.17 Use `Nullish Coalescing`
+### 17. Use `Nullish Coalescing`
 
 Use the nullish coalescing operator (`??`) to handle cases where a value is `null` or `undefined`. It ensures that only those values are replaced by the right-hand side, unlike `||` which also replaces falsy values like `0` or `''`.
 
@@ -1097,7 +1085,7 @@ console.log(safeValue); // "I exist"
 
 ---
 
-### 1.18 Passing `arguments` as `objects`
+### 18. Passing `arguments` as `objects`
 
 Passing arguments as objects improves code readability, as it eliminates the need for the arguments to be in a specific order and helps with autocompletion in IDEs.
 
@@ -1117,7 +1105,7 @@ createProduct({
 
 ---
 
-### 1.19 Use `Object.entries()` to check empty object
+### 19. Use `Object.entries()` to check empty object
 
 To check if an object is empty, use `Object.entries()` which returns an array of the object's enumerable properties. If the length is 0, the object is empty.
 
@@ -1135,7 +1123,7 @@ console.log(Object.entries(emptyObj).length === 0); // true
 
 ---
 
-### 1.20 Use `early return` pattern
+### 20. Use `early return` pattern
 
 Using the early return pattern makes code more readable and efficient by eliminating unnecessary `else` statements.
 
@@ -1173,7 +1161,7 @@ function FizzBuzz(i) {
 
 ---
 
-### 1.21 Use `dot` Syntax Over `bracket` Syntax
+### 21. Use `dot` Syntax Over `bracket` Syntax
 
 We should prefer `dot` syntax when the properties are known in advance, as it makes the code more succinct and easier to read. Use `bracket` syntax only when the property is a variable or might change dynamically.
 
@@ -1189,7 +1177,7 @@ book.preface.intro = 'Section 1';
 book['preface']['intro'] = 'Section 1';
 ```
 
-### 1.22 Use `spread` Operator to Conditionally Add Properties to Objects or Arrays
+### 22. Use `spread` Operator to Conditionally Add Properties to Objects or Arrays
 
 The `spread` operator (`...`) allows for quick and conditional additions of properties to objects or arrays.
 
@@ -1208,7 +1196,7 @@ const person = {
 const fruits = ['a', 'b', ...(isSummer ? ['w'] : [])];
 ```
 
-### 1.23 Use `in` Keyword to Check if Property Exists in an Object
+### 23. Use `in` Keyword to Check if Property Exists in an Object
 
 The `in` keyword is the preferred way to check if a property exists in an object.
 
@@ -1220,7 +1208,7 @@ console.log('salary' in person); // returns true
 console.log('age' in person); // returns false
 ```
 
-### 1.24 Use `multiline` Comments Over `single-line` Comments for Long Text
+### 24. Use `multiline` Comments Over `single-line` Comments for Long Text
 
 For long comments, use multiline comments for better readability.
 
@@ -1240,7 +1228,7 @@ For long comments, use multiline comments for better readability.
 // Which is written as multiple single-line comments.
 ```
 
-### 1.25 Use `Union Types` Instead of `Enum`
+### 25. Use `Union Types` Instead of `Enum`
 
 Union types are preferred over `enum` because they offer more flexibility, don't get compiled, and are more linear. If you must use `enum`, declare it as `const` to prevent it from being included in the build output.
 
@@ -1306,7 +1294,7 @@ export const ALL_HTTP_STATUS_CODES = [
 export type HttpStatusCodes = (typeof ALL_HTTP_STATUS_CODES)[number];
 ```
 
-### 1.26 Avoid Code Duplication
+### 26. Avoid Code Duplication
 
 Duplicate code increases maintenance complexity. Instead, abstract common logic into reusable functions.
 
@@ -1371,7 +1359,7 @@ function showManagerList(managers) {
 }
 ```
 
-### 1.27 Avoid Using Flags as Function Parameters
+### 27. Avoid Using Flags as Function Parameters
 
 Functions should focus on one thing. Avoid using flags to make a function do multiple tasks. Instead, split the function into multiple functions.
 
@@ -1399,7 +1387,7 @@ function createFile(name, temp) {
 }
 ```
 
-### 1.28 Avoid Positional Markers
+### 28. Avoid Positional Markers
 
 Positional markers add noise to the code. Let functions and variable names, along with proper indentation, convey the structure of your code.
 
@@ -1435,7 +1423,7 @@ const actions = function () {
 };
 ```
 
-### 1.29 Avoid Contractions
+### 29. Avoid Contractions
 
 Avoid using contractions in variable and function names as they reduce readability.
 
@@ -1451,7 +1439,7 @@ const onItemClick = () => {};
 const onItmClk = () => {};
 ```
 
-### 1.30 Use Named Parameters Instead of Options Objects
+### 30. Use Named Parameters Instead of Options Objects
 
 Named parameters improve the clarity of function calls by explicitly showing which options are being passed.
 
@@ -1475,7 +1463,7 @@ function setPageThread(name, options = {}) {
 }
 ```
 
-### 1.31 Avoid Direct Use of `Object.prototype` Methods
+### 31. Avoid Direct Use of `Object.prototype` Methods
 
 Avoid directly calling `Object.prototype` methods like `hasOwnProperty`, `propertyIsEnumerable`, and `isPrototypeOf`. These methods can be shadowed by properties in the object or fail with objects created without a prototype (e.g., `Object.create(null)`). Use the `call` method to ensure functionality.
 
@@ -1488,7 +1476,7 @@ const hasA = Object.prototype.hasOwnProperty.call(obj, 'a');
 
 ---
 
-### 1.32 Avoid Nested Subscriptions
+### 32. Avoid Nested Subscriptions
 
 Use higher-order observables like `switchMap()` to flatten or join inner observables. This avoids pyramid-shaped callback hell and improves readability.
 
@@ -1514,7 +1502,7 @@ this.route.params.subscribe((params) => {
 
 ---
 
-### 1.33 Prefer `Type Annotations` Over `Type Assertions`
+### 33. Prefer `Type Annotations` Over `Type Assertions`
 
 Using type annotations ensures type safety and compile-time checks.
 
@@ -1539,19 +1527,19 @@ const william = {
 
 ---
 
-### 1.34 Avoid `++` Operator; Use Compound Operators
+### 34. Avoid `++` Operator; Use Compound Operators
 
 Instead of incrementing with `++`, use compound operators like `+=`.
 
 ---
 
-### 1.35 Avoid Assigning `undefined`
+### 35. Avoid Assigning `undefined`
 
 Do not manually assign `undefined` to variables. Use `null` instead when needed.
 
 ---
 
-### 1.36 Encapsulate Conditionals
+### 36. Encapsulate Conditionals
 
 Encapsulate complex conditional logic into functions with descriptive names to enhance readability.
 
@@ -1577,7 +1565,7 @@ if (fsm.state === 'fetching' && isEmpty(listNode)) {
 
 ---
 
-### 1.37 Handle Caught Errors
+### 37. Handle Caught Errors
 
 Always handle caught errors meaningfully. Logging to the console is insufficient.
 
@@ -1605,7 +1593,7 @@ try {
 
 ---
 
-### 1.38 Handle Rejected Promises or Observables
+### 38. Handle Rejected Promises or Observables
 
 Similar to caught errors, rejected promises should be handled properly.
 
@@ -1631,7 +1619,7 @@ getData()
 
 ---
 
-### 1.39 Use Logical Nullish Assignment (`??=`)
+### 39. Use Logical Nullish Assignment (`??=`)
 
 The `??=` operator assigns a value only if the variable is nullish (null or undefined).
 
@@ -1652,7 +1640,7 @@ if (!user.twitterName) {
 
 ---
 
-### 1.40 Avoid Implicit Else
+### 40. Avoid Implicit Else
 
 Explicitly handle all cases to enhance readability and adhere to the fail-fast principle.
 
@@ -1683,7 +1671,7 @@ function carBrand(model) {
 
 ---
 
-### 1.41 Prefer ECMAScript `#field` for Private Members
+### 41. Prefer ECMAScript `#field` for Private Members
 
 Use `#field` instead of `private` for private class members, as it is natively supported in JavaScript.
 
@@ -1705,7 +1693,7 @@ class Test {
 
 ---
 
-### 1.42 Use `at()` Method for Array/String Access
+### 42. Use `at()` Method for Array/String Access
 
 The `at()` method simplifies accessing elements from the end of an array or string.
 
@@ -1721,7 +1709,7 @@ S.at(-1); // 'd'
 
 ---
 
-### 1.43 Use `findLast()` to Locate Items from the End
+### 43. Use `findLast()` to Locate Items from the End
 
 The `findLast()` method helps locate array items starting from the end.
 
@@ -1734,7 +1722,7 @@ A.findLast((v) => v % 10 === 0); // 40
 
 ---
 
-### 1.44 Use `hasOwn()` Instead of `hasOwnProperty()`
+### 44. Use `hasOwn()` Instead of `hasOwnProperty()`
 
 The `Object.hasOwn()` method is more concise and avoids issues with shadowing.
 
@@ -1757,7 +1745,7 @@ if (hasOwnProperty.call(object, 'foo')) {
 
 ---
 
-### 1.45 Use the `cause` Property in Errors
+### 45. Use the `cause` Property in Errors
 
 Preserve the original error when wrapping errors using the `cause` property.
 
@@ -1775,7 +1763,7 @@ await fetch('https://example.com/data.csv')
 
 ---
 
-### 1.46 Prefer Separate Types Over Optional Properties
+### 46. Prefer Separate Types Over Optional Properties
 
 Divide types to model distinct states clearly, avoiding excessive use of optional properties.
 
@@ -1811,7 +1799,7 @@ interface Product {
 
 ---
 
-### 1.47 Use Descriptive Names for Generics
+### 47. Use Descriptive Names for Generics
 
 Use descriptive names for generics to improve clarity.
 
@@ -1833,19 +1821,19 @@ function head<T>(arr: T[]): T | undefined {
 
 ---
 
-### 1.51 Class Names
+### 51. Class Names
 
 Use **noun** or **noun phrase** names for classes, such as `Customer`, `WikiPage`, `Account`, or `AddressParser`. Avoid using terms like `Manager`, `Processor`, `Data`, or `Info`. A class name should not be a verb.
 
 ---
 
-### 1.52 Method Names
+### 52. Method Names
 
 Methods should have **verb** or **verb phrase** names, such as `postPayment`, `deletePage`, or `save`.
 
 ---
 
-### 1.53 Pick One Word Per Concept
+### 53. Pick One Word Per Concept
 
 Maintain consistency by using one word for a single concept throughout the codebase. For example:
 
@@ -1855,7 +1843,7 @@ Maintain consistency by using one word for a single concept throughout the codeb
 
 ---
 
-### 1.54 Blocks and Indenting
+### 54. Blocks and Indenting
 
 - Code blocks (e.g., `if`, `else`, `while`) should typically contain one line of code, ideally a function call.
 - Keep function indentation shallow (one or two levels) for better readability and maintainability.
@@ -1863,13 +1851,13 @@ Maintain consistency by using one word for a single concept throughout the codeb
 
 ---
 
-### 1.55 Avoid Flag Arguments
+### 55. Avoid Flag Arguments
 
 Passing a boolean (flag) to a function is a poor practice. It indicates the function is doing more than one thing, reducing clarity.
 
 ---
 
-### 1.56 Command-Query Separation
+### 56. Command-Query Separation
 
 A function should either, It should not do both:
 
@@ -1878,45 +1866,45 @@ A function should either, It should not do both:
 
 ---
 
-### 1.57 Prefer Exceptions Over Error Codes
+### 57. Prefer Exceptions Over Error Codes
 
 - Returning error codes forces the caller to handle errors immediately.
 - Using exceptions allows error handling to be separate from the primary logic, simplifying the code.
 
 ---
 
-### 1.58 Avoid Javadocs in Non-Public Code
+### 58. Avoid Javadocs in Non-Public Code
 
 Javadocs are useful for public APIs but unnecessary for internal or non-public code.
 
 ---
 
-### 1.59 Vertical Density
+### 59. Vertical Density
 
 Place lines of code that are closely related together to improve readability.
 
 ---
 
-### 1.60 Vertical Openness Between Concepts
+### 60. Vertical Openness Between Concepts
 
 Use blank lines to separate distinct concepts, making the code easier to navigate.
 
 ---
 
-### 1.61 Horizontal Openness and Density
+### 61. Horizontal Openness and Density
 
 - Avoid spaces between function names and opening parentheses, as the function and its arguments are closely related.
 
 ---
 
-### 1.62 Provide Context with Exceptions
+### 62. Provide Context with Exceptions
 
 - Include detailed context in error messages to identify the source and nature of the problem.
 - Always pass meaningful messages with exceptions.
 
 ---
 
-### 1.63 Don't Return Null
+### 63. Don't Return Null
 
 - Returning `null` can lead to unexpected errors.
 - Instead, throw an exception or return a special-case object.
@@ -1924,14 +1912,14 @@ Use blank lines to separate distinct concepts, making the code easier to navigat
 
 ---
 
-### 1.64 Don't Pass Null
+### 64. Don't Pass Null
 
 - Passing `null` to methods is worse than returning `null`.
 - Avoid it unless explicitly required by an external API.
 
 ---
 
-### 1.65 FIRST Rule for Clean Tests
+### 65. FIRST Rule for Clean Tests
 
 - **Fast**: Tests should execute quickly.
 - **Independent**: Tests should not depend on each other.
@@ -1941,7 +1929,7 @@ Use blank lines to separate distinct concepts, making the code easier to navigat
 
 ---
 
-### 1.66 Keep Design Simple
+### 66. Keep Design Simple
 
 A "simple" design:
 
@@ -1952,36 +1940,42 @@ A "simple" design:
 
 ---
 
-### 1.67 Avoid Overloading Interfaces
+### 67. Avoid Overloading Interfaces
 
 - Tight, small interfaces reduce coupling.
 - Avoid defining interfaces with too many functions to depend on.
 
 ---
 
-### 1.68 Favor Many Small Functions Over Complex Behavior Flags
+### 68. Favor Many Small Functions Over Complex Behavior Flags
 
 It’s better to have multiple specialized functions than a single function with behavior dictated by flags or code passed as arguments.
 
 ---
 
-### 1.69 Prefer Polymorphism Over Conditional Statements
+### 69. Prefer Polymorphism Over Conditional Statements
 
 Where applicable, use polymorphism instead of `if/else` or `switch/case`.
 
 ---
 
-### 1.70 Use Long Names for Long Scopes
+### 70. Use Long Names for Long Scopes
 
 - Short variable names are fine for small scopes.
 - Use descriptive, longer names for variables in larger scopes.
 
 ---
 
-### 1.71 Names Should Describe Side Effects
+### 71. Names Should Describe Side Effects
 
 - Function, variable, and class names should clearly indicate their purpose and behavior.
 - Example: A function named `createOrReturns` explicitly describes its dual behavior.
+
+---
+
+### 72. Use `GUIDs` for IDs
+
+Adopt `GUIDs` as random ID generators instead of sequential IDs to prevent Broken Object Level Authorization (BOLA) vulnerabilities.
 
 ---
 
