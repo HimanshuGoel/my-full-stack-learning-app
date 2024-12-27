@@ -555,7 +555,7 @@ Example:
 
 Here's the rewritten version with improved logical structure:
 
-### 1 Avoid Mental Mapping
+### . 1 Avoid Mental Mapping
 
 When coding quickly, we often make assumptions that are clear to us in the moment but may not be easily understood by others or our future selves. Always aim to make your code as readable as possible for anyone who may encounter it.
 
@@ -575,7 +575,7 @@ names.forEach((u) => {
 });
 ```
 
-### 2 Functions Should Do One Thing
+### 2. Functions Should Do One Thing
 
 A function should focus on a single responsibility. It should have a clear, descriptive name that conveys its purpose and what the arguments represent. A function that does only one thing is easier to maintain and reuse.
 
@@ -611,7 +611,7 @@ function createFile(name, isPublic) {
 }
 ```
 
-### 3 Use `includes()` Instead of Multiple Conditions
+### 3. Use `includes()` Instead of Multiple Conditions
 
 Instead of using multiple `||` conditions to check for several values, use an array and the `includes()` method. This approach is cleaner and more efficient.
 
@@ -631,7 +631,7 @@ if (x === 'orange' || x === 'red' || x === 'gray') {
 }
 ```
 
-### 4 Use Template Literals for String Concatenation
+### 4. Use Template Literals for String Concatenation
 
 Template literals allow you to concatenate strings and variables in a cleaner and more readable manner than using the `+` operator.
 
@@ -655,7 +655,7 @@ const msg =
   'we have supported programmes to help alleviate human suffering. \n\t';
 ```
 
-### 5 Avoid Magic Numbers
+### 5. Avoid Magic Numbers
 
 Magic numbers are hard-coded values without clear meaning. Always assign such numbers to a well-named variable to clarify their purpose.
 
@@ -676,7 +676,7 @@ for (let i = 0; i < 50; i++) {
 }
 ```
 
-### 6 Avoid Deep Nesting
+### 6. Avoid Deep Nesting
 
 Deeply nested loops can be difficult to understand. Instead of nesting too many levels, extract them into separate functions for clarity and reuse.
 
@@ -706,7 +706,7 @@ array.forEach((firstArr) => {
 });
 ```
 
-### 7 Avoid Large Functions
+### 7. Avoid Large Functions
 
 Large functions can be overwhelming and hard to maintain. Break them down into smaller, focused functions to enhance readability, reusability, and testability.
 
@@ -736,7 +736,7 @@ const addSub = (a, b) => {
 };
 ```
 
-### 8 Favor Descriptive Over Concise Naming
+### 8. Favor Descriptive Over Concise Naming
 
 Always use descriptive names for functions, variables, and constants. This avoids ambiguity and improves code readability, especially when there are multiple similar functions.
 
@@ -756,7 +756,7 @@ const searchUser = (phone) => {
 };
 ```
 
-### 9 Capitalize Constant Values (SNAKE CASE)
+### 9. Capitalize Constant Values (SNAKE CASE)
 
 Constant values should be in uppercase with words separated by underscores. This is a widely accepted convention to differentiate constants from regular variables.
 
@@ -766,7 +766,7 @@ Constant values should be in uppercase with words separated by underscores. This
 const DAYS_IN_A_YEAR = 365;
 ```
 
-### 10 Avoid Inlining Function Types
+### 10. Avoid Inlining Function Types
 
 Instead of inlining function types directly within the function signature, define them separately for clarity and better maintainability.
 
@@ -815,7 +815,7 @@ const getBooks = (searchParams: {
 
 ---
 
-### . 11 Use `strong type checks`
+### 11. Use `strong type checks`
 
 Always use `===` (strict equality) instead of `==` (loose equality) to avoid unexpected type coercion.
 
