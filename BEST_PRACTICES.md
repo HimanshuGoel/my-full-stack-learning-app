@@ -555,7 +555,7 @@ Example:
 
 Here's the rewritten version with improved logical structure:
 
-### . 1 Avoid Mental Mapping
+### 1. Avoid Mental Mapping
 
 When coding quickly, we often make assumptions that are clear to us in the moment but may not be easily understood by others or our future selves. Always aim to make your code as readable as possible for anyone who may encounter it.
 
@@ -574,6 +574,8 @@ names.forEach((u) => {
   this.notifyUsers(u);
 });
 ```
+
+---
 
 ### 2. Functions Should Do One Thing
 
@@ -611,6 +613,8 @@ function createFile(name, isPublic) {
 }
 ```
 
+---
+
 ### 3. Use `includes()` Instead of Multiple Conditions
 
 Instead of using multiple `||` conditions to check for several values, use an array and the `includes()` method. This approach is cleaner and more efficient.
@@ -630,6 +634,8 @@ if (x === 'orange' || x === 'red' || x === 'gray') {
   // do something
 }
 ```
+
+---
 
 ### 4. Use Template Literals for String Concatenation
 
@@ -655,6 +661,8 @@ const msg =
   'we have supported programmes to help alleviate human suffering. \n\t';
 ```
 
+---
+
 ### 5. Avoid Magic Numbers
 
 Magic numbers are hard-coded values without clear meaning. Always assign such numbers to a well-named variable to clarify their purpose.
@@ -675,6 +683,8 @@ for (let i = 0; i < 50; i++) {
   // do something
 }
 ```
+
+---
 
 ### 6. Avoid Deep Nesting
 
@@ -706,6 +716,8 @@ array.forEach((firstArr) => {
 });
 ```
 
+---
+
 ### 7. Avoid Large Functions
 
 Large functions can be overwhelming and hard to maintain. Break them down into smaller, focused functions to enhance readability, reusability, and testability.
@@ -736,6 +748,8 @@ const addSub = (a, b) => {
 };
 ```
 
+---
+
 ### 8. Favor Descriptive Over Concise Naming
 
 Always use descriptive names for functions, variables, and constants. This avoids ambiguity and improves code readability, especially when there are multiple similar functions.
@@ -756,6 +770,8 @@ const searchUser = (phone) => {
 };
 ```
 
+---
+
 ### 9. Capitalize Constant Values (SNAKE CASE)
 
 Constant values should be in uppercase with words separated by underscores. This is a widely accepted convention to differentiate constants from regular variables.
@@ -765,6 +781,8 @@ Constant values should be in uppercase with words separated by underscores. This
 ```typescript
 const DAYS_IN_A_YEAR = 365;
 ```
+
+---
 
 ### 10. Avoid Inlining Function Types
 
@@ -1177,6 +1195,8 @@ book.preface.intro = 'Section 1';
 book['preface']['intro'] = 'Section 1';
 ```
 
+---
+
 ### 22. Use `spread` Operator to Conditionally Add Properties to Objects or Arrays
 
 The `spread` operator (`...`) allows for quick and conditional additions of properties to objects or arrays.
@@ -1196,6 +1216,8 @@ const person = {
 const fruits = ['a', 'b', ...(isSummer ? ['w'] : [])];
 ```
 
+---
+
 ### 23. Use `in` Keyword to Check if Property Exists in an Object
 
 The `in` keyword is the preferred way to check if a property exists in an object.
@@ -1207,6 +1229,8 @@ const person = { name: 'John Doe', salary: 1000 };
 console.log('salary' in person); // returns true
 console.log('age' in person); // returns false
 ```
+
+---
 
 ### 24. Use `multiline` Comments Over `single-line` Comments for Long Text
 
@@ -1227,6 +1251,8 @@ For long comments, use multiline comments for better readability.
 // This is a long comment
 // Which is written as multiple single-line comments.
 ```
+
+---
 
 ### 25. Use `Union Types` Instead of `Enum`
 
@@ -1294,6 +1320,8 @@ export const ALL_HTTP_STATUS_CODES = [
 export type HttpStatusCodes = (typeof ALL_HTTP_STATUS_CODES)[number];
 ```
 
+---
+
 ### 26. Avoid Code Duplication
 
 Duplicate code increases maintenance complexity. Instead, abstract common logic into reusable functions.
@@ -1359,6 +1387,8 @@ function showManagerList(managers) {
 }
 ```
 
+---
+
 ### 27. Avoid Using Flags as Function Parameters
 
 Functions should focus on one thing. Avoid using flags to make a function do multiple tasks. Instead, split the function into multiple functions.
@@ -1386,6 +1416,8 @@ function createFile(name, temp) {
   }
 }
 ```
+
+---
 
 ### 28. Avoid Positional Markers
 
@@ -1423,6 +1455,8 @@ const actions = function () {
 };
 ```
 
+---
+
 ### 29. Avoid Contractions
 
 Avoid using contractions in variable and function names as they reduce readability.
@@ -1438,6 +1472,8 @@ const onItemClick = () => {};
 ```typescript
 const onItmClk = () => {};
 ```
+
+---
 
 ### 30. Use Named Parameters Instead of Options Objects
 
@@ -1462,6 +1498,8 @@ function setPageThread(name, options = {}) {
   let activeClass = options.activeClass;
 }
 ```
+
+---
 
 ### 31. Avoid Direct Use of `Object.prototype` Methods
 
