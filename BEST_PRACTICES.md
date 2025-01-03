@@ -21,19 +21,13 @@ Do not use a `placeholder` if it is identical to the `label`. Use `placeholder` 
 
 **Why:** Repetition of information creates unnecessary duplication.
 
----
-
 ### 1. Enclose `plain text` within elements
 
 Plain text in HTML should always be wrapped in an appropriate element like a `<div>` or `<span>`.
 
----
-
 ### 1. Use `links` for non-form actions
 
 Use `links` instead of `buttons` for actions outside a form.
-
----
 
 ### 1. Avoid `inline styles`
 
@@ -43,8 +37,6 @@ Inline styles should be avoided. Use external stylesheets for consistency and re
 
 - Inline styles cannot be reused.
 - They make the HTML markup cluttered and hard to maintain.
-
----
 
 ### 1. Prefer `class` selectors over `id` selectors
 
