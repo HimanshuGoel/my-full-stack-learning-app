@@ -15,13 +15,13 @@ Not every practices herein has to be strictly followed, and even fewer will be u
 
 ---
 
-### Avoid `placeholder` if it matches the `label`
+### - Avoid `placeholder` if it matches the `label`
 
 Do not use a `placeholder` if it is identical to the `label`. Use `placeholder` only for providing additional hints or tips.
 
 **Why:** Repetition of information creates unnecessary duplication.
 
-### Enclose `plain text` within elements
+### - Enclose `plain text` within elements
 
 Plain text in HTML should always be wrapped in an appropriate element like a `<div>` or `<span>`.
 
