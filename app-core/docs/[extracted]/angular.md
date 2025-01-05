@@ -2072,3 +2072,5 @@ CSS is the styling mechanism for the web. It is a standard of selectors, propert
 - Characteristics of good automated tests – isolated (no side effects on other tests), independent (can be run in any order), repeatable (always pass or fail), maintainable, valuable.
 
 - When a bug is found, a failing automated test can be written to reproduce it. When the bug is fixed the test will pass. In some future change, if the bug reoccurs it will be caught by the automated test.
+
+- Conceptually, observables are more about handling events than managing data that is also one of the reason to adapt Signals.

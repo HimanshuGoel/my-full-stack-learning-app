@@ -171,3 +171,13 @@ import { MatCardModule } from '@angular/material/card';
 ## Security
 
 - Application security best practices or OWASP top 10? - CSP, Cross-site scripting, Broken Authentication, Sensitive data exposure, Security Misconfiguration
+
+>if you had to pick only 5 libraries as dependencies for your angular app, which ones would you pick?
+
+>what’s your go-to strategy for debugging angular components?
+
+>have you ever created a custom rxjs operator? what problem did it solve?
+
+>what unconventional challenges did you face while developing or architecting angular apps?
+
+>how do you manage api type consistency between frontend, mobile apps, and backend?

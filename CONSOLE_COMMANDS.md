@@ -1,12 +1,16 @@
 # Console Commands
 
-- [Firebase](#firebase)
-- [Angular](#angular)
-- [Git](#git)
-- [Node](#node)
-- [Chrome](#chrome)
-- [Java](#java)
-- [Docker](#docker)
+Essential console commands for commonly used tools.
+
+## Table of Contents
+
+1. [Firebase](#firebase)
+1. [Angular](#angular)
+1. [Git](#git)
+1. [Node](#node)
+1. [Chrome](#chrome)
+1. [Java](#java)
+1. [Docker](#docker)
 
 ## Firebase
 
@@ -111,4 +115,3 @@ console.log(metadata);
   - Remove volume: `docker volume rm <name>`
   - `docker pc`
   - `docker exec -it mss-api-gateway sh` then `curl -vvv fop-authentication-ldap:2389`
-  

@@ -3,9 +3,7 @@ import cors from 'cors';
 import express from 'express';
 import helmet from 'helmet';
 
-import { PATH } from './constants/path.constant';
 import { apiErrorHandler } from './handlers/api-error.handler';
-import { staticContentHandler } from './handlers/static-content.handler';
 
 import { morganMiddleware } from './middlewares/morgan.middleware';
 import { registerRoutes } from './routes';
@@ -16,7 +14,6 @@ export class App {
 
   constructor() {
     this.express = express();
-    this.setStaticContentHandler();
     this.setMiddlewares();
     this.setRoutes();
     this.setDBConnection();
@@ -29,11 +26,6 @@ export class App {
 
   private setDBConnection(): void {
     DBUtility.createConnection();
-  }
-
-  private setStaticContentHandler(): void {
-    this.express.use(staticContentHandler);
-    this.express.use(express.static(PATH.staticFolder));
   }
 
   private setMiddlewares(): void {

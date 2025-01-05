@@ -330,6 +330,10 @@
   9. Growing. Every day I do something to grow. Reading, listening, watching something that causes me to think and discover. Boring? Never. And it’s paid off big time in knowledge.
   10. Giving. I try to give every day to my family, friends, clients, non-profits and readers. Never boring. Constantly rewarding. And it’s paid off big time in fulfillment.
 
+- Why do you think the old stories tell of men who set out on great journeys to impress the gods? Because trying to impress people just isn't worth the time and effort. - Henry Rollins
+
+- Sometimes it is better to lose money than to lose peace or health.
+
 ## Others
 
 - Common full stack technology stack - Python + Django, PHP + Laravel, NextJs + React, Nuxt + Vue

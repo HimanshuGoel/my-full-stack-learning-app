@@ -1,8 +1,15 @@
 # My Full Stack Learning App
 
-## Overview
-
 This is an application to showcase a range of various frontend and backend skills acquired from diverse sources such as articles, training materials, and more.
+
+## Table of Contents
+
+1. [Project Structure (High-level)](#project-structure-high-level)
+1. [Development server](#development-server)
+1. [Deployed Server](#deployed-server)
+1. [Documents](#documents)
+1. [Other Documents](#other-documents)
+1. [Any Feedback](#any-feedback)
 
 ## Project Structure (High-level)
 

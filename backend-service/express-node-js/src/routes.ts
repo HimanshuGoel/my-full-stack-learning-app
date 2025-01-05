@@ -1,9 +1,9 @@
 import express from 'express';
 
-import { ApplicationsRoute } from './routes/applications.route';
+import { SubscriptionsRoute } from './routes/subscriptions.route';
 import { HealthRoute } from './routes/health.route';
 
 export function registerRoutes(app: express.Application): void {
   new HealthRoute(app);
-  new ApplicationsRoute(app);
+  new SubscriptionsRoute(app);
 }

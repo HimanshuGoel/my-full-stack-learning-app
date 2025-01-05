@@ -1,12 +1,16 @@
 # Keyboard Shortcuts
 
-- [Windows](#windows)
-- [Pluralsight Video Player](#pluralsight-video-player)
-- [Notepad++](#notepad)
-- [MS Teams](#ms-teams)
-- [VS Code](#vs-code)
-- [Chrome](#chrome)
-- [GitHub Copilot](#github-copilot)
+Essential keyboard shortcuts for commonly used tools.
+
+## Table of Contents
+
+1. [Windows](#windows)
+1. [Pluralsight Video Player](#pluralsight-video-player)
+1. [Notepad++](#notepad)
+1. [MS Teams](#ms-teams)
+1. [VS Code](#vs-code)
+1. [Chrome](#chrome)
+1. [GitHub Copilot](#github-copilot)
 
 ## **Windows**
 

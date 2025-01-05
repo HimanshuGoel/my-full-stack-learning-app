@@ -31,6 +31,7 @@
     "fuzzdb",
     "Goel",
     "Gollum",
+    "hackathons",
     "Hashbang",
     "HATEOAS",
     "Hevery",
@@ -100,7 +101,7 @@
     "Wireframe",
     "xmsl",
     "zoomable"
-  ],
+],
   "markdown.extension.toc.updateOnSave": false,
   "eslint.workingDirectories": ["frontend"]
 }

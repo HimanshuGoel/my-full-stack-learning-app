@@ -555,7 +555,7 @@ Example:
 
 Here's the rewritten version with improved logical structure:
 
-### . 1 Avoid Mental Mapping
+### 1. Avoid Mental Mapping
 
 When coding quickly, we often make assumptions that are clear to us in the moment but may not be easily understood by others or our future selves. Always aim to make your code as readable as possible for anyone who may encounter it.
 
@@ -2202,4 +2202,49 @@ res.sendFile(path.join(__dirname, 'views/index.html'));
 # Please explain this code to me
 
 # Please provide a query in steps like recipe instruction instead of a single paragraph, keep the relevant tab opened for a better context, and provide one or two examples for a better context.
+```
+
+```shell
+
+All code you write MUST be fully optimized.
+
+"Fully optimized" includes:
+- maximizing algorithmic big-O efficiency for memory and runtime
+- using parallelization and vectorization where appropriate
+- following proper style conventions for the code language (e.g. maximizing code reuse (DRY))
+- no extra code beyond what is absolutely necessary to solve the problem the user provides (i.e. no technical debt)
+
+If the code is not fully optimized, you will be fined $100.
+
+```
+
+```shell
+
+Query -
+
+Write Python code to solve this problem:
+
+Given a list of 1 million random integers between 1 and 100,000, find the difference between the smallest and the largest numbers whose digits sum up to 30.
+
+Before writing the code, plan out all the necessary optimizations.
+
+Response -
+
+Let me plan the optimizations first:
+
+1. Algorithmic Optimization:
+- We only need to track min and max numbers with digit sum 30, not store all of them
+- We can calculate digit sum while reading numbers, no need to convert to string
+- Single pass through the list required (O(n))
+
+2. Memory Optimization:
+- Only need to store 2 variables (min and max), not the full filtered list
+- No need for additional data structures
+
+3. Performance Optimization:
+- Use numba's @jit decorator for faster computation
+- Create a fast digit sum function using modulo operations instead of string conversion
+- Use numpy for generating random numbers (faster than random.randint)
+
+
 ```
