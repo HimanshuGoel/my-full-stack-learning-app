@@ -10,7 +10,7 @@ Here's a glimpse of what's coming up in the development journey!
 ## Version 1.0 (next)
 
 - Reread and refactor `app-core/docs` folder content through daily bookmark
-- Develop and keep updated a sample application using angular, typescript, node.js, spring boot, mongodb, docker, aws, generative ai technologies
+- Develop and maintain a sample application using angular, typescript, node.js, spring boot, mongodb, docker, aws, generative ai technologies
 
 ## Future Versions
 
