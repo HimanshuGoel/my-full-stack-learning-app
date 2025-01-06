@@ -15,15 +15,15 @@ Not every practice herein has to be strictly followed, and even fewer will be un
 
 ### Avoid `placeholder` if it matches the `label`
 
-Do not use a `placeholder` if it is identical to the `label`. Use `placeholder` only to provide additional hints or tips. Repetition of information creates unnecessary duplication.
+- Do not use a `placeholder` if it is identical to the `label`. Use `placeholder` only to provide additional hints or tips. Repetition of information creates unnecessary duplication.
 
 ### Enclose `plain text` within elements
 
-Plain text in HTML should always be wrapped in an appropriate element like a `<div>` or `<span>`.
+- Plain text in HTML should always be wrapped in an appropriate element like a `<div>` or `<span>`.
 
 ### Use `links` for non-form actions
 
-Use `links` instead of `buttons` for actions outside a form.
+- Use `links` instead of `buttons` for actions outside a form.
 
 ### Avoid `inline styles`
 
