@@ -1,8 +1,8 @@
 # Best Practices
 
-These best practices more of a knowledge sharing which have been acquired collectively while working in different projects, or reading articles, books, and other resources. The main objective of this document is to produce readable, reusable, consistent, and refactorable software.
+These best practices are more of a knowledge-sharing process that has been acquired collectively while working on different projects or reading articles, books, and other resources. The main objective of this document is to produce readable, reusable, consistent, and refactorable software.
 
-Not every practices herein has to be strictly followed, and even fewer will be universally agreed upon. These are guidelines and nothing more.
+Not every practice herein has to be strictly followed, and even fewer will be universally agreed upon. These are guidelines and nothing more.
 
 ## Table of Contents
 
@@ -13,15 +13,11 @@ Not every practices herein has to be strictly followed, and even fewer will be u
 
 ## Angular
 
----
+### Avoid `placeholder` if it matches the `label`
 
-### * Avoid `placeholder` if it matches the `label`
+Do not use a `placeholder` if it is identical to the `label`. Use `placeholder` only to provide additional hints or tips. Repetition of information creates unnecessary duplication.
 
-Do not use a `placeholder` if it is identical to the `label`. Use `placeholder` only for providing additional hints or tips.
-
-**Why:** Repetition of information creates unnecessary duplication.
-
-### * Enclose `plain text` within elements
+### Enclose `plain text` within elements
 
 Plain text in HTML should always be wrapped in an appropriate element like a `<div>` or `<span>`.
 
@@ -31,12 +27,7 @@ Use `links` instead of `buttons` for actions outside a form.
 
 ### Avoid `inline styles`
 
-Inline styles should be avoided. Use external stylesheets for consistency and reusability.
-
-**Why:**
-
-- Inline styles cannot be reused.
-- They make the HTML markup cluttered and hard to maintain.
+Inline styles should be avoided. Use external stylesheets for consistency and reusability. Inline styles cannot be reused and make the HTML markup cluttered and hard to maintain.
 
 ### Prefer `class` selectors over `id` selectors
 
@@ -58,9 +49,7 @@ Always use `class` selectors instead of `id` selectors because `class` selectors
 </header>
 ```
 
----
-
-### 6. Use the `hidden` attribute for visibility control
+### Use the `hidden` attribute for visibility control
 
 Use the `hidden` attribute to hide elements instead of relying on JavaScript or CSS.
 
@@ -70,9 +59,7 @@ Use the `hidden` attribute to hide elements instead of relying on JavaScript or 
 <p hidden>This paragraph is hidden from view.</p>
 ```
 
----
-
-### 7. Follow Angular `file naming` conventions
+### Follow Angular `file naming` conventions
 
 Use Angular's recommended suffixes for different file types:
 
@@ -83,16 +70,11 @@ Use Angular's recommended suffixes for different file types:
 - **Interceptors:** `.interceptor.ts`
 - **Modules:** `.module.ts`
 - **Routing Modules:** `-routing.module.ts`
-- Other files: Use descriptive names, e.g., `filtering.ts` for utility filters.
+- **Other files:** Use descriptive names, e.g., `filtering.ts` for utility filters.
 
----
+### Avoid `nested subscriptions`
 
-### 8. Avoid `nested subscriptions`
-
-Flatten or join inner observables using higher-order observables like `switchMap`.
-
-**Why:**
-Nested subscriptions lead to callback hell and unreadable code.
+Flatten or join inner observables using higher-order observables like `switchMap`. Nested subscriptions lead to callback hell and unreadable code.
 
 **Example (Do):**
 
@@ -114,12 +96,9 @@ this.route.params.subscribe((params) => {
 });
 ```
 
----
+### Use proper naming for `subject` and `observable`
 
-### 9. Use proper naming for `subject` and `observable`
-
-- Postfix `subject` variables with `Subject`.
-- Postfix `observable` variables with `$`.
+Postfix `subject` variables with `Subject` and Postfix `observable` variables with `$`.
 
 **Example:**
 
@@ -128,9 +107,7 @@ private categorySelectionSubject = new Subject<number>();
 categorySelectedAction$ = this.categorySelectionSubject.asObservable();
 ```
 
----
-
-### 10. Avoid functions in `templates`
+### Avoid functions in `templates`
 
 Do not call functions directly within templates. Instead, use `pipes` or pre-calculated values for better performance.
 
@@ -146,15 +123,11 @@ Do not call functions directly within templates. Instead, use `pipes` or pre-cal
 <span>{{ getSourceDetails(travelDetailsJson) }}</span>
 ```
 
----
-
-### 11. Use `asapScheduler` instead of `setTimeout`
+### Use `asapScheduler` instead of `setTimeout`
 
 Prefer `asapScheduler` from RxJS for delays to avoid blocking the event loop.
 
----
-
-### 12. Use `takeUntil` or `take(1)` for unsubscribing
+### Use `takeUntil` or `take(1)` for unsubscribing
 
 Use operators like `takeUntil` or `take(1)` for unsubscribing from observables to prevent memory leaks.
 
@@ -175,11 +148,9 @@ ngOnDestroy(): void {
 }
 ```
 
----
+### Avoid logic inside `subscribe`
 
-### 13. Avoid logic inside `subscribe`
-
-Move logic out of `subscribe` functions to keep code functional and cleaner.
+Move logic from `subscribe` functions to keep code functional and cleaner.
 
 **Example (Do):**
 
@@ -204,9 +175,7 @@ pokemon$.subscribe((pokemon) => {
 });
 ```
 
----
-
-### 14. Use the `json` pipe for debugging
+### Use the `json` pipe for debugging
 
 Use the `json` pipe to display object data for debugging purposes.
 
@@ -216,9 +185,7 @@ Use the `json` pipe to display object data for debugging purposes.
 <div><pre>{{ profileForm | json }}</pre></div>
 ```
 
----
-
-### 15. Use child components with `ngFor`
+### Use child components with `ngFor`
 
 When using `ngFor`, consider breaking repeating logic into child components.
 
@@ -237,33 +204,23 @@ When using `ngFor`, consider breaking repeating logic into child components.
 </div>
 ```
 
----
-
-### 16. Delegate complex logic to component methods
+### Delegate complex logic to component methods
 
 Avoid embedding non-trivial logic in templates. Use component methods for such logic.
 
----
-
-### 17. Use `trackBy` with `ngFor`
+### Use `trackBy` with `ngFor`
 
 Use `trackBy` to improve performance by uniquely identifying elements in `ngFor`.
 
----
-
-### 18. Avoid using `enums`
+### Avoid using `enums`
 
 Enums cannot be tree-shaken. Consider alternatives like constants.
 
----
-
-### 19. Optimize images with `ngSrc` and set dimensions
+### Optimize images with `ngSrc` and set dimensions
 
 Use `ngSrc` for lazy loading images and set dimensions (`width` and `height`) to prevent layout shifts.
 
----
-
-### 20. Follow `Declarative Data Access` patterns
+### Follow `Declarative Data Access` patterns
 
 Use the `async` pipe to manage data streams directly in templates, reducing the need for explicit subscription management.
 
@@ -275,222 +232,11 @@ Use the `async` pipe to manage data streams directly in templates, reducing the 
 </div>
 ```
 
----
-
-### 21. Apply the `Adapter Pattern`
-
-Use the `Adapter Pattern` when integrating third-party libraries. This allows seamless replacement of the library later without major code changes.
-
----
-
-### 22. Implement `Typeahead` or `Combobox` for Large Lookups
-
-For lookups with numerous values, utilize a `Typeahead` or `Combobox` component. These provide both `select` and `textbox` functionality, improving the user experience.
-
-**Otherwise:** Users may struggle to navigate through extensive lists, leading to frustration.
-
----
-
-### 23. Design `Forms` as Single Columns
-
-Single-column forms are easier to scan and align well with mobile displays.
-
-**Otherwise:** Multi-column forms can overwhelm users, causing them to overlook or skip fields.
-
----
-
-### 24. Present `Checkboxes` and `Radios` Vertically
-
-Vertical alignment makes checkboxes and radio buttons easier to scan. Including visuals alongside options can further enhance usability.
-
-![image](./app-core/docs/[extracted]/images/bp-ux-show-vertically.jpeg)
-
----
-
-### 25. Display All Options Directly if Fewer Than Six
-
-Show options directly when fewer than six exist. For more than five options, use a dropdown with search functionality for sets exceeding 25 items. Use a radio button group otherwise.
-
-**Otherwise:** Dropdowns hide choices and require additional clicks to select.
-
-![image](./app-core/docs/[extracted]/images/bp-ux-show-radio-instead-selections.jpeg)
-
----
-
-### 26. Appropriately Size `Modal` Windows
-
-Ensure modals are appropriately sized. They should not occupy the entire screen and should ideally use no more than 25% of it. If content cannot fit without scrolling, consider using a separate page instead.
-
----
-
-### 27. Avoid `Nested Modals`
-
-Do not create modal windows that trigger additional modals.
-
-**Otherwise:** This increases visual complexity and user confusion.
-
----
-
-### 28. Use `Flat Buttons` on Modals
-
-Utilize flat buttons in modals to harmonize the button actions with dialog content.
-
-![image](./app-core/docs/[extracted]/images/bp-ux-flat-buttons-on-modals.png)
-
----
-
-### 29. Employ `Raised` and `Ghost` Buttons
-
-Use raised buttons for primary actions and ghost buttons for secondary or tertiary actions.
-
-![image](./app-core/docs/[extracted]/images/bp-ux-primary-and-ghost-buttons.png)
-
----
-
-### 30. Provide Meaningful `Placeholder` Text
-
-Include placeholders to guide users on the expected input. For example, use a placeholder such as "Enter tracking number (e.g., 12345ABC)."
-
-![user-experience-meaningful-placeholder](./app-core/docs/[extracted]/images/bp-ux-user-experience-meaningful-placeholder.png)
-
----
-
-### 31. Add Help Icons Next to Fields
-
-Include a help icon ('?' or 'i') to display tooltips with guidance when hovered over. This is particularly helpful for complex or sensitive fields.
-
-![user-experience-help-icon.png](./app-core/docs/[extracted]/images/bp-ux-user-experience-help-icon.png)
-
----
-
-### 32. Use Toggles for Binary Choices
-
-For binary options (e.g., Yes/No), prefer toggles over radio buttons or dropdowns.
-
----
-
-### 33. Prioritize One Primary Button
-
-Avoid placing multiple primary buttons together. Differentiate actions by using distinct button styles such as filled, outlined, or plain.
-
-![bp-ux-button-variations.webp](./app-core/docs/[extracted]/images/bp-ux-button-variations.webp)
-
----
-
-### 34. Use Appropriate Colors for Actions
-
-Apply consistent colors for actions: red for destructive actions (e.g., "Delete") and green for positive ones (e.g., "Save"). Add icons for clarity when needed.
-
-![bp-ux-colored-button.webp](./app-core/docs/[extracted]/images/bp-ux-colored-button.webp)
-
----
-
-### 35. Use Action-Oriented Button Labels
-
-Avoid vague labels like "Yes" or "No." Use clear, action-oriented text such as "Save" or "Cancel" to indicate the button's purpose.
-
----
-
-### 37. Use Multi-Select Fields for Over Seven Options
-
-For lists with more than seven values, consider using a multi-select field to simplify the selection process.
-
-![bp-ux-prefer-multiselect.webp](./app-core/docs/[extracted]/images/bp-ux-prefer-multiselect.webp)
-
----
-
-### 38. Avoid Long Dropdowns
-
-Long dropdowns can be challenging, especially for mobile users. Limit the number of items to prevent scrolling frustration.
-
-![bp-ux-avoid-long-dropdowns.webp](./app-core/docs/[extracted]/images/bp-ux-avoid-long-dropdowns.webp)
-
----
-
-### 39. Eliminate Unnecessary Messages
-
-Avoid showing irrelevant or unclear messages that might confuse users or lead to misunderstandings.
-
-![bp-ux-unneeded-message.webp](./app-core/docs/[extracted]/images/bp-ux-unneeded-message.webp)
-
----
-
-### 41. Secure the `Environment`
-
-Ensure all software and components are up-to-date, and remove unused features or dependencies to maintain a secure environment.
-
-### 42. Use Prefixes for Commit Messages
-
-Follow a standardized convention for commit messages. Examples:
-
-```shell
-docs: message
-feat: message
-fix: message
-perf: message
-refactor: message
-revert: message
-style: message
-test: message
-build: message
-ci: message
-chore: message
-```
-
----
-
-### 43. Examples of Well-Written Commit Messages
-
-Use concise, descriptive messages. Examples:
-
-```shell
-chore: update npm dependency to the latest version
-refactor(core): add and move tests for `Dispatcher`.
-fix(zone.js): store remove abort listener on the scheduled task.
-fix(docs-infra): remove config release from test scripts
-build: update io_bazel_rules_sass digest to 61dde52
-docs: resolve extra padding on tutorial editor (#54828)
-```
-
----
-
-### 44. Code Review Guidelines
-
-When performing code reviews, ensure the following criteria are met:
-
-- **Readability:** Code should be clean and easy to understand.
-- **Performance:** Optimize for efficient execution.
-- **Reusability:** Design for modularity and future use.
-- **Test Coverage:** Include tests for edge cases and functionality.
-- **Maintainability:** Ensure code can be updated or refactored easily.
-
----
-
-### 45. Guidelines for Writing Issue Titles
-
-Use the format `[Component] ([Project/Module]) - [Action] [Description]`.
-
-Examples:
-
-- routes (example-app) - add examples for all supported functionality
-- ui (dashboard) - update styling for the new theme
-- backend (auth-service) - fix token expiration issue
-- API (user-profile) - remove deprecated endpoints
-- docs (setup-guide) - update installation instructions
-- database (orders) - optimize query performance
-- middleware (security) - implement additional logging
-
----
-
-### 46. Use Numeric Lists in Documentation
-
-Use numeric lists for long content sections to improve readability and organization. Numeric lists are easier to scan than alphabetic ones.
-
----
-
-### 47. Use `inject()` for Dependency Injection
+### Use `inject()` for Dependency Injection
 
 Prefer `inject()` for cleaner dependency management over a `constructor`.
+
+**Example:**
 
 ```typescript
 import { inject } from '@angular/core';
@@ -502,13 +248,11 @@ export const fetchData = () => {
 };
 ```
 
----
-
-### 48. Use Standalone Components
+### Use Standalone Components
 
 Standalone components reduce module dependencies and improve modularity.
 
-Example:
+**Example:**
 
 ```typescript
 import { Component } from '@angular/core';
@@ -527,13 +271,11 @@ export class InputDemoComponent {
 }
 ```
 
----
-
-### 49. Use `ngTemplateOutlet` for Template Reuse
+### Use `ngTemplateOutlet` for Template Reuse
 
 Leverage `ngTemplateOutlet` to dynamically reuse templates.
 
-Example:
+**Example:**
 
 ```html
 <ng-template #template let-name="name">
@@ -542,6 +284,163 @@ Example:
 
 <div *ngTemplateOutlet="template; context: { name: 'Angular' }"></div>
 ```
+
+### Apply the `Adapter Pattern`
+
+Use the `Adapter Pattern` when integrating third-party libraries. This allows for the seamless replacement of the library later without major code changes.
+
+### Implement `Typeahead` or `Combobox` for Large Lookups
+
+For lookups with numerous values, utilize a `Typeahead` or `Combobox` component. These provide both `select` and `textbox` functionality, improving the user experience. Otherwise, Users may struggle to navigate through extensive lists, which may lead to frustration.
+
+### Design `Forms` as Single Columns
+
+Single-column forms are easier to scan and align well with mobile displays. Otherwise, multi-column forms can overwhelm users, causing them to overlook or skip fields.
+
+### Present `Checkboxes` and `Radios` Vertically
+
+Vertical alignment makes checkboxes and radio buttons easier to scan. Including visuals alongside options can further enhance usability.
+
+![image](./app-core/docs/[extracted]/images/bp-ux-show-vertically.jpeg)
+
+### Display All Options Directly if Fewer Than Six
+
+Show options directly when fewer than six exist. For more than five options, use a dropdown with search functionality for sets exceeding 25 items. Use a radio button group otherwise. Otherwise, dropdowns hide choices and require additional clicks to select.
+
+![image](./app-core/docs/[extracted]/images/bp-ux-show-radio-instead-selections.jpeg)
+
+### Appropriately Size `Modal` Windows
+
+Ensure modals are appropriately sized. They should not occupy the entire screen and should ideally use no more than 25% of it. If content cannot fit without scrolling, consider using a separate page instead.
+
+### Avoid `Nested Modals`
+
+Do not create modal windows that trigger additional modals. Otherwise, this increases visual complexity and user confusion.
+
+### Use `Flat Buttons` on Modals
+
+Utilize flat buttons in modals to harmonize the button actions with dialog content.
+
+![image](./app-core/docs/[extracted]/images/bp-ux-flat-buttons-on-modals.png)
+
+### Use `Raised` and `Ghost` Buttons
+
+Use raised buttons for primary actions and ghost buttons for secondary or tertiary actions.
+
+![image](./app-core/docs/[extracted]/images/bp-ux-primary-and-ghost-buttons.png)
+
+### Provide Meaningful `Placeholder` Text
+
+Include placeholders to guide users on the expected input. For example, use a placeholder such as "Enter tracking number (e.g., 12345ABC)."
+
+![user-experience-meaningful-placeholder](./app-core/docs/[extracted]/images/bp-ux-user-experience-meaningful-placeholder.png)
+
+### Add Help Icons Next to Fields
+
+Include a help icon ('?' or 'i') to display tooltips with guidance when hovered over. This is particularly helpful for complex or sensitive fields.
+
+![user-experience-help-icon.png](./app-core/docs/[extracted]/images/bp-ux-user-experience-help-icon.png)
+
+### Use Toggles for Binary Choices
+
+For binary options (e.g., Yes/No), prefer toggles over radio buttons or dropdowns.
+
+### Prioritize One Primary Button
+
+Avoid placing multiple primary buttons together. Differentiate actions using distinct button styles such as filled, outlined, or plain.
+
+![bp-ux-button-variations.webp](./app-core/docs/[extracted]/images/bp-ux-button-variations.webp)
+
+### Use Appropriate Colors for Actions
+
+Apply consistent colors for actions: red for destructive actions (e.g., "Delete") and green for positive ones (e.g., "Save"). Add icons for clarity when needed.
+
+![bp-ux-colored-button.webp](./app-core/docs/[extracted]/images/bp-ux-colored-button.webp)
+
+### Use Action-Oriented Button Labels
+
+Avoid vague labels like "Yes" or "No." Use clear, action-oriented text such as "Save" or "Cancel" to indicate the button's purpose.
+
+### Use Multi-Select Fields for Over Seven Options
+
+For lists with more than seven values, consider using a multi-select field to simplify the selection process.
+
+![bp-ux-prefer-multiselect.webp](./app-core/docs/[extracted]/images/bp-ux-prefer-multiselect.webp)
+
+### Avoid Long Dropdowns
+
+Long dropdowns can be challenging, especially for mobile users. Limit the number of items to prevent scrolling frustration.
+
+![bp-ux-avoid-long-dropdowns.webp](./app-core/docs/[extracted]/images/bp-ux-avoid-long-dropdowns.webp)
+
+### Eliminate Unnecessary Messages
+
+Avoid showing irrelevant or unclear messages that might confuse users or lead to misunderstandings.
+
+![bp-ux-unneeded-message.webp](./app-core/docs/[extracted]/images/bp-ux-unneeded-message.webp)
+
+### Secure the `Environment`
+
+Ensure all software and components are up-to-date, and remove unused features or dependencies to maintain a secure environment.
+
+### Use Prefixes for Commit Messages
+
+Follow a standardized convention for commit messages. Examples:
+
+```shell
+docs: message
+feat: message
+fix: message
+perf: message
+refactor: message
+revert: message
+style: message
+test: message
+build: message
+ci: message
+chore: message
+```
+
+### Examples of Well-Written Commit Messages
+
+Use concise, descriptive messages. Examples:
+
+```shell
+chore: update npm dependency to the latest version
+refactor(core): add and move tests for `Dispatcher`.
+fix(zone.js): store removes abort listener on the scheduled task.
+fix(docs-infra): remove config release from test scripts
+build: update io_bazel_rules_sass digest to 61dde52
+docs: resolve extra padding on the tutorial editor (#54828)
+```
+
+### Code Review Guidelines
+
+When performing code reviews, ensure the following criteria are met:
+
+- **Readability:** Code should be clean and easy to understand.
+- **Performance:** Optimize for efficient execution.
+- **Reusability:** Design for modularity and future use.
+- **Test Coverage:** Include tests for edge cases and functionality.
+- **Maintainability:** Ensure code can be updated or refactored easily.
+
+### Guidelines for Writing Issue Titles
+
+Use the format `[Component] ([Project/Module]) - [Action] [Description]`.
+
+**Examples:**
+
+- routes (example-app) - add examples for all supported functionality
+- ui (dashboard) - update styling for the new theme
+- backend (auth-service) - fix token expiration issue
+- API (user-profile) - remove deprecated endpoints
+- docs (setup-guide) - update installation instructions
+- database (orders) - optimize query performance
+- middleware (security) - implement additional logging
+
+### Use Numeric Lists in Documentation
+
+Use numeric lists for long content sections to improve readability and organization. Numeric lists are easier to scan than alphabetic ones.
 
 ## Typescript
 
