@@ -61,21 +61,21 @@ Essential console commands for commonly used tools.
 
 ## Chrome
 
-**Angular DOM Debugging** -
+- Angular DOM Debugging
 
-```typescript
-const component = ng.getComponent($0);
-console.log(component);
-
-const component = $0;
-ng.applyChanges(component);
-
-const context = ng.getContext($0);
-console.log(context);
-
-const metadata = ng.getDirectiveMetadata($0);
-console.log(metadata);
-```
+  ```typescript
+  const component = ng.getComponent($0);
+  console.log(component);
+  
+  const component = $0;
+  ng.applyChanges(component);
+  
+  const context = ng.getContext($0);
+  console.log(context);
+  
+  const metadata = ng.getDirectiveMetadata($0);
+  console.log(metadata);
+  ```
 
 ## Java
 
