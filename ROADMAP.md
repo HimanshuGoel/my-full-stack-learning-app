@@ -17,5 +17,5 @@ Here's a glimpse of what's coming up in the development journey!
 - Make contributions to open-source projects
 - Record and publish videos on different topics
 - Write and publish articles on different topics
-- Make contributions in coding challenges and hackathons
+- Make contributions to coding challenges and hackathons
 - Develop websites and mobile apps for the businesses of friends, family members, and as a freelancer
