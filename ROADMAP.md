@@ -4,15 +4,15 @@ Here's a glimpse of what's coming up in the development journey!
 
 ## Table of Contents
 
-1. [Version 1.0 (next)](#version-10-next)
-1. [Future Versions](#future-versions)
+1. [Upcoming](#upcoming)
+1. [Future](#future)
 
-## Version 1.0 (next)
+## Upcoming
 
 - Reread and refactor `app-core/docs` folder content through daily bookmark
 - Develop and maintain a sample application using angular, typescript, node.js, spring boot, mongodb, docker, aws, generative ai technologies
 
-## Future Versions
+## Future
 
 - Make contributions to open-source projects
 - Record and publish videos on different topics
