@@ -51,3 +51,7 @@ db.collection_name.find()
 > CI/CD Integration
 > Logging with Winston
 > Automated API Documentation
+
+setup eslint, prettier
+
+refactor codebase to make it more of feature based instead of type based

@@ -1,13 +1,7 @@
 import { App } from './app';
-
-// import { setGlobalEnvironment } from './constants/global.constant';
-// import { Environment } from './environments/environment';
 import { logger } from './utilities/logger.utility';
 
 const PORT = process.env.PORT || 8080;
-
-// const env: Environment = new Environment();
-// setGlobalEnvironment(env);
 
 const app = new App();
 

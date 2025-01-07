@@ -8,8 +8,7 @@
     "prettier"
   ],
   "parserOptions": {
-    "ecmaVersion": 2020,
-    "project": "./tsconfig.json"
+    "ecmaVersion": 2020
   },
   "plugins": ["prettier"],
   "rules": {

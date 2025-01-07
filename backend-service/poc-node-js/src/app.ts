@@ -41,7 +41,7 @@ export class App {
     registerRoutes(this.express);
   }
 
-  private basePathRoute(request: express.Request, response: express.Response): void {
+  private basePathRoute(_request: express.Request, response: express.Response): void {
     response.json({ api: 'express-node-js', message: 'base path' });
   }
 }

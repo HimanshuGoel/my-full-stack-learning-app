@@ -21,7 +21,7 @@ export class SubscriptionsRoute extends BaseApiRoute {
       .delete('/subscriptions/:name', this.deleteByName.bind(this));
   }
 
-  private async getAll(req: Request, res: Response, next: NextFunction) {
+  private async getAll(_req: Request, res: Response, next: NextFunction) {
     try {
       const subscriptions = await SubscriptionsRepo.getAll();
 
@@ -37,7 +37,6 @@ export class SubscriptionsRoute extends BaseApiRoute {
 
   private async getByName(req: Request, res: Response, next: NextFunction) {
     // try {
-    //   const userEmailId = getUserEmailIdFromHeader(req);
     //   const { name: applicationName } = req.params;
     //   if (!applicationName) {
     //     sendInvalidParamsResponse('applicationName', 'route-params', res);
@@ -56,7 +55,6 @@ export class SubscriptionsRoute extends BaseApiRoute {
 
   private async createByName(req: Request, res: Response, next: NextFunction) {
     // try {
-    //   const userEmailId = getUserEmailIdFromHeader(req);
     //   const applicationData = req.body.data as IDTOSaveApplication;
     //   const alreadyExists = await ApplicationsRepo.getByName(applicationData.name, userEmailId);
     //   if (alreadyExists) {
@@ -88,7 +86,6 @@ export class SubscriptionsRoute extends BaseApiRoute {
 
   private async updateByName(req: Request, res: Response, next: NextFunction) {
     // try {
-    //   const userEmailId = getUserEmailIdFromHeader(req);
     //   const { name: existingApplicationName } = req.params;
     //   if (!existingApplicationName) {
     //     sendInvalidParamsResponse('applicationName', 'route-params', res);
@@ -131,7 +128,6 @@ export class SubscriptionsRoute extends BaseApiRoute {
 
   private async deleteByName(req: Request, res: Response, next: NextFunction) {
     // try {
-    //   const userEmailId = getUserEmailIdFromHeader(req);
     //   const { name: applicationName } = req.params;
     //   if (!applicationName) {
     //     sendInvalidParamsResponse('applicationName', 'route-params', res);
