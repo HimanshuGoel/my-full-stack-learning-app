@@ -1694,9 +1694,9 @@ Not every practice herein has to be strictly followed, and even fewer will be un
 - Returning error codes forces the caller to handle errors immediately.
 - Using exceptions allows error handling to be separate from the primary logic, simplifying the code.
 
-### Avoid Javadocs in Non-Public Code
+### Avoid Javadoc in Non-Public Code
 
-- Javadocs are useful for public APIs but unnecessary for internal or non-public code.
+- Javadoc are useful for public APIs but unnecessary for internal or non-public code.
 
 ### Vertical Density
 
@@ -1738,10 +1738,10 @@ Not every practice herein has to be strictly followed, and even fewer will be un
 
 - A "simple" design:
 
-1. Passes all tests.
-1. Avoids duplication.
-1. Clearly expresses intent.
-1. Minimizes the number of classes and methods.
+  1. Passes all tests.
+  1. Avoids duplication.
+  1. Clearly expresses intent.
+  1. Minimizes the number of classes and methods.
 
 ### Avoid Overloading Interfaces
 
@@ -1774,7 +1774,7 @@ Not every practice herein has to be strictly followed, and even fewer will be un
 
 ### Validate Content-Type
 
-Always validate the `Content-Type` header. Use `application/json` as the default format. Because, invalid `Content-Type` can open security risks like unwanted POST requests.
+- Always validate the `Content-Type` header. Use `application/json` as the default format. Because, invalid `Content-Type` can open security risks like unwanted POST requests.
 
 ### Avoid Returning Plain Text
 
@@ -2005,6 +2005,5 @@ Let me plan the optimizations first:
 - Use numba's @jit decorator for faster computation
 - Create a fast digit sum function using modulo operations instead of string conversion
 - Use numpy for generating random numbers (faster than random.randint)
-
 
 ```
