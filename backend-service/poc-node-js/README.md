@@ -24,3 +24,30 @@ use db_name1
 
 db.getCollectionNames(); or show collections
 db.collection_name.find()
+
+> nx reset
+
+> nx serve proof-of-concepts
+
+> Mongo DB -
+> Schema with Mongoose
+> Validation Annotations (built-in and custom)
+> Middleware (Hooks) (pre-save, post-save)
+> Aggregations (advanced query like calculating aggregating)
+> Virtual Fields
+> Indexing on subscription name 7. Error Handling (validation error)
+> Transactions
+> Populate (Relationships) 10. Data Encryption
+> Auditing
+> Pagination
+> Soft Deletes
+> Environment-specific Configurations
+> Caching with Redis
+> API Rate Limiting
+> Query Filtering, Sorting, and Pagination
+
+<https://chatgpt.com/share/677a9b1d-b234-800a-b93b-097e67a0573b>
+
+> CI/CD Integration
+> Logging with Winston
+> Automated API Documentation
