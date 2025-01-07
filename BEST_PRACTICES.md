@@ -1686,8 +1686,8 @@ Not every practice herein has to be strictly followed, and even fewer will be un
 
 - A function should either, It should not do both:
 
-1. Perform an action (change the state of an object).
-1. Return information about an object.
+  1. Perform an action (change the state of an object).
+  1. Return information about an object.
 
 ### Prefer Exceptions Over Error Codes
 
