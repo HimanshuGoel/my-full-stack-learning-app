@@ -27,7 +27,7 @@ Not every practice herein has to be strictly followed, and even fewer will be un
 
 ### Avoid `inline styles`
 
-Inline styles should be avoided. Use external stylesheets for consistency and reusability. Inline styles cannot be reused and make the HTML markup cluttered and hard to maintain.
+- Inline styles should be avoided. Use external stylesheets for consistency and reusability. Inline styles cannot be reused and make the HTML markup cluttered and hard to maintain.
 
 ### Prefer `class` selectors over `id` selectors
 
@@ -179,30 +179,30 @@ Inline styles should be avoided. Use external stylesheets for consistency and re
 
 - Use the `json` pipe to display object data for debugging purposes.
 
-**Example:**
+  **Example:**
 
-    ```html
-    <div><pre>{{ profileForm | json }}</pre></div>
-    ```
+  ```html
+  <div><pre>{{ profileForm | json }}</pre></div>
+  ```
 
-    ### Use child components with `ngFor`
+  ### Use child components with `ngFor`
 
-    When using `ngFor`, consider breaking repeating logic into child components.
+  - When using `ngFor`, consider breaking repeating logic into child components.
 
-    **Example (Do):**
+  **Example (Do):**
 
-    ```html
-    <user-detail *ngFor="let user of users" [user]="user"></user-detail>
-    ```
+  ```html
+  <user-detail *ngFor="let user of users" [user]="user"></user-detail>
+  ```
 
-    **Example (Avoid):**
+  **Example (Avoid):**
 
-    ```html
-    <div *ngFor="let user of users">
+  ```html
+  <div *ngFor="let user of users">
     <h3>{{ user.name }}</h3>
     <span>{{ user.age }}</span>
-    </div>
-    ```
+  </div>
+  ```
 
 ### Delegate complex logic to component methods
 
@@ -446,481 +446,438 @@ Inline styles should be avoided. Use external stylesheets for consistency and re
 
 - Here's the rewritten version with improved logical structure:
 
-### 1. Avoid Mental Mapping
+### Avoid Mental Mapping
 
-When coding quickly, we often make assumptions that are clear to us in the moment but may not be easily understood by others or our future selves. Always aim to make your code as readable as possible for anyone who may encounter it.
+- When coding quickly, we often make assumptions that are clear to us in the moment but may not be easily understood by others or our future selves. Always aim to make your code as readable as possible for anyone who may encounter it.
 
-**Code Example** - `Do`
+  **Code Example** - `Do`
 
-```typescript
-names.forEach((name) => {
-  this.notifyUsers(name);
-});
-```
+  ```typescript
+  names.forEach((name) => {
+    this.notifyUsers(name);
+  });
+  ```
 
-**Code Example** - `Avoid`
+  **Code Example** - `Avoid`
 
-```typescript
-names.forEach((u) => {
-  this.notifyUsers(u);
-});
-```
+  ```typescript
+  names.forEach((u) => {
+    this.notifyUsers(u);
+  });
+  ```
 
----
+### Functions Should Do One Thing
 
-### 2. Functions Should Do One Thing
+- A function should focus on a single responsibility. It should have a clear, descriptive name that conveys its purpose and what the arguments represent. A function that does only one thing is easier to maintain and reuse.
 
-A function should focus on a single responsibility. It should have a clear, descriptive name that conveys its purpose and what the arguments represent. A function that does only one thing is easier to maintain and reuse.
+  **Code Example** - `Do`
 
-**Code Example** - `Do`
+  ```typescript
+  function notifyUser() {}
 
-```typescript
-function notifyUser() {}
+  function getUsers() {}
 
-function getUsers() {}
-
-function createFile(name) {
-  fs.create(name);
-}
-
-function createPublicFile(name) {
-  fs.create(`./public/${name}`);
-}
-```
-
-**Code Example** - `Avoid`
-
-```typescript
-function notify() {}
-
-function getUsers() {}
-
-function createFile(name, isPublic) {
-  if (isPublic) {
-    fs.create(`./public/${name}`);
-  } else {
+  function createFile(name) {
     fs.create(name);
   }
-}
-```
 
----
-
-### 3. Use `includes()` Instead of Multiple Conditions
-
-Instead of using multiple `||` conditions to check for several values, use an array and the `includes()` method. This approach is cleaner and more efficient.
-
-**Code Example** - `Do`
-
-```typescript
-if (['orange', 'red', 'gray'].includes(x)) {
-  // do something
-}
-```
-
-**Code Example** - `Avoid`
-
-```typescript
-if (x === 'orange' || x === 'red' || x === 'gray') {
-  // do something
-}
-```
-
----
-
-### 4. Use Template Literals for String Concatenation
-
-Template literals allow you to concatenate strings and variables in a cleaner and more readable manner than using the `+` operator.
-
-**Code Example** - `Do`
-
-```typescript
-const winnerMsg = `Congrats to the winner: ${winnerName}, you got a ${gift}`;
-
-const msg = `Working in conjunction with humanitarian aid agencies,
-  we have supported programmes to help alleviate human suffering.`;
-```
-
-**Code Example** - `Avoid`
-
-```typescript
-const winnerMsg =
-  'Congrats to the winner: ' + winnerName + ', you got a ' + gift;
-
-const msg =
-  'Working in conjunction with humanitarian aid agencies,\n\t' +
-  'we have supported programmes to help alleviate human suffering. \n\t';
-```
-
----
-
-### 5. Avoid Magic Numbers
-
-Magic numbers are hard-coded values without clear meaning. Always assign such numbers to a well-named variable to clarify their purpose.
-
-**Code Example** - `Do`
-
-```typescript
-let NUMBER_OF_STUDENTS = 50;
-for (let i = 0; i < NUMBER_OF_STUDENTS; i++) {
-  // do something
-}
-```
-
-**Code Example** - `Avoid`
-
-```typescript
-for (let i = 0; i < 50; i++) {
-  // do something
-}
-```
-
----
-
-### 6. Avoid Deep Nesting
-
-Deeply nested loops can be difficult to understand. Instead of nesting too many levels, extract them into separate functions for clarity and reuse.
-
-**Code Example** - `Do`
-
-```typescript
-const array = [[['John Snow']]];
-const getValuesOfNestedArray = (element) => {
-  if (Array.isArray(element)) {
-    return getValuesOfNestedArray(element[0]);
+  function createPublicFile(name) {
+    fs.create(`./public/${name}`);
   }
-  return element;
-};
-getValuesOfNestedArray(array);
-```
+  ```
 
-**Code Example** - `Avoid`
+  **Code Example** - `Avoid`
 
-```typescript
-const array = [[['John Snow']]];
-array.forEach((firstArr) => {
-  firstArr.forEach((secondArr) => {
-    secondArr.forEach((element) => {
-      console.log(element);
+  ```typescript
+  function notify() {}
+
+  function getUsers() {}
+
+  function createFile(name, isPublic) {
+    if (isPublic) {
+      fs.create(`./public/${name}`);
+    } else {
+      fs.create(name);
+    }
+  }
+  ```
+
+### Use `includes()` Instead of Multiple Conditions
+
+- Instead of using multiple `||` conditions to check for several values, use an array and the `includes()` method. This approach is cleaner and more efficient.
+
+  **Code Example** - `Do`
+
+  ```typescript
+  if (['orange', 'red', 'gray'].includes(x)) {
+    // do something
+  }
+  ```
+
+  **Code Example** - `Avoid`
+
+  ```typescript
+  if (x === 'orange' || x === 'red' || x === 'gray') {
+    // do something
+  }
+  ```
+
+### Use Template Literals for String Concatenation
+
+- Template literals allow you to concatenate strings and variables in a cleaner and more readable manner than using the `+` operator.
+
+  **Code Example** - `Do`
+
+  ```typescript
+  const winnerMsg = `Congrats to the winner: ${winnerName}, you got a ${gift}`;
+
+  const msg = `Working in conjunction with humanitarian aid agencies,
+  we have supported programmes to help alleviate human suffering.`;
+  ```
+
+  **Code Example** - `Avoid`
+
+  ```typescript
+  const winnerMsg =
+    'Congrats to the winner: ' + winnerName + ', you got a ' + gift;
+
+  const msg =
+    'Working in conjunction with humanitarian aid agencies,\n\t' +
+    'we have supported programmes to help alleviate human suffering. \n\t';
+  ```
+
+### Avoid Magic Numbers
+
+- Magic numbers are hard-coded values without clear meaning. Always assign such numbers to a well-named variable to clarify their purpose.
+
+  **Code Example** - `Do`
+
+  ```typescript
+  let NUMBER_OF_STUDENTS = 50;
+  for (let i = 0; i < NUMBER_OF_STUDENTS; i++) {
+    // do something
+  }
+  ```
+
+  **Code Example** - `Avoid`
+
+  ```typescript
+  for (let i = 0; i < 50; i++) {
+    // do something
+  }
+  ```
+
+### Avoid Deep Nesting
+
+- Deeply nested loops can be difficult to understand. Instead of nesting too many levels, extract them into separate functions for clarity and reuse.
+
+  **Code Example** - `Do`
+
+  ```typescript
+  const array = [[['John Snow']]];
+  const getValuesOfNestedArray = (element) => {
+    if (Array.isArray(element)) {
+      return getValuesOfNestedArray(element[0]);
+    }
+    return element;
+  };
+  getValuesOfNestedArray(array);
+  ```
+
+  **Code Example** - `Avoid`
+
+  ```typescript
+  const array = [[['John Snow']]];
+  array.forEach((firstArr) => {
+    firstArr.forEach((secondArr) => {
+      secondArr.forEach((element) => {
+        console.log(element);
+      });
     });
   });
-});
-```
+  ```
 
----
+### Avoid Large Functions
 
-### 7. Avoid Large Functions
+- Large functions can be overwhelming and hard to maintain. Break them down into smaller, focused functions to enhance readability, reusability, and testability.
 
-Large functions can be overwhelming and hard to maintain. Break them down into smaller, focused functions to enhance readability, reusability, and testability.
+  **Code Example** - `Do`
 
-**Code Example** - `Do`
-
-```typescript
-// add
-const add = (a, b) => {
-  return a + b;
-};
-// sub
-const sub = (a, b) => {
-  return a - b;
-};
-```
-
-**Code Example** - `Avoid`
-
-```typescript
-const addSub = (a, b) => {
+  ```typescript
   // add
-  const addition = a + b;
+  const add = (a, b) => {
+    return a + b;
+  };
   // sub
-  const sub = a - b;
-  // returning as a string
-  return `${addition}${sub}`;
-};
-```
+  const sub = (a, b) => {
+    return a - b;
+  };
+  ```
+
+  **Code Example** - `Avoid`
+
+  ```typescript
+  const addSub = (a, b) => {
+    // add
+    const addition = a + b;
+    // sub
+    const sub = a - b;
+    // returning as a string
+    return `${addition}${sub}`;
+  };
+  ```
+
+### Favor Descriptive Over Concise Naming
 
----
+- Always use descriptive names for functions, variables, and constants. This avoids ambiguity and improves code readability, especially when there are multiple similar functions.
 
-### 8. Favor Descriptive Over Concise Naming
+  **Code Example** - `Do`
 
-Always use descriptive names for functions, variables, and constants. This avoids ambiguity and improves code readability, especially when there are multiple similar functions.
+  ```typescript
+  const searchUserByPhoneNo = (phone) => {
+    // do something
+  };
+  ```
 
-**Code Example** - `Do`
+  **Code Example** - `Avoid`
 
-```typescript
-const searchUserByPhoneNo = (phone) => {
-  // do something
-};
-```
+  ```typescript
+  const searchUser = (phone) => {
+    // do something
+  };
+  ```
 
-**Code Example** - `Avoid`
+### Capitalize Constant Values (SNAKE CASE)
 
-```typescript
-const searchUser = (phone) => {
-  // do something
-};
-```
+- Constant values should be in uppercase with words separated by underscores. This is a widely accepted convention to differentiate constants from regular variables.
 
----
+  **Code Example** - `Do`
 
-### 9. Capitalize Constant Values (SNAKE CASE)
+  ```typescript
+  const DAYS_IN_A_YEAR = 365;
+  ```
 
-Constant values should be in uppercase with words separated by underscores. This is a widely accepted convention to differentiate constants from regular variables.
+### Avoid Inlining Function Types
 
-**Code Example** - `Do`
+- Instead of inlining function types directly within the function signature, define them separately for clarity and better maintainability.
 
-```typescript
-const DAYS_IN_A_YEAR = 365;
-```
+  **Code Example** - `Do`
 
----
+  ```typescript
+  type SearchParams = {
+    title?: string;
+    publishYear?: string;
+    author?: string;
+  };
 
-### 10. Avoid Inlining Function Types
+  type Book = {
+    isbn: string;
+    title: string;
+    publishYear: string;
+    author: string[];
+  };
 
-Instead of inlining function types directly within the function signature, define them separately for clarity and better maintainability.
+  type GetBooks = (s: SearchParams) => Promise<Book[]>;
 
-**Code Example** - `Do`
+  const getBooks: GetBooks = (searchParams) =>
+    fetch(api + createQuery(searchParams)).then((res) =>
+      res.ok ? res.json() : Promise.reject(res)
+    );
+  ```
+
+  **Code Example** - `Avoid`
+
+  ```typescript
+  const getBooks = (searchParams: {
+    title?: string;
+    publishYear?: string;
+    author?: string;
+  }): Promise<{
+    isbn: string;
+    title: string;
+    publishYear: string;
+    author: string[];
+  }>[] => {
+    return fetch(api + createQuery(searchParams)).then((res) =>
+      res.ok ? res.json() : Promise.reject(res)
+    );
+  };
+  ```
 
-```typescript
-type SearchParams = {
-  title?: string;
-  publishYear?: string;
-  author?: string;
-};
+### Use `strong type checks`
 
-type Book = {
-  isbn: string;
-  title: string;
-  publishYear: string;
-  author: string[];
-};
+- Always use `===` (strict equality) instead of `==` (loose equality) to avoid unexpected type coercion.
+
+  **Code Example** - `Do`
 
-type GetBooks = (s: SearchParams) => Promise<Book[]>;
+  ```typescript
+  if (val === '123') {
+    console.log(val);
+  }
+  ```
 
-const getBooks: GetBooks = (searchParams) =>
-  fetch(api + createQuery(searchParams)).then((res) =>
-    res.ok ? res.json() : Promise.reject(res)
-  );
-```
+  **Code Example** - `Avoid`
 
-**Code Example** - `Avoid`
+  ```typescript
+  if (val == 123) {
+    console.log(val);
+  }
+  ```
 
-```typescript
-const getBooks = (searchParams: {
-  title?: string;
-  publishYear?: string;
-  author?: string;
-}): Promise<{
-  isbn: string;
-  title: string;
-  publishYear: string;
-  author: string[];
-}>[] => {
-  return fetch(api + createQuery(searchParams)).then((res) =>
-    res.ok ? res.json() : Promise.reject(res)
-  );
-};
-```
+### Use proper `variable naming`
 
----
+- Variables should be named clearly to convey their purpose. Avoid unnecessary words or context in variable names.
 
-### 11. Use `strong type checks`
+  **Code Example** - `Do`
 
-Always use `===` (strict equality) instead of `==` (loose equality) to avoid unexpected type coercion.
+  ```typescript
+  const MAX_AGE = 30;
+  let daysSinceLastVisit = 10;
 
-**Code Example** - `Do`
+  let currentYear = new Date().getFullYear();
+  const isUserOlderThanAllowed = user.age > MAX_AGE;
+  ```
 
-```typescript
-if (val === '123') {
-  console.log(val);
-}
-```
+  **Code Example** - `Avoid`
 
-**Code Example** - `Avoid`
+  ```typescript
+  let daysSLV = 10;
+  let y = new Date().getFullYear();
 
-```typescript
-if (val == 123) {
-  console.log(val);
-}
-```
+  let ok;
+  if (user.age > 30) {
+    ok = true;
+  }
+  ```
 
----
+  **Code Example** - `Do`
 
-### 12. Use proper `variable naming`
+  ```typescript
+  let name;
+  let product;
+  ```
 
-Variables should be named clearly to convey their purpose. Avoid unnecessary words or context in variable names.
+  **Code Example** - `Avoid`
 
-**Code Example** - `Do`
+  ```typescript
+  let nameValue;
+  let theProduct;
+  ```
 
-```typescript
-const MAX_AGE = 30;
-let daysSinceLastVisit = 10;
+  **Code Example** - `Do`
 
-let currentYear = new Date().getFullYear();
-const isUserOlderThanAllowed = user.age > MAX_AGE;
-```
+  ```typescript
+  const product = {
+    id: 1,
+    name: 'T-Shirt',
+    price: 8.99,
+    units: 12,
+  };
+  product.name;
+  ```
 
-**Code Example** - `Avoid`
+  **Code Example** - `Avoid`
 
-```typescript
-let daysSLV = 10;
-let y = new Date().getFullYear();
+  ```typescript
+  const product = {
+    productId: 1,
+    productName: 'T-Shirt',
+    productPrice: 8.99,
+    productUnits: 12,
+  };
+  product.productName;
+  ```
 
-let ok;
-if (user.age > 30) {
-  ok = true;
-}
-```
+### Use proper `function naming`
 
-**Code Example** - `Do`
+- Function names should be long and descriptive, reflecting their behavior and the intent of the arguments. Avoid excessive arguments (ideally no more than two) to keep the function simple and testable. Default arguments should be used instead of conditionals where possible.
 
-```typescript
-let name;
-let product;
-```
+  **Code Example** - `Do`
 
-**Code Example** - `Avoid`
+  ```typescript
+  function sendEmailUser(emailAddress) {
+    // implementation
+  }
+  ```
 
-```typescript
-let nameValue;
-let theProduct;
-```
+  **Code Example** - `Avoid`
 
-**Code Example** - `Do`
+  ```typescript
+  function email(user) {
+    // implementation
+  }
+  ```
 
-```typescript
-const product = {
-  id: 1,
-  name: 'T-Shirt',
-  price: 8.99,
-  units: 12,
-};
-product.name;
-```
+  **Code Example** - `Do`
 
-**Code Example** - `Avoid`
-
-```typescript
-const product = {
-  productId: 1,
-  productName: 'T-Shirt',
-  productPrice: 8.99,
-  productUnits: 12,
-};
-product.productName;
-```
-
----
-
-### 13. Use proper `function naming`
-
-Function names should be long and descriptive, reflecting their behavior and the intent of the arguments. Avoid excessive arguments (ideally no more than two) to keep the function simple and testable. Default arguments should be used instead of conditionals where possible.
-
-**Code Example** - `Do`
-
-```typescript
-function sendEmailUser(emailAddress) {
-  // implementation
-}
-```
-
-**Code Example** - `Avoid`
-
-```typescript
-function email(user) {
-  // implementation
-}
-```
-
-**Code Example** - `Do`
-
-```typescript
-function getProducts({ fields, fromDate, toDate }) {
-  // implementation
-}
-
-getProducts({
-  fields: ['id', 'name', 'price', 'units'],
-  fromDate: '2020-07-01',
-  toDate: '2020-07-22',
-});
-```
-
-**Code Example** - `Avoid`
-
-```typescript
-function getProducts(fields, fromDate, toDate) {
-  // implementation
-}
-```
-
-**Code Example** - `Do`
-
-```typescript
-function createShape(type = 'circle') {
-  // ...
-}
-```
-
-**Code Example** - `Avoid`
-
-```typescript
-function createShape(type) {
-  const shapeType = type || 'circle';
-  // ...
-}
-```
-
----
-
-### 14. Use `scan` instead of `reduce` operator
-
-Use `scan` instead of `reduce` for streams, as it emits an intermediate result at each step, making it more useful for real-time processing.
-
-**Code Example** - `Do`
-
-```typescript
-const source$ = range(0, 10);
-
-source$
-  .pipe(
-    filter((x) => x % 2 === 0),
-    map((x) => x + x),
-    scan((acc, x) => acc + x, 0)
-  )
-  .subscribe((x) => console.log(x));
-```
-
----
-
-### 15. Place most of the code outside the `conditional branch`
-
-Avoid placing too much logic inside conditional branches. This can make the code difficult to follow. Instead, execute the main logic outside the condition and return early if necessary.
-
-**Code Example** - `Do`
-
-```typescript
-function drawRectangle(e) {
-  const mouseOutOfBounds = this.getMousePos(e);
-  if (mouseOutOfBounds) {
-    return;
+  ```typescript
+  function getProducts({ fields, fromDate, toDate }) {
+    // implementation
   }
 
-  const ctx = this.canvas.getContext('2d');
-  ctx.beginPath();
-  ctx.lineWidth = '4';
-  ctx.strokeStyle = 'green';
-  ctx.rect(30, 30, 50, 50);
-  ctx.stroke();
-}
-```
+  getProducts({
+    fields: ['id', 'name', 'price', 'units'],
+    fromDate: '2020-07-01',
+    toDate: '2020-07-22',
+  });
+  ```
 
-**Code Example** - `Avoid`
+  **Code Example** - `Avoid`
 
-```typescript
-function drawRectangle(e) {
-  const mouseOutOfBounds = this.getMousePos(e);
-  if (!mouseOutOfBounds) {
+  ```typescript
+  function getProducts(fields, fromDate, toDate) {
+    // implementation
+  }
+  ```
+
+  **Code Example** - `Do`
+
+  ```typescript
+  function createShape(type = 'circle') {
+    // ...
+  }
+  ```
+
+  **Code Example** - `Avoid`
+
+  ```typescript
+  function createShape(type) {
+    const shapeType = type || 'circle';
+    // ...
+  }
+  ```
+
+### Use `scan` instead of `reduce` operator
+
+- Use `scan` instead of `reduce` for streams, as it emits an intermediate result at each step, making it more useful for real-time processing.
+
+  **Code Example** - `Do`
+
+  ```typescript
+  const source$ = range(0, 10);
+
+  source$
+    .pipe(
+      filter((x) => x % 2 === 0),
+      map((x) => x + x),
+      scan((acc, x) => acc + x, 0)
+    )
+    .subscribe((x) => console.log(x));
+  ```
+
+### Place most of the code outside the `conditional branch`
+
+- Avoid placing too much logic inside conditional branches. This can make the code difficult to follow. Instead, execute the main logic outside the condition and return early if necessary.
+
+  **Code Example** - `Do`
+
+  ```typescript
+  function drawRectangle(e) {
+    const mouseOutOfBounds = this.getMousePos(e);
+    if (mouseOutOfBounds) {
+      return;
+    }
+
     const ctx = this.canvas.getContext('2d');
     ctx.beginPath();
     ctx.lineWidth = '4';
@@ -928,927 +885,848 @@ function drawRectangle(e) {
     ctx.rect(30, 30, 50, 50);
     ctx.stroke();
   }
-}
-```
+  ```
 
----
+  **Code Example** - `Avoid`
 
-### 16. Use `Optional Chaining`
-
-Optional chaining (`?.`) helps prevent runtime errors when accessing deeply nested properties in objects that may not exist.
-
-**Code Example** - `Do`
-
-```typescript
-const value = data?.test?.value;
-console.log(value);
-
-const person = {
-  name: 'John',
-  age: 19,
-  fullName() {
-    return 'John Snow';
-  },
-};
-
-person.lastName?.(); // undefined (no error)
-person.fullName?.(); // John Snow
-```
-
-**Code Example** - `Avoid`
-
-```typescript
-const data = { test: { value: 1 } };
-if (data && data.test) {
-  console.log(data.test.value);
-}
-```
-
----
-
-### 17. Use `Nullish Coalescing`
-
-Use the nullish coalescing operator (`??`) to handle cases where a value is `null` or `undefined`. It ensures that only those values are replaced by the right-hand side, unlike `||` which also replaces falsy values like `0` or `''`.
-
-**Code Example** - `Do`
-
-```typescript
-let maybeValue = '';
-let safeValue = maybeValue ?? 'value';
-console.log(safeValue); // ""
-
-maybeValue = null;
-let safeValue = maybeValue ?? 'value';
-console.log(safeValue); // "value"
-
-const authorName = book?.author?.firstName ?? 'Unknown';
-```
-
-**Code Example** - `Avoid`
-
-```typescript
-let maybeValue = 'I exist';
-let safeValue = maybeValue || 'value';
-console.log(safeValue); // "I exist"
-```
-
----
-
-### 18. Passing `arguments` as `objects`
-
-Passing arguments as objects improves code readability, as it eliminates the need for the arguments to be in a specific order and helps with autocompletion in IDEs.
-
-**Code Example** - `Do`
-
-```typescript
-const createProduct = ({ name, description, price }) => {
-  // Create the product
-};
-
-createProduct({
-  name: 'Pepperoni Pizza',
-  description: 'Hot, crispy and tasty!',
-  price: 15.99,
-});
-```
-
----
-
-### 19. Use `Object.entries()` to check empty object
-
-To check if an object is empty, use `Object.entries()` which returns an array of the object's enumerable properties. If the length is 0, the object is empty.
-
-**Code Example** - `Do`
-
-```typescript
-let sampleObj = {
-  name: 'Mark',
-  occupation: 'Developer',
-};
-let emptyObj = {};
-console.log(Object.entries(sampleObj).length === 0); // false
-console.log(Object.entries(emptyObj).length === 0); // true
-```
-
----
-
-### 20. Use `early return` pattern
-
-Using the early return pattern makes code more readable and efficient by eliminating unnecessary `else` statements.
-
-**Code Example** - `Do`
-
-```typescript
-function FizzBuzz(i) {
-  if (i % 15 === 0) {
-    return 'FizzBuzz';
+  ```typescript
+  function drawRectangle(e) {
+    const mouseOutOfBounds = this.getMousePos(e);
+    if (!mouseOutOfBounds) {
+      const ctx = this.canvas.getContext('2d');
+      ctx.beginPath();
+      ctx.lineWidth = '4';
+      ctx.strokeStyle = 'green';
+      ctx.rect(30, 30, 50, 50);
+      ctx.stroke();
+    }
   }
-  if (i % 3 === 0) {
-    return 'Fizz';
+  ```
+
+### Use `Optional Chaining`
+
+- Optional chaining (`?.`) helps prevent runtime errors when accessing deeply nested properties in objects that may not exist.
+
+  **Code Example** - `Do`
+
+  ```typescript
+  const value = data?.test?.value;
+  console.log(value);
+
+  const person = {
+    name: 'John',
+    age: 19,
+    fullName() {
+      return 'John Snow';
+    },
+  };
+
+  person.lastName?.(); // undefined (no error)
+  person.fullName?.(); // John Snow
+  ```
+
+  **Code Example** - `Avoid`
+
+  ```typescript
+  const data = { test: { value: 1 } };
+  if (data && data.test) {
+    console.log(data.test.value);
   }
-  return i % 5 === 0 ? 'Buzz' : i;
-}
-```
+  ```
 
-**Code Example** - `Avoid`
+### Use `Nullish Coalescing`
 
-```typescript
-function FizzBuzz(i) {
-  let result = undefined;
-  if (i % 15 === 0) {
-    result = 'FizzBuzz';
-  } else if (i % 3 === 0) {
-    result = 'Fizz';
-  } else if (i % 5 === 0) {
-    result = 'Buzz';
-  } else {
-    result = i;
+- Use the nullish coalescing operator (`??`) to handle cases where a value is `null` or `undefined`. It ensures that only those values are replaced by the right-hand side, unlike `||` which also replaces falsy values like `0` or `''`.
+
+  **Code Example** - `Do`
+
+  ```typescript
+  let maybeValue = '';
+  let safeValue = maybeValue ?? 'value';
+  console.log(safeValue); // ""
+
+  maybeValue = null;
+  let safeValue = maybeValue ?? 'value';
+  console.log(safeValue); // "value"
+
+  const authorName = book?.author?.firstName ?? 'Unknown';
+  ```
+
+  **Code Example** - `Avoid`
+
+  ```typescript
+  let maybeValue = 'I exist';
+  let safeValue = maybeValue || 'value';
+  console.log(safeValue); // "I exist"
+  ```
+
+### Passing `arguments` as `objects`
+
+- Passing arguments as objects improves code readability, as it eliminates the need for the arguments to be in a specific order and helps with autocompletion in IDEs.
+
+  **Code Example** - `Do`
+
+  ```typescript
+  const createProduct = ({ name, description, price }) => {
+    // Create the product
+  };
+
+  createProduct({
+    name: 'Pepperoni Pizza',
+    description: 'Hot, crispy and tasty!',
+    price: 15.99,
+  });
+  ```
+
+### Use `Object.entries()` to check empty object
+
+- To check if an object is empty, use `Object.entries()` which returns an array of the object's enumerable properties. If the length is 0, the object is empty.
+
+  **Code Example** - `Do`
+
+  ```typescript
+  let sampleObj = {
+    name: 'Mark',
+    occupation: 'Developer',
+  };
+  let emptyObj = {};
+  console.log(Object.entries(sampleObj).length === 0); // false
+  console.log(Object.entries(emptyObj).length === 0); // true
+  ```
+
+### Use `early return` pattern
+
+- Using the early return pattern makes code more readable and efficient by eliminating unnecessary `else` statements.
+
+  **Code Example** - `Do`
+
+  ```typescript
+  function FizzBuzz(i) {
+    if (i % 15 === 0) {
+      return 'FizzBuzz';
+    }
+    if (i % 3 === 0) {
+      return 'Fizz';
+    }
+    return i % 5 === 0 ? 'Buzz' : i;
   }
-  return result;
-}
-```
+  ```
 
----
+  **Code Example** - `Avoid`
 
-### 21. Use `dot` Syntax Over `bracket` Syntax
+  ```typescript
+  function FizzBuzz(i) {
+    let result = undefined;
+    if (i % 15 === 0) {
+      result = 'FizzBuzz';
+    } else if (i % 3 === 0) {
+      result = 'Fizz';
+    } else if (i % 5 === 0) {
+      result = 'Buzz';
+    } else {
+      result = i;
+    }
+    return result;
+  }
+  ```
 
-We should prefer `dot` syntax when the properties are known in advance, as it makes the code more succinct and easier to read. Use `bracket` syntax only when the property is a variable or might change dynamically.
+### Use `dot` Syntax Over `bracket` Syntax
 
-**Correct Example**:
+- We should prefer `dot` syntax when the properties are known in advance, as it makes the code more succinct and easier to read. Use `bracket` syntax only when the property is a variable or might change dynamically.
 
-```typescript
-book.preface.intro = 'Section 1';
-```
+  **Correct Example**:
 
-**Avoid**:
+  ```typescript
+  book.preface.intro = 'Section 1';
+  ```
 
-```typescript
-book['preface']['intro'] = 'Section 1';
-```
+  **Avoid**:
 
----
+  ```typescript
+  book['preface']['intro'] = 'Section 1';
+  ```
 
-### 22. Use `spread` Operator to Conditionally Add Properties to Objects or Arrays
+### Use `spread` Operator to Conditionally Add Properties to Objects or Arrays
 
-The `spread` operator (`...`) allows for quick and conditional additions of properties to objects or arrays.
+- The `spread` operator (`...`) allows for quick and conditional additions of properties to objects or arrays.
 
-**Example**:
+  **Example**:
 
-```typescript
-const condition = true;
-const person = {
-  id: 1,
-  name: 'John Doe',
-  ...(condition && { age: 16 }),
-};
-```
+  ```typescript
+  const condition = true;
+  const person = {
+    id: 1,
+    name: 'John Doe',
+    ...(condition && { age: 16 }),
+  };
+  ```
 
-```javascript
-const fruits = ['a', 'b', ...(isSummer ? ['w'] : [])];
-```
+  ```javascript
+  const fruits = ['a', 'b', ...(isSummer ? ['w'] : [])];
+  ```
 
----
+### Use `in` Keyword to Check if Property Exists in an Object
 
-### 23. Use `in` Keyword to Check if Property Exists in an Object
+- The `in` keyword is the preferred way to check if a property exists in an object.
 
-The `in` keyword is the preferred way to check if a property exists in an object.
+  **Example**:
 
-**Example**:
+  ```typescript
+  const person = { name: 'John Doe', salary: 1000 };
+  console.log('salary' in person); // returns true
+  console.log('age' in person); // returns false
+  ```
 
-```typescript
-const person = { name: 'John Doe', salary: 1000 };
-console.log('salary' in person); // returns true
-console.log('age' in person); // returns false
-```
+### Use `multiline` Comments Over `single-line` Comments for Long Text
 
----
+- For long comments, use multiline comments for better readability.
 
-### 24. Use `multiline` Comments Over `single-line` Comments for Long Text
+  **Correct Example**:
 
-For long comments, use multiline comments for better readability.
-
-**Correct Example**:
-
-```typescript
-/*
+  ```typescript
+  /*
   This is another long comment
   written as a multiline comment
-*/
-```
+  */
+  ```
 
-**Avoid**:
+  **Avoid**:
 
-```typescript
-// This is a long comment
-// Which is written as multiple single-line comments.
-```
+  ```typescript
+  // This is a long comment
+  // Which is written as multiple single-line comments.
+  ```
 
----
+### Use `Union Types` Instead of `Enum`
 
-### 25. Use `Union Types` Instead of `Enum`
+- Union types are preferred over `enum` because they offer more flexibility, don't get compiled, and are more linear. If you must use `enum`, declare it as `const` to prevent it from being included in the build output.
 
-Union types are preferred over `enum` because they offer more flexibility, don't get compiled, and are more linear. If you must use `enum`, declare it as `const` to prevent it from being included in the build output.
+  **Correct Example with Union Types**:
 
-**Correct Example with Union Types**:
+  ```typescript
+  export type GamePadInput = 'UP' | 'DOWN' | 'LEFT' | 'RIGHT';
+  ```
 
-```typescript
-export type GamePadInput = 'UP' | 'DOWN' | 'LEFT' | 'RIGHT';
-```
+  **Correct Example with Const Enum**:
 
-**Correct Example with Const Enum**:
+  ```typescript
+  const enum ProductType {
+    Sports,
+    HomeGoods,
+    Groceries,
+  }
+  ```
 
-```typescript
-const enum ProductType {
-  Sports,
-  HomeGoods,
-  Groceries,
-}
-```
+  **Avoid Enum**:
 
-**Avoid Enum**:
+  ```typescript
+  enum GamePadInput {
+    Up = 'UP',
+    Down = 'DOWN',
+    Left = 'LEFT',
+    Right = 'RIGHT',
+  }
+  ```
 
-```typescript
-enum GamePadInput {
-  Up = 'UP',
-  Down = 'DOWN',
-  Left = 'LEFT',
-  Right = 'RIGHT',
-}
-```
+  Instead of:
 
-Instead of:
+  ```typescript
+  export enum HttpStatusCode {
+    OK = 200,
+    BAD_REQUEST = 400,
+    UNAUTHORIZED = 401,
+    FORBIDDEN = 403,
+    NOT_FOUND = 404,
+    INTERNAL_SERVER_ERROR = 500,
+  }
+  ```
 
-```typescript
-export enum HttpStatusCode {
-  OK = 200,
-  BAD_REQUEST = 400,
-  UNAUTHORIZED = 401,
-  FORBIDDEN = 403,
-  NOT_FOUND = 404,
-  INTERNAL_SERVER_ERROR = 500,
-}
-```
+  Use:
 
-Use:
+  ```typescript
+  export const HttpStatusCode_OK = 200;
+  export const HttpStatusCode_BAD_REQUEST = 400;
+  export const HttpStatusCode_UNAUTHORIZED = 401;
+  export const HttpStatusCode_FORBIDDEN = 403;
+  export const HttpStatusCode_NOT_FOUND = 404;
+  export const HttpStatusCode_INTERNAL_SERVER_ERROR = 500;
 
-```typescript
-export const HttpStatusCode_OK = 200;
-export const HttpStatusCode_BAD_REQUEST = 400;
-export const HttpStatusCode_UNAUTHORIZED = 401;
-export const HttpStatusCode_FORBIDDEN = 403;
-export const HttpStatusCode_NOT_FOUND = 404;
-export const HttpStatusCode_INTERNAL_SERVER_ERROR = 500;
+  export const ALL_HTTP_STATUS_CODES = [
+    HttpStatusCode_OK,
+    HttpStatusCode_BAD_REQUEST,
+    HttpStatusCode_UNAUTHORIZED,
+    HttpStatusCode_FORBIDDEN,
+    HttpStatusCode_NOT_FOUND,
+    HttpStatusCode_INTERNAL_SERVER_ERROR,
+  ] as const;
 
-export const ALL_HTTP_STATUS_CODES = [
-  HttpStatusCode_OK,
-  HttpStatusCode_BAD_REQUEST,
-  HttpStatusCode_UNAUTHORIZED,
-  HttpStatusCode_FORBIDDEN,
-  HttpStatusCode_NOT_FOUND,
-  HttpStatusCode_INTERNAL_SERVER_ERROR,
-] as const;
+  export type HttpStatusCodes = (typeof ALL_HTTP_STATUS_CODES)[number];
+  ```
 
-export type HttpStatusCodes = (typeof ALL_HTTP_STATUS_CODES)[number];
-```
+### Avoid Code Duplication
 
----
+- Duplicate code increases maintenance complexity. Instead, abstract common logic into reusable functions.
 
-### 26. Avoid Code Duplication
+  **Correct Example**:
 
-Duplicate code increases maintenance complexity. Instead, abstract common logic into reusable functions.
+  ```typescript
+  function showEmployeeList(employees) {
+    employees.forEach((employee) => {
+      const expectedSalary = employee.calculateExpectedSalary();
+      const experience = employee.getExperience();
 
-**Correct Example**:
+      const data = {
+        expectedSalary,
+        experience,
+      };
 
-```typescript
-function showEmployeeList(employees) {
-  employees.forEach((employee) => {
-    const expectedSalary = employee.calculateExpectedSalary();
-    const experience = employee.getExperience();
+      switch (employee.type) {
+        case 'manager':
+          data.portfolio = employee.getMBAProjects();
+          break;
+        case 'developer':
+          data.githubLink = employee.getGithubLink();
+          break;
+      }
 
-    const data = {
-      expectedSalary,
-      experience,
-    };
+      render(data);
+    });
+  }
+  ```
 
-    switch (employee.type) {
-      case 'manager':
-        data.portfolio = employee.getMBAProjects();
-        break;
-      case 'developer':
-        data.githubLink = employee.getGithubLink();
-        break;
-    }
+  **Avoid**:
 
-    render(data);
-  });
-}
-```
+  ```typescript
+  function showDeveloperList(developers) {
+    developers.forEach((developer) => {
+      const expectedSalary = developer.calculateExpectedSalary();
+      const experience = developer.getExperience();
+      const githubLink = developer.getGithubLink();
+      const data = {
+        expectedSalary,
+        experience,
+        githubLink,
+      };
 
-**Avoid**:
+      render(data);
+    });
+  }
 
-```typescript
-function showDeveloperList(developers) {
-  developers.forEach((developer) => {
-    const expectedSalary = developer.calculateExpectedSalary();
-    const experience = developer.getExperience();
-    const githubLink = developer.getGithubLink();
-    const data = {
-      expectedSalary,
-      experience,
-      githubLink,
-    };
+  function showManagerList(managers) {
+    managers.forEach((manager) => {
+      const expectedSalary = manager.calculateExpectedSalary();
+      const experience = manager.getExperience();
+      const portfolio = manager.getMBAProjects();
+      const data = {
+        expectedSalary,
+        experience,
+        portfolio,
+      };
 
-    render(data);
-  });
-}
+      render(data);
+    });
+  }
+  ```
 
-function showManagerList(managers) {
-  managers.forEach((manager) => {
-    const expectedSalary = manager.calculateExpectedSalary();
-    const experience = manager.getExperience();
-    const portfolio = manager.getMBAProjects();
-    const data = {
-      expectedSalary,
-      experience,
-      portfolio,
-    };
+### Avoid Using Flags as Function Parameters
 
-    render(data);
-  });
-}
-```
+- Functions should focus on one thing. Avoid using flags to make a function do multiple tasks. Instead, split the function into multiple functions.
 
----
+  **Correct Example**:
 
-### 27. Avoid Using Flags as Function Parameters
-
-Functions should focus on one thing. Avoid using flags to make a function do multiple tasks. Instead, split the function into multiple functions.
-
-**Correct Example**:
-
-```typescript
-function createFile(name) {
-  fs.create(name);
-}
-
-function createTempFile(name) {
-  createFile(`./temp/${name}`);
-}
-```
-
-**Avoid**:
-
-```typescript
-function createFile(name, temp) {
-  if (temp) {
-    fs.create(`./temp/${name}`);
-  } else {
+  ```typescript
+  function createFile(name) {
     fs.create(name);
   }
-}
-```
 
----
+  function createTempFile(name) {
+    createFile(`./temp/${name}`);
+  }
+  ```
 
-### 28. Avoid Positional Markers
+  **Avoid**:
 
-Positional markers add noise to the code. Let functions and variable names, along with proper indentation, convey the structure of your code.
+  ```typescript
+  function createFile(name, temp) {
+    if (temp) {
+      fs.create(`./temp/${name}`);
+    } else {
+      fs.create(name);
+    }
+  }
+  ```
 
-**Correct Example**:
+### Avoid Positional Markers
 
-```typescript
-$scope.model = {
-  menu: 'foo',
-  nav: 'bar',
-};
+- Positional markers add noise to the code. Let functions and variable names, along with proper indentation, convey the structure of your code.
 
-const actions = function () {
-  // ...
-};
-```
+  **Correct Example**:
 
-**Avoid**:
+  ```typescript
+  $scope.model = {
+    menu: 'foo',
+    nav: 'bar',
+  };
 
-```typescript
-////////////////////////////////////////////////////////////////////////////////
-// Scope Model Instantiation
-////////////////////////////////////////////////////////////////////////////////
-$scope.model = {
-  menu: 'foo',
-  nav: 'bar',
-};
+  const actions = function () {
+    // ...
+  };
+  ```
 
-////////////////////////////////////////////////////////////////////////////////
-// Action setup
-////////////////////////////////////////////////////////////////////////////////
-const actions = function () {
-  // ...
-};
-```
+  **Avoid**:
 
----
+  ```typescript
+  ////////////////////////////////////////////////////////////////////////////////
+  // Scope Model Instantiation
+  ////////////////////////////////////////////////////////////////////////////////
+  $scope.model = {
+    menu: 'foo',
+    nav: 'bar',
+  };
 
-### 29. Avoid Contractions
+  ////////////////////////////////////////////////////////////////////////////////
+  // Action setup
+  ////////////////////////////////////////////////////////////////////////////////
+  const actions = function () {
+    // ...
+  };
+  ```
 
-Avoid using contractions in variable and function names as they reduce readability.
+### Avoid Contractions
 
-**Correct Example**:
+- Avoid using contractions in variable and function names as they reduce readability.
 
-```typescript
-const onItemClick = () => {};
-```
+  **Correct Example**:
 
-**Avoid**:
+  ```typescript
+  const onItemClick = () => {};
+  ```
 
-```typescript
-const onItmClk = () => {};
-```
+  **Avoid**:
 
----
+  ```typescript
+  const onItmClk = () => {};
+  ```
 
-### 30. Use Named Parameters Instead of Options Objects
+### Use Named Parameters Instead of Options Objects
 
-Named parameters improve the clarity of function calls by explicitly showing which options are being passed.
+- Named parameters improve the clarity of function calls by explicitly showing which options are being passed.
 
-**Correct Example**:
+  **Correct Example**:
 
-```typescript
-function setPageThread(name, { popular, expires, activeClass } = {}) {
-  console.log(popular);
-  console.log(expires);
-  console.log(activeClass);
-}
-```
+  ```typescript
+  function setPageThread(name, { popular, expires, activeClass } = {}) {
+    console.log(popular);
+    console.log(expires);
+    console.log(activeClass);
+  }
+  ```
 
-**Avoid**:
+  **Avoid**:
 
-```typescript
-function setPageThread(name, options = {}) {
-  let popular = options.popular;
-  let expires = options.expires;
-  let activeClass = options.activeClass;
-}
-```
+  ```typescript
+  function setPageThread(name, options = {}) {
+    let popular = options.popular;
+    let expires = options.expires;
+    let activeClass = options.activeClass;
+  }
+  ```
 
----
+### Avoid Direct Use of `Object.prototype` Methods
 
-### 31. Avoid Direct Use of `Object.prototype` Methods
+- Avoid directly calling `Object.prototype` methods like `hasOwnProperty`, `propertyIsEnumerable`, and `isPrototypeOf`. These methods can be shadowed by properties in the object or fail with objects created without a prototype (e.g., `Object.create(null)`). Use the `call` method to ensure functionality.
 
-Avoid directly calling `Object.prototype` methods like `hasOwnProperty`, `propertyIsEnumerable`, and `isPrototypeOf`. These methods can be shadowed by properties in the object or fail with objects created without a prototype (e.g., `Object.create(null)`). Use the `call` method to ensure functionality.
+  **Example**:
 
-**Example**:
+  ```typescript
+  const obj = { a: 1 };
+  const hasA = Object.prototype.hasOwnProperty.call(obj, 'a');
+  ```
 
-```typescript
-const obj = { a: 1 };
-const hasA = Object.prototype.hasOwnProperty.call(obj, 'a');
-```
+### Avoid Nested Subscriptions
 
----
+- Use higher-order observables like `switchMap()` to flatten or join inner observables. This avoids pyramid-shaped callback hell and improves readability.
 
-### 32. Avoid Nested Subscriptions
+  **Prefer**:
 
-Use higher-order observables like `switchMap()` to flatten or join inner observables. This avoids pyramid-shaped callback hell and improves readability.
+  ```typescript
+  todo$ = this.route.params.pipe(
+    map((params) => +params['id']),
+    switchMap((id) => this.todoStore.getTodoById(id))
+  );
+  ```
 
-**Prefer**:
+  **Avoid**:
 
-```typescript
-todo$ = this.route.params.pipe(
-  map((params) => +params['id']),
-  switchMap((id) => this.todoStore.getTodoById(id))
-);
-```
-
-**Avoid**:
-
-```typescript
-this.route.params.subscribe((params) => {
-  const id = +params['id'];
-  this.todoStore.todos.subscribe((todos) => {
-    this.todo = todos.find((todo) => todo.id === id);
+  ```typescript
+  this.route.params.subscribe((params) => {
+    const id = +params['id'];
+    this.todoStore.todos.subscribe((todos) => {
+      this.todo = todos.find((todo) => todo.id === id);
+    });
   });
-});
-```
+  ```
 
----
+### Prefer `Type Annotations` Over `Type Assertions`
 
-### 33. Prefer `Type Annotations` Over `Type Assertions`
+- Using type annotations ensures type safety and compile-time checks.
 
-Using type annotations ensures type safety and compile-time checks.
+  **Prefer**:
 
-**Prefer**:
+  ```typescript
+  const william: Person = {
+    name: 'William',
+    age: 25,
+    occupation: 'artist',
+  };
+  ```
 
-```typescript
-const william: Person = {
-  name: 'William',
-  age: 25,
-  occupation: 'artist',
-};
-```
+  **Avoid**:
 
-**Avoid**:
+  ```typescript
+  const william = {
+    name: 'William',
+    age: 25,
+  } as Person;
+  ```
 
-```typescript
-const william = {
-  name: 'William',
-  age: 25,
-} as Person;
-```
+### Avoid `++` Operator; Use Compound Operators
 
----
+- Instead of incrementing with `++`, use compound operators like `+=`.
 
-### 34. Avoid `++` Operator; Use Compound Operators
+### Avoid Assigning `undefined`
 
-Instead of incrementing with `++`, use compound operators like `+=`.
+- Do not manually assign `undefined` to variables. Use `null` instead when needed.
 
----
+### Encapsulate Conditionals
 
-### 35. Avoid Assigning `undefined`
+- Encapsulate complex conditional logic into functions with descriptive names to enhance readability.
 
-Do not manually assign `undefined` to variables. Use `null` instead when needed.
+  **Prefer**:
 
----
+  ```typescript
+  function shouldShowSpinner(fsm, listNode) {
+    return fsm.state === 'fetching' && isEmpty(listNode);
+  }
 
-### 36. Encapsulate Conditionals
+  if (shouldShowSpinner(fsmInstance, listNodeInstance)) {
+    // ...
+  }
+  ```
 
-Encapsulate complex conditional logic into functions with descriptive names to enhance readability.
+  **Avoid**:
 
-**Prefer**:
+  ```typescript
+  if (fsm.state === 'fetching' && isEmpty(listNode)) {
+    // ...
+  }
+  ```
 
-```typescript
-function shouldShowSpinner(fsm, listNode) {
-  return fsm.state === 'fetching' && isEmpty(listNode);
-}
+### Handle Caught Errors
 
-if (shouldShowSpinner(fsmInstance, listNodeInstance)) {
-  // ...
-}
-```
+- Always handle caught errors meaningfully. Logging to the console is insufficient.
 
-**Avoid**:
+  **Prefer**:
 
-```typescript
-if (fsm.state === 'fetching' && isEmpty(listNode)) {
-  // ...
-}
-```
-
----
-
-### 37. Handle Caught Errors
-
-Always handle caught errors meaningfully. Logging to the console is insufficient.
-
-**Prefer**:
-
-```typescript
-try {
-  functionThatMightThrow();
-} catch (error) {
-  console.error(error);
-  notifyUserOfError(error);
-  reportErrorToService(error);
-}
-```
-
-**Avoid**:
-
-```typescript
-try {
-  functionThatMightThrow();
-} catch (error) {
-  console.log(error);
-}
-```
-
----
-
-### 38. Handle Rejected Promises or Observables
-
-Similar to caught errors, rejected promises should be handled properly.
-
-**Prefer**:
-
-```typescript
-getData()
-  .then((data) => functionThatMightThrow(data))
-  .catch((error) => {
+  ```typescript
+  try {
+    functionThatMightThrow();
+  } catch (error) {
     console.error(error);
     notifyUserOfError(error);
     reportErrorToService(error);
-  });
-```
-
-**Avoid**:
-
-```typescript
-getData()
-  .then((data) => functionThatMightThrow(data))
-  .catch((error) => console.log(error));
-```
-
----
-
-### 39. Use Logical Nullish Assignment (`??=`)
-
-The `??=` operator assigns a value only if the variable is nullish (null or undefined).
-
-**Prefer**:
-
-```typescript
-let user = { name: 'John Snow' };
-user.twitterName ??= '@john_snow';
-```
-
-**Avoid**:
-
-```typescript
-if (!user.twitterName) {
-  user.twitterName = '@john_snow';
-}
-```
-
----
-
-### 40. Avoid Implicit Else
-
-Explicitly handle all cases to enhance readability and adhere to the fail-fast principle.
-
-**Prefer**:
-
-```typescript
-function carBrand(model) {
-  if (model === 'A4') {
-    return 'Audi';
   }
-  if (model === 'AMG') {
+  ```
+
+  **Avoid**:
+
+  ```typescript
+  try {
+    functionThatMightThrow();
+  } catch (error) {
+    console.log(error);
+  }
+  ```
+
+### Handle Rejected Promises or Observables
+
+- Similar to caught errors, rejected promises should be handled properly.
+
+  **Prefer**:
+
+  ```typescript
+  getData()
+    .then((data) => functionThatMightThrow(data))
+    .catch((error) => {
+      console.error(error);
+      notifyUserOfError(error);
+      reportErrorToService(error);
+    });
+  ```
+
+  **Avoid**:
+
+  ```typescript
+  getData()
+    .then((data) => functionThatMightThrow(data))
+    .catch((error) => console.log(error));
+  ```
+
+### Use Logical Nullish Assignment (`??=`)
+
+- The `??=` operator assigns a value only if the variable is nullish (null or undefined).
+
+  **Prefer**:
+
+  ```typescript
+  let user = { name: 'John Snow' };
+  user.twitterName ??= '@john_snow';
+  ```
+
+  **Avoid**:
+
+  ```typescript
+  if (!user.twitterName) {
+    user.twitterName = '@john_snow';
+  }
+  ```
+
+### Avoid Implicit Else
+
+- Explicitly handle all cases to enhance readability and adhere to the fail-fast principle.
+
+  **Prefer**:
+
+  ```typescript
+  function carBrand(model) {
+    if (model === 'A4') {
+      return 'Audi';
+    }
+    if (model === 'AMG') {
+      return 'Mercedes-Benz';
+    }
+    throw new Error('Model not found');
+  }
+  ```
+
+  **Avoid**:
+
+  ```typescript
+  function carBrand(model) {
+    if (model === 'A4') {
+      return 'Audi';
+    }
     return 'Mercedes-Benz';
   }
-  throw new Error('Model not found');
-}
-```
+  ```
 
-**Avoid**:
+### Prefer ECMAScript `#field` for Private Members
 
-```typescript
-function carBrand(model) {
-  if (model === 'A4') {
-    return 'Audi';
+- Use `#field` instead of `private` for private class members, as it is natively supported in JavaScript.
+
+  **Prefer**:
+
+  ```typescript
+  class Test {
+    #age: number;
   }
-  return 'Mercedes-Benz';
-}
-```
+  ```
 
----
+  **Avoid**:
 
-### 41. Prefer ECMAScript `#field` for Private Members
+  ```typescript
+  class Test {
+    private age: number;
+  }
+  ```
 
-Use `#field` instead of `private` for private class members, as it is natively supported in JavaScript.
+### Use `at()` Method for Array/String Access
 
-**Prefer**:
+- The `at()` method simplifies accessing elements from the end of an array or string.
 
-```typescript
-class Test {
-  #age: number;
-}
-```
+  **Example**:
 
-**Avoid**:
+  ```typescript
+  const A = [2, 4, 6, 8, 10];
+  A.at(-1); // 10
 
-```typescript
-class Test {
-  private age: number;
-}
-```
+  const S = 'Hello World';
+  S.at(-1); // 'd'
+  ```
 
----
+### Use `findLast()` to Locate Items from the End
 
-### 42. Use `at()` Method for Array/String Access
+- The `findLast()` method helps locate array items starting from the end.
 
-The `at()` method simplifies accessing elements from the end of an array or string.
+  **Example**:
 
-**Example**:
+  ```typescript
+  const A = [1, 20, 3, 40, 5];
+  A.findLast((v) => v % 10 === 0); // 40
+  ```
 
-```typescript
-const A = [2, 4, 6, 8, 10];
-A.at(-1); // 10
+### Use `hasOwn()` Instead of `hasOwnProperty()`
 
-const S = 'Hello World';
-S.at(-1); // 'd'
-```
+- The `Object.hasOwn()` method is more concise and avoids issues with shadowing.
 
----
+  **Prefer**:
 
-### 43. Use `findLast()` to Locate Items from the End
+  ```typescript
+  if (Object.hasOwn(object, 'foo')) {
+    console.log('has property foo');
+  }
+  ```
 
-The `findLast()` method helps locate array items starting from the end.
+  **Avoid**:
 
-**Example**:
+  ```typescript
+  let hasOwnProperty = Object.prototype.hasOwnProperty;
+  if (hasOwnProperty.call(object, 'foo')) {
+    console.log('has property foo');
+  }
+  ```
 
-```typescript
-const A = [1, 20, 3, 40, 5];
-A.findLast((v) => v % 10 === 0); // 40
-```
+### Use the `cause` Property in Errors
 
----
+- Preserve the original error when wrapping errors using the `cause` property.
 
-### 44. Use `hasOwn()` Instead of `hasOwnProperty()`
+  **Example**:
 
-The `Object.hasOwn()` method is more concise and avoids issues with shadowing.
+  ```typescript
+  await fetch('https://example.com/data.csv')
+    .catch((err) => {
+      throw new Error('Failed to fetch', { cause: err });
+    })
+    .catch((err) => {
+      console.log('Cause:', err.cause);
+    });
+  ```
 
-**Prefer**:
+### Prefer Separate Types Over Optional Properties
 
-```typescript
-if (Object.hasOwn(object, 'foo')) {
-  console.log('has property foo');
-}
-```
+- Divide types to model distinct states clearly, avoiding excessive use of optional properties.
 
-**Avoid**:
+  **Prefer**:
 
-```typescript
-let hasOwnProperty = Object.prototype.hasOwnProperty;
-if (hasOwnProperty.call(object, 'foo')) {
-  console.log('has property foo');
-}
-```
+  ```typescript
+  interface Product {
+    id: string;
+    type: 'digital' | 'physical';
+  }
 
----
+  interface DigitalProduct extends Product {
+    type: 'digital';
+    sizeInMb: number;
+  }
 
-### 45. Use the `cause` Property in Errors
+  interface PhysicalProduct extends Product {
+    type: 'physical';
+    weightInKg: number;
+  }
+  ```
 
-Preserve the original error when wrapping errors using the `cause` property.
+  **Avoid**:
 
-**Example**:
+  ```typescript
+  interface Product {
+    id: string;
+    type: 'digital' | 'physical';
+    sizeInMb?: number;
+    weightInKg?: number;
+  }
+  ```
 
-```typescript
-await fetch('https://example.com/data.csv')
-  .catch((err) => {
-    throw new Error('Failed to fetch', { cause: err });
-  })
-  .catch((err) => {
-    console.log('Cause:', err.cause);
-  });
-```
+### Use Descriptive Names for Generics
 
----
+- Use descriptive names for generics to improve clarity.
 
-### 46. Prefer Separate Types Over Optional Properties
+  **Prefer**:
 
-Divide types to model distinct states clearly, avoiding excessive use of optional properties.
+  ```typescript
+  function head<Element>(arr: Element[]): Element | undefined {
+    return arr[0];
+  }
+  ```
 
-**Prefer**:
+  **Avoid**:
 
-```typescript
-interface Product {
-  id: string;
-  type: 'digital' | 'physical';
-}
+  ```typescript
+  function head<T>(arr: T[]): T | undefined {
+    return arr[0];
+  }
+  ```
 
-interface DigitalProduct extends Product {
-  type: 'digital';
-  sizeInMb: number;
-}
+### Class Names
 
-interface PhysicalProduct extends Product {
-  type: 'physical';
-  weightInKg: number;
-}
-```
+- Use **noun** or **noun phrase** names for classes, such as `Customer`, `WikiPage`, `Account`, or `AddressParser`. Avoid using terms like `Manager`, `Processor`, `Data`, or `Info`. A class name should not be a verb.
 
-**Avoid**:
+### Method Names
 
-```typescript
-interface Product {
-  id: string;
-  type: 'digital' | 'physical';
-  sizeInMb?: number;
-  weightInKg?: number;
-}
-```
+- Methods should have **verb** or **verb phrase** names, such as `postPayment`, `deletePage`, or `save`.
 
----
+### Pick One Word Per Concept
 
-### 47. Use Descriptive Names for Generics
-
-Use descriptive names for generics to improve clarity.
-
-**Prefer**:
-
-```typescript
-function head<Element>(arr: Element[]): Element | undefined {
-  return arr[0];
-}
-```
-
-**Avoid**:
-
-```typescript
-function head<T>(arr: T[]): T | undefined {
-  return arr[0];
-}
-```
-
----
-
-### 51. Class Names
-
-Use **noun** or **noun phrase** names for classes, such as `Customer`, `WikiPage`, `Account`, or `AddressParser`. Avoid using terms like `Manager`, `Processor`, `Data`, or `Info`. A class name should not be a verb.
-
----
-
-### 52. Method Names
-
-Methods should have **verb** or **verb phrase** names, such as `postPayment`, `deletePage`, or `save`.
-
----
-
-### 53. Pick One Word Per Concept
-
-Maintain consistency by using one word for a single concept throughout the codebase. For example:
+- Maintain consistency by using one word for a single concept throughout the codebase. For example:
 
 - Avoid mixing terms like `fetch`, `retrieve`, and `get` for similar actions.
 - Do not use varied terms like `controller`, `manager`, or `driver` interchangeably.
   A consistent lexicon simplifies understanding and usage.
 
----
-
-### 54. Blocks and Indenting
+### Blocks and Indenting
 
 - Code blocks (e.g., `if`, `else`, `while`) should typically contain one line of code, ideally a function call.
 - Keep function indentation shallow (one or two levels) for better readability and maintainability.
 - Smaller, focused functions are easier to name descriptively and understand.
 
----
+### Avoid Flag Arguments
 
-### 55. Avoid Flag Arguments
+- Passing a boolean (flag) to a function is a poor practice. It indicates the function is doing more than one thing, reducing clarity.
 
-Passing a boolean (flag) to a function is a poor practice. It indicates the function is doing more than one thing, reducing clarity.
+### Command-Query Separation
 
----
-
-### 56. Command-Query Separation
-
-A function should either, It should not do both:
+- A function should either, It should not do both:
 
 1. Perform an action (change the state of an object).
 1. Return information about an object.
 
----
-
-### 57. Prefer Exceptions Over Error Codes
+### Prefer Exceptions Over Error Codes
 
 - Returning error codes forces the caller to handle errors immediately.
 - Using exceptions allows error handling to be separate from the primary logic, simplifying the code.
 
----
+### Avoid Javadocs in Non-Public Code
 
-### 58. Avoid Javadocs in Non-Public Code
+- Javadocs are useful for public APIs but unnecessary for internal or non-public code.
 
-Javadocs are useful for public APIs but unnecessary for internal or non-public code.
+### Vertical Density
 
----
+- Place lines of code that are closely related together to improve readability.
 
-### 59. Vertical Density
+### Vertical Openness Between Concepts
 
-Place lines of code that are closely related together to improve readability.
+- Use blank lines to separate distinct concepts, making the code easier to navigate.
 
----
-
-### 60. Vertical Openness Between Concepts
-
-Use blank lines to separate distinct concepts, making the code easier to navigate.
-
----
-
-### 61. Horizontal Openness and Density
+### Horizontal Openness and Density
 
 - Avoid spaces between function names and opening parentheses, as the function and its arguments are closely related.
 
----
-
-### 62. Provide Context with Exceptions
+### Provide Context with Exceptions
 
 - Include detailed context in error messages to identify the source and nature of the problem.
 - Always pass meaningful messages with exceptions.
 
----
-
-### 63. Don't Return Null
+### Don't Return Null
 
 - Returning `null` can lead to unexpected errors.
 - Instead, throw an exception or return a special-case object.
 - For third-party APIs that return `null`, wrap such methods to handle this explicitly.
 
----
-
-### 64. Don't Pass Null
+### Don't Pass Null
 
 - Passing `null` to methods is worse than returning `null`.
 - Avoid it unless explicitly required by an external API.
 
----
-
-### 65. FIRST Rule for Clean Tests
+### FIRST Rule for Clean Tests
 
 - **Fast**: Tests should execute quickly.
 - **Independent**: Tests should not depend on each other.
@@ -1856,258 +1734,211 @@ Use blank lines to separate distinct concepts, making the code easier to navigat
 - **Self-validating**: Tests should yield a boolean result (pass/fail).
 - **Timely**: Write tests early during development.
 
----
+### Keep Design Simple
 
-### 66. Keep Design Simple
-
-A "simple" design:
+- A "simple" design:
 
 1. Passes all tests.
 1. Avoids duplication.
 1. Clearly expresses intent.
 1. Minimizes the number of classes and methods.
 
----
-
-### 67. Avoid Overloading Interfaces
+### Avoid Overloading Interfaces
 
 - Tight, small interfaces reduce coupling.
 - Avoid defining interfaces with too many functions to depend on.
 
----
+### Favor Many Small Functions Over Complex Behavior Flags
 
-### 68. Favor Many Small Functions Over Complex Behavior Flags
+- It's better to have multiple specialized functions than a single function with behavior dictated by flags or code passed as arguments.
 
-It’s better to have multiple specialized functions than a single function with behavior dictated by flags or code passed as arguments.
+### Prefer Polymorphism Over Conditional Statements
 
----
+- Where applicable, use polymorphism instead of `if/else` or `switch/case`.
 
-### 69. Prefer Polymorphism Over Conditional Statements
-
-Where applicable, use polymorphism instead of `if/else` or `switch/case`.
-
----
-
-### 70. Use Long Names for Long Scopes
+### Use Long Names for Long Scopes
 
 - Short variable names are fine for small scopes.
 - Use descriptive, longer names for variables in larger scopes.
 
----
-
-### 71. Names Should Describe Side Effects
+### Names Should Describe Side Effects
 
 - Function, variable, and class names should clearly indicate their purpose and behavior.
 - Example: A function named `createOrReturns` explicitly describes its dual behavior.
 
----
+### Use `GUIDs` for IDs
 
-### 72. Use `GUIDs` for IDs
-
-Adopt `GUIDs` as random ID generators instead of sequential IDs to prevent Broken Object Level Authorization (BOLA) vulnerabilities.
-
----
+- Adopt `GUIDs` as random ID generators instead of sequential IDs to prevent Broken Object Level Authorization (BOLA) vulnerabilities.
 
 ## Node.js
 
-### 1. Validate Content-Type
+### Validate Content-Type
 
-Always validate the `Content-Type` header. Use `application/json` as the default format.
+Always validate the `Content-Type` header. Use `application/json` as the default format. Because, invalid `Content-Type` can open security risks like unwanted POST requests.
 
-**Why**:
-Invalid `Content-Type` can open security risks like unwanted POST requests.
+### Avoid Returning Plain Text
 
----
+- Don't return plain text as an API response. While not mandatory, it's a common practice to use JSON as the data format.
 
-### 2. Avoid Returning Plain Text
+### Use `camelCase` for JSON Properties
 
-Don't return plain text as an API response. While not mandatory, it’s a common practice to use JSON as the data format.
+- Always use `camelCase` for JSON keys.
 
----
+  **Do**:
 
-### 3. Use `camelCase` for JSON Properties
-
-Always use `camelCase` for JSON keys.
-
-**Do**:
-
-```json
-{
-  "userId": "1",
-  "userName": "John Snow"
-}
-```
-
-**Avoid**:
-
-```json
-{
-  "user_id": "1",
-  "user_name": "John Snow"
-}
-```
-
----
-
-### 4. Include Error Details in Responses
-
-Always include error details in the response body. Mention the affected fields if possible.
-
-**Example**:
-
-```json
-{
-  "error": "Invalid payload.",
-  "detail": {
-    "name": "This field is required."
+  ```json
+  {
+    "userId": "1",
+    "userName": "John Snow"
   }
-}
-```
+  ```
 
----
+  **Avoid**:
 
-### 5. Include Totals in Responses
+  ```json
+  {
+    "user_id": "1",
+    "user_name": "John Snow"
+  }
+  ```
 
-When returning a list, include the total number of items.
+### Include Error Details in Responses
 
-**Do**:
+- Always include error details in the response body. Mention the affected fields if possible.
 
-```json
-{
-  "users": [{}, {}],
-  "total": 2
-}
-```
+  **Example**:
 
-**Avoid**:
+  ```json
+  {
+    "error": "Invalid payload.",
+    "detail": {
+      "name": "This field is required."
+    }
+  }
+  ```
 
-```json
-{
-  "users": [{}, {}]
-}
-```
+### Include Totals in Responses
 
----
+- When returning a list, include the total number of items.
 
-### 6. Use Correct HTTP Methods
+  **Do**:
 
-Stick to standard HTTP methods for clarity:
+  ```json
+  {
+    "users": [{}, {}],
+    "total": 2
+  }
+  ```
 
-- **GET**: Fetch data.
-- **POST**: Create data.
-- **PUT**: Replace data.
-- **PATCH**: Update part of the data.
-- **DELETE**: Remove data.
+  **Avoid**:
 
----
+  ```json
+  {
+    "users": [{}, {}]
+  }
+  ```
 
-### 7. Return Correct Status Codes
+### Use Correct HTTP Methods
 
-Match HTTP methods with appropriate status codes:
+- Stick to standard HTTP methods for clarity:
 
-- **200 OK**: GET, PUT, PATCH.
-- **201 Created**: POST.
-- **204 No Content**: DELETE.
+  - **GET**: Fetch data.
+  - **POST**: Create data.
+  - **PUT**: Replace data.
+  - **PATCH**: Update part of the data.
+  - **DELETE**: Remove data.
 
----
+### Return Correct Status Codes
 
-### 8. Avoid Verbs in Resource URLs
+- Match HTTP methods with appropriate status codes:
 
-Use HTTP methods to describe actions, not verbs in the URL.
+  - **200 OK**: GET, PUT, PATCH.
+  - **201 Created**: POST.
+  - **204 No Content**: DELETE.
 
-**Do**:
-`PUT /users/{userId}`
+### Avoid Verbs in Resource URLs
 
-**Avoid**:
-`POST /updateUser/{userId}` or `GET /getUsers`
+- Use HTTP methods to describe actions, not verbs in the URL.
 
----
+  **Do**:
+  `PUT /users/{userId}`
 
-### 9. Use Plural Names for Collections
+  **Avoid**:
+  `POST /updateUser/{userId}` or `GET /getUsers`
 
-Point to collections using plural names.
+### Use Plural Names for Collections
 
-**Do**:
-`GET /users`
+- Point to collections using plural names.
 
-**Avoid**:
-`GET /user`
+  **Do**:
+  `GET /users`
 
----
+  **Avoid**:
+  `GET /user`
 
-### 10. URLs Should Point to Properties
+### URLs Should Point to Properties
 
-Structure URLs to start with a collection and end with an identifier.
+- Structure URLs to start with a collection and end with an identifier.
 
-**Do**:
-`GET /shops/:shopId`
+  **Do**:
+  `GET /shops/:shopId`
 
-**Avoid**:
-`GET /shops/:shopId/category/:categoryId/price`
+  **Avoid**:
+  `GET /shops/:shopId/category/:categoryId/price`
 
----
+### Use `kebab-case` for URLs
 
-### 11. Use `kebab-case` for URLs
+- Write URLs in `kebab-case` for readability.
 
-Write URLs in `kebab-case` for readability.
+  **Do**:
+  `/system-orders`
 
-**Do**:
-`/system-orders`
+  **Avoid**:
+  `/systemOrders` or `/system_orders`
 
-**Avoid**:
-`/systemOrders` or `/system_orders`
+### Use `camelCase` for Parameters
 
----
+- Use `camelCase` for route parameters.
 
-### 12. Use `camelCase` for Parameters
+  **Do**:
+  `/system-orders/{orderId}`
 
-Use `camelCase` for route parameters.
+  **Avoid**:
+  `/system-orders/{order_id}` or `/system-orders/{OrderId}`
 
-**Do**:
-`/system-orders/{orderId}`
+### Use Verbs for Non-Resource URLs
 
-**Avoid**:
-`/system-orders/{order_id}` or `/system-orders/{OrderId}`
+- For non-CRUD operations, verbs in URLs are acceptable.
 
----
+  **Example**:
+  `POST /alerts/245743/resend`
 
-### 13. Use Verbs for Non-Resource URLs
+### Debug with `util.inspect()`
 
-For non-CRUD operations, verbs in URLs are acceptable.
+- To debug objects, use `util.inspect()` for detailed information.
 
-**Example**:
-`POST /alerts/245743/resend`
+  **Example**:
 
----
+  ```javascript
+  const util = require('util');
+  console.log(
+    util.inspect(object, { showHidden: false, depth: 2, colors: true })
+  );
+  ```
 
-### 14. Debug with `util.inspect()`
+### Use `__dirname` and `path()`
 
-To debug objects, use `util.inspect()` for detailed information.
+- For file paths, use `__dirname` and `path()` to avoid OS inconsistencies.
 
-**Example**:
+  **Example**:
 
-```javascript
-const util = require('util');
-console.log(
-  util.inspect(object, { showHidden: false, depth: 2, colors: true })
-);
-```
-
----
-
-### 15. Use `__dirname` and `path()`
-
-For file paths, use `__dirname` and `path()` to avoid OS inconsistencies.
-
-**Example**:
-
-```javascript
-res.sendFile(path.join(__dirname, 'views/index.html'));
-```
+  ```javascript
+  res.sendFile(path.join(__dirname, 'views/index.html'));
+  ```
 
 ## Generative AI
 
-### 1. Better prompts
+### Better prompts
 
 ```javascript
 /* draw a brown wooden boat with a white sail on top of a blue ocean
