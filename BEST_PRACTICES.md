@@ -212,10 +212,6 @@ Not every practice herein has to be strictly followed, and even fewer will be un
 
 - Use `trackBy` to improve performance by uniquely identifying elements in `ngFor`.
 
-### Avoid using `enums`
-
-- Enums cannot be tree-shaken. Consider alternatives like constants.
-
 ### Optimize images with `ngSrc` and set dimensions
 
 - Use `ngSrc` for lazy loading images and set dimensions (`width` and `height`) to prevent layout shifts.
@@ -702,7 +698,7 @@ Not every practice herein has to be strictly followed, and even fewer will be un
   };
   ```
 
-### Use `strong type checks`
+### Use Strong Type Checks
 
 - Always use `===` (strict equality) instead of `==` (loose equality) to avoid unexpected type coercion.
 
@@ -722,7 +718,7 @@ Not every practice herein has to be strictly followed, and even fewer will be un
   }
   ```
 
-### Use proper `variable naming`
+### Use Proper Variable Naming
 
 - Variables should be named clearly to convey their purpose. Avoid unnecessary words or context in variable names.
 
@@ -786,7 +782,7 @@ Not every practice herein has to be strictly followed, and even fewer will be un
   product.productName;
   ```
 
-### Use proper `function naming`
+### Use Proper Function Naming
 
 - Function names should be long and descriptive, reflecting their behavior and the intent of the arguments. Avoid excessive arguments (ideally no more than two) to keep the function simple and testable. Default arguments should be used instead of conditionals where possible.
 
@@ -863,7 +859,7 @@ Not every practice herein has to be strictly followed, and even fewer will be un
     .subscribe((x) => console.log(x));
   ```
 
-### Place most of the code outside the `conditional branch`
+### Place Most of the Code Outside the Conditional Branch
 
 - Avoid placing too much logic inside conditional branches. This can make the code difficult to follow. Instead, execute the main logic outside the condition and return early if necessary.
 
@@ -901,7 +897,7 @@ Not every practice herein has to be strictly followed, and even fewer will be un
   }
   ```
 
-### Use `Optional Chaining`
+### Use Optional Chaining
 
 - Optional chaining (`?.`) helps prevent runtime errors when accessing deeply nested properties in objects that may not exist.
 
@@ -932,7 +928,7 @@ Not every practice herein has to be strictly followed, and even fewer will be un
   }
   ```
 
-### Use `Nullish Coalescing`
+### Use Nullish Coalescing
 
 - Use the nullish coalescing operator (`??`) to handle cases where a value is `null` or `undefined`. It ensures that only those values are replaced by the right-hand side, unlike `||` which also replaces falsy values like `0` or `''`.
 
@@ -976,7 +972,7 @@ Not every practice herein has to be strictly followed, and even fewer will be un
   });
   ```
 
-### Use `Object.entries()` to check empty object
+### Use `Object.entries()` to Check Empty Object
 
 - To check if an object is empty, use `Object.entries()` which returns an array of the object's enumerable properties. If the length is 0, the object is empty.
 
@@ -992,7 +988,7 @@ Not every practice herein has to be strictly followed, and even fewer will be un
   console.log(Object.entries(emptyObj).length === 0); // true
   ```
 
-### Use `early return` pattern
+### Use `Early Return` pattern
 
 - Using the early return pattern makes code more readable and efficient by eliminating unnecessary `else` statements.
 
@@ -1097,7 +1093,7 @@ Not every practice herein has to be strictly followed, and even fewer will be un
 
 ### Use `Union Types` Instead of `Enum`
 
-- Union types are preferred over `enum` because they offer more flexibility, don't get compiled, and are more linear. If you must use `enum`, declare it as `const` to prevent it from being included in the build output.
+- Union types are preferred over `enum` because they offer more flexibility, don't get compiled, and are more linear. If you must use `enum`, declare it as `const` to prevent it from being included in the build output. Also, Enums cannot be tree-shaken.
 
   **Code Example** - `Do` (Union Types):
 
@@ -1700,13 +1696,13 @@ Not every practice herein has to be strictly followed, and even fewer will be un
 
 - Place lines of code that are closely related together to improve readability.
 
-### Vertical Openness Between Concepts
-
-- Use blank lines to separate distinct concepts, making the code easier to navigate.
-
 ### Horizontal Openness and Density
 
 - Avoid spaces between function names and opening parentheses, as the function and its arguments are closely related.
+
+### Vertical Openness Between Concepts
+
+- Use blank lines to separate distinct concepts, making the code easier to navigate.
 
 ### Provide Context with Exceptions
 
