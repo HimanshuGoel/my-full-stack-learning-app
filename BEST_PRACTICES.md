@@ -1302,7 +1302,7 @@ Not every practice herein has to be strictly followed, and even fewer will be un
   const onItmClk = () => {};
   ```
 
-### Use Named Parameters Instead of Options Objects
+### Use `named` Parameters Instead of `options` Objects
 
 - Named parameters improve the clarity of function calls by explicitly showing which options are being passed.
 
@@ -1485,7 +1485,7 @@ Not every practice herein has to be strictly followed, and even fewer will be un
   }
   ```
 
-### Avoid Implicit Else
+### Avoid Implicit `else`
 
 - Explicitly handle all cases to enhance readability and adhere to the fail-fast principle.
 
@@ -1596,40 +1596,6 @@ Not every practice herein has to be strictly followed, and even fewer will be un
     });
   ```
 
-### Prefer Separate Types Over Optional Properties
-
-- Divide types to model distinct states clearly, avoiding excessive use of optional properties.
-
-  **Prefer**:
-
-  ```typescript
-  interface Product {
-    id: string;
-    type: 'digital' | 'physical';
-  }
-
-  interface DigitalProduct extends Product {
-    type: 'digital';
-    sizeInMb: number;
-  }
-
-  interface PhysicalProduct extends Product {
-    type: 'physical';
-    weightInKg: number;
-  }
-  ```
-
-  **Avoid**:
-
-  ```typescript
-  interface Product {
-    id: string;
-    type: 'digital' | 'physical';
-    sizeInMb?: number;
-    weightInKg?: number;
-  }
-  ```
-
 ### Use Descriptive Names for Generics
 
 - Use descriptive names for generics to improve clarity.
@@ -1654,17 +1620,100 @@ Not every practice herein has to be strictly followed, and even fewer will be un
 
 - Use **noun** or **noun phrase** names for classes, such as `Customer`, `WikiPage`, `Account`, or `AddressParser`. Avoid using terms like `Manager`, `Processor`, `Data`, or `Info`. A class name should not be a verb.
 
+  **Do:**
+
+  ```typescript
+  class Customer {
+    private name: string;
+    private email: string;
+
+    constructor(name: string, email: string) {
+      this.name = name;
+      this.email = email;
+    }
+
+    updateContactInfo(email: string): void {
+      this.email = email;
+    }
+  }
+  ```
+
+  **Avoid:**
+
+  ```typescript
+  class CustomerManager {
+    private name: string;
+    private email: string;
+
+    constructor(name: string, email: string) {
+      this.name = name;
+      this.email = email;
+    }
+
+    manageCustomerDetails(email: string): void {
+      this.email = email;
+    }
+  }
+  ```
+
 ### Method Names
 
 - Methods should have **verb** or **verb phrase** names, such as `postPayment`, `deletePage`, or `save`.
+
+  **Do:**
+
+  ```typescript
+  class Account {
+    postPayment(amount: number): void {
+      // logic to post payment
+    }
+
+    deletePage(pageId: number): void {
+      // logic to delete a page
+    }
+  }
+  ```
+
+  **Avoid:**
+
+  ```typescript
+  class Account {
+    paymentHandler(amount: number): void {
+      // logic to post payment
+    }
+
+    pageRemoval(pageId: number): void {
+      // logic to delete a page
+    }
+  }
+  ```
 
 ### Pick One Word Per Concept
 
 - Maintain consistency by using one word for a single concept throughout the codebase. For example:
 
 - Avoid mixing terms like `fetch`, `retrieve`, and `get` for similar actions.
-- Do not use varied terms like `controller`, `manager`, or `driver` interchangeably.
-  A consistent lexicon simplifies understanding and usage.
+- Do not use varied terms like `controller`, `manager`, or `driver` interchangeably. A consistent lexicon simplifies understanding and usage.
+
+  **Do:**
+
+  ```typescript
+  class DataFetcher {
+    fetchData(): string {
+      return 'data';
+    }
+  }
+  ```
+
+  **Avoid:**
+
+  ```typescript
+  class DataRetriever {
+    getData(): string {
+      return 'data';
+    }
+  }
+  ```
 
 ### Blocks and Indenting
 
@@ -1672,9 +1721,54 @@ Not every practice herein has to be strictly followed, and even fewer will be un
 - Keep function indentation shallow (one or two levels) for better readability and maintainability.
 - Smaller, focused functions are easier to name descriptively and understand.
 
+  **Do:**
+
+  ```typescript
+  if (isEligible(user)) {
+    grantAccess(user);
+  }
+  ```
+
+  **Avoid:**
+
+  ```typescript
+  if (isEligible(user)) {
+    // Check for additional eligibility
+    if (!user.isBlacklisted) {
+      // Log the event
+      console.log('Access granted to user');
+      grantAccess(user);
+    }
+  }
+  ```
+
 ### Avoid Flag Arguments
 
 - Passing a boolean (flag) to a function is a poor practice. It indicates the function is doing more than one thing, reducing clarity.
+
+  **Do:**
+
+  ```typescript
+  displayDetailedReport(): void {
+      // logic for detailed report
+  }
+
+  displaySummaryReport(): void {
+      // logic for summary report
+  }
+  ```
+
+  **Avoid:**
+
+  ```typescript
+  displayReport(isDetailed: boolean): void {
+      if (isDetailed) {
+          // logic for detailed report
+      } else {
+          // logic for summary report
+      }
+  }
+  ```
 
 ### Command-Query Separation
 
@@ -1683,31 +1777,203 @@ Not every practice herein has to be strictly followed, and even fewer will be un
   1. Perform an action (change the state of an object).
   1. Return information about an object.
 
+     **Do:**
+
+  ```typescript
+  isEligibleForUpgrade(): boolean {
+      // Check if user is eligible
+      return true;
+  }
+
+  upgradeAccount(): void {
+      // Perform account upgrade
+  }
+  ```
+
+  **Avoid:**
+
+  ```typescript
+  checkAndUpgradeAccount(): boolean {
+      if (this.isEligibleForUpgrade()) {
+          this.upgradeAccount();
+          return true;
+      }
+      return false;
+  }
+  ```
+
 ### Prefer Exceptions Over Error Codes
 
 - Returning error codes forces the caller to handle errors immediately.
 - Using exceptions allows error handling to be separate from the primary logic, simplifying the code.
 
+  **Do:**
+
+  ```typescript
+  class UserService {
+    getUserById(userId: number): User {
+      if (!this.isValidUser(userId)) {
+        throw new Error(`Invalid user ID: ${userId}`);
+      }
+      // Logic to retrieve user
+      return new User(userId);
+    }
+  }
+
+  try {
+    const user = new UserService().getUserById(123);
+  } catch (error) {
+    console.error(error.message);
+  }
+  ```
+
+  **Avoid:**
+
+  ```typescript
+  class UserService {
+    getUserById(userId: number): number {
+      if (!this.isValidUser(userId)) {
+        return -1; // Error code
+      }
+      // Logic to retrieve user
+      return 0; // Success code
+    }
+  }
+
+  const result = new UserService().getUserById(123);
+  if (result === -1) {
+    console.error('Invalid user ID.');
+  }
+  ```
+
 ### Avoid Javadoc in Non-Public Code
 
 - Javadoc are useful for public APIs but unnecessary for internal or non-public code.
+
+  **Do:**
+
+  ```typescript
+  class InternalHelper {
+    // This method calculates the sum of two numbers.
+    add(a: number, b: number): number {
+      return a + b;
+    }
+  }
+  ```
+
+  **Avoid:**
+
+  ```typescript
+  /**
+   * This method calculates the sum of two numbers.
+   */
+  class InternalHelper {
+    add(a: number, b: number): number {
+      return a + b;
+    }
+  }
+  ```
 
 ### Vertical Density
 
 - Place lines of code that are closely related together to improve readability.
 
+  **Do:**
+
+  ```typescript
+  if (isEligible(user)) {
+    grantAccess(user);
+  } else {
+    denyAccess(user);
+  }
+  ```
+
+  **Avoid:**
+
+  ```typescript
+  if (isEligible(user)) {
+    grantAccess(user);
+  } else {
+    denyAccess(user);
+  }
+  ```
+
 ### Horizontal Openness and Density
 
 - Avoid spaces between function names and opening parentheses, as the function and its arguments are closely related.
+
+  **Do:**
+
+  ```typescript
+  function calculateTotal(amount: number, taxRate: number): number {
+    return amount + amount * taxRate;
+  }
+  ```
+
+  **Avoid:**
+
+  ```typescript
+  function calculateTotal(amount: number, taxRate: number): number {
+    return amount + amount * taxRate;
+  }
+  ```
 
 ### Vertical Openness Between Concepts
 
 - Use blank lines to separate distinct concepts, making the code easier to navigate.
 
+  **Do:**
+
+  ```typescript
+  class User {
+    constructor(private name: string, private age: number) {}
+
+    getDetails(): string {
+      return `${this.name}, Age: ${this.age}`;
+    }
+  }
+
+  class UserService {
+    getAllUsers(): User[] {
+      return [new User('Alice', 25), new User('Bob', 30)];
+    }
+  }
+  ```
+
+  **Avoid:**
+
+  ```typescript
+  class User {
+    constructor(private name: string, private age: number) {}
+    getDetails(): string {
+      return `${this.name}, Age: ${this.age}`;
+    }
+  }
+  class UserService {
+    getAllUsers(): User[] {
+      return [new User('Alice', 25), new User('Bob', 30)];
+    }
+  }
+  ```
+
 ### Provide Context with Exceptions
 
 - Include detailed context in error messages to identify the source and nature of the problem.
 - Always pass meaningful messages with exceptions.
+
+  **Do:**
+
+  ```typescript
+  throw new Error(
+    `User not found with ID: ${userId}. Ensure the ID is correct.`
+  );
+  ```
+
+  **Avoid:**
+
+  ```typescript
+  throw new Error('User not found.');
+  ```
 
 ### Don't Return Null
 
@@ -1715,10 +1981,68 @@ Not every practice herein has to be strictly followed, and even fewer will be un
 - Instead, throw an exception or return a special-case object.
 - For third-party APIs that return `null`, wrap such methods to handle this explicitly.
 
+  **Do:**
+
+  ```typescript
+  class UserService {
+    getUserById(userId: number): User {
+      if (!this.isValidUser(userId)) {
+        throw new Error(`User not found with ID: ${userId}`);
+      }
+      return new User(userId);
+    }
+  }
+  ```
+
+  **Avoid:**
+
+  ```typescript
+  class UserService {
+    getUserById(userId: number): User | null {
+      if (!this.isValidUser(userId)) {
+        return null;
+      }
+      return new User(userId);
+    }
+  }
+  ```
+
 ### Don't Pass Null
 
 - Passing `null` to methods is worse than returning `null`.
 - Avoid it unless explicitly required by an external API.
+
+  **Do:**
+
+  ```typescript
+  class NotificationService {
+    sendNotification(user: User): void {
+      if (!user) {
+        throw new Error('Invalid user object provided.');
+      }
+      // Logic to send notification
+    }
+  }
+
+  const user = new User(123);
+  new NotificationService().sendNotification(user);
+  ```
+
+  **Avoid:**
+
+  ```typescript
+  class NotificationService {
+    sendNotification(user: User | null): void {
+      if (user === null) {
+        console.error('Cannot send notification to a null user.');
+        return;
+      }
+      // Logic to send notification
+    }
+  }
+
+  new NotificationService().sendNotification(null);
+  ```
 
 ### FIRST Rule for Clean Tests
 
@@ -1730,39 +2054,193 @@ Not every practice herein has to be strictly followed, and even fewer will be un
 
 ### Keep Design Simple
 
-- A "simple" design:
+- A "simple" design should passes all tests, avoids duplication, clearly expresses intent and minimizes the number of classes and methods.
 
-  1. Passes all tests.
-  1. Avoids duplication.
-  1. Clearly expresses intent.
-  1. Minimizes the number of classes and methods.
+  **Do:**
+
+  ```typescript
+  class Calculator {
+    add(a: number, b: number): number {
+      return a + b;
+    }
+
+    subtract(a: number, b: number): number {
+      return a - b;
+    }
+  }
+  ```
+
+  **Avoid:**
+
+  ```typescript
+  class Calculator {
+    performOperation(operation: string, a: number, b: number): number {
+      if (operation === 'add') {
+        return a + b;
+      } else if (operation === 'subtract') {
+        return a - b;
+      }
+      return 0;
+    }
+  }
+  ```
 
 ### Avoid Overloading Interfaces
 
 - Tight, small interfaces reduce coupling.
 - Avoid defining interfaces with too many functions to depend on.
 
+  **Do:**
+
+  ```typescript
+  interface IAdder {
+    add(a: number, b: number): number;
+  }
+
+  interface ISubtractor {
+    subtract(a: number, b: number): number;
+  }
+  ```
+
+  **Avoid:**
+
+  ```typescript
+  interface ICalculator {
+    add(a: number, b: number): number;
+    subtract(a: number, b: number): number;
+    multiply(a: number, b: number): number;
+    divide(a: number, b: number): number;
+  }
+  ```
+
 ### Favor Many Small Functions Over Complex Behavior Flags
 
 - It's better to have multiple specialized functions than a single function with behavior dictated by flags or code passed as arguments.
 
+  **Do:**
+
+  ```typescript
+  function calculateTax(amount: number): number {
+    return amount * 0.1;
+  }
+
+  function calculateDiscount(amount: number): number {
+    return amount * 0.05;
+  }
+  ```
+
+  **Avoid:**
+
+  ```typescript
+  function calculateAmount(amount: number, flag: string): number {
+    if (flag === 'tax') {
+      return amount * 0.1;
+    } else if (flag === 'discount') {
+      return amount * 0.05;
+    }
+    return 0;
+  }
+  ```
+
 ### Prefer Polymorphism Over Conditional Statements
 
 - Where applicable, use polymorphism instead of `if/else` or `switch/case`.
+
+  **Do:**
+
+  ```typescript
+  abstract class Shape {
+    abstract area(): number;
+  }
+
+  class Circle extends Shape {
+    constructor(private radius: number) {
+      super();
+    }
+
+    area(): number {
+      return Math.PI * this.radius ** 2;
+    }
+  }
+
+  class Rectangle extends Shape {
+    constructor(private width: number, private height: number) {
+      super();
+    }
+
+    area(): number {
+      return this.width * this.height;
+    }
+  }
+  ```
+
+  **Avoid:**
+
+  ```typescript
+  function calculateArea(shape: string, dimensions: any): number {
+    if (shape === 'circle') {
+      return Math.PI * dimensions.radius ** 2;
+    } else if (shape === 'rectangle') {
+      return dimensions.width * dimensions.height;
+    }
+    return 0;
+  }
+  ```
 
 ### Use Long Names for Long Scopes
 
 - Short variable names are fine for small scopes.
 - Use descriptive, longer names for variables in larger scopes.
 
-### Names Should Describe Side Effects
+  **Do:**
+
+  ```typescript
+  const totalAmountAfterDiscountAndTax =
+    calculateTotalAmountIncludingTaxAndDiscount(items);
+  ```
+
+  **Avoid:**
+
+  ```typescript
+  const amt = calculateTotal(items);
+  ```
+
+### Function Names Should Describe Side Effects
 
 - Function, variable, and class names should clearly indicate their purpose and behavior.
 - Example: A function named `createOrReturns` explicitly describes its dual behavior.
 
+  **Do:**
+
+  ```typescript
+  import { v4 as uuidv4 } from 'uuid';
+
+  const userId = uuidv4(); // Random GUID
+  ```
+
+  **Avoid:**
+
+  ```typescript
+  let userId = 1; // Sequential ID (Not recommended)
+  ```
+
 ### Use `GUIDs` for IDs
 
 - Adopt `GUIDs` as random ID generators instead of sequential IDs to prevent Broken Object Level Authorization (BOLA) vulnerabilities.
+
+  **Do:**
+
+  ```typescript
+  import { v4 as uuidv4 } from 'uuid';
+
+  const userId = uuidv4(); // Random GUID
+  ```
+
+  **Avoid:**
+
+  ```typescript
+  let userId = 1; // Sequential ID (Not recommended)
+  ```
 
 ## Node.js
 
