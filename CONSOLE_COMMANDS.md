@@ -39,6 +39,7 @@ Essential console commands for commonly used tools.
 - Clear cache: `npm cache clean --force`
 - Check outdated packages: `npm outdated`
 - Update packages: `npm update`
+- Install packages by ignoring peer dependencies - `npm i --legacy-peer-deps`
 - Node.js and npm versions: `node -v`, `node --version`, `npm version`
 - Using `nvm`:
   - Install: `nvm install 6.9.2`
@@ -66,13 +67,13 @@ Essential console commands for commonly used tools.
   ```typescript
   const component = ng.getComponent($0);
   console.log(component);
-  
+
   const component = $0;
   ng.applyChanges(component);
-  
+
   const context = ng.getContext($0);
   console.log(context);
-  
+
   const metadata = ng.getDirectiveMetadata($0);
   console.log(metadata);
   ```

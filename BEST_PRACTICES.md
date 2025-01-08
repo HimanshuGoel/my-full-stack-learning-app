@@ -185,9 +185,9 @@ Not every practice herein has to be strictly followed, and even fewer will be un
   <div><pre>{{ profileForm | json }}</pre></div>
   ```
 
-  ### Use child components with `ngFor`
+### Use child components with `ngFor`
 
-  - When using `ngFor`, consider breaking repeating logic into child components.
+- When using `ngFor`, consider breaking repeating logic into child components.
 
   **Example (Do):**
 
@@ -443,8 +443,6 @@ Not every practice herein has to be strictly followed, and even fewer will be un
 - Use numeric lists for long content sections to improve readability and organization. Numeric lists are easier to scan than alphabetic ones.
 
 ## Typescript
-
-- Here's the rewritten version with improved logical structure:
 
 ### Avoid Mental Mapping
 
@@ -1034,13 +1032,13 @@ Not every practice herein has to be strictly followed, and even fewer will be un
 
 - We should prefer `dot` syntax when the properties are known in advance, as it makes the code more succinct and easier to read. Use `bracket` syntax only when the property is a variable or might change dynamically.
 
-  **Correct Example**:
+  **Code Example** - `Do`
 
   ```typescript
   book.preface.intro = 'Section 1';
   ```
 
-  **Avoid**:
+  **Code Example** - `Avoid`
 
   ```typescript
   book['preface']['intro'] = 'Section 1';
@@ -1081,7 +1079,7 @@ Not every practice herein has to be strictly followed, and even fewer will be un
 
 - For long comments, use multiline comments for better readability.
 
-  **Correct Example**:
+  **Code Example** - `Do`
 
   ```typescript
   /*
@@ -1090,7 +1088,7 @@ Not every practice herein has to be strictly followed, and even fewer will be un
   */
   ```
 
-  **Avoid**:
+  **Code Example** - `Avoid`
 
   ```typescript
   // This is a long comment
@@ -1101,13 +1099,13 @@ Not every practice herein has to be strictly followed, and even fewer will be un
 
 - Union types are preferred over `enum` because they offer more flexibility, don't get compiled, and are more linear. If you must use `enum`, declare it as `const` to prevent it from being included in the build output.
 
-  **Correct Example with Union Types**:
+  **Code Example** - `Do` (Union Types):
 
   ```typescript
   export type GamePadInput = 'UP' | 'DOWN' | 'LEFT' | 'RIGHT';
   ```
 
-  **Correct Example with Const Enum**:
+  **Code Example** - `Do` (Const Enum)
 
   ```typescript
   const enum ProductType {
@@ -1117,7 +1115,7 @@ Not every practice herein has to be strictly followed, and even fewer will be un
   }
   ```
 
-  **Avoid Enum**:
+  **Code Example** - `Avoid` (Enum)
 
   ```typescript
   enum GamePadInput {
@@ -1128,20 +1126,7 @@ Not every practice herein has to be strictly followed, and even fewer will be un
   }
   ```
 
-  Instead of:
-
-  ```typescript
-  export enum HttpStatusCode {
-    OK = 200,
-    BAD_REQUEST = 400,
-    UNAUTHORIZED = 401,
-    FORBIDDEN = 403,
-    NOT_FOUND = 404,
-    INTERNAL_SERVER_ERROR = 500,
-  }
-  ```
-
-  Use:
+  **Code Example** - `Do`
 
   ```typescript
   export const HttpStatusCode_OK = 200;
@@ -1163,11 +1148,24 @@ Not every practice herein has to be strictly followed, and even fewer will be un
   export type HttpStatusCodes = (typeof ALL_HTTP_STATUS_CODES)[number];
   ```
 
+  **Code Example** - `Avoid`
+
+  ```typescript
+  export enum HttpStatusCode {
+    OK = 200,
+    BAD_REQUEST = 400,
+    UNAUTHORIZED = 401,
+    FORBIDDEN = 403,
+    NOT_FOUND = 404,
+    INTERNAL_SERVER_ERROR = 500,
+  }
+  ```
+
 ### Avoid Code Duplication
 
 - Duplicate code increases maintenance complexity. Instead, abstract common logic into reusable functions.
 
-  **Correct Example**:
+  **Code Example** - `Do`
 
   ```typescript
   function showEmployeeList(employees) {
@@ -1194,7 +1192,7 @@ Not every practice herein has to be strictly followed, and even fewer will be un
   }
   ```
 
-  **Avoid**:
+  **Code Example** - `Avoid`
 
   ```typescript
   function showDeveloperList(developers) {
@@ -1232,7 +1230,7 @@ Not every practice herein has to be strictly followed, and even fewer will be un
 
 - Functions should focus on one thing. Avoid using flags to make a function do multiple tasks. Instead, split the function into multiple functions.
 
-  **Correct Example**:
+  **Code Example** - `Do`
 
   ```typescript
   function createFile(name) {
@@ -1244,7 +1242,7 @@ Not every practice herein has to be strictly followed, and even fewer will be un
   }
   ```
 
-  **Avoid**:
+  **Code Example** - `Avoid`
 
   ```typescript
   function createFile(name, temp) {
@@ -1260,7 +1258,7 @@ Not every practice herein has to be strictly followed, and even fewer will be un
 
 - Positional markers add noise to the code. Let functions and variable names, along with proper indentation, convey the structure of your code.
 
-  **Correct Example**:
+  **Code Example** - `Do`
 
   ```typescript
   $scope.model = {
@@ -1273,7 +1271,7 @@ Not every practice herein has to be strictly followed, and even fewer will be un
   };
   ```
 
-  **Avoid**:
+  **Code Example** - `Avoid`
 
   ```typescript
   ////////////////////////////////////////////////////////////////////////////////
@@ -1296,13 +1294,13 @@ Not every practice herein has to be strictly followed, and even fewer will be un
 
 - Avoid using contractions in variable and function names as they reduce readability.
 
-  **Correct Example**:
+  **Code Example** - `Do`
 
   ```typescript
   const onItemClick = () => {};
   ```
 
-  **Avoid**:
+  **Code Example** - `Avoid`
 
   ```typescript
   const onItmClk = () => {};
@@ -1312,7 +1310,7 @@ Not every practice herein has to be strictly followed, and even fewer will be un
 
 - Named parameters improve the clarity of function calls by explicitly showing which options are being passed.
 
-  **Correct Example**:
+  **Code Example** - `Do`
 
   ```typescript
   function setPageThread(name, { popular, expires, activeClass } = {}) {
@@ -1322,7 +1320,7 @@ Not every practice herein has to be strictly followed, and even fewer will be un
   }
   ```
 
-  **Avoid**:
+  **Code Example** - `Avoid`
 
   ```typescript
   function setPageThread(name, options = {}) {
@@ -1911,7 +1909,10 @@ Not every practice herein has to be strictly followed, and even fewer will be un
 - For non-CRUD operations, verbs in URLs are acceptable.
 
   **Example**:
-  `POST /alerts/245743/resend`
+
+  ```shell
+  POST /alerts/245743/resend
+  ```
 
 ### Debug with `util.inspect()`
 
@@ -1979,8 +1980,6 @@ If the code is not fully optimized, you will be fined $100.
 ```
 
 ```shell
-
-Query -
 
 Write Python code to solve this problem:
 
