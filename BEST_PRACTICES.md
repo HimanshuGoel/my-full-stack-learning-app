@@ -1361,7 +1361,7 @@ Not every practice herein has to be strictly followed, and even fewer will be un
   });
   ```
 
-### Prefer `Type Annotations` Over `Type Assertions`
+### Prefer Type Annotations Over Type Assertions
 
 - Using type annotations ensures type safety and compile-time checks.
 
@@ -1392,7 +1392,7 @@ Not every practice herein has to be strictly followed, and even fewer will be un
 
 - Do not manually assign `undefined` to variables. Use `null` instead when needed.
 
-### Encapsulate Conditionals
+### Encapsulate Complex Conditions into Functions
 
 - Encapsulate complex conditional logic into functions with descriptive names to enhance readability.
 
@@ -1442,7 +1442,7 @@ Not every practice herein has to be strictly followed, and even fewer will be un
   }
   ```
 
-### Handle Rejected Promises or Observables
+### Handle Rejected `promises` or `observables`
 
 - Similar to caught errors, rejected promises should be handled properly.
 
@@ -1485,7 +1485,7 @@ Not every practice herein has to be strictly followed, and even fewer will be un
   }
   ```
 
-### Avoid Implicit `else`
+### Avoid Implicit `else` Block
 
 - Explicitly handle all cases to enhance readability and adhere to the fail-fast principle.
 
@@ -1616,7 +1616,7 @@ Not every practice herein has to be strictly followed, and even fewer will be un
   }
   ```
 
-### Class Names
+### Class Names Should be Meaningful
 
 - Use **noun** or **noun phrase** names for classes, such as `Customer`, `WikiPage`, `Account`, or `AddressParser`. Avoid using terms like `Manager`, `Processor`, `Data`, or `Info`. A class name should not be a verb.
 
@@ -1656,7 +1656,7 @@ Not every practice herein has to be strictly followed, and even fewer will be un
   }
   ```
 
-### Method Names
+### Method Names Should be Meaningful
 
 - Methods should have **verb** or **verb phrase** names, such as `postPayment`, `deletePage`, or `save`.
 
@@ -1975,7 +1975,7 @@ Not every practice herein has to be strictly followed, and even fewer will be un
   throw new Error('User not found.');
   ```
 
-### Don't Return Null
+### Don't Return `null`
 
 - Returning `null` can lead to unexpected errors.
 - Instead, throw an exception or return a special-case object.
@@ -2007,7 +2007,7 @@ Not every practice herein has to be strictly followed, and even fewer will be un
   }
   ```
 
-### Don't Pass Null
+### Don't Pass `null`
 
 - Passing `null` to methods is worse than returning `null`. Avoid it unless explicitly required by an external API.
 
@@ -2043,7 +2043,7 @@ Not every practice herein has to be strictly followed, and even fewer will be un
   new NotificationService().sendNotification(null);
   ```
 
-### FIRST Rule for Clean Tests
+### Follow FIRST Rule for Clean Tests
 
 - **Fast**: Tests should execute quickly.
 - **Independent**: Tests should not depend on each other.
@@ -2231,7 +2231,7 @@ Not every practice herein has to be strictly followed, and even fewer will be un
   let userId = 1; // Sequential ID (Not recommended)
   ```
 
-### Use `GUIDs` for IDs
+### Use Random IDs Instead of Sequential
 
 - Adopt `GUIDs` as random ID generators instead of sequential IDs to prevent Broken Object Level Authorization (BOLA) vulnerabilities.
 
