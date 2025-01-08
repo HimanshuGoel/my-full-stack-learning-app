@@ -2009,8 +2009,7 @@ Not every practice herein has to be strictly followed, and even fewer will be un
 
 ### Don't Pass Null
 
-- Passing `null` to methods is worse than returning `null`.
-- Avoid it unless explicitly required by an external API.
+- Passing `null` to methods is worse than returning `null`. Avoid it unless explicitly required by an external API.
 
   **Do:**
 
@@ -2087,8 +2086,7 @@ Not every practice herein has to be strictly followed, and even fewer will be un
 
 ### Avoid Overloading Interfaces
 
-- Tight, small interfaces reduce coupling.
-- Avoid defining interfaces with too many functions to depend on.
+- Tight, small interfaces reduce coupling. Avoid defining interfaces with too many functions to depend on.
 
   **Do:**
 
@@ -2189,26 +2187,35 @@ Not every practice herein has to be strictly followed, and even fewer will be un
 
 ### Use Long Names for Long Scopes
 
-- Short variable names are fine for small scopes.
-- Use descriptive, longer names for variables in larger scopes.
+- Short variable names are fine for small scopes. Use descriptive, longer names for variables in larger scopes.
 
   **Do:**
 
   ```typescript
-  const totalAmountAfterDiscountAndTax =
-    calculateTotalAmountIncludingTaxAndDiscount(items);
+  function calculateInvoiceTotal(items: Item[]): number {
+    let totalAmountForAllItems = 0; // Descriptive variable name for long scope
+    for (let item of items) {
+      totalAmountForAllItems += item.price * item.quantity;
+    }
+    return totalAmountForAllItems;
+  }
   ```
 
   **Avoid:**
 
   ```typescript
-  const amt = calculateTotal(items);
+  function calculateInvoiceTotal(items: Item[]): number {
+    let t = 0; // Short variable name in a long scope
+    for (let i of items) {
+      t += i.price * i.quantity;
+    }
+    return t;
+  }
   ```
 
 ### Function Names Should Describe Side Effects
 
-- Function, variable, and class names should clearly indicate their purpose and behavior.
-- Example: A function named `createOrReturns` explicitly describes its dual behavior.
+- Function, variable, and class names should clearly indicate their purpose and behavior. Example: A function named `createOrReturns` explicitly describes its dual behavior.
 
   **Do:**
 
