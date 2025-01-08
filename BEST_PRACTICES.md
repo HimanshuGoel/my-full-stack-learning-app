@@ -7,9 +7,14 @@ Not every practice herein has to be strictly followed, and even fewer will be un
 ## Table of Contents
 
 1. [Angular](#angular)
-1. [Typescript](#typescript)
-1. [Node.js](#nodejs)
+1. [AWS](#aws)
+1. [Docker](#docker)
 1. [Generative AI](#generative-ai)
+1. [Miscellaneous](#miscellaneous)
+1. [MongoDB](#mongodb)
+1. [Node.js](#nodejs)
+1. [Spring Boot](#spring-boot)
+1. [Typescript](#typescript)
 
 ## Angular
 
@@ -437,6 +442,265 @@ Not every practice herein has to be strictly followed, and even fewer will be un
 ### Use Numeric Lists in Documentation
 
 - Use numeric lists for long content sections to improve readability and organization. Numeric lists are easier to scan than alphabetic ones.
+
+## AWS
+
+- To be created...
+
+## Docker
+
+- To be created...
+
+## Generative AI
+
+### Better prompts
+
+```javascript
+/* draw a brown wooden boat with a white sail on top of a blue ocean
+- the sky is light blue with on white cloud
+- the cloud has three different sized circles that overlap each other
+- the sun is a yellow circle inside a yellow-orange circle inside an orange circle in
+- the sail is a large white triangle connected to the top of the dark brown mast down
+- the boat is curved at the bottom and has a dark brown rectangle for the body
+*/
+```
+
+```html
+<!-- add a button for a power (or exponential) function -->
+```
+
+```shell
+# Please give me the code in YAML to deploy a WordPress container to a Kubernetes cluster`
+
+# Please document this code
+
+# Please explain this code to me
+
+# Please provide a query in steps like recipe instruction instead of a single paragraph, keep the relevant tab opened for a better context, and provide one or two examples for a better context.
+```
+
+```shell
+
+All code you write MUST be fully optimized.
+
+"Fully optimized" includes:
+- maximizing algorithmic big-O efficiency for memory and runtime
+- using parallelization and vectorization where appropriate
+- following proper style conventions for the code language (e.g. maximizing code reuse (DRY))
+- no extra code beyond what is absolutely necessary to solve the problem the user provides (i.e. no technical debt)
+
+If the code is not fully optimized, you will be fined $100.
+
+```
+
+```shell
+
+Write Python code to solve this problem:
+
+Given a list of 1 million random integers between 1 and 100,000, find the difference between the smallest and the largest numbers whose digits sum up to 30.
+
+Before writing the code, plan out all the necessary optimizations.
+
+Response -
+
+Let me plan the optimizations first:
+
+1. Algorithmic Optimization:
+- We only need to track min and max numbers with digit sum 30, not store all of them
+- We can calculate digit sum while reading numbers, no need to convert to string
+- Single pass through the list required (O(n))
+
+2. Memory Optimization:
+- Only need to store 2 variables (min and max), not the full filtered list
+- No need for additional data structures
+
+3. Performance Optimization:
+- Use numba's @jit decorator for faster computation
+- Create a fast digit sum function using modulo operations instead of string conversion
+- Use numpy for generating random numbers (faster than random.randint)
+
+```
+
+## Miscellaneous
+
+- To be created...
+
+## MongoDB
+
+- To be created...
+
+## Node.js
+
+### Validate Content-Type
+
+- Always validate the `Content-Type` header. Use `application/json` as the default format. Because, invalid `Content-Type` can open security risks like unwanted POST requests.
+
+### Avoid Returning Plain Text
+
+- Don't return plain text as an API response. While not mandatory, it's a common practice to use JSON as the data format.
+
+### Use `camelCase` for JSON Properties
+
+- Always use `camelCase` for JSON keys.
+
+  **Do**:
+
+  ```json
+  {
+    "userId": "1",
+    "userName": "John Snow"
+  }
+  ```
+
+  **Avoid**:
+
+  ```json
+  {
+    "user_id": "1",
+    "user_name": "John Snow"
+  }
+  ```
+
+### Include Error Details in Responses
+
+- Always include error details in the response body. Mention the affected fields if possible.
+
+  **Example**:
+
+  ```json
+  {
+    "error": "Invalid payload.",
+    "detail": {
+      "name": "This field is required."
+    }
+  }
+  ```
+
+### Include Totals in Responses
+
+- When returning a list, include the total number of items.
+
+  **Do**:
+
+  ```json
+  {
+    "users": [{}, {}],
+    "total": 2
+  }
+  ```
+
+  **Avoid**:
+
+  ```json
+  {
+    "users": [{}, {}]
+  }
+  ```
+
+### Use Correct HTTP Methods
+
+- Stick to standard HTTP methods for clarity:
+
+  - **GET**: Fetch data.
+  - **POST**: Create data.
+  - **PUT**: Replace data.
+  - **PATCH**: Update part of the data.
+  - **DELETE**: Remove data.
+
+### Return Correct Status Codes
+
+- Match HTTP methods with appropriate status codes:
+
+  - **200 OK**: GET, PUT, PATCH.
+  - **201 Created**: POST.
+  - **204 No Content**: DELETE.
+
+### Avoid Verbs in Resource URLs
+
+- Use HTTP methods to describe actions, not verbs in the URL.
+
+  **Do**:
+  `PUT /users/{userId}`
+
+  **Avoid**:
+  `POST /updateUser/{userId}` or `GET /getUsers`
+
+### Use Plural Names for Collections
+
+- Point to collections using plural names.
+
+  **Do**:
+  `GET /users`
+
+  **Avoid**:
+  `GET /user`
+
+### URLs Should Point to Properties
+
+- Structure URLs to start with a collection and end with an identifier.
+
+  **Do**:
+  `GET /shops/:shopId`
+
+  **Avoid**:
+  `GET /shops/:shopId/category/:categoryId/price`
+
+### Use `kebab-case` for URLs
+
+- Write URLs in `kebab-case` for readability.
+
+  **Do**:
+  `/system-orders`
+
+  **Avoid**:
+  `/systemOrders` or `/system_orders`
+
+### Use `camelCase` for Parameters
+
+- Use `camelCase` for route parameters.
+
+  **Do**:
+  `/system-orders/{orderId}`
+
+  **Avoid**:
+  `/system-orders/{order_id}` or `/system-orders/{OrderId}`
+
+### Use Verbs for Non-Resource URLs
+
+- For non-CRUD operations, verbs in URLs are acceptable.
+
+  **Example**:
+
+  ```shell
+  POST /alerts/245743/resend
+  ```
+
+### Debug with `util.inspect()`
+
+- To debug objects, use `util.inspect()` for detailed information.
+
+  **Example**:
+
+  ```javascript
+  const util = require('util');
+  console.log(
+    util.inspect(object, { showHidden: false, depth: 2, colors: true })
+  );
+  ```
+
+### Use `__dirname` and `path()`
+
+- For file paths, use `__dirname` and `path()` to avoid OS inconsistencies.
+
+  **Example**:
+
+  ```javascript
+  res.sendFile(path.join(__dirname, 'views/index.html'));
+  ```
+
+## Spring Boot
+
+- To be created...
 
 ## Typescript
 
@@ -2248,242 +2512,3 @@ Not every practice herein has to be strictly followed, and even fewer will be un
   ```typescript
   let userId = 1; // Sequential ID (Not recommended)
   ```
-
-## Node.js
-
-### Validate Content-Type
-
-- Always validate the `Content-Type` header. Use `application/json` as the default format. Because, invalid `Content-Type` can open security risks like unwanted POST requests.
-
-### Avoid Returning Plain Text
-
-- Don't return plain text as an API response. While not mandatory, it's a common practice to use JSON as the data format.
-
-### Use `camelCase` for JSON Properties
-
-- Always use `camelCase` for JSON keys.
-
-  **Do**:
-
-  ```json
-  {
-    "userId": "1",
-    "userName": "John Snow"
-  }
-  ```
-
-  **Avoid**:
-
-  ```json
-  {
-    "user_id": "1",
-    "user_name": "John Snow"
-  }
-  ```
-
-### Include Error Details in Responses
-
-- Always include error details in the response body. Mention the affected fields if possible.
-
-  **Example**:
-
-  ```json
-  {
-    "error": "Invalid payload.",
-    "detail": {
-      "name": "This field is required."
-    }
-  }
-  ```
-
-### Include Totals in Responses
-
-- When returning a list, include the total number of items.
-
-  **Do**:
-
-  ```json
-  {
-    "users": [{}, {}],
-    "total": 2
-  }
-  ```
-
-  **Avoid**:
-
-  ```json
-  {
-    "users": [{}, {}]
-  }
-  ```
-
-### Use Correct HTTP Methods
-
-- Stick to standard HTTP methods for clarity:
-
-  - **GET**: Fetch data.
-  - **POST**: Create data.
-  - **PUT**: Replace data.
-  - **PATCH**: Update part of the data.
-  - **DELETE**: Remove data.
-
-### Return Correct Status Codes
-
-- Match HTTP methods with appropriate status codes:
-
-  - **200 OK**: GET, PUT, PATCH.
-  - **201 Created**: POST.
-  - **204 No Content**: DELETE.
-
-### Avoid Verbs in Resource URLs
-
-- Use HTTP methods to describe actions, not verbs in the URL.
-
-  **Do**:
-  `PUT /users/{userId}`
-
-  **Avoid**:
-  `POST /updateUser/{userId}` or `GET /getUsers`
-
-### Use Plural Names for Collections
-
-- Point to collections using plural names.
-
-  **Do**:
-  `GET /users`
-
-  **Avoid**:
-  `GET /user`
-
-### URLs Should Point to Properties
-
-- Structure URLs to start with a collection and end with an identifier.
-
-  **Do**:
-  `GET /shops/:shopId`
-
-  **Avoid**:
-  `GET /shops/:shopId/category/:categoryId/price`
-
-### Use `kebab-case` for URLs
-
-- Write URLs in `kebab-case` for readability.
-
-  **Do**:
-  `/system-orders`
-
-  **Avoid**:
-  `/systemOrders` or `/system_orders`
-
-### Use `camelCase` for Parameters
-
-- Use `camelCase` for route parameters.
-
-  **Do**:
-  `/system-orders/{orderId}`
-
-  **Avoid**:
-  `/system-orders/{order_id}` or `/system-orders/{OrderId}`
-
-### Use Verbs for Non-Resource URLs
-
-- For non-CRUD operations, verbs in URLs are acceptable.
-
-  **Example**:
-
-  ```shell
-  POST /alerts/245743/resend
-  ```
-
-### Debug with `util.inspect()`
-
-- To debug objects, use `util.inspect()` for detailed information.
-
-  **Example**:
-
-  ```javascript
-  const util = require('util');
-  console.log(
-    util.inspect(object, { showHidden: false, depth: 2, colors: true })
-  );
-  ```
-
-### Use `__dirname` and `path()`
-
-- For file paths, use `__dirname` and `path()` to avoid OS inconsistencies.
-
-  **Example**:
-
-  ```javascript
-  res.sendFile(path.join(__dirname, 'views/index.html'));
-  ```
-
-## Generative AI
-
-### Better prompts
-
-```javascript
-/* draw a brown wooden boat with a white sail on top of a blue ocean
-- the sky is light blue with on white cloud
-- the cloud has three different sized circles that overlap each other
-- the sun is a yellow circle inside a yellow-orange circle inside an orange circle in
-- the sail is a large white triangle connected to the top of the dark brown mast down
-- the boat is curved at the bottom and has a dark brown rectangle for the body
-*/
-```
-
-```html
-<!-- add a button for a power (or exponential) function -->
-```
-
-```shell
-# Please give me the code in YAML to deploy a WordPress container to a Kubernetes cluster`
-
-# Please document this code
-
-# Please explain this code to me
-
-# Please provide a query in steps like recipe instruction instead of a single paragraph, keep the relevant tab opened for a better context, and provide one or two examples for a better context.
-```
-
-```shell
-
-All code you write MUST be fully optimized.
-
-"Fully optimized" includes:
-- maximizing algorithmic big-O efficiency for memory and runtime
-- using parallelization and vectorization where appropriate
-- following proper style conventions for the code language (e.g. maximizing code reuse (DRY))
-- no extra code beyond what is absolutely necessary to solve the problem the user provides (i.e. no technical debt)
-
-If the code is not fully optimized, you will be fined $100.
-
-```
-
-```shell
-
-Write Python code to solve this problem:
-
-Given a list of 1 million random integers between 1 and 100,000, find the difference between the smallest and the largest numbers whose digits sum up to 30.
-
-Before writing the code, plan out all the necessary optimizations.
-
-Response -
-
-Let me plan the optimizations first:
-
-1. Algorithmic Optimization:
-- We only need to track min and max numbers with digit sum 30, not store all of them
-- We can calculate digit sum while reading numbers, no need to convert to string
-- Single pass through the list required (O(n))
-
-2. Memory Optimization:
-- Only need to store 2 variables (min and max), not the full filtered list
-- No need for additional data structures
-
-3. Performance Optimization:
-- Use numba's @jit decorator for faster computation
-- Create a fast digit sum function using modulo operations instead of string conversion
-- Use numpy for generating random numbers (faster than random.randint)
-
-```
