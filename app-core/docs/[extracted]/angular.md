@@ -2074,3 +2074,13 @@ CSS is the styling mechanism for the web. It is a standard of selectors, propert
 - When a bug is found, a failing automated test can be written to reproduce it. When the bug is fixed the test will pass. In some future change, if the bug reoccurs it will be caught by the automated test.
 
 - Conceptually, observables are more about handling events than managing data that is also one of the reason to adapt Signals.
+
+- HTML 5 storage API – session (per origin and per instance, tied to domain origin) storage, local storage.
+
+- Local storage is also attached to per origin but available across all browser instances.
+
+- Storage API issues – function are synchronous, no access from web workers, vulnerable to XSS attacks.
+
+- We should not store any sensitive data in storage. The storage API is designed for simple key-value storage. We can save the complex object as-well but we need to stringy if before saving, but it causes the performance overhead.
+
+- Whenever an async function is called, it is sent to a browser API. These are APIs built into the browser. Based on the command received from the call stack, the API starts its own single-threaded operation.

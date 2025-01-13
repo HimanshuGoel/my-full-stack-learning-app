@@ -92,3 +92,5 @@ db.animals.find({name: 'cat}).explain()
 - Covering index - we use query using index and all the information is with index itself then there is no need to go to the dist to get the actual document, we can use the index itself to the actual result. In the explain() it will say indexOnly as true. Suppose we have applied index on name field and returning only the name field, not even `_id`, then the covering index will be used.
 
 - When our database is large, we can create index in the background so that read and write action won't get blocked.
+
+- Mongoose is an ORM for MongoDB. We don’t have to deal with MongoDB directly, mongoose is going to do that for us.

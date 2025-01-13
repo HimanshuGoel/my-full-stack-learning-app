@@ -814,3 +814,39 @@ Timestamps are simple numbers that represent milliseconds since 1970.
 Use them for unique IDs, date calculations, or expiration logic.
 JavaScript provides multiple methods to work with timestamps.
 Absolute values make timestamps great for finding differences between times.
+
+- If you call setTimeOut with 0ms and resolve a promise immediately, which would console log first? The answer is Promises and the reason is that Job queue gets more priority than Event Queue.
+
+## Transpilers
+
+- Transpilers - Babel, TypeScript, Elm
+
+![node-js-transpilers-typescript-vs-babel](./images/node-js-transpilers-typescript-vs-babel.png)
+
+- ECMAScript versions -
+
+![node-js-ecmascript-versions](./images/node-js-ecmascript-versions.png)
+
+- Module formats - IIFE, Asynchronous Module Definition (AMD), CommonJS (CJS), Universal Module Definition (UMD), ES6 Modules
+
+- Cache busting – by default we set the cache expiration to 1 year, and if JavaScript file changes then change the bundle name to force request for latest version. For this we need to hash the bundle filename, and generate that name into HTML dynamically.
+
+- Package vs. module – a module is a single javascript file that has some reasonable functionality, a package is a directory with one or more models inside of it and package.json file which has metadata about the package. It can be from simpler like from lodash to complex one like express. While working with NPM we are working with packages, which is why it is called node package manager.
+
+- The package-lock.json files gets created when we installed some packages, it specify the exact versions of every package that got installed. By this it will be sure that everybody in the team using the same exact versions of all packages even if that team member join after a while to the team.
+
+- Semantic versioning – 1.8.3 where 1 is major version, 8 is minor version and 3 is the revision or the patch number. Patch will be used when some bug fix or performance improvement, that doesn’t change the functionality. Minor means new feature is introduced but no breaking changes, major is when breaking changes like changing the function signature.
+
+- Tilde (~) operator will get the latest patch version, carrot (^) will get the latest minor version, use \* or ‘x’ if we even okay to get the latest major version
+
+- The package-lock.json file overrides the package.json file, so while installing a package it will take the version from package-lock.json file instead of from package.json file, if we don’t want this then we need to delete it temporary for avoiding this.
+
+- Generators enabled the functionality for async-await keywords because of pause-resume feature. Generator functions can be paused and resumed unlike normal functions. They also stored the state of the function while paused. They return generators object which implement the iterator protocol by this they provide a method name ‘next()’, this method restarts a paused generator function. They works upon concept of lazy execution by which they compute the values on demand.
+
+- Async-await let us write the asynchronous code more like the way we write the synchronous code. Data returned from async func is automatically wrapped in a promise. Using the await keyword will automatically extract data from a promise. Also, we need to use try-catch while using async-await because await will only return value when it gets success result.
+
+- We can write event-driven code with EventEmitters classes. The EventEmitter calls all listeners synchronously in the order in which they were registered. This ensures the proper sequencing of events and helps to avoid race conditions and logic errors. But we can made them async for a particular case by using setImmediate(), it will push the code execution into the next cycle of the event loop.
+
+- Use omitBy() function from lodash to send only the changed property with a PATCH request –
+
+![node-js-using-omitby-with-patch-request](./images/node-js-using-omitby-with-patch-request.png)
