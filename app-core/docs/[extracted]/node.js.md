@@ -1,5 +1,7 @@
 # Extracted Notes - Node.js
 
+## Table of Contents
+
 - [REST](#rest)
 - [Middleware](#middleware)
 - [HATEOAS](#hateoas)
@@ -262,6 +264,8 @@
   ![node-js-folder-structure-group-by-feature](./images/node-js-folder-structure-group-by-feature.png)
 
 ## Mongoose
+
+- Mongoose is an ORM for MongoDB. We don’t have to deal with MongoDB directly, mongoose is going to do that for us.
 
 - Mongoose, like express, has support for middleware. Middleware is perfect for validating, changing, notifying, input sanitization etc. we will use middleware to hash our passwords before a user is created. Middleware will attach to lifecycle events around our documents like before save, before validations, after save, etc.
 

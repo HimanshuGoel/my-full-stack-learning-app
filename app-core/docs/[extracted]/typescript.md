@@ -850,3 +850,17 @@ Absolute values make timestamps great for finding differences between times.
 - Use omitBy() function from lodash to send only the changed property with a PATCH request –
 
 ![node-js-using-omitby-with-patch-request](./images/node-js-using-omitby-with-patch-request.png)
+
+- REPL stands for Read, Eval, Print and Loop. Use the ctrl + l to break the REPL session.
+
+- By using Electron, we can create cross platform desktop applications.
+
+- Instead of using console.log() use debug(), it will only log when we are running in development mode not in production mode.
+
+- For callbacks, use arrow function instead of normal function.
+
+- Promises are invented for JS for single threaded environment.
+
+- We can ship a software update if we have added value without removing any existing value even though the new value feature is not complete, so user can’t still use it from UI, it is called dark release.
+
+- The setImmediate will take preference over setTimeout. So, use setImmediate if we want to execute it on next tick of the event loop, node has similar api called process.nextTick.

@@ -527,7 +527,11 @@ Let me plan the optimizations first:
 
 ## MongoDB
 
-- To be created...
+- We should pass an empty object to find() method when we want to return all the documents instead of using blank find() method -
+
+  ```shell
+  db.aircraft.find({})
+  ```
 
 ## Node.js
 

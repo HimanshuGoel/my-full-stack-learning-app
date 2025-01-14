@@ -8,35 +8,13 @@
 
 ## Soft Skills
 
+### LinkedIn
+
 - LinkedIn - A place to find and be found. Profile pic should be a head shot with proper background color.
 
+### Writing
+
 - 5 parts of formula for more effective message – don’t have the long paragraph. Next step is phone call, over the email, or face to face meeting.
-
-- As an interviewer we also need to sell the opportunity like the projects, team, company, perks, contribution impact, preparation, promptness, attitude and vibe, our stories.
-
-- Interviewee’s tell their experience in stories, concise answers, thoughtful questions, choice of words, body language and kindness.
-
-- Don’t ask many yes / no questions but open-ended questions like “tell me about a time when,”, “tell me more about that project” or “how you solve this problem”.
-
-- We can ask the complex problem they have worked upon, any new technology how they will learn, any project or shared code or ask for any homework. And then ask questions based on that homework. We can first have panel interview then give homework then call.
-
-- Interview questions -
-
-  - how many technologies you have worked and how much you would rate each of these?
-  - which languages are you proficient in and could teach others?
-  - tell me about the users you have worked with? what do your users do that make you upset
-  - how long have you worked with this language? what are the best and worst changes you have seen since started
-  - if you were asked to present to a group of engineers about a particular technology, what would you present?
-  - what technical projects do your do at home
-  - if you had more time what technology you would study
-  - what do you think of working with older technology
-  - when you are learning a new technology, what process do you use to bring yourself up to speed
-  - what do you do when you see a colleague is approaching a problem the wrong way? let them do it and learn, or...?
-  - do you read books? what are the last three books you have read?
-
-- Illegal questions – age, religion, arrested, married, children, weight, personal finances, alcoholic, health, nationality, disabilities, military discharge.
-
-- Enunciate – speak the words clearly.
 
 - Key elements of a email – subject, introduction, the message, call to action (last part of the body), email signature.
 
@@ -60,6 +38,42 @@
 
 - It is the editing and proofreading the text which separates from the bad writer.
 
+- Email should have amplification structure – beginning with a declared main idea, followed by supporting details and elaborations, and ending with logistics.
+
+- Email is asynchronous communication and instant messaging is synchronous communication.
+
+- Fast is fine, but accuracy is everything.
+
+- We should different visuals like screenshots, icons, symbols, table, graphs and charts, flowcharts to make it easy to understand and engaging.
+
+### Interview
+
+- As an interviewer we also need to sell the opportunity like the projects, team, company, perks, contribution impact, preparation, promptness, attitude and vibe, our stories.
+
+- Interviewee’s tell their experience in stories, concise answers, thoughtful questions, choice of words, body language and kindness.
+
+- Don’t ask many yes / no questions but open-ended questions like “tell me about a time when,”, “tell me more about that project” or “how you solve this problem”.
+
+- We can ask the complex problem they have worked upon, any new technology how they will learn, any project or shared code or ask for any homework. And then ask questions based on that homework. We can first have panel interview then give homework then call.
+
+- SampleInterview questions -
+
+  - how many technologies you have worked and how much you would rate each of these?
+  - which languages are you proficient in and could teach others?
+  - tell me about the users you have worked with? what do your users do that make you upset
+  - how long have you worked with this language? what are the best and worst changes you have seen since started
+  - if you were asked to present to a group of engineers about a particular technology, what would you present?
+  - what technical projects do your do at home
+  - if you had more time what technology you would study
+  - what do you think of working with older technology
+  - when you are learning a new technology, what process do you use to bring yourself up to speed
+  - what do you do when you see a colleague is approaching a problem the wrong way? let them do it and learn, or...?
+  - do you read books? what are the last three books you have read?
+
+- Illegal questions – age, religion, arrested, married, children, weight, personal finances, alcoholic, health, nationality, disabilities, military discharge.
+
+### Professionalism
+
 - High performance consultant would often arrive the next day with a solution to a problem that he’d managed to solve at home the night before.
 
 - A consultant who handles this competence with difficulty, takes on too much and then finds it hard to admit that the workload is too much for him.
@@ -76,17 +90,11 @@
 
 ![soft-skill-trust-factors](./images/soft-skill-trust-factors.png)
 
+### Speaking
+
+- Enunciate – speak the words clearly.
+
 - Just being chatty is not same as being open. The attributes of openness are vulnerability, transparency and maintaining confidentiality.
-
-- If we do something extra over and beyond which we normally do early on that will help us build the trust, then we can reap onto it rest of the time of the relationship.
-
-- Rebuilding credibility and reliability – coming to a meeting prepared, putting your point across and taking notes to share with other are great steps to rebuild credibility, be more knowledgeable, communicate confidently. For reliability, be punctual, dependable, consistent with action, avoid last minute surprises.
-
-- Rebuilding openness and self-orientation – should have candid conversations about feedback or misunderstanding, give help people in small ways, be interesting in entire person (hobby, past things).
-
-- Put yourself into other person shoe to reduce self-orientation, be fully present while listening.
-
-- Teams Calling - It uses phone system technology and PSTN to call internally and externally.
 
 - During presentation instead of saying word um… just use silence.
 
@@ -98,13 +106,17 @@
 
 - Gobbledygook – intentionally meaningless language – we deliberately use unclear language so that general people don’t understand it and won’t raise any counter question.
 
-- Email should have amplification structure – beginning with a declared main idea, followed by supporting details and elaborations, and ending with logistics.
+### Values
 
-- Email is asynchronous communication and instant messaging is synchronous communication.
+- If we do something extra over and beyond which we normally do early on that will help us build the trust, then we can reap onto it rest of the time of the relationship.
 
-- Fast is fine, but accuracy is everything.
+- Rebuilding credibility and reliability – coming to a meeting prepared, putting your point across and taking notes to share with other are great steps to rebuild credibility, be more knowledgeable, communicate confidently. For reliability, be punctual, dependable, consistent with action, avoid last minute surprises.
 
-- We should different visuals like screenshots, icons, symbols, table, graphs and charts, flowcharts to make it easy to understand and engaging.
+- Rebuilding openness and self-orientation – should have candid conversations about feedback or misunderstanding, give help people in small ways, be interesting in entire person (hobby, past things).
+
+### Listening
+
+- Put yourself into other person shoe to reduce self-orientation, be fully present while listening.
 
 ## Wellness
 
@@ -320,15 +332,15 @@
 - For fulfilling life - I’ve said many times, “I’m not the smartest guy in the room but if I develop a routine I can accomplish anything.” And that’s paid off big time in life.
 
   1. Marriage. Ok, that doesn’t sound romantic. My wife and I, purposely, catch up every day. While we walk and have dinner together. Oh, and other things. And that’s paid off big time in romance.
-  2. Family. While our kids were growing up I rarely watched TV. Instead, we talked over dinner and enjoyed family activities. And that’s paid off big time in our relationships.
-  3. Food. I know what works in my body so I eat the same diet every day. Boring? I find feeling crappy boring. And that’s paid off big time in health.
-  4. Exercise. I exercise every day. Walking, karate, yard work (not my favorite). And I stretch and strengthen. Boring? Sometimes. Yet, it’s paid off big time in vitality.
-  5. Gratitude. Every morning, while getting ready, I give thanks for everything I have. No TV, phones or emails. Just gratitude. And that’s paid off big time in happiness.
-  6. Prayer. Every morning, while having breakfast, I pray for those I love and everything I need. Boring? Never. Every day I expect the best. And it’s paid off big time receiving it.
-  7. Saving. My wife and I have saved for retirement since we married. Often a real sacrifice when we had little. Boring? Often. And it’s paid off big time in savings.
-  8. Investing. I’m not smart enough to time the market or discover hot investments. So I just keep investing broadly. Boring? Sure. But I like boring investing. And it’s paid off big time in wealth.
-  9. Growing. Every day I do something to grow. Reading, listening, watching something that causes me to think and discover. Boring? Never. And it’s paid off big time in knowledge.
-  10. Giving. I try to give every day to my family, friends, clients, non-profits and readers. Never boring. Constantly rewarding. And it’s paid off big time in fulfillment.
+  1. Family. While our kids were growing up I rarely watched TV. Instead, we talked over dinner and enjoyed family activities. And that’s paid off big time in our relationships.
+  1. Food. I know what works in my body so I eat the same diet every day. Boring? I find feeling crappy boring. And that’s paid off big time in health.
+  1. Exercise. I exercise every day. Walking, karate, yard work (not my favorite). And I stretch and strengthen. Boring? Sometimes. Yet, it’s paid off big time in vitality.
+  1. Gratitude. Every morning, while getting ready, I give thanks for everything I have. No TV, phones or emails. Just gratitude. And that’s paid off big time in happiness.
+  1. Prayer. Every morning, while having breakfast, I pray for those I love and everything I need. Boring? Never. Every day I expect the best. And it’s paid off big time receiving it.
+  1. Saving. My wife and I have saved for retirement since we married. Often a real sacrifice when we had little. Boring? Often. And it’s paid off big time in savings.
+  1. Investing. I’m not smart enough to time the market or discover hot investments. So I just keep investing broadly. Boring? Sure. But I like boring investing. And it’s paid off big time in wealth.
+  1. Growing. Every day I do something to grow. Reading, listening, watching something that causes me to think and discover. Boring? Never. And it’s paid off big time in knowledge.
+  1. Giving. I try to give every day to my family, friends, clients, non-profits and readers. Never boring. Constantly rewarding. And it’s paid off big time in fulfillment.
 
 - Why do you think the old stories tell of men who set out on great journeys to impress the gods? Because trying to impress people just isn't worth the time and effort. - Henry Rollins
 
@@ -617,19 +629,19 @@
   - attend workshops and complete certifications - attend workshops, complete certifications (togaf, aws solutions architect), and participate in architectural case studies
   - summarize achievements and plan for the next day - summarize the day’s achievements and plan priorities for the next day. address urgent issues as needed
 
->ARM-based processors are known for their power efficiency, which is a crucial  factor hyperscalers who are manaing thousands or even millons of servers.
+> ARM-based processors are known for their power efficiency, which is a crucial factor hyperscalers who are manaing thousands or even millons of servers.
 
->local LLMs are advanced AI models that have been optimized to run on personal devices without the need for contatnt internet connectivity like GPT-2 Mobile, ALBERT, DistilBERT.
+> local LLMs are advanced AI models that have been optimized to run on personal devices without the need for contatnt internet connectivity like GPT-2 Mobile, ALBERT, DistilBERT.
 
->Headphone Form Factor - Over-Ear Headphone, On-Ear Headphone, In-Ear Monitors and True Wireless Earbuds
+> Headphone Form Factor - Over-Ear Headphone, On-Ear Headphone, In-Ear Monitors and True Wireless Earbuds
 
->High frequencies contribute to the sparkle and detail in music.
+> High frequencies contribute to the sparkle and detail in music.
 
->surround sound fomrats - dolby digital, dts, dolby atmos, dts:x
+> surround sound fomrats - dolby digital, dts, dolby atmos, dts:x
 
->Java is a bluprint for a building, specifying every detail. The blueprint (bytecode) is then interpretd by a skilled builder (JVM) to construct the building (application) on any plot of land (platform). JS, on the other hand is like flexible LEGO bricks. You can build various structures (web features) on the fly, without a rigid plan.
+> Java is a bluprint for a building, specifying every detail. The blueprint (bytecode) is then interpretd by a skilled builder (JVM) to construct the building (application) on any plot of land (platform). JS, on the other hand is like flexible LEGO bricks. You can build various structures (web features) on the fly, without a rigid plan.
 
->jargon words - smartphones - system on chip, led, universal flash storage, ingress protection, bokeh, optical image stabilization, hight dynamic range, sampling rate, priscope camera
+> jargon words - smartphones - system on chip, led, universal flash storage, ingress protection, bokeh, optical image stabilization, hight dynamic range, sampling rate, priscope camera
 
 audio - bass rolll-off, bit depth, crossover frequency, driver, dynamic range, equalization, flat response, soundstage, low-frequency effects
 
