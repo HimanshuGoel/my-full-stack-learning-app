@@ -37,6 +37,10 @@
 
 - Replicate sets - Minimum replica sets in MongoDB - primary db (only writable instance), secondary db (read-only instances, data is replicated from primary db) and arbiter db (no data, provides additional vote to elect the db in-case if primary gets failed).
 
+- History of database -
+
+  ![database-history](./images/database-history.png)
+
 ## Queries
 
 - The find() method returns a cursor to the documents that match the query criteria. In projection, 1 means inclusion and 0 for exclusion.

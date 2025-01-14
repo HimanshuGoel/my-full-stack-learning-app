@@ -1574,7 +1574,6 @@ Public-Key-Pins: pin-sha256=[pin 1]; pin-sha256=[pin 2]; max-age=2592000; report
 - Dynamic Components with ComponentFactory, also we should also avoid
 
 ```typescript
-
 export abstract class Widget {
   abstract render(data: any): Component;
 }
@@ -1666,6 +1665,7 @@ export class ErrorInterceptor implements HttpInterceptor {
 ```
 
 - Real world Use cases of -
+
   - Implement APP_INITIALIZER to load configuration information. Suppose, you have to load API endpoints, application static contents like images/texts which are kept in different repo.
   - Implement APP_INITIALIZER to load authentication information. Suppose, you need to check login status before opening the application. Only if login is authorized then only aplication will be opened, other will display unauthorized error.
 
@@ -2084,3 +2084,124 @@ CSS is the styling mechanism for the web. It is a standard of selectors, propert
 - We should not store any sensitive data in storage. The storage API is designed for simple key-value storage. We can save the complex object as-well but we need to stringy if before saving, but it causes the performance overhead.
 
 - Whenever an async function is called, it is sent to a browser API. These are APIs built into the browser. Based on the command received from the call stack, the API starts its own single-threaded operation.
+
+- Common full stack technology stack - Python + Django, PHP + Laravel, NextJs + React, Nuxt + Vue
+
+- URL segments - <https://example.logto.io:8080/blogs/index.html?param1=value1&param2=value2#introduction> - Scheme, Host, Port, Path, Query Parameters, Fragment Identifier
+
+- HTML is a parser language or abstract layer for C++ to parse on the browser. The browser are very good at networking and timers capabilities.
+
+![browser-behind-the-scene](./images/browser-behind-the-scene.png)
+
+- Browser works on simple working concept to display the data and provide interaction to the user. It converts the token into scattered objects which gets constructed into the Document Object Model.
+
+![browser-html-node-list](./images/browser-html-node-list.png)
+
+- Afterwards, to create the relations between them, it creates node list which is given by rendering engine.
+
+![browser-html-node-list-afterwards](./images/browser-html-node-list-afterwards.png)
+
+- Browser engine is very good at math to create render tree as per client screen size and components size based on CSS then it starts painting to actually showing elements on the UI. Whenever browser sees a script tag it will stop executing the DOM or whatever works it is doing, the first preference always goes to JS as JS has the capability to modify DOM or CSS so no point to painting before evaluating all the JS. That is why we should not first send the JS but the HTML and CSS so that browser will show the page without any delay on first load, then send the JS for interactivity. However in case of CSSOM, JS execution will be halted until CSSOM is ready.
+
+![browser-html-render-tree](./images/browser-html-render-tree.png)
+
+- JWT has three segments, each separated by dots. If it is a base64-encoded JSON then its first two segments would start from characters "eyJ" because when decode it becomes base64({"). First part it has Header that describes the token itself and how to read & validate the token. It has properties like type, alg and kid. The second part is the payload, it is the content of the token itself. It contains claims about the entity. The final part is the signature value, it is created using the header, payload and signing key. Its length varies based on the algorithm and key.
+
+- The JWT pronounce as "jot". It is originally created by the OAuth working group due to demand for JSON representation of claims and to replace SAML assertion.
+
+- When to use JWTs – for API access, for information transfer (identity token), security proofs. We should always use JWTs in combination with something else like OAuth or Open Identity Connect protocols where rules are defined and low risk of misuse.
+
+- JWTs are not a replacement for cookies and sessions. Browsers cannot maintain JWT sessions, we have to implement token storage and management. There is no out-of-the-box method to invalidate a single JWT.
+
+- We should not store application or permission data as we should keep our JWTs small as it can easily hit header size limits.
+
+- JOSE (JavaScript object signing and encryption) standards – JWON Web Tokens, JSON Web Signature, JSON Web Encryption, JSON Web Key, JSON Web Algorithms.
+
+- Initial format check of JWT - three sections, two dots, base64url data, valid JSON objects.
+
+- We should first validate the token like checking the issuer, subject value, audience, expiration date, before parsing it.
+
+- JWE has 5 distinct section instead of 3 of JWT –
+
+![misc-technical-jwe](./images/misc-technical-jwe.png)
+
+- When to use JWE – if we use PII (personally identifiable information) like names, email address street address, IP address, account number, telephone number etc., if token needs to be passed through multiple systems (including the 3rd party).
+
+- Skill transfer is very easy in angular, as most of the angular projects looks the same. When you use angular, you are getting everything like route, forms package, http package, there is a kind of prescribed way to code with angular but products like react are much more pick and choose, so you can choose which router you want, which http package you want to use.
+  By low-code we can deliver better software faster. One way is to abstracting automating things so professional developers can go faster. It also takes the constraint away from people who can only build that and it open an ability to adapt to this new world in real time with people who has no traditional skills in software development. It provides speed, simplicity, no huge army of engineers and get live quickly and save tons of the cost to the business, anybody can develop software, business and IT will be on same page by providing common language, has guidance and guard rails, no long red tape of processes.
+
+- Chrome dev tools - Elements, console, sources tabs are called panel and windows inside each of them are called pane.
+
+- Time begins on 1st jan 1970 with the unix epoch, when we say Date.now(), it gives milliseconds from this time.
+
+- IDE's Evaluation - vi -> emics -> vim -> neo vim -> nano -> notepad++ -> Dreamweaver -> visual studio code -> visual studio -> WebStorm (features looks more reliable and polished than vs code)
+
+- Choosing the framework depends whether website mostly have static content or highly interactive, if highly interactive then whether it needs SEO, if SEO and content rarely change like in blogs website then use JAM stack and pre-render the content and cache on the CDN. if dynamic content then need full SSR + hydration.
+
+- Angular bootstrap process - angular.json (main) -> main.ts (bootstrapModule) -> app.module (bootstrap) -> app.component -> app.component.html -> index.html (`<app-root></app-root>` selector is used as an element to get the app component) -> The javascript files {runtime.js, polyfile.js, … etc } are responsible to make our application a single page and they are handled by the browser itself. But, the Html code should be available in our application itself.
+
+- Google searching tips - cut the crap - Forget "what," "how," and other words that serve only a syntactical purpose. Demand answers using meaningful and descriptive verbs example - instead of 'what is algorithmic complexity' use 'define algorithmic complexity'. Order keywords from broad to specific, instead of 'consume an api using typescript with axios' use 'typescript axios consume api'. Use Images for Diagrams and Visualizations. Many times, Images will contain concise and informative graphics that will answer your question much faster than a web page could.
+
+- Useful http status codes - 100 Information - 100 — Continue; 101 — Switching protocol; 103 — Checkpoints. 200 Successful. 300 Redirection - 301 — Moved Permanently; 302 — Found; 304 — Not Modified; 305 — Use Proxy; 307 — Temporary Redirect. 400 Client Errors - 400: Bad Request; 401: Unauthorized; 403: Forbidden; 404: Not Found; 408: Request Timeout; 410: Gone; 429: Too Many Requests. 500 Server Errors - 500 — Internal Server Error; 502 — Bad Gateway; 503 — Service Unavailable; 504 — Gateway Timeout.
+
+- Zero-day Exploits - Attacks exploiting vulnerabilities in software before the developer has issued a patch.
+
+- Types of MFA - SMS codes, authenticator apps, hardware tokens.
+
+- A piece of code should be where you expect to find it - and, if not, you should re-factor to get it there.
+
+### YAML
+
+- It is short for YAML aren't markup language. It is human-readable data serialization language. It can be used to keep and transfer the data. Its most common purposes is the configuration files. It is a true superset of JSON.
+
+- YAML use cases – cross-language data sharing, configuration files, log files, object persistence, working with language like ruby, python, etc.
+
+- It has two style – block (human readable) and flow (less human readable like JSON)
+
+![misc-technical-block-vs-flow-style](./images/misc-technical-block-vs-flow-style.png)
+
+- YAML - Building blocks – sequence (arrays), mapping (key-value) and scalar (string, number, boolean and dates). We should do indentation with spaces not with tabs. For list we need to use (-) and for key-value we need to `(:)`. Scalar values – with string values we can use quotes or without quotes. By using the `#` we can add comment.
+
+- One YAML file can contain multiple documents. The documents can be separated by 3 hyphens (---).
+
+![misc-technical-yaml-key-value-and-array](./images/misc-technical-yaml-key-value-and-array.png)
+
+![misc-technical-yaml-nested-array](./images/misc-technical-yaml-nested-array.png)
+
+![misc-technical-yaml-nested-mappings](./images/misc-technical-yaml-nested-mappings.png)
+
+- Explicit typing – by using like !!str is an explicit typing which will convert the date into a string type.
+
+![misc-technical-yaml-explicit-typing](./images/misc-technical-yaml-explicit-typing.png)
+
+- Repeated nodes – to avoid code repeat.
+
+![misc-technical-repeated-nodes](./images/misc-technical-repeated-nodes.png)
+
+- Processing of YAML –
+
+![misc-technical-processing-of-yaml](./images/misc-technical-processing-of-yaml.png)
+
+- YAML vs. JSON – YAML is standard for configuration and JSON is standard for service API.
+
+![misc-technical-yaml-vs-json](./images/misc-technical-yaml-vs-json.png)
+
+- YAML vs. XML
+
+![misc-technical-yaml-vs-xmsl](./images/misc-technical-yaml-vs-xmsl.png)
+
+- GitLab is a single platform that provides entire DevOps toolchain for organizations of any scale and size.
+
+- A pipeline contains below things – jobs, runners, stages
+
+- To create table of contents from headings automatically, we can use [[*TOC*]] syntax.
+
+- Github is a cloud based git repository hosting service.
+
+- We can run a workflow on any Github event –
+
+![misc-technical-github-events](./images/misc-technical-github-events.png)
+
+- Anonymous comments can cause serious damage to your website's reputation.
+
+- WWW or no WWW – whether your website is brand-new or has been hosted for a few months already will depend entirely on its stage. If it brand-new, you must definitely choose whether to use www or non-www in the URL of your site.
