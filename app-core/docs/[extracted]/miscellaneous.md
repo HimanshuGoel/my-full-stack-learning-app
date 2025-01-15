@@ -3,8 +3,21 @@
 ## Table of Contents
 
 - [Soft Skills](#soft-skills)
+  - [LinkedIn](#linkedin)
+  - [Writing](#writing)
+  - [Interview](#interview)
+  - [Professionalism](#professionalism)
+  - [Speaking](#speaking)
+  - [Values](#values)
+  - [Listening](#listening)
 - [Wellness](#wellness)
+  - [Food](#food)
+  - [Exercise](#exercise)
+  - [Socializing](#socializing)
+  - [Philosophies](#philosophies)
 - [Others](#others)
+  - [Gadgets](#gadgets)
+  - [Science](#science)
 
 ## Soft Skills
 
@@ -58,7 +71,7 @@
 
 - We can ask the complex problem they have worked upon, any new technology how they will learn, any project or shared code or ask for any homework. And then ask questions based on that homework. We can first have panel interview then give homework then call.
 
-- SampleInterview questions -
+- Sample Interview Questions -
 
   - How many technologies you have worked and how much you would rate each of these?
   - Which languages are you proficient in and could teach others?
@@ -82,17 +95,17 @@
 
 - Whether you are young professional, a student, or a CEO, understanding yourself is critical for becoming a better professional. It will help you enhance your strengths and improve your weakness to make you a better boss and a better colleague.
 
-![soft-skills-johari-window](./images/soft-skills-johari-window.png)
+  ![soft-skills-johari-window](./images/soft-skills-johari-window.png)
 
 - Values act as our personal compass, helping us to navigate choices and decisions, both personally and professionally. Values are formed by your life experience.
 
-![soft-skills-4-factors-of-trust](./images/soft-skills-4-factors-of-trust.png)
+  ![soft-skills-4-factors-of-trust](./images/soft-skills-4-factors-of-trust.png)
 
 - Credibility is essential for hiring, promoting and trusting people. Those who end up establishing expertise are confident about showcasing their qualifications and achievements. The more we care about the success of others around us, the more they will trust us, paving the way for collaboration.
 
-![soft-skill-trust-factors](./images/soft-skill-trust-factors.png)
+  ![soft-skill-trust-factors](./images/soft-skill-trust-factors.png)
 
-- when a company lays off individual workers, it doesn't pick them at random. it lays off the least productive, least knowledgeable, and most senior (expensive, but also old) workers. these are workers which the company has unfortunate experience with, whose absence won't be felt.
+- When a company lays off individual workers, it doesn't pick them at random. it lays off the least productive, least knowledgeable, and most senior (expensive, but also old) workers. these are workers which the company has unfortunate experience with, whose absence won't be felt.
 
 - Now a day, the technology and hardware are not the bottlenecks but the people skill sets.
 
@@ -144,7 +157,7 @@
 
 - Our real goal is to tell the story of the system, and that the function we write to fit cleanly together into a clear and precise language to help us with that telling.
 
-- when people look under the hood, we want them to be impressed with the neatness, consistency, and attention to detail that they perceive. We want them to struck by the orderliness. We want them to perceive that professionals have been at work.
+- When people look under the hood, we want them to be impressed with the neatness, consistency, and attention to detail that they perceive. We want them to struck by the orderliness. We want them to perceive that professionals have been at work.
 
 - The newspaper metaphor - think of a well-written newspaper article. you read it vertically. At the top you expect a headline that will tell you what the story is about and allows you to decide whether it is something you want to rad. the first paragraph gives you a synopsis of the whole story, hiding all the details while giving you broad-brush concepts. As you continue downward, the details increase until you have all the dates, names, quotes, claims, and other minutia. We would like a source file to be like a newspaper article.
 
@@ -184,9 +197,9 @@
 
 - The code should be easy to modify as requirements change.
 
-- use astro framework for a content heavy fast website
+- Use astro framework for a content heavy fast website
 
-- display technologies - lcd, led and micro led
+- Display technologies - lcd, led and micro led
 
 ### Speaking
 
@@ -219,8 +232,6 @@
 - Don't interrupt the other person while they are speaking - by your interruption, you're insinuating that your thoughts and ideas are more important than theirs."
 
 ## Wellness
-
-### Illness
 
 ### Food
 
@@ -315,6 +326,8 @@
 - I don't want heaven if it going to arrive into my life, if that heaven does not contain your soul - ramayana
 
 - Don't compare with others like if you driving alto and someone land rover crosses you then you don't give that much importance.
+
+- Young bright minds ready to snipe every job opportunity that comes their way.
 
 - Consciousness and time are worlds biggest mysteries.
 
@@ -415,7 +428,7 @@
 
 ## Others
 
-### Games
+### Gadgets
 
 - If you like ray tracing in your games, you would want to get an NVIDIA card. And if you primarily like to work on Linux, then an AMD card is what you should be looking to get.
 
@@ -425,11 +438,45 @@
 
 - Consider the task of finding a specific item in an unsorted database. A classical computer would need to check each item one by one, requiring, on average, N/2 checks for a database of N items. However, Grover's algorithm, a quantum algorithm, can find the item in roughly mod N operations, showcasing quantum computing's potential for speedup in search problems.
 
-- Engineers used to give complex names for the technology but under the hood it is very simple and have same base concept.
-
-- WordPress is an open-source, free platform for building and developing websites. WordPress is the most user-friendly and efficient blogging and website builder on the market right now.
-
 - SNES 8-bit games.
+
+- There is no need to defragment the SSD as they do not work the same way as traditional hard drives. In fact, defragmenting an SSD can cause unnecessary wear and tear on the drive.
+
+- To prevent screen burn-in, avoid displaying static images or leaving the monitor on for long periods of time. Use a screensaver or power-saving mode when monitor is not in use.
+
+- A good song will develop as it goes along, taking us on a familiar path sprinkled with surprises along the way to make sure we are listening. A bad song, on the other hand, will remain stagnant throughout its entirety.
+
+- Overclocking will make your phone run hotter and shorten your battery life, but I can squeeze every drop of power out of your device.
+
+- ARM-based processors are known for their power efficiency, which is a crucial factor hyper-scalers who are managing thousands or even millions of servers.
+
+- Foley artists give life to shapes like footsteps, actors walking in leg chains. They reproduce every day sounds like waves crashing, rain coming down, cars passing by, punches, kicks, wind blowing, doors slamming. Three major kinds – feet, movement, specifies. Like roaring of a tiger in a scene or helicopters flying over the heads of the actors in a scene are produced by artists working on specifics.
+
+- Headphone Form Factor - Over-Ear Headphone, On-Ear Headphone, In-Ear Monitors and True Wireless Earbuds
+
+- High frequencies contribute to the sparkle and detail in music.
+
+- Surround sound formats - dolby digital, dts, dolby atmos, dts:x
+
+- Jargon words - smartphones - system on chip, led, universal flash storage, ingress protection, bokeh, optical image stabilization, hight dynamic range, sampling rate, priscope camera
+
+- Jargon words - Audio - bass roll-off, bit depth, crossover frequency, driver, dynamic range, equalization, flat response, soundstage, low-frequency effects
+
+- Jargon words - Wearables - lte connectivity, strap material
+
+- Jargon words - TVs - high dynamic range, organic light emitting diode, dolby vision, audio return channel, high-definition multimedia interface
+
+- Jargon words - AI - augmented intelligence, edge ai, explainable ai, neural architecture search, reinforcement learning
+
+- Jargon words - Mouse and Keyboard - acceleration, angle snapping, glide pads, jitter, paracord cable, 60% keyboard, abs keycaps, actution point, clicky switches, keycap legends, lnear switches,
+
+- Jargon words - CPU and GPU - avx instructions, cinebench, clock speed, overclocking, anti-aliasing, directx ray-tracing, deep learning super sampling, fidelityFX super resolution, OpenGL/DirectX/Vulkan, VSync/G-Sync/FreeSync
+
+- Jargon words - Monitor - Adaptive SYnc, Aspect Ratio, Curved Monitors, Loal DImming, Response Time
+
+- Jargon words - Storage and RAM - Cold Storage, Hot Swapping, NAND Flash Memmoery, Redundent Array of Independent Disks, Double Data Rate, Error-Correcting Code, Extreme Memory Profile
+
+- Jargon words - Power Supply & Motherboard - Brownout Protection, Form Factor, Hold-up Time, Inrush Current, ATX, BIOS/UEFI, Clear CMOS Button, Firmware Updates, NIC, Socket Type
 
 ### Science
 
@@ -446,55 +493,3 @@
 - Motion is a combined outcome of a body under observation and the observer.
 
 - Magnetism – The core of the earth was made from iron, while the planet itself was a magnet, which he quoted to be the reason for compasses to point to the north. The unit of the strength of a magnetic field is Tesla. Magnet types – permanent, temporary and electromagnets. A current-carrying wire produces a magnetic field around it. Magnet uses – scrap lifting, surgical extraction, dc motor, ac generators. The payment card strip is made of magnet, audio cassette, CRT's monitor, speaker system. Over-exposure to static magnetic fields can be harmful to our health.
-
-- We should not create any features of functionality when we are carrying out the refactoring process.
-
-- Event based learnings (like office training) vs continuous learnings (like from pluralsight).
-
-- Young bright minds ready to snipe every job opportunity that comes their way.
-
-- Foley artists give life to shapes like footsteps, actors walking in leg chains. They reproduce every day sounds like waves crashing, rain coming down, cars passing by, punches, kicks, wind blowing, doors slamming. Three major kinds – feet, movement, specifies. Like roaring of a tiger in a scene or helicopters flying over the heads of the actors in a scene are produced by artists working on specifics.
-
-- Freemium – providing a free, basic version of the app with the option to upgrade to a premium, paid version.
-
-- There is no need to defragment the SSD as they do not work the same way as traditional hard drives. In fact, defragmenting an SSD can cause unnecessary wear and tear on the drive.
-
-- To prevent screen burn-in, avoid displaying static images or leaving the monitor on for long periods of time. Use a screensaver or power-saving mode when monitor is not in use.
-
-- A good song will develop as it goes along, taking us on a familiar path sprinkled with surprises along the way to make sure we are listening. A bad song, on the other hand, will remain stagnant throughout its entirety.
-
-- Overclocking will make your phone run hotter and shorten your battery life, but I can squeeze every drop of power out of your device.
-
-- Writing clean code is what you must do in order to call yourself a professional. There is no reasonable excuse for doing anything less than your best.
-
-- ARM-based processors are known for their power efficiency, which is a crucial factor hyper-scalers who are managing thousands or even millions of servers.
-
-- Local LLMs are advanced AI models that have been optimized to run on personal devices without the need for constant internet connectivity like GPT-2 Mobile, ALBERT, DistilBERT.
-
-- Headphone Form Factor - Over-Ear Headphone, On-Ear Headphone, In-Ear Monitors and True Wireless Earbuds
-
-- High frequencies contribute to the sparkle and detail in music.
-
-- Surround sound formats - dolby digital, dts, dolby atmos, dts:x
-
-- Java is a blueprint for a building, specifying every detail. The blueprint (bytecode) is then interpreted by a skilled builder (JVM) to construct the building (application) on any plot of land (platform). JS, on the other hand is like flexible LEGO bricks. You can build various structures (web features) on the fly, without a rigid plan.
-
-- Jargon words - smartphones - system on chip, led, universal flash storage, ingress protection, bokeh, optical image stabilization, hight dynamic range, sampling rate, priscope camera
-
-- Audio - bass roll-off, bit depth, crossover frequency, driver, dynamic range, equalization, flat response, soundstage, low-frequency effects
-
-- Wearables - lte connectivity, strap material
-
-- TVs - high dynamic range, organic light emitting diode, dolby vision, audio return channel, high-definition multimedia interface
-
-- AI - augmented intelligence, edge ai, explainable ai, neural architecture search, reinforcement learning
-
-- Mouse and Keyboard - acceleration, angle snapping, glide pads, jitter, paracord cable, 60% keyboard, abs keycaps, actution point, clicky switches, keycap legends, lnear switches,
-
-- CPU and GPU - avx instructions, cinebench, clock speed, overclocking, anti-aliasing, directx ray-tracing, deep learning super sampling, fidelityFX super resolution, OpenGL/DirectX/Vulkan, VSync/G-Sync/FreeSync
-
-- Monitor - Adaptive SYnc, Aspect Ratio, Curved Monitors, Loal DImming, Response Time
-
-- Storage and RAm - Cold Storage, Hot Swapping, NAND Flash Memmoery, Redundent Array of Independent Disks, Double Data Rate, Error-Correcting Code, Extreme Memory Profile
-
-- Power Supply & Motherboard - Brownout Protection, Form Factor, Hold-up Time, Inrush Current, ATX, BIOS/UEFI, Clear CMOS Button, Firmware Updates, NIC, Socket Type
