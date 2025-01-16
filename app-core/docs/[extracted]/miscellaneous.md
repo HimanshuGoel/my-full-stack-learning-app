@@ -8,7 +8,6 @@
   - [Interview](#interview)
   - [Professionalism](#professionalism)
   - [Speaking](#speaking)
-  - [Values](#values)
   - [Listening](#listening)
 - [Wellness](#wellness)
   - [Food](#food)
@@ -141,6 +140,12 @@
 
 - A jack of all trades is a master of none, but often-times better than a master of one.
 
+- If we do something extra over and beyond which we normally do early on that will help us build the trust, then we can reap onto it rest of the time of the relationship.
+
+- Rebuilding credibility and reliability – coming to a meeting prepared, putting your point across and taking notes to share with other are great steps to rebuild credibility, be more knowledgeable, communicate confidently. For reliability, be punctual, dependable, consistent with action, avoid last minute surprises.
+
+- Rebuilding openness and self-orientation – should have candid conversations about feedback or misunderstanding, give help people in small ways, be interesting in entire person (hobby, past things).
+
 - "Debuggers don't remove bugs. They only show them in slow motion." Using a debugger doesn't scale. Types and tools and tests do.
 
 - You should name a variable using the same care wit which you name a first-born child.
@@ -201,6 +206,18 @@
 
 - Display technologies - lcd, led and micro led
 
+- Engineers used to give complex names for the technology but under the hood it is very simple and have same base concept.
+
+- WordPress is an open-source, free platform for building and developing websites. WordPress is the most user-friendly and efficient blogging and website builder on the market right now.
+
+- We should not create any features of functionality when we are carrying out the refactoring process.
+
+- Event based learnings (like office training) vs continuous learnings (like from pluralsight).
+
+- Freemium – providing a free, basic version of the app with the option to upgrade to a premium, paid version.
+
+- Writing clean code is what you must do in order to call yourself a professional. There is no reasonable excuse for doing anything less than your best.
+
 ### Speaking
 
 - Enunciate – speak the words clearly.
@@ -216,14 +233,6 @@
   1. Blockers - No Blockers for now
 
 - Gobbledygook – intentionally meaningless language – we deliberately use unclear language so that general people don't understand it and won't raise any counter question.
-
-### Values
-
-- If we do something extra over and beyond which we normally do early on that will help us build the trust, then we can reap onto it rest of the time of the relationship.
-
-- Rebuilding credibility and reliability – coming to a meeting prepared, putting your point across and taking notes to share with other are great steps to rebuild credibility, be more knowledgeable, communicate confidently. For reliability, be punctual, dependable, consistent with action, avoid last minute surprises.
-
-- Rebuilding openness and self-orientation – should have candid conversations about feedback or misunderstanding, give help people in small ways, be interesting in entire person (hobby, past things).
 
 ### Listening
 
@@ -425,6 +434,8 @@
 - Why do you think the old stories tell of men who set out on great journeys to impress the gods? Because trying to impress people just isn't worth the time and effort. - Henry Rollins
 
 - Sometimes it is better to lose money than to lose peace or health.
+
+- Everything takes at least generation, is because we don't change minds, we have to wait for a generation to retire or die before we can get critical mass on the next new idea. And that's the way progress goes.
 
 ## Others
 

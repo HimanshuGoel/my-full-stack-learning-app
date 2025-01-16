@@ -2205,3 +2205,11 @@ CSS is the styling mechanism for the web. It is a standard of selectors, propert
 - Anonymous comments can cause serious damage to your website's reputation.
 
 - WWW or no WWW – whether your website is brand-new or has been hosted for a few months already will depend entirely on its stage. If it brand-new, you must definitely choose whether to use www or non-www in the URL of your site.
+
+- CSS was designed to format technical document, that was its purpose of life, but that is not what we use it for. We use it for all kinds of stuff that it is very badly suited for. We use it as it is only option.
+
+- URI stands for Uniform Resource Identifier, this is used to reference web pages, images, videos, files and pretty much any resource available to a computer, tablet, or smart phone, the browser processes in terms of URI. jQuery use term of URL for web pages.
+
+- It seems that perfection is attained not when there is nothing more to add, but when there is nothing more to subtract.
+
+- Danger driven development – where we are doing crazy reckless stuff in the code just to keep in interesting. Always take the time to code well.

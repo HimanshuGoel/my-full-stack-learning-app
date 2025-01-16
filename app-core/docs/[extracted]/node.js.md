@@ -319,6 +319,8 @@
 
   ![node-js-history](./images/node-js-history.png)
 
+- In node.js we got non-blocking file i/o which is the main advantage. Node.js implements a web server in a JS event loop. It is a high-performance event pump.
+
 ## HTTPS
 
 - We can create polling request for an API on some specific intervals by using setInterval() method.
@@ -334,6 +336,8 @@
 ## Security
 
 - CSRF support is indirectly inbuilt in angular which will check any XSRF-TOKEN from the server response headers and set it to the request header automatically so that it will get match on the server side. We can override this behavior to provide a different token by using XSRF strategy service
+
+- Typo squatting – it is like uploading vulnerable package by changing some characters in spelling to make them look like some famous package and people might download it after getting confuse.
 
 ## Unit Tests
 
