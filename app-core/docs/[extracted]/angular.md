@@ -2213,3 +2213,7 @@ CSS is the styling mechanism for the web. It is a standard of selectors, propert
 - It seems that perfection is attained not when there is nothing more to add, but when there is nothing more to subtract.
 
 - Danger driven development – where we are doing crazy reckless stuff in the code just to keep in interesting. Always take the time to code well.
+
+- We can ship a software update if we have added value without removing any existing value even though the new value feature is not complete, so user can't still use it from UI, it is called dark release.
+
+- By using Electron, we can create cross platform desktop applications.

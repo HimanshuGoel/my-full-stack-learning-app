@@ -160,6 +160,8 @@
 
 - You can take any number of examples like the `setTimeout` method, Axios methods, or any other method that run asynchronously. let’s take the setTimeout operation and look into its lifecycle. When a `setTimeout` is called, it is processed in the stack and then sent to the corresponding API which waits till the specified time to send this operation back in for processing.
 
+- nextTick and setImmediate – these are like timers. In Nodejs 0 milliseconds will be default to 1 milliseconds.
+
 - Where does it send the operation? The event queue. Hence, we have a cyclic system for running async operations in JavaScript. The language itself is single-threaded, but the browser APIs act as separate threads.
 
 - The event loop facilitates this process; it constantly checks whether or not the call stack is empty. If it is empty, new functions are added from the event queue. If it is not, then the current function call is processed.
@@ -217,6 +219,14 @@
 - Lifecycle scripts – pre-start, start and test. Custom scripts – debug, predebug-compile, debug-compile, pre-build, build, etc. If we are running lifecycle script then we don’t have to specify ‘run’ while running that script like “npm start”.
 
 - Using Glob we can specify which files should be compiled. It lets us specify a file named pattern for the compiler to match. `.` Is for the current directory, `**` for the searching recursively inside the child directories.
+
+- The package-lock.json files gets created when we installed some packages, it specify the exact versions of every package that got installed. By this it will be sure that everybody in the team using the same exact versions of all packages even if that team member join after a while to the team.
+
+- Semantic versioning – 1.8.3 where 1 is major version, 8 is minor version and 3 is the revision or the patch number. Patch will be used when some bug fix or performance improvement, that doesn't change the functionality. Minor means new feature is introduced but no breaking changes, major is when breaking changes like changing the function signature.
+
+- Tilde (~) operator will get the latest patch version, carrot (^) will get the latest minor version, use \* or 'x' if we even okay to get the latest major version
+
+- The package-lock.json file overrides the package.json file, so while installing a package it will take the version from package-lock.json file instead of from package.json file, if we don't want this then we need to delete it temporary for avoiding this.
 
 ## Express
 

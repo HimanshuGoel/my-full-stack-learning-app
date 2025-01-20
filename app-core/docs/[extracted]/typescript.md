@@ -10,23 +10,26 @@
 - [Loops](#loops)
 - [Patterns](#patterns)
 - [Async and Events](#async-and-events)
-- [Promises](#promises)
 - [Events](#events)
 - [jQuery](#jquery)
 - [Hoisting](#hoisting)
 - [Symbols](#symbols)
 - [Maps and Sets](#maps-and-sets)
 - [Recursion](#recursion)
-- [Scopes](#scopes)
 - [Closure](#closure)
 - [Modules](#modules)
 - [JSON](#json)
 - [Web-workers](#web-workers)
-- [Webpack](#webpack)
 - [Linting](#linting)
-- [Transpilers](#transpilers)
+- [Regex](#regex)
+- [AJAX](#ajax)
+- [Error Handling](#error-handling)
+- [Polyfills](#polyfills)
+- [Compilers](#compilers)
 
 ## Overview
+
+- JavaScript was originally called Live Script, Netscape changed its name to JavaScript, and it is believed that this was because of the hype of Java within the industry.
 
 - Typescript also support new features of ECMAScript and other features which even didn't introduced yet in ECMAScript like interface.
 
@@ -36,17 +39,7 @@
 
 - It is like a JavaScript, with guard rails.
 
-- Static and Dynamic typing – typescript is static typing and have type safety is a compile time feature.
-
-- The overall computer system doesn't care for the source code, but the compile or interpreter does. It only understands the binary instructions. Source code is for us to understand and for developers.
-
-- In JavaScript, the variable does not have types but value has types. So, any variable can have any type of values. It is different behavior from the static languages.
-
 - JavaScript has nothing to do with Java, similar names for marketing reasons. Developed by Netscape in 1995 to create products and applications that run in the browser. It is primarily client side. It was originally designed as a scripting language, it is actually a fully featured language.
-
-- JavaScript is also a complied language, not interpreter. Because in interpreter while executing line 3 it has no idea what it is on line 4. In JIT just in time compilation, it won't compile the function at instance, but when it was force to, means when we will call that function.
-
-- Undefined means the variable was declared, but it has a special empty value that we mistakenly called undefined. It is uninitialized. It doesn't mean undeclared, it is like vacuum. Undefined is a proper value.
 
 - Lexical scope and dynamic scope: Perl and bash languages only have dynamic scope. Lexical scope means compile time scope, when it is parsing our code. Lexical scope is like building going from first floor to top floor to find, or nested scope bubbles.
 
@@ -56,11 +49,7 @@
 
 - JavaScript and Lua are only two languages which are object oriented; others like C# are just class oriented languages. Only in these languages we can create object without a class.
 
-- The number type in JS is IEEE-754 format, this format is prone to rounding errors, but by this we can represent integers and floating point numbers.
-
 - ES2017 is unofficially called ES8. JS was created by Brendan Eich, he was told to create java like language for Netscape browser. ES is a standard that guides the path of JS.
-
-- JS is interpreted, in C# compilation includes verification of syntactically correctness of code and creating intermediate language (IL) code packages. But in JS we can use JSLint to check for correctness and minification for packaging.
 
 - Human head has two systems – head and gut. Head is the higher level one, its analytic, its algorithm, it is where we do mathematics and reasoning and logic, it requires tremendous amount of effort and a bit slow, most of the time we need to turn it off, due to its slowness only we needed to invent computer. Another part is gut, it is intuitive, heuristic, associative and very, very fast, requires no effort and we cannot turn it off, it is on all the time. Head gets its assumptions from gut and it is not aware of that connection, its think it is getting results from vault of deep truth, but as it is getting from gut, sometimes head can get wrong input.
 
@@ -82,9 +71,13 @@
 
 - Meanwhile after seeing this Microsoft had completely missed the web and the internet, they thought the future of telecommunications was going to be fax and cable TV. So they bought out a browser company, it was another spinoff out of Illinois called spyglass, took their thing and relabelled it as IE and decided that they also need one more thing related to JS. So, they reverse engineering the first JS engine. MS also noticed all the blunders, bugs, errors, design defects, MS carefully documents all of them and replicates them, they called it JScript. Then Netscape went to w3c to make the standard of their language, but w3c denied then they went to ISO, and then European computer manufactures association (ECMA), MS also joined this committee and dominates the committee. Also, MS told that all the bugs will remain in the standard, those standards where published by name ECMAScript.
 
-- Other OO programming language has inheritance is classical where objects are instance of classes and classes inherit from other classes, but in JS it is based on prototypes where objects inherit from objects and that's it. There are no classes, this idea it got from Self language.
-
 - Javascript provides concept of delegations i.e. differential inheritance, where an object can only do what it can do and if its asked to do something that it can't do, it will designate another object to do that work on its behalf.
+
+- ECMAScript versions -
+
+  ![node-js-ecmascript-versions](./images/node-js-ecmascript-versions.png)
+
+- REPL stands for Read, Eval, Print and Loop. Use the ctrl + l to break the REPL session.
 
 ## Browser
 
@@ -96,7 +89,7 @@
 
 - Window is a global object in JS, we can access it from anywhere. Important key things are below –
 
-![typescript-important-document-api](./images/typescript-important-document-api.png)
+  ![typescript-important-document-api](./images/typescript-important-document-api.png)
 
 - Unfortunately, in the browser the use of global variables is required because there is no kind of linkage mechanism that allows one compilation unit to find another. They just share a common global scope. So, in browser use very minimum global variables and named the as UPPER_CASE.
 
@@ -120,6 +113,24 @@
 
 ## Types
 
+- Static and Dynamic typing – typescript is static typing and have type safety is a compile time feature.
+
+- In JavaScript, the variable does not have types but value has types. So, any variable can have any type of values. It is different behavior from the static languages.
+
+- JavaScript is also a complied language, not interpreter. Because in interpreter while executing line 3 it has no idea what it is on line 4. In JIT just in time compilation, it won't compile the function at instance, but when it was force to, means when we will call that function.
+
+- Undefined means the variable was declared, but it has a special empty value that we mistakenly called undefined. It is uninitialized. It doesn't mean undeclared, it is like vacuum. Undefined is a proper value.
+
+- The number type in JS is IEEE-754 format, this format is prone to rounding errors, but by this we can represent integers and floating point numbers.
+
+- We can use String.raw() method if we don't want special character to get render on the UI like '\t', '\n', etc, they will get printed as a raw string.
+
+- The length of the emoji is not 1 unlike normal string characters, it can vary from 1 to 7, etc. String a Unicode character can get fit into 16-bit unit, but not emoji.
+
+- The "void 0" is a primitive value of undefined.
+
+- We cannot add a property to interface declaration if it is private or protected. Only public properties can be added to the interface signature.
+
 - The void type is not exist in javascript language.
 
 - We can use 'never' type when a function is not going to return any value like if that function throw an error.
@@ -128,7 +139,7 @@
 
 - An interface defines the shape of data. It is like a mold used to create baked goods such as muffins. It drives consistency across the objects. Unlike Interface, Type can also be used to represent primary types not just object like data structure.
 
-![typescript-interface-vs-types](./images/typescript-interface-vs-types.png)
+  ![typescript-interface-vs-types](./images/typescript-interface-vs-types.png)
 
 - The 'typeof null' will return generic 'object' value.
 
@@ -136,9 +147,9 @@
 
 - Symbols – they are new primitive data type, they are unique and immutable. Every symbol we create is different from every other symbol. Once we created them we can't change them. Use case for them – to make good unique constants, enum like behaviour, computer property declarations to avoid name collisions, customize internal language behaviour. The string passed below in symbol is just for debugging purpose.
 
-![typescript-symbol1](./images/typescript-symbol1.png)
+  ![typescript-symbol1](./images/typescript-symbol1.png)
 
-![typescript-symbol2](./images/typescript-symbol2.png)
+  ![typescript-symbol2](./images/typescript-symbol2.png)
 
 - Decorators - They are like annotations in java and attributes in c#. In JS they are implemented as functions.
 
@@ -148,7 +159,7 @@
 
 - Duck Typing – in below we don't need to specify the probablyADuck variable as a Duck type, it is considered automatically as it has all its methods.
 
-![typescript-duck-typing2](./images/typescript-duck-typing2.png)
+  ![typescript-duck-typing2](./images/typescript-duck-typing2.png)
 
 - Type Declaration Files - They are also called type definition types or type libraries, these are just wrapper for existing javascript libraries. The goal of type declaration file is to declare types for the variables, functions, objects and other constructs in the library that match the intended use of those items. This allows the typescript compiler to make sure that we are using the library correctly. We can find the problems at compile time. They are just development-time tool to assist the compiler. They end with "d.ts" extensions.
 
@@ -158,7 +169,7 @@
 
 - TypeScript implements structural type system, so in below the object developer can be directly treated as interface as it has all the interface properties. As long as the structure match, we can treat the object as the type with that structure event if it wasn't explicitly declared with that type. This is also called duck typing:
 
-![typescript-duck-typing](./images/typescript-duck-typing.png)
+  ![typescript-duck-typing](./images/typescript-duck-typing.png)
 
 - Static members are a nice way to add utility or helper methods that are related to the purpose of class but aren't dependent on any data that might be stored in instances of the class.
 
@@ -170,7 +181,7 @@
 
 - In 40s when the first Von Neumann machines start coming online they are integer-only machines, but most of the programmers are mathematicians and they are trying to figure out how to do read computation and it is hard, they were trying to do stuff with scaled integers and it is lot of work, and it is error prone. And someone figures out floating point, that we will have two numbers per number, one is the number itself and other is a scale factor, which tells us how many positions to move the decimal point. Then we can just give it to a subroutine, and subroutine will figure out how to add these things. And it worked and it made programming much easier to do. Unfortunately, those libraries were really slow. So, when we get to the 50s, there is now interest in putting floating point into hardware, but we were making out stuff of tubes, and it is hard to do. Someone has figured it out that if we use binary floating pinot instead of decimal floating point, we don't have to implement a dive by 10 in order to do a scaling, we can just shift 1 bit, which is free. That worked great for scientific computing because in scientific computing, our lower digits are probably wrong anyway, but it doesn't work for business processing because they are adding up money and they need to be exact. They have to give the cents exact. So, even successor like java is not good with business types, that is the tragedy we are in now. The solution might be below, this might be only 1 number system which a future language needs to be adopt –
 
-![typescript-dec-64](./images/typescript-dec-64.png)
+  ![typescript-dec-64](./images/typescript-dec-64.png)
 
 - If we are adding integers in a software implementation, it can add two integers and five instructions, in a hardware implementation adding integers should happen in once cycle, which means we don't need to have int as a separate type in order to get performance. We can get performance and range of values that we need in one number type.
 
@@ -178,9 +189,9 @@
 
 - Crude computation bug – below will make the infinite loop. JavaScript only has 1 number type and it is IEEE 754 double-precision floating point, by this we can represent wide range of values but downside is that some of the precession can be lost in the process.
 
-![typescript-number-type](./images/typescript-number-type.png)
+  ![typescript-number-type](./images/typescript-number-type.png)
 
-![javascript-number-type-2](./images/typescript-number-type-2.png)
+  ![javascript-number-type-2](./images/typescript-number-type-2.png)
 
 - We cannot compare NaN with NaN, it will give false. So we need to call isNaN(NaN) function instead
 
@@ -191,6 +202,10 @@
 - We also get NaN as a confusing thing from IEEE format; it is the result of confusing or erroneous operations.
 
 - Array is a contiguous series or span of memory divided into equal size slots where each slot is indexed by a number; very fast, very efficient. One advantage is that we don't need to provide length or type when creating an array. We don't have to worry about out of bound array, as it is not an actual array but an hash table, so every value is in bounds, in first version of javascript they forget to add the concept of array.
+
+Timestamps - A timestamp represents the time elapsed since January 1st, 1970, at midnight (UTC). This is also called the Unix Epoch. It's measured in milliseconds (1 second = 1000 milliseconds). Timestamps are absolute values, meaning they're great for calculations like finding time differences. Timestamps are super handy because they're precise and easy to work with, especially for: Generating unique IDs, Setting expiration times (like cookies), Calculating differences between dates.
+
+Timestamps are simple numbers that represent milliseconds since 1970. Use them for unique IDs, date calculations, or expiration logic. JavaScript provides multiple methods to work with timestamps. Absolute values make timestamps great for finding differences between times.
 
 ## Functions
 
@@ -206,9 +221,13 @@
 
 - While passing the values to a function called arguments, and in function declaration they are called parameters. These two terminology cannot be used interchangeably.
 
+- Call site of "this" keyword – four rules – default binding rule , this rules says that if we are in strict mode, default 'this' keyword to the undefined value, if we are not strict mode, then default the 'this' keyword to global value. Example for this rule is foo(); call. Third rule is implicit binding rule, the call site binding object will become the "this" keyword value. Example is o2.foo().
+
+- Explicit binding – if we use .call() or .apply() at the call site, both of those utilities take as their first parameter a "this" binding.
+
 - Ways in which we can define JavaScript function, last one is preferred and myObject name should be like a namespace name for your application. Function 2 and function 5 will be available on the global scope.
 
-![typescript-function-defining-ways](./images/typescript-function-defining-ways.png)
+  ![typescript-function-defining-ways](./images/typescript-function-defining-ways.png)
 
 - The apply() let us use a parameter name args which has all the arguments, unlike call() method in which we need to specify the each parameter separately.
 
@@ -222,11 +241,11 @@
 
 - Arrow functions are used to make 'this' easier to understand. Below code will return the window object, not the document object which would be the case if we do not use arrow function. So, we are no more limited to have access only object which called the function means context of the function:
 
-![typescript-arrow-function-issue](./images/typescript-arrow-function-issue.png)
+  ![typescript-arrow-function-issue](./images/typescript-arrow-function-issue.png)
 
 - Below code as well will return the window object not the invoice object:
 
-![typescript-arrow-function-issue2](./images/typescript-arrow-function-issue2.png)
+  ![typescript-arrow-function-issue2](./images/typescript-arrow-function-issue2.png)
 
 - Iterator is an object that let us iterate through an array, an object, a string, or even our custom objects.
 
@@ -234,9 +253,13 @@
 
 - Using same method name at multiple levels in an object is called shadowing.
 
-- The [[prototype]] points to the prototype of the constructor used to create the object. It is a linkage from one object to another object. By this we can call a property or a method on an object reference , and it can't handle that object or property, if it can't handle that, it delegates up to prototype chain to a different object. We can find out where an object's [[prototype]] points to using dunder proto, Object.getPrototypeOf, and ".constructor.prototype".
+- The `prototype` points to the prototype of the constructor used to create the object. It is a linkage from one object to another object. By this we can call a property or a method on an object reference , and it can't handle that object or property, if it can't handle that, it delegates up to prototype chain to a different object. We can find out where an object's [[prototype]] points to using dunder proto, Object.getPrototypeOf, and ".constructor.prototype".
 
 - Inheritance vs. prototypical inheritance – they are opposite to each other, one of them is copy down, one of them is a delegation up the chain. We should say JavaScript has behavior delegation not inheritance.
+
+- Use omitBy() function from lodash to send only the changed property with a PATCH request –
+
+  ![node-js-using-omitby-with-patch-request](./images/node-js-using-omitby-with-patch-request.png)
 
 - Arrow Func – it is used to deal with the issue with scope in callback function in which anonymous function passed as callback to other function create their own scope. Arrow function bind the scope of where they are defined, not where they are used which is also known is lexical binding. We get rid off the function name and use arrow for it.
 
@@ -276,9 +299,9 @@
 
 - Value of 'this' in function for different cases invocation. We need to use call, bind or prototype to control this context –
 
-![typescript-value-of-this-based-on-context](./images/typescript-value-of-this-based-on-context.png)
+  ![typescript-value-of-this-based-on-context](./images/typescript-value-of-this-based-on-context.png)
 
-![typescript-value-of-this-based-on-context2](./images/typescript-value-of-this-based-on-context2.png)
+  ![typescript-value-of-this-based-on-context2](./images/typescript-value-of-this-based-on-context2.png)
 
 - A common approach to encapsulation in JS is using a constructor function. But adding functions to prototype required quite a bit coding and some repetition. Using class we can write it into much simpler way. The class syntax is not introducing a new object model to javascript. It is just syntactical sugar over the existing prototype-based inheritance.
 
@@ -306,17 +329,23 @@
 
 - The big advantage in prototypal systems is we eliminate or reduce coupling between classes unlike classification inheritance.
 
+- Generators enabled the functionality for async-await keywords because of pause-resume feature. Generator functions can be paused and resumed unlike normal functions. They also stored the state of the function while paused. They return generators object which implement the iterator protocol by this they provide a method name 'next()', this method restarts a paused generator function. They works upon concept of lazy execution by which they compute the values on demand.
+
+- Instead of using console.log() use debug(), it will only log when we are running in development mode not in production mode.
+
 ## Object
 
 - By using Object.assign, the source object remain unchanged, the target object is modified and used as return value. In case of duplicate properties on source objects, the value from the last object on the chain always prevails.
 
 - Iterables return an iterator object. This object knows how to access items from a collection 1 at a time, while keeping track of its current position within the same sequence.
 
-![typescript-iterables](./images/typescript-iterables.png)
+  ![typescript-iterables](./images/typescript-iterables.png)
 
 - Proxies and reflection are both forms of meta programming generally to know information about itself or for a program to control how is executing while it is executing other programs. Reflection is getting information about the program and proxy is changing how the program execute during execution. Proxy object sits between other code and target object. Proxies are slower than regular object. Revocable proxies allow the system to recover resources – use in very large applications with lots of data.
 
-![typescript-proxy-and-reflection](./images/typescript-proxy-and-reflection.png)
+  ![typescript-proxy-and-reflection](./images/typescript-proxy-and-reflection.png)
+
+- Other OO programming language has inheritance is classical where objects are instance of classes and classes inherit from other classes, but in JS it is based on prototypes where objects inherit from objects and that's it. There are no classes, this idea it got from Self language.
 
 - Immutability helps in performance, if we have an object that needs to be change the value stored in one of its properties, it may take a long time for JS to recognize that that properties has been changed, basically every property on that object has to be checked to see if its changed in order to determine that our data has changed. By enforcing immutability all JS has to do is check the object reference to see if that's changed. If it has changed then that some property value is changed, checking for object reference changes in very fast. So in this case immutability is performance enhancer. It is mainly for objects/arrays other data types are already immutable.
 
@@ -350,7 +379,7 @@
 
 - Meta object API – a property is a named collection of attributes, earlier this api wasn't exposed for outside world.
 
-![typescript-meta-object-api](./images/typescript-meta-object-api.png)
+  ![typescript-meta-object-api](./images/typescript-meta-object-api.png)
 
 - We can stop object extensibility by using preventExtensions() method, the object won't accept new property assignment. The freeze() stop its extension and also make all property as read-only and immutable. By this we can pass this object to third party and be confident that third party can't be able to corrupt this object
 
@@ -359,6 +388,16 @@
 - We have two distinct kind of objects, we have objects which just contain data, only data, and objects contain only functions, which are frozen, and those objects are very strong and very reliable, they cannot be tempered with, they provide the interface for dealing with the objects which are containing the data. By this we can create good API which can defend themselves, which can remain robust in the face of all the confusion happening inside our system. So, in above image put data in member variables.
 
 ## Loops
+
+- The for and for-of are the constructs of the language itself, whereas the for-each is the method on the array, map and set objects and can access it on the interables.
+
+- The for-each loop skips absent values for absent value which got created while doing like below, these are not undefined or null values. The array will be called Sparse Array.
+
+- With for or for-each loops, we can' use the "continue" or "break" keywords. For this, we should use "filter()" method then further chain the "forEach()" method. To convert and transform a value, we need to use the map() method.
+
+- The for-in loop produces indices instead of values unlike for-of loop. The for-in loop present from the start of the language but for-of has been introduced in ES6 version.
+
+- Also, with for-in loop the order of the iteration is not guaranteed also it will enumerated the inherited properties. We should not use for-in loop to iterate arrays or other iterables but use for-of loop. We should use for-in only to iterate the properties on a object, with for-of we will get an error that object is not iterable. To still make the use of for-of we can use Object.entries() or Object.keys() methods to iterate. So, we should use for-in only if we also want to iterate the inherited properties.
 
 - The for-in loop can be used to loop through the property on an object. If we set enumerable false we cannot loop through that property. Also that property will not be JSON serialized.
 
@@ -392,6 +431,208 @@
 
 - Revealing Prototype Pattern - It combines prototype and revealing module pattern to get the best from both of them. Functions loaded into memory once, also it is extensible.
 
+- Solid Principles - It is an acronym for five design principles aimed at enhancing the understanding, development, and maintenance of software. By applying this set of principles, you should notice a reduction in bugs, improved code quality, the production of more organized code, decreased coupling, enhanced refactoring, and encouragement of code reuse.
+
+- Single Responsibility Principle - one class should have one, and only one, reason to change. It also avoids Lack of cohesion, Too much information in one place, Challenges in implementing automated tests as it's hard to mock such a class. ou can (and should) apply it to methods and functions as well.
+
+  ```typescript
+  class AuthenticationManager {
+    authenticateUser(username: string, password: string): boolean {
+      // Authenticate logic
+    }
+  }
+
+  class UserProfileManager {
+    showUserProfile(username: string): UserProfile {
+      // Show user profile logic
+    }
+
+    updateUserProfile(username: string): UserProfile {
+      // Update user profile logic
+    }
+  }
+
+  class PermissionManager {
+    setUserPermissions(username: string): void {
+      // Set permission logic
+    }
+  }
+
+  // ❌
+  function processTasks(taskList: Task[]): void {
+    taskList.forEach((task) => {
+      // Processing logic involving multiple responsibilities
+      updateTaskStatus(task);
+      displayTaskDetails(task);
+      validateTaskCompletion(task);
+      verifyTaskExistence(task);
+    });
+  }
+
+  // ✅
+  function updateTaskStatus(task: Task): Task {
+    // Logic for updating task status
+    return { ...task, completed: true };
+  }
+
+  function displayTaskDetails(task: Task): void {
+    // Logic for displaying task details
+    console.log(`Task ID: ${task.id}, Description: ${task.description}`);
+  }
+
+  function validateTaskCompletion(task: Task): boolean {
+    // Logic for validating task completion
+    return task.completed;
+  }
+
+  function verifyTaskExistence(task: Task): boolean {
+    // Logic for verifying task existence
+    return tasks.some((t) => t.id === task.id);
+  }
+  ```
+
+  ![typescript-single-responsiblity](./images/typescript-single-responsiblity.avif)
+
+- Open Closed Principle - Objects or entities should be open for extension but closed for modification. Modifying an existing class to add new behavior carries a serious risk of introducing bugs into something that was already working. Open for extension: You can add new functionality or behavior to the class without changing its source code. Closed for modification: If your class already has a functionality or behavior that works fine, don't change its source code to add something new.
+
+  ```typescript
+  interface Shape {
+    area(): number;
+  }
+
+  class Circle implements Shape {
+    radius: number;
+
+    constructor(radius: number) {
+      this.radius = radius;
+    }
+
+    area(): number {
+      return Math.PI * this.radius ** 2;
+    }
+  }
+
+  class Square implements Shape {
+    sideLength: number;
+
+    constructor(sideLength: number) {
+      this.sideLength = sideLength;
+    }
+
+    area(): number {
+      return this.sideLength ** 2;
+    }
+  }
+
+  class AreaCalculator {
+    totalArea(shapes: Shape[]): number {
+      let total = 0;
+
+      shapes.forEach((shape) => {
+        total += shape.area();
+      });
+
+      return total;
+    }
+  }
+  ```
+
+  ![typescript-open-closed](./images/typescript-open-closed.avif)
+
+- Liskov Substitution Principle - A derived class must be substitutable for its base class. If S is a subtype of T, then objects of type T in a program can be replaced by objects of type S without altering the properties of this program.
+
+  ```typescript
+  class Person {
+    speakName() {
+      return 'I am a person!';
+    }
+  }
+
+  class Child extends Person {
+    speakName() {
+      return 'I am a child!';
+    }
+  }
+
+  const person = new Person();
+  const child = new Child();
+
+  function printName(message: string) {
+    console.log(message);
+  }
+
+  printName(person.speakName()); // I am a person!
+  printName(child.speakName()); // I am a child!
+  ```
+
+  ![typescript-liskov](./images/typescript-liskov.avif)
+
+- Interface Segregation Principle - A class should not be forced to implement interfaces and methods it does not use. This way, the behavior is isolated correctly within our context, and we still respect the Interface Segregation Principle.
+
+  ```typescript
+  interface Readable {
+    read(): void;
+  }
+
+  interface Downloadable {
+    download(): void;
+  }
+
+  class OnlineBook implements Readable, Downloadable {
+    read(): void {
+      // does something
+    }
+
+    download(): void {
+      // does something
+    }
+  }
+
+  class PhysicalBook implements Readable {
+    read(): void {
+      // does something
+    }
+  }
+  ```
+
+  ![typescript-interface-segregation](./images/typescript-interface-segregation.avif)
+
+- Dependency Inversion Principle - Depend on abstractions and not on implementations. High-level modules should not depend on low-level modules. Both should depend on abstractions. Abstractions should not depend on details. Details should depend on abstractions. In the above example, UserService directly depends on the concrete implementation of MySQLDatabase. This violates DIP since the high-level class UserService is directly dependent on a low-level class. If we want to switch to a different database system (e.g., PostgreSQL), we need to modify the UserService class, which is AWFUL! Let's fix this code using DIP. Instead of depending on concrete implementations, the high-level class UserService should depend on abstractions.
+
+  ```typescript
+  // Abstract interface (abstraction) for the low-level module
+  interface Database {
+    getUserData(id: number): string;
+  }
+
+  class MySQLDatabase implements Database {
+    getUserData(id: number): string {
+      // Logic to fetch user data from MySQL database
+    }
+  }
+
+  // Another low-level module implementing the Database interface
+  class PostgreSQLDatabase implements Database {
+    getUserData(id: number): string {
+      // Logic to fetch user data from PostgreSQL database
+    }
+  }
+
+  class UserService {
+    private database: Database;
+
+    constructor(database: Database) {
+      this.database = database;
+    }
+
+    getUser(id: number): string {
+      return this.database.getUserData(id);
+    }
+  }
+  ```
+
+  ![typescript-dependency-inversion](./images/typescript-dependency-inversion.png)
+
 ## Async and Events
 
 - The smallest timeout delay period will be 4 milliseconds, even 0 will be bumped to 4 milliseconds. Timers will not start until the outer most function is finished.
@@ -400,7 +641,7 @@
 
 - The event queue – if at a time only person can go to the teller, then there has to be a queue to hold the other people, this queue is a part of event loop in JS. This is where work is stored until the current operation or task is done executing.
 
-![typescript-event-queue](./images/typescript-event-queue.png)
+  ![typescript-event-queue](./images/typescript-event-queue.png)
 
 - The javascript engine will only execute one piece of JS code at a time, behind the scenes there are a pool of threads that are used for things like making web requests. This pool of threads can have multiple connections open to multiple different servers to request data for multiple different requests at the same time. This is all hidden behind the scenes, this is how we can still achieve parallelism within JS. We still have behind the scenes the ability for multithreading, it is not just applied to our JS code itself.
 
@@ -412,21 +653,29 @@
 
 - The JS engine and the browser tab that we are working has a separate event loop dedicated just to our application, this event loop contains a queue, inside of this queue work can be placed that will be eventually executed when whatever is running is complete. In addition to this queue, there is a call stack it contains whatever is executing at this current time, a call stack is like a todo list while performing a task. Work will be pushed on call stack and then once it is done it will vanish. A todo item can also have sub-task like to create a hamburger we might need to find many items to look for same with the work, it will be further pushed to the stack only, as usual after completion of that subtask, it will be removed from the stack and controls get back to the earlier item on the stack.
 
-![typescript-event-loop2](./images/typescript-event-loop2.png)
+  ![typescript-event-loop2](./images/typescript-event-loop2.png)
 
 - The black box items will be handle by browser behind the scenes for us, and a mechanism in browser will also listen for the their responses as-well, after getting the response it will push those response inside the queue. Behind the scene the browser is handling these requests not the JS engine, so that multiple threads handling multiple request at the same time. So it is possible while our single-threaded JS engine is doing work that behind the scenes other things can be happening, we just don't have those things happening inside of our JS engine –
 
-![typescript-event-loop3](./images/typescript-event-loop3.png)
+  ![typescript-event-loop3](./images/typescript-event-loop3.png)
 
 - In setTimeout() function there is not guarantee that our function will be called at exactly at the mentioned time, at that time elapse the function will be pushed in the queue, but it will called once all other prior work in the queue gets completed. Also when we say 0 milliseconds the browser is putting in as 4.
 
 - In the browser the call stack pane is real life stack of JS event queue.
 
-- Nodejs nextTick and setImmediate – these are like timers. In Nodejs 0 milliseconds will be default to 1 milliseconds.
-
 - The process.nextTick take precedence over setTimeout. In nextTick() all the callbacks that we register will be run at the end of the current event loop turn. Means whatever is running right now once it is done, the registered nextTick() will be called. nextTick() is like a bouncer that lets people cut in line, lets the VIP people get in ahead of everybody else.
 
-## Promises
+- If you call setTimeOut with 0ms and resolve a promise immediately, which would console log first? The answer is Promises and the reason is that Job queue gets more priority than Event Queue.
+
+- For callbacks, use arrow function instead of normal function.
+
+- Promises are invented for JS for single threaded environment.
+
+- The setImmediate will take preference over setTimeout. So, use setImmediate if we want to execute it on next tick of the event loop, node has similar api called process.nextTick.
+
+- Async-await let us write the asynchronous code more like the way we write the synchronous code. Data returned from async func is automatically wrapped in a promise. Using the await keyword will automatically extract data from a promise. Also, we need to use try-catch while using async-await because await will only return value when it gets success result.
+
+- We can write event-driven code with EventEmitters classes. The EventEmitter calls all listeners synchronously in the order in which they were registered. This ensures the proper sequencing of events and helps to avoid race conditions and logic errors. But we can made them async for a particular case by using setImmediate(), it will push the code execution into the next cycle of the event loop.
 
 - Promises – much cleaner code than callbacks. Simple API – then and catch methods, chain together as then function also returns promise.
 
@@ -446,7 +695,7 @@
 
 - Event driven model was inspired by HyperCard
 
-![typescript-hyper-card](./images/typescript-hyper-card.png)
+  ![typescript-hyper-card](./images/typescript-hyper-card.png)
 
 ## jQuery
 
@@ -476,7 +725,7 @@
 
 - Issues with using Objects as Maps – when using objects as maps, its key are always converted to strings. We should stop using the object, but use Map objects which is a simple key/value data structure. Any value may be used as either a key or a value, and the objects are not converted to strings. Also, we can use maps when keys are unknown until runtime, use objects if keys are predefined. We should also use maps when keys are of same type and all values are of same type. Maps are iterable, so they can be used in a for-of loop. Each run of the loops returns a [key, value] pair for an entry in the Map.
 
-![typescript-using-maps-instead-of-objects](./images/typescript-using-maps-instead-of-objects.png)
+  ![typescript-using-maps-instead-of-objects](./images/typescript-using-maps-instead-of-objects.png)
 
 - The WeakMap is a type of Map where only objects can be passed as keys, primitive data types such as strings, numbers, Booleans, etc. are not allowed. WeekMaps are not iterable, so they can't be used with for-of loop. Weakmaps are better with memory, they can be garbage collected. Individual entries in a weakmap can be garbage collected, while the weakmap itself still exists.
 
@@ -496,17 +745,11 @@
 
 - Recursion example of conversion of normal function into recursion, anything we can write recursively, we can also write iteratively. The recursive version is smaller, more elegant but one danger is that they are building up one after another on the stack, we can run out of memory if we put a very large number, but with modern computers, that is not much a problem.
 
-## Scopes
-
-- Call site of "this" keyword – four rules – default binding rule , this rules says that if we are in strict mode, default 'this' keyword to the undefined value, if we are not strict mode, then default the 'this' keyword to global value. Example for this rule is foo(); call. Third rule is implicit binding rule, the call site binding object will become the "this" keyword value. Example is o2.foo().
-
-- Explicit binding – if we use .call() or .apply() at the call site, both of those utilities take as their first parameter a "this" binding.
-
 ## Closure
 
 - A closure wraps up an entire environment, binding necessary variable from other scope. It is unlike a function's local variables as they aren't available once the function's scope is closed. Closures are very useful in creating function 'construction zones', a closure can make the creation of very similar functions ultra-efficient. We should aware that bound variables won't be evident in the stored function, examining the contents of our new variables doesn't reveal closures.
 
-![typescript-closure](./images/typescript-closure.png)
+  ![typescript-closure](./images/typescript-closure.png)
 
 - Closure – function is called in the scope in which it was declared, not in the scope in which it is invoked. The way closure works is that a function is going to scope its variable at the time it is declared, not at the time it is run.
 
@@ -520,11 +763,13 @@
 
 ## Modules
 
+- Module formats – es2015 syntax is in-built one which TypeScript adapted from JavaScript. Earlier ones were CommonJS, AMD (for browser), UMD, System JS formats.
+
 - UMD module format – at runtime scripts in the UMD format check for global variables that are distinctive between AMD and CommonJS and depending upon which globals are found the module will be initialized in the appropriate manner. If we writing a module that is appropriate to use in both CommonJS and AMD environments we can consider using the UMD format.
 
 - Ambient modules – large JS libraries could potentially have lots of modules in them. Each module in a large library would have its own d.ts file and that would quickly become unwieldy and inconvenient. The solution is to declare ambient modules inside a single d.ts file. Ambient modules don't provide any implementation details. In type definition files they are just the wrapper aournd an implementing that defined in the actual library. Since there aren't any top-level exports, it can't be imported directly. We first need to add a triple slash reference to the d.ts file, then we can write the import statement, we don't need to define the path for the module to import but just the name of the module in the double quote exactly it was defined in d.ts file.
 
-![typescript-ambient-modules](./images/typescript-ambient-modules.png)
+  ![typescript-ambient-modules](./images/typescript-ambient-modules.png)
 
 - Module loaders – Node has inbuilt module loaders capability means it understands the Common JS format and how to retrieve all of the necessary dependencies when running code written in or compiled to that format. As of now browsers don't provide that capability natively. However, there are couple of very good libraries that give us the ability to load and use modules in browser apps like Require.js, it understands AMD format, System JS understands AMD, Common JS, ES2015 and its own system format.
 
@@ -536,13 +781,13 @@
 
 - There is different module syntax like AMD, Common JS, TS has adapted ES2015 module syntax by default. Benefits – encapsulation, reusability, create higher-level abstraction. We will also need module loader/bundler to run our code. Webpack will prepare our modules to execute in a browser as part of a build step.
 
-![typescript-supported-technologies](./images/typescript-supported-technologies.png)
+  ![typescript-supported-technologies](./images/typescript-supported-technologies.png)
 
 - Relative vs. non-relative imports – './', '/', '../' all are same for current directive. We should give relative reference when giving our own modules and non-relative paths when referring third party modules.
 
 - Module formats are just a syntax which is used to define a module, module loaders are generally JS library which we can include in our project that understand the module format we have decided to use and how to load and execute the modules we define in that format. This relationship is similar to JS and browser and itself.
 
-![typescript-module-type-format](./images/typescript-module-type-format.png)
+  ![typescript-module-type-format](./images/typescript-module-type-format.png)
 
 - Common JS format is used mostly with server side, Universal module definition (UMD) is a single format that attempts to be compatible with both the AMD and Common JS formats. We might consider using this format if we need to same module on the server in a node application and as part of a browser application. It would be supported by the CommonJS module loader in Node, as well as an AMD loader in the browser like RequireJS.
 
@@ -566,7 +811,9 @@
 
 - They can replace module loaders in a browser, as they can be used in build steps rather than run time. A bundler follows the chain of module dependencies in an application, just like a loader, but instead of downloading a dependency when it's needed, it just adds it to the bundle in the proper order. The result of the bundling process is that we are left with far fewer files that the browser has to download. Browserify and webpack are famous bundlers.
 
-- Webpack support many module formats, code splitting, it can bundles more than just JS modules, also use loaders feature for transformation before bundling.
+- Module formats - IIFE, Asynchronous Module Definition (AMD), CommonJS (CJS), Universal Module Definition (UMD), ES6 Modules.
+
+- Package vs. module – a module is a single javascript file that has some reasonable functionality, a package is a directory with one or more models inside of it and package.json file which has metadata about the package. It can be from simpler like from lodash to complex one like express. While working with NPM we are working with packages, which is why it is called node package manager.
 
 ## JSON
 
@@ -578,16 +825,6 @@
 
 - A web-worker is another option to run tasks in parallel in JS. They are designed for browsers. They are started by main thread and every worker gets his own isolated global environment, nothing is shared between main thread and worker thread. SharedArrayBuffer supports a scenario where many worker thread need to share same data. Normal arrays are not optimized for this kind of work, due to which ArrayBuffer and TypedArrays have been introduced, they reduces memory footprint and optimize data transfer.
 
-## Webpack
-
-- Webpack process –
-
-![typescript-webpack-process](./images/typescript-webpack-process.png)
-
-- We can use webpack web server for local development environment, it serves the bundle file in-memory which makes our debugging and application fast on localhost. It will keep all JS files into one bundle file.
-
-- But when our application is complete we need to build it for a production environment, so we need a package file that we can send off to store on the server, we need to minimize the code for production. For production, webpack will create a dist folder and files like below, it will also have a map file, this file is useful in some tools for getting the exact line numbers, it maps the minimize code to the original code. Webpack do all of these for us. Three main files one is html, another is JS file and finally one is a map file
-
 ## Linting
 
 - JSLint defines a professional subset of JS, it will hurt our feelings as we get really emotional about how we write our programs.
@@ -595,6 +832,12 @@
 - Switch statement is having fall-through hazards, so we should use 'break' keywords.
 
 ## Regex
+
+- In top 15 languages, only assembly language doesn't support regular expression.
+
+  ![typescript-regex-basic-syntax](./images/typescript-regex-basic-syntax.png)
+
+  ![typescript-regex-short-codes](./images/typescript-regex-short-codes.png)
 
 - RegExp are not readable and understandable easily if they are long, there is tool regulex (<http://jex.im/regulex/>) which we can use to see it in a diagrammatic form to understand it better.
 
@@ -604,319 +847,44 @@
 
 - The Metamorphosis of AJAX - The web comes from word processing and word processing historically comes in two very distinct schools – binary proprietary and textual open. For this the first program was runoff then GML (general mark-up language then html comes from GML). The angular brackets for tabs from Brian Reid's scribe to distinguish between format and content.
 
-- We cannot add a property to interface declaration if it is private or protected. Only public properties can be added to the interface signature.
-
-- Module formats – es2015 syntax is in-built one which TypeScript adapted from JavaScript. Earlier ones were CommonJS, AMD (for browser), UMD, System JS formats.
-
-- JavaScript was originally called Live Script, Netscape changed its name to JavaScript, and it is believed that this was because of the hype of Java within the industry.
+## Error Handling
 
 - Types of errors – compile time errors, runtime errors, syntax error, logic error
 
 - Types of runtime error – SyntaxError, TypeError, ReferenceError, URIError, RangeError, EvalError, InternalError.
 
-- We can use String.raw() method if we don't want special character to get render on the UI like '\t', '\n', etc, they will get printed as a raw string.
+## Polyfills
 
-- The length of the emoji is not 1 unlike normal string characters, it can vary from 1 to 7, etc. String a Unicode character can get fit into 16-bit unit, but not emoji.
+- Polyfills handles the cross browser feature gaps. It is a technique to add missing features to older browsers, allowing them to support newer features that are only available in modern browsers. It ensures that websites can run correctly across all browsers. It also support for deprecated features on newer browsers for older applications. The famous library for polyfills is core-js which includes methods like includes(), find(), findIndex(), flatMap(), sort(), padStart(), padEnd(), assign(), entries(), sing(), trunc(), promises, etc.
 
-- The for and for-of are the constructs of the language itself, whereas the for-each is the method on the array, map and set objects and can access it on the interables.
+## Compilers
 
-- The for-each loop skips absent values for absent value which got created while doing like below, these are not undefined or null values. The array will be called Sparse Array.
-
-- With for or for-each loops, we can' use the "continue" or "break" keywords. For this, we should use "filter()" method then further chain the "forEach()" method. To convert and transform a value, we need to use the map() method.
-
-- The for-in loop produces indices instead of values unlike for-of loop. The for-in loop present from the start of the language but for-of has been introduced in ES6 version.
-
-- Also, with for-in loop the order of the iteration is not guaranteed also it will enumerated the inherited properties. We should not use for-in loop to iterate arrays or other iterables but use for-of loop. We should use for-in only to iterate the properties on a object, with for-of we will get an error that object is not iterable. To still make the use of for-of we can use Object.entries() or Object.keys() methods to iterate. So, we should use for-in only if we also want to iterate the inherited properties.
+- Modern web browsers have good support for the latest versions of JS, including features that were introduced in newer versions of the language. But we still need transpiling for few advanced language feature that are not yet supported by all modern browsers might need transpiling.
 
 - When ES6 was released, it was not able to run directly in browsers. To run it into the browser, this process is called transpilling to convert ES6 into ES5 before getting served to browser.
 
 - Unlike compiler transpilers transform the code of a language into another form of the same language. They are also referred to as source to source compilers. This process converts one higher level language to another higher level language.
 
-- Modern web browsers have good support for the latest versions of JS, including features that were introduced in newer versions of the language. But we still need transpiling for few advanced language feature that are not yet supported by all modern browsers might need transpiling.
-
-- Polyfills handles the cross browser feature gaps. It is a technique to add missing features to older browsers, allowing them to support newer features that are only available in modern browsers. It ensures that websites can run correctly across all browsers. It also support for deprecated features on newer browsers for older applications. The famous library for polyfills is core-js which includes methods like includes(), find(), findIndex(), flatMap(), sort(), padStart(), padEnd(), assign(), entries(), sing(), trunc(), promises, etc.
-
-- The "void 0" is a primitive value of undefined.
-
-- In top 15 languages, only assembly language doesn't support regular expression.
-
-![typescript-regex-basic-syntax](./images/typescript-regex-basic-syntax.png)
-
-![typescript-regex-short-codes](./images/typescript-regex-short-codes.png)
-
-- Solid Principles - It is an acronym for five design principles aimed at enhancing the understanding, development, and maintenance of software. By applying this set of principles, you should notice a reduction in bugs, improved code quality, the production of more organized code, decreased coupling, enhanced refactoring, and encouragement of code reuse.
-
-  - Single Responsibility Principle - one class should have one, and only one, reason to change. It also avoids Lack of cohesion, Too much information in one place, Challenges in implementing automated tests as it's hard to mock such a class. ou can (and should) apply it to methods and functions as well.
-
-    ```typescript
-    class AuthenticationManager {
-      authenticateUser(username: string, password: string): boolean {
-        // Authenticate logic
-      }
-    }
-
-    class UserProfileManager {
-      showUserProfile(username: string): UserProfile {
-        // Show user profile logic
-      }
-
-      updateUserProfile(username: string): UserProfile {
-        // Update user profile logic
-      }
-    }
-
-    class PermissionManager {
-      setUserPermissions(username: string): void {
-        // Set permission logic
-      }
-    }
-
-    // ❌
-    function processTasks(taskList: Task[]): void {
-      taskList.forEach((task) => {
-        // Processing logic involving multiple responsibilities
-        updateTaskStatus(task);
-        displayTaskDetails(task);
-        validateTaskCompletion(task);
-        verifyTaskExistence(task);
-      });
-    }
-
-    // ✅
-    function updateTaskStatus(task: Task): Task {
-      // Logic for updating task status
-      return { ...task, completed: true };
-    }
-
-    function displayTaskDetails(task: Task): void {
-      // Logic for displaying task details
-      console.log(`Task ID: ${task.id}, Description: ${task.description}`);
-    }
-
-    function validateTaskCompletion(task: Task): boolean {
-      // Logic for validating task completion
-      return task.completed;
-    }
-
-    function verifyTaskExistence(task: Task): boolean {
-      // Logic for verifying task existence
-      return tasks.some((t) => t.id === task.id);
-    }
-    ```
-
-    ![typescript-single-responsiblity](../docs-assets/images/typescript-single-responsiblity.avif)
-
-  - Open Closed Principle - Objects or entities should be open for extension but closed for modification. Modifying an existing class to add new behavior carries a serious risk of introducing bugs into something that was already working. Open for extension: You can add new functionality or behavior to the class without changing its source code. Closed for modification: If your class already has a functionality or behavior that works fine, don't change its source code to add something new.
-
-    ```typescript
-    interface Shape {
-      area(): number;
-    }
-
-    class Circle implements Shape {
-      radius: number;
-
-      constructor(radius: number) {
-        this.radius = radius;
-      }
-
-      area(): number {
-        return Math.PI * this.radius ** 2;
-      }
-    }
-
-    class Square implements Shape {
-      sideLength: number;
-
-      constructor(sideLength: number) {
-        this.sideLength = sideLength;
-      }
-
-      area(): number {
-        return this.sideLength ** 2;
-      }
-    }
-
-    class AreaCalculator {
-      totalArea(shapes: Shape[]): number {
-        let total = 0;
-
-        shapes.forEach((shape) => {
-          total += shape.area();
-        });
-
-        return total;
-      }
-    }
-    ```
-
-    ![typescript-open-closed](../docs-assets/images/typescript-open-closed.avif)
-
-    - Liskov Substitution Principle - A derived class must be substitutable for its base class. If S is a subtype of T, then objects of type T in a program can be replaced by objects of type S without altering the properties of this program.
-
-      ```typescript
-      class Person {
-        speakName() {
-          return 'I am a person!';
-        }
-      }
-
-      class Child extends Person {
-        speakName() {
-          return 'I am a child!';
-        }
-      }
-
-      const person = new Person();
-      const child = new Child();
-
-      function printName(message: string) {
-        console.log(message);
-      }
-
-      printName(person.speakName()); // I am a person!
-      printName(child.speakName()); // I am a child!
-      ```
-
-      ![typescript-liskov](../docs-assets/images/typescript-liskov.avif)
-
-  - Interface Segregation Principle - A class should not be forced to implement interfaces and methods it does not use. This way, the behavior is isolated correctly within our context, and we still respect the Interface Segregation Principle.
-
-    ```typescript
-    interface Readable {
-      read(): void;
-    }
-
-    interface Downloadable {
-      download(): void;
-    }
-
-    class OnlineBook implements Readable, Downloadable {
-      read(): void {
-        // does something
-      }
-
-      download(): void {
-        // does something
-      }
-    }
-
-    class PhysicalBook implements Readable {
-      read(): void {
-        // does something
-      }
-    }
-    ```
-
-    ![typescript-interface-segregation](../docs-assets/images/typescript-interface-segregation.avif)
-
-  - Dependency Inversion Principle - Depend on abstractions and not on implementations. High-level modules should not depend on low-level modules. Both should depend on abstractions. Abstractions should not depend on details. Details should depend on abstractions. In the above example, UserService directly depends on the concrete implementation of MySQLDatabase. This violates DIP since the high-level class UserService is directly dependent on a low-level class. If we want to switch to a different database system (e.g., PostgreSQL), we need to modify the UserService class, which is AWFUL! Let's fix this code using DIP. Instead of depending on concrete implementations, the high-level class UserService should depend on abstractions.
-
-    ```typescript
-    // Abstract interface (abstraction) for the low-level module
-    interface Database {
-      getUserData(id: number): string;
-    }
-
-    class MySQLDatabase implements Database {
-      getUserData(id: number): string {
-        // Logic to fetch user data from MySQL database
-      }
-    }
-
-    // Another low-level module implementing the Database interface
-    class PostgreSQLDatabase implements Database {
-      getUserData(id: number): string {
-        // Logic to fetch user data from PostgreSQL database
-      }
-    }
-
-    class UserService {
-      private database: Database;
-
-      constructor(database: Database) {
-        this.database = database;
-      }
-
-      getUser(id: number): string {
-        return this.database.getUserData(id);
-      }
-    }
-    ```
-
-    ![typescript-dependency-inversion](../docs-assets/images/typescript-dependency-inversion.png)
-
-What Are Timestamps? 🤔
-A timestamp represents the time elapsed since January 1st, 1970, at midnight (UTC). This is also called the Unix Epoch.
-
-📏 It's measured in milliseconds (1 second = 1000 milliseconds).
-🗓️ Timestamps are absolute values, meaning they're great for calculations like finding time differences.
-
-Timestamps are super handy because they're precise and easy to work with, especially for:
-
-Generating unique IDs 🆔
-Setting expiration times (like cookies) 🍪
-Calculating differences between dates 🕒
-
-Timestamps are simple numbers that represent milliseconds since 1970.
-Use them for unique IDs, date calculations, or expiration logic.
-JavaScript provides multiple methods to work with timestamps.
-Absolute values make timestamps great for finding differences between times.
-
-- If you call setTimeOut with 0ms and resolve a promise immediately, which would console log first? The answer is Promises and the reason is that Job queue gets more priority than Event Queue.
-
-## Transpilers
-
 - Declaration merging - The compiler merges two seperate declarations declared with the same same into a single definition. allowed merges - interfaces, enums, namespaces with classes/functions/enums. disallowed - classes with classes. We can use declaration merging to implement module augmentation. It is a technique that allows us to extend existing modules with new members. It is a nice way to extend modules that we might not maintain or to extend the 3rd party code that we may not be responsible for maintaining.
 
-![typescript-declaration-merging](./images/typescript-declaration-merging.png)
+  ![typescript-declaration-merging](./images/typescript-declaration-merging.png)
 
 - Babel is a second stage transpiler and provides a handy backup plan just in case Typescript doesn't transpile something as we expected.
 
-![typescript-babel-working](./images/typescript-babel-working.png)
+  ![typescript-babel-working](./images/typescript-babel-working.png)
 
 - Transpilers - Babel, TypeScript, Elm
 
-![node-js-transpilers-typescript-vs-babel](./images/node-js-transpilers-typescript-vs-babel.png)
+  ![node-js-transpilers-typescript-vs-babel](./images/node-js-transpilers-typescript-vs-babel.png)
 
-- ECMAScript versions -
-
-![node-js-ecmascript-versions](./images/node-js-ecmascript-versions.png)
-
-- Module formats - IIFE, Asynchronous Module Definition (AMD), CommonJS (CJS), Universal Module Definition (UMD), ES6 Modules
+- Webpack support many module formats, code splitting, it can bundles more than just JS modules, also use loaders feature for transformation before bundling.
 
 - Cache busting – by default we set the cache expiration to 1 year, and if JavaScript file changes then change the bundle name to force request for latest version. For this we need to hash the bundle filename, and generate that name into HTML dynamically.
 
-- Package vs. module – a module is a single javascript file that has some reasonable functionality, a package is a directory with one or more models inside of it and package.json file which has metadata about the package. It can be from simpler like from lodash to complex one like express. While working with NPM we are working with packages, which is why it is called node package manager.
+- Webpack process –
 
-- The package-lock.json files gets created when we installed some packages, it specify the exact versions of every package that got installed. By this it will be sure that everybody in the team using the same exact versions of all packages even if that team member join after a while to the team.
+  ![typescript-webpack-process](./images/typescript-webpack-process.png)
 
-- Semantic versioning – 1.8.3 where 1 is major version, 8 is minor version and 3 is the revision or the patch number. Patch will be used when some bug fix or performance improvement, that doesn't change the functionality. Minor means new feature is introduced but no breaking changes, major is when breaking changes like changing the function signature.
+- We can use webpack web server for local development environment, it serves the bundle file in-memory which makes our debugging and application fast on localhost. It will keep all JS files into one bundle file.
 
-- Tilde (~) operator will get the latest patch version, carrot (^) will get the latest minor version, use \* or 'x' if we even okay to get the latest major version
-
-- The package-lock.json file overrides the package.json file, so while installing a package it will take the version from package-lock.json file instead of from package.json file, if we don't want this then we need to delete it temporary for avoiding this.
-
-- Generators enabled the functionality for async-await keywords because of pause-resume feature. Generator functions can be paused and resumed unlike normal functions. They also stored the state of the function while paused. They return generators object which implement the iterator protocol by this they provide a method name 'next()', this method restarts a paused generator function. They works upon concept of lazy execution by which they compute the values on demand.
-
-- Async-await let us write the asynchronous code more like the way we write the synchronous code. Data returned from async func is automatically wrapped in a promise. Using the await keyword will automatically extract data from a promise. Also, we need to use try-catch while using async-await because await will only return value when it gets success result.
-
-- We can write event-driven code with EventEmitters classes. The EventEmitter calls all listeners synchronously in the order in which they were registered. This ensures the proper sequencing of events and helps to avoid race conditions and logic errors. But we can made them async for a particular case by using setImmediate(), it will push the code execution into the next cycle of the event loop.
-
-- Use omitBy() function from lodash to send only the changed property with a PATCH request –
-
-![node-js-using-omitby-with-patch-request](./images/node-js-using-omitby-with-patch-request.png)
-
-- REPL stands for Read, Eval, Print and Loop. Use the ctrl + l to break the REPL session.
-
-- By using Electron, we can create cross platform desktop applications.
-
-- Instead of using console.log() use debug(), it will only log when we are running in development mode not in production mode.
-
-- For callbacks, use arrow function instead of normal function.
-
-- Promises are invented for JS for single threaded environment.
-
-- We can ship a software update if we have added value without removing any existing value even though the new value feature is not complete, so user can't still use it from UI, it is called dark release.
-
-- The setImmediate will take preference over setTimeout. So, use setImmediate if we want to execute it on next tick of the event loop, node has similar api called process.nextTick.
+- But when our application is complete we need to build it for a production environment, so we need a package file that we can send off to store on the server, we need to minimize the code for production. For production, webpack will create a dist folder and files like below, it will also have a map file, this file is useful in some tools for getting the exact line numbers, it maps the minimize code to the original code. Webpack do all of these for us. Three main files one is html, another is JS file and finally one is a map file
