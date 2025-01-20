@@ -216,6 +216,8 @@
 
 - Lifecycle scripts – pre-start, start and test. Custom scripts – debug, predebug-compile, debug-compile, pre-build, build, etc. If we are running lifecycle script then we don’t have to specify ‘run’ while running that script like “npm start”.
 
+- Using Glob we can specify which files should be compiled. It lets us specify a file named pattern for the compiler to match. `.` Is for the current directory, `**` for the searching recursively inside the child directories.
+
 ## Express
 
 - Express is Sinatra inspired web development for Node.js, i.e. insanely fast, flexible, and simple.
