@@ -2,6 +2,8 @@
 
 Here's a glimpse of what's coming up in the development journey!
 
+**Current Skills Set -** Angular, Angular Material, TypeScript, JavaScript, Jasmine/Karma, CSS, SASS / LESS, HTML5, SQL, Cypress, Node.js, Express, RESTful APIs, Web Accessibility, Web Performance Optimization, NPM, Git, Machine Learning
+
 ## Table of Contents
 
 - [Year 2025 - Quarter 1](#year-2025---quarter-1)
@@ -46,7 +48,7 @@ User Interface (Angular, Styling)
 - Training Notes (Pluralsight)
 - Extracted Notes
 - Best Practices
-- POC Implementation (Standalone Components, Signals, Deferred Loading, Server-Side Rendering, Contextual Themes, PWA, Playwright, Dockerization, AWS Deployment)
+- POC Implementation (Standalone Components, Signals, Deferred Loading, Server-Side Rendering, Contextual Themes Switching, Responsive UI, Block Element Modifier, PWA, Playwright, Dockerization, AWS Deployment)
 
 ## Year 2026 - Quarter 1
 
