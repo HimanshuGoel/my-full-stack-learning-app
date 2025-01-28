@@ -34,7 +34,7 @@ Backend API (Spring Boot, Java)
 
 ## Year 2025 - Quarter 3
 
-AWS (Docker, Kubernetes, Helm Charts, AWS, Jenkins, Gitlab CI Actions)
+AWS (Docker, Kubernetes, Helm Charts, AWS)
 
 - Training Notes (Pluralsight)
 - Extracted Notes
@@ -43,7 +43,7 @@ AWS (Docker, Kubernetes, Helm Charts, AWS, Jenkins, Gitlab CI Actions)
 
 ## Year 2025 - Quarter 4
 
-User Interface (Angular, Styling)
+User Interface (Angular, Styling, Jenkins, Gitlab CI Actions)
 
 - Training Notes (Pluralsight)
 - Extracted Notes
