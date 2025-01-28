@@ -888,3 +888,7 @@ Timestamps are simple numbers that represent milliseconds since 1970. Use them f
 - We can use webpack web server for local development environment, it serves the bundle file in-memory which makes our debugging and application fast on localhost. It will keep all JS files into one bundle file.
 
 - But when our application is complete we need to build it for a production environment, so we need a package file that we can send off to store on the server, we need to minimize the code for production. For production, webpack will create a dist folder and files like below, it will also have a map file, this file is useful in some tools for getting the exact line numbers, it maps the minimize code to the original code. Webpack do all of these for us. Three main files one is html, another is JS file and finally one is a map file
+
+- The overall computer system doesn't care for the source code, but the compile or interpreter does. It only understands the binary instructions. Source code is for us to understand and for developers.
+
+- JS is interpreted, in C# compilation includes verification of syntactically correctness of code and creating intermediate language (IL) code packages. But in JS we can use JSLint to check for correctness and minification for packaging.

@@ -2,9 +2,6 @@
 
 Here's a glimpse of what's coming up in the development journey!
 
-- Reread and refactor `app-core/docs` folder content through daily bookmark
-- Develop and maintain a sample application using angular, typescript, node.js, spring boot, mongodb, docker, aws, generative ai technologies
-
 ## Table of Contents
 
 - [Year 2025 - Quarter 1](#year-2025---quarter-1)
@@ -13,8 +10,7 @@ Here's a glimpse of what's coming up in the development journey!
 - [Year 2025 - Quarter 4](#year-2025---quarter-4)
 - [Year 2026 - Quarter 1](#year-2026---quarter-1)
 - [Year 2026 - Quarter 2](#year-2026---quarter-2)
-- [Year 2026 - Quarter 3](#year-2026---quarter-3)
-- [Year 2026 - Quarter 4](#year-2026---quarter-4)
+- [Year 2026 - Quarter 3 and Quarter 4](#year-2026---quarter-3-and-quarter-4)
 
 ## Year 2025 - Quarter 1
 
@@ -23,34 +19,34 @@ Database (MongoDB)
 - Training Notes (Pluralsight)
 - Extracted Notes
 - Best Practices
-- POC Implementation (Intermediate Level)
+- POC Implementation (Indexing, Pagination, CRUD operations, Data Modeling, Data Validation, Transactions)
 
 ## Year 2025 - Quarter 2
 
-Backend API (Node.js, Spring Boot)
+Backend API (Spring Boot, Java)
 
 - Training Notes (Pluralsight)
 - Extracted Notes
 - Best Practices
-- POC Implementation (Intermediate Level)
+- POC Implementation (RESTful API Design for CRUD Operations, Dependency Injection, Database Integration, validation, Exception Handling, Authentication and Authorization, Configuration Management, Unit and Integration Testing, Logging, API Documentation, Caching, Dockerization, Microservices Architecture)
 
 ## Year 2025 - Quarter 3
 
-User Interface (Angular, ReactJS, VueJS, Svelte)
+AWS (Docker, Kubernetes, Helm Charts, AWS, Jenkins, Gitlab CI Actions)
 
 - Training Notes (Pluralsight)
 - Extracted Notes
 - Best Practices
-- POC Implementation (Intermediate Level, Advance Level for Angular)
+- POC Implementation (S3, CloudFront, API Gateway, Lambda, Cognito, Route 53, CodeCommit, CodePipeline, Cloudwatch, IAM, WAF & Shield, EC2, RDS, DynamoDB, FSx, Key Management Service, CloudTrail, Direct Connect, VPC, Amazon Aurora, Pulumi)
 
 ## Year 2025 - Quarter 4
 
-Deployment (Docker, Kubernetes, Helm Charts, AWS, Jenkins, Gitlab CI Actions)
+User Interface (Angular, Styling)
 
 - Training Notes (Pluralsight)
 - Extracted Notes
 - Best Practices
-- POC Implementation (Intermediate Level)
+- POC Implementation (Standalone Components, Signals, Deferred Loading, Server-Side Rendering, Contextual Themes, PWA, Playwright, Dockerization, AWS Deployment)
 
 ## Year 2026 - Quarter 1
 
@@ -63,23 +59,14 @@ Generative AI (Machine Learning, LLM, Stable Diffusion)
 
 ## Year 2026 - Quarter 2
 
-Mobile (Hybrid, Native, PWA, App Store Deployment)
+Mobile (Hybrid, Native, App Store Deployment) and User Interface (ReactJS, VueJS, Svelte)
 
 - Training Notes (Pluralsight)
 - Extracted Notes
 - Best Practices
 - POC Implementation (Intermediate Level)
 
-## Year 2026 - Quarter 3
-
-Cloud Native (AWS Lambda, Serverless, Microservices, API Gateway, EventBridge, DynamoDB)
-
-- Training Notes (Pluralsight)
-- Extracted Notes
-- Best Practices
-- POC Implementation (Intermediate Level)
-
-## Year 2026 - Quarter 4
+## Year 2026 - Quarter 3 and Quarter 4
 
 - Make contributions to open-source projects
 - Record and publish videos on different topics

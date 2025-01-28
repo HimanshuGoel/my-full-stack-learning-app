@@ -266,7 +266,11 @@
 
 - Surround yourself with good friends.
 
+- Create events in life - every month should have 4 normal event and 1 big event, year should have 7 to 8 big events like birthday and anniversary in the household, holi and diwali
+
 ### Philosophies
+
+- Signs someone has self respect? they speak up, they follow through on what they say they are going to do, their priorities are clear and they live by them, they say no kindly and without equivocation, they do not put up with a lack of clarity, a lack of certainty or a sense that they are not being valued, when you catch a glimpse of their inner dialogue it’s full of compassion, they have self awareness, there is a sense of integration and alignment: words align with actions, actions align with priorities.
 
 - Experience is the name everyone gives to their mistakes. Oscan Wilde.
 
@@ -436,6 +440,8 @@
 - Sometimes it is better to lose money than to lose peace or health.
 
 - Everything takes at least generation, is because we don't change minds, we have to wait for a generation to retire or die before we can get critical mass on the next new idea. And that's the way progress goes.
+
+- First pain points come then solution and then the a great product comes.
 
 ## Others
 
