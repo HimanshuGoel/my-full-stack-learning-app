@@ -11,6 +11,7 @@ Essential console commands for commonly used tools.
 1. [Chrome](#chrome)
 1. [Java](#java)
 1. [Docker](#docker)
+1. [Linux](#linux)
 
 ## Firebase
 
@@ -116,3 +117,10 @@ Essential console commands for commonly used tools.
   - Remove volume: `docker volume rm <name>`
   - `docker pc`
   - `docker exec -it mss-api-gateway sh` then `curl -vvv fop-authentication-ldap:2389`
+
+## Linux
+
+- ls
+- mkdir
+- devbox shell
+- java --version
