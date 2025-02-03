@@ -8,7 +8,7 @@
 - SCSS
 - Angular
 - Accessability
-- User Experience
+- User Experience (UX)
 - Unit Testing
 - Web Security
 - Architectural
