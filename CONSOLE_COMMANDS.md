@@ -14,6 +14,7 @@ Essential console commands for commonly used tools.
 1. [Linux](#linux)
 1. [Devbox Shell](#devbox-shell)
 1. [Pulumi](#pulumi)
+1. [AWS Console](#aws-console)
 
 ## Firebase
 
@@ -84,6 +85,8 @@ Essential console commands for commonly used tools.
 
 ## Java
 
+- Running class file: javac HelloWorld.java
+- Running compiled file: java HelloWorld
 - Check Java version: `java --version`
 - Check compiler version: `javac -version`
 - Create a JAR file: `jar cvf TitlecaseConverter.jar .`
@@ -198,3 +201,10 @@ Essential console commands for commonly used tools.
   - `pulumi stack select`  
 - Configuration Management
   - `pulumi config set gcp:project ps-pulumi-getting-started`  
+
+## AWS Console
+
+- `pf-` (then double tab for suggestions)  
+- `pf-admin`  
+- `ss`  
+- `aws s3 ls`  
