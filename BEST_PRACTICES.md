@@ -13,7 +13,7 @@ Not every practice herein has to be strictly followed, and even fewer will be un
 1. [Miscellaneous](#miscellaneous)
 1. [MongoDB](#mongodb)
 1. [Node.js](#nodejs)
-1. [Spring Boot](#spring-boot)
+1. [Java](#java)
 1. [Typescript](#typescript)
 
 ## Angular
@@ -702,7 +702,7 @@ Let me plan the optimizations first:
   res.sendFile(path.join(__dirname, 'views/index.html'));
   ```
 
-## Spring Boot
+## Java
 
 - To be created...
 

@@ -1,3 +1,0 @@
-# Interview Questions - Spring Boot
-
-To be created...
