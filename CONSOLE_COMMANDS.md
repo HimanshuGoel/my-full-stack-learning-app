@@ -12,6 +12,9 @@ Essential console commands for commonly used tools.
 1. [Java](#java)
 1. [Docker](#docker)
 1. [Linux](#linux)
+1. [Devbox Shell](#devbox-shell)
+1. [Pulumi](#pulumi)
+1. [AWS Console](#aws-console)
 
 ## Firebase
 
@@ -34,7 +37,8 @@ Essential console commands for commonly used tools.
 
 - `git tag`
 - `git config --list`
-
+- `git commit -m "DWB-343: Pulumi stack file"`
+  
 ## Node
 
 - Clear cache: `npm cache clean --force`
@@ -81,6 +85,8 @@ Essential console commands for commonly used tools.
 
 ## Java
 
+- Running class file: javac HelloWorld.java
+- Running compiled file: java HelloWorld
 - Check Java version: `java --version`
 - Check compiler version: `javac -version`
 - Create a JAR file: `jar cvf TitlecaseConverter.jar .`
@@ -120,7 +126,85 @@ Essential console commands for commonly used tools.
 
 ## Linux
 
-- ls
-- mkdir
+- Navigation and Directory Management
+  - `pwd` (present working directory)  
+  - `cd /usr/share/doc/wget/`  
+  - `cd` (with no argument will take you to the home directory)  
+  - `ls`  
+  - `ls -a`  
+  - `ls -all`  
+  - `ls -l` (long form)  
+  - `ls -lh` (with file size)  
+  - `ls -lht` (logical order)  
+  - `ls -l /etc`  
+  - `mkdir data`  
+  - `rmdir newData/` (remove directory)  
+- File Management
+  - `touch file-name` (create a new empty file)  
+  - `nano file-name` (open nano text editor)  
+  - `ctrl + x + y` (close nano text editor)  
+  - `cp file1 newData/`  
+  - `cp file* newdata/` (copy all files starting with 'file' name)  
+  - `mv ../file* .` (move files to the current directory)  
+  - `rm file?` (delete all files named 'file' followed by a single digit)  
+  - `rm *` (delete all data in the current directory)  
+  - `sudo rm -rf *` (forcefully delete all files and directories)  
+- File Viewing and Searching
+  - `cat /etc/passwd`  
+  - `less .bashrc`  
+  - `locate adduser` (search files through the file system)  
+- Package Management
+  - `sudo apt update`  
+  - `sudo apt install`  
+  - `sudo apt install man-db`  
+- Networking and Downloads
+  - `wget wordpress.org/latest.tar.gz`  
+  - `wget --help | less`  
+  - `man wget`  
+  - `info wget examples simple`  
+  - `tar xzf nmap-7.70.tar.gz`  
+- System Information
+  - `ip addr` or `ip a`  
+  - `type wget`  
+- Command Help and History
+  - `man ls`  
+  - `man wget`  
+  - `info`  
+  - `history` (recent 1000 previous commands)  
+  - `up arrow / down arrow` (cycle through command history)  
+- Miscellaneous
+  - `clear` (twice in the list, kept once)  
+
+## Devbox Shell
+
 - devbox shell
-- java --version
+
+## Pulumi
+
+- Deployment & Execution
+  - `pulumi up`  
+  - `pulumi up --yes`  
+  - `pulumi up --debug`  
+  - `pulumi down`  
+  - `pulumi cancel`  
+  - `pulumi destroy`  
+  - `pulumi refresh`  
+- Authentication & Login
+  - `pulumi login --local`  
+  - `pulumi login s3://287278485187-infrastructure-state`  
+- Stack Management
+  - `pulumi stack new`  
+  - `pulumi stack init`  
+  - `pulumi stack init test`  
+  - `pulumi stack ls`  
+  - `pulumi stack rm`  
+  - `pulumi stack select`  
+- Configuration Management
+  - `pulumi config set gcp:project ps-pulumi-getting-started`  
+
+## AWS Console
+
+- `pf-` (then double tab for suggestions)  
+- `pf-admin`  
+- `ss`  
+- `aws s3 ls`  
