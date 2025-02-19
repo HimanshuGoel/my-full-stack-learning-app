@@ -73,3 +73,63 @@ Essential keyboard shortcuts for commonly used tools.
 - See 10 Suggestions: `Ctrl + Enter`
 - Trigger Suggestion: `Alt + \`
 - Ask Copilot: `Ctrl + I`
+
+## IntelliJ Idea
+
+### **Navigation & Search**
+
+- `Shift` **(press twice)** → Search Everywhere (Files, Classes, Actions, etc.)
+- `Ctrl + N` → Go to Class
+- `Ctrl + Shift + N` → Go to File
+- `Ctrl + Alt + Shift + N` → Go to Symbol
+- `Ctrl + B` / `Ctrl + Click` → Go to Definition
+- `Alt + ← / →` → Navigate Back / Forward
+- `Ctrl + E` → Recent Files
+- `Ctrl + Shift + E` → Recently Edited Files
+- `Ctrl + F12` → File Structure
+- `Ctrl + Shift + A` → Find Action (Search for any command)
+
+### **Editing & Refactoring**
+
+- `Ctrl + Space` → Basic Code Completion
+- `Ctrl + Shift + Space` → Smart Code Completion
+- `Ctrl + Shift + Enter` → Complete Statement
+- `Ctrl + D` → Duplicate Line
+- `Ctrl + Y` → Delete Line
+- `Ctrl + Shift + ↑ / ↓` → Move Statement Up / Down
+- `Ctrl + /` → Toggle Line Comment
+- `Ctrl + Shift + /` → Toggle Block Comment
+- `Ctrl + Alt + L` → Reformat Code
+- `Alt + Enter` → Show Intentions & Quick Fixes
+- `Shift + F6` → Rename
+- `Ctrl + Alt + V` → Extract Variable
+- `Ctrl + Alt + M` → Extract Method
+- `Ctrl + Alt + F` → Extract Field
+- `Ctrl + Alt + C` → Extract Constant
+
+### **Running & Debugging**
+
+- `Shift + F10` → Run
+- `Shift + F9` → Debug
+- `F8` → Step Over
+- `F7` → Step Into
+- `Shift + F8` → Step Out
+- `Alt + 5` → Show Debug Window
+- `Alt + 4` → Show Run Window
+
+### **Version Control (Git)**
+
+- `Ctrl + K` → Commit
+- `Ctrl + Shift + K` → Push
+- `Ctrl + T` → Update Project (Pull)
+- `Alt +` → Show Git History
+- `Ctrl + Shift + V` → Show Clipboard History
+
+### **Terminal & Tool Windows**
+
+- `Alt + 1` → Open Project Explorer
+- `Alt + 2` → Open Favorites
+- `Alt + 4` → Open Run Window
+- `Alt + 5` → Open Debug Window
+- `Alt + 9` → Open Version Control
+- `Alt + F12` → Open Terminal
