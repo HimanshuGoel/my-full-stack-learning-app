@@ -39,6 +39,9 @@ Essential console commands for commonly used tools.
 - `git tag`
 - `git config --list`
 - `git commit -m "DWB-343: Pulumi stack file"`
+- `git reset HEAD^`
+- `git checkout another_branch`
+- `git config core.filemode false`
 
 ## Node
 
@@ -95,6 +98,8 @@ Essential console commands for commonly used tools.
 - Create a launchable JAR file: `jar cvmf TC-MANIFEST.MF TitlecaseConverter.jar .`
 - Check Maven version: `mvn -version`
 - Run Maven with profile: `mvn clean compile -P dev`
+- mvn dependency:tree
+- mvn clean install
 
 ## Docker
 
@@ -202,11 +207,35 @@ Essential console commands for commonly used tools.
   - tar cf newarchive.tar wordpress (create an archive without gzip compression)
   - gzip newarchive.tar (adding gzip compression)
   - unzip akismet.4.1.zip
-  - zip newname.zip *
+  - zip newname.zip \*
 
 ## Devbox Shell
 
-- devbox shell
+### **1. General DevBox Commands**
+
+- `devbox init` – Initialize a new DevBox environment
+- `devbox shell` – Start an interactive shell with installed tools
+- `devbox search <package>` – Search for a package available in the DevBox environment
+- `devbox install <package>` – Install a package into the DevBox
+- `devbox remove <package>` – Remove a package from DevBox
+
+### **2. Managing Environments**
+
+- `devbox status` – Show the status of the DevBox
+- `devbox run <command>` – Run a command within the DevBox environment
+- `devbox services` – List all running services in DevBox
+- `devbox update` – Update the installed DevBox packages
+
+### **3. Configuration & Debugging**
+
+- `devbox list` – List installed packages
+- `devbox info` – Get details about the current DevBox setup
+- `devbox logs` – View logs for debugging
+
+### **4. Exiting & Cleanup**
+
+- `exit` – Leave the DevBox shell
+- `devbox destroy` – Remove the DevBox instance completely
 
 ## Pulumi
 
@@ -237,6 +266,7 @@ Essential console commands for commonly used tools.
 - `pf-admin`
 - `ss`
 - `aws s3 ls`
+- aws codecommit list-repositories --query 'repositories[].repositoryName' --output text
 
 ## IntelliJ Idea
 
