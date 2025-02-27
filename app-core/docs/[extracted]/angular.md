@@ -2217,3 +2217,17 @@ CSS is the styling mechanism for the web. It is a standard of selectors, propert
 - We can ship a software update if we have added value without removing any existing value even though the new value feature is not complete, so user can't still use it from UI, it is called dark release.
 
 - By using Electron, we can create cross platform desktop applications.
+
+- Signal observe state (variable values) not event or data that arrives over time. the computation signal derived its value from other signals, it should be side-effect free means it should write to any signal, also the computed value is memorized.
+
+- signal = data value + change notifications
+
+```typescript
+const quantity = signal<number>(1);
+this.quantity.set(newQty);
+this.quantity.update(v => v.2);
+```
+
+- an effect is an operation that runs whenever one or more signal values change, we can use it to aid in debugging signals. we should not normally change state/value of a signal as it can lead to a circular updates and extra change detect cycles.
+
+- in service we should use rxjs to get the data from the service but from service we should only expose signals. signals are great for optimizing rendering.

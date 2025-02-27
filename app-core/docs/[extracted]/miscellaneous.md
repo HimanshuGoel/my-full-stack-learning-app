@@ -17,6 +17,7 @@
 - [Others](#others)
   - [Gadgets](#gadgets)
   - [Science](#science)
+  - [Games](#games)
 
 ## Soft Skills
 
@@ -512,3 +513,7 @@
 - Motion is a combined outcome of a body under observation and the observer.
 
 - Magnetism – The core of the earth was made from iron, while the planet itself was a magnet, which he quoted to be the reason for compasses to point to the north. The unit of the strength of a magnetic field is Tesla. Magnet types – permanent, temporary and electromagnets. A current-carrying wire produces a magnetic field around it. Magnet uses – scrap lifting, surgical extraction, dc motor, ac generators. The payment card strip is made of magnet, audio cassette, CRT's monitor, speaker system. Over-exposure to static magnetic fields can be harmful to our health.
+
+### Games
+
+- Games like sifu, cuphead and dead cells will be easier when you think about them as games about dodging / parrying, not fighting
