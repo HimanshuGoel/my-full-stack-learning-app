@@ -446,6 +446,8 @@
 
 - First pain points come then solution and then the a great product comes.
 
+- Yoga - To "know" your body in the best possible way. Gym - To "grow" your body in the best possible way.
+
 ## Others
 
 ### Gadgets
