@@ -16,6 +16,7 @@ Essential console commands for commonly used tools.
 1. [Pulumi](#pulumi)
 1. [AWS Console](#aws-console)
 1. [IntelliJ Idea](#intellij-idea)
+1. [Playwright](#playwright)
 
 ## Firebase
 
@@ -42,6 +43,11 @@ Essential console commands for commonly used tools.
 - `git reset HEAD^`
 - `git checkout another_branch`
 - `git config core.filemode false`
+- `git rebase -i HEAD~10`
+- `git push --force`
+- `git pull --no-rebase`
+- `git pull origin BRANCH_NAME --rebase`
+- `git reset --hard origin/BRANCH_NAME`
 
 ## Node
 
@@ -237,6 +243,11 @@ Essential console commands for commonly used tools.
 - `exit` – Leave the DevBox shell
 - `devbox destroy` – Remove the DevBox instance completely
 
+### Miscellaneous
+
+- `ps -ef | grep idea`
+- `tail -f idea.log`
+
 ## Pulumi
 
 - Deployment & Execution
@@ -272,3 +283,7 @@ Essential console commands for commonly used tools.
 
 - alt + enter - add import statement
 - shift + shift - search pane
+
+## Playwright
+
+- `npx playwright test file_name`
