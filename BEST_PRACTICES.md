@@ -8,13 +8,12 @@ Not every practice herein has to be strictly followed, and even fewer will be un
 
 1. [Angular](#angular)
 1. [AWS](#aws)
-1. [Docker](#docker)
-1. [Generative AI](#generative-ai)
-1. [Miscellaneous](#miscellaneous)
-1. [MongoDB](#mongodb)
-1. [Node.js](#nodejs)
-1. [Java](#java)
-1. [Typescript](#typescript)
+2. [Generative AI](#generative-ai)
+3. [Miscellaneous](#miscellaneous)
+4. [MongoDB](#mongodb)
+5. [Node.js](#nodejs)
+6. [Java](#java)
+7. [Typescript](#typescript)
 
 ## Angular
 
@@ -444,10 +443,6 @@ Not every practice herein has to be strictly followed, and even fewer will be un
 - Use numeric lists for long content sections to improve readability and organization. Numeric lists are easier to scan than alphabetic ones.
 
 ## AWS
-
-- To be created...
-
-## Docker
 
 - To be created...
 
