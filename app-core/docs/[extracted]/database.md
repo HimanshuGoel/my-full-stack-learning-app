@@ -1,4 +1,4 @@
-# Extracted Notes - MongoDB
+# Extracted Notes - Database
 
 ## Table of Contents
 

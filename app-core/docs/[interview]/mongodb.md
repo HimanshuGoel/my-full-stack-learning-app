@@ -1,3 +1,0 @@
-# Interview Questions - MongoDB
-
-To be created...

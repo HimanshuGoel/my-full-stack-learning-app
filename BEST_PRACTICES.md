@@ -8,12 +8,12 @@ Not every practice herein has to be strictly followed, and even fewer will be un
 
 1. [Angular](#angular)
 1. [AWS](#aws)
-2. [Generative AI](#generative-ai)
-3. [Miscellaneous](#miscellaneous)
-4. [MongoDB](#mongodb)
-5. [Node.js](#nodejs)
-6. [Java](#java)
-7. [Typescript](#typescript)
+1. [Generative AI](#generative-ai)
+1. [Miscellaneous](#miscellaneous)
+1. [Database](#database)
+1. [Node.js](#nodejs)
+1. [Java](#java)
+1. [Typescript](#typescript)
 
 ## Angular
 
@@ -520,7 +520,7 @@ Let me plan the optimizations first:
 
 - To be created...
 
-## MongoDB
+## Database
 
 - We should pass an empty object to find() method when we want to return all the documents instead of using blank find() method -
 
