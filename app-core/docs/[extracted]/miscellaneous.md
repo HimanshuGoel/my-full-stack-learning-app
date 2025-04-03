@@ -271,6 +271,8 @@
 
 ### Philosophies
 
+- Build your dreams or someone else will hire you to build theirs.
+
 - Rule No 1:- Find your Niche, Rule No 2:- Set your Goals, Rule No 3 :- Slog your a** off and stop discussions on Politics or Religion for the next 20 years, Rule No 4:- Stop feeling sorry for yourself or expecting sympathy. Instead hope for humiliation so that it is driven into you, You may not become a great success but you will no longer feel inferior, You will feel like someone who has DONE HIS BEST and anyone who has done his best , can never feel inferior. ACT LIKE AN INDIAN, THINK LIKE A CHINESE !!!!
 
 - Signs someone has self respect? they speak up, they follow through on what they say they are going to do, their priorities are clear and they live by them, they say no kindly and without equivocation, they do not put up with a lack of clarity, a lack of certainty or a sense that they are not being valued, when you catch a glimpse of their inner dialogue it’s full of compassion, they have self awareness, there is a sense of integration and alignment: words align with actions, actions align with priorities.
