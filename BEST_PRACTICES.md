@@ -7,7 +7,7 @@ Not every practice herein has to be strictly followed, and even fewer will be un
 ## Table of Contents
 
 1. [Angular](#angular)
-1. [AWS](#aws)
+1. [Cloud](#cloud)
 1. [Generative AI](#generative-ai)
 1. [Miscellaneous](#miscellaneous)
 1. [Database](#database)
@@ -442,7 +442,12 @@ Not every practice herein has to be strictly followed, and even fewer will be un
 
 - Use numeric lists for long content sections to improve readability and organization. Numeric lists are easier to scan than alphabetic ones.
 
-## AWS
+### Using modal dialog
+
+A modal dialog disables the background interface and cannot be closed by clicking anywhere outside the dialog or using an Esc key. Both of these behaviors can be used for non-modal (modeless) dialogs that are informational and do not require user input before they can be closed. User Expectations: Providing both a Close/Cancel button and a Close [X] icon caters to different user habits and expectations, enhancing usability.​ Design Recommendations: Ensure that the closing mechanisms are clearly visible and accessible. Avoid relying solely on implicit methods (like clicking outside the dialog) for closing modal dialogs, as this can lead to confusion.
+Supporting both explicit (button + [X]) and optional implicit closing behaviors improves usability when thoughtfully applied based on context and user flow. The priority should always be clarity, consistency, and safety in user interactions.
+
+## Cloud
 
 - To be created...
 

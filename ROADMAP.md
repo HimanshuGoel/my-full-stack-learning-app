@@ -34,7 +34,7 @@ Backend API (Spring Boot, Java)
 
 ## Year 2025 - Quarter 3
 
-AWS (Docker, Kubernetes, Helm Charts, AWS)
+Cloud (Docker, Kubernetes, Helm Charts, AWS)
 
 - Training Notes (Pluralsight)
 - Extracted Notes
@@ -75,3 +75,37 @@ Mobile (Hybrid, Native, App Store Deployment) and User Interface (ReactJS, VueJS
 - Write and publish articles on different topics
 - Make contributions to coding challenges and hackathons
 - Develop websites and mobile apps for the businesses of friends, family members, and as a freelancer
+
+---
+
+1 UX/Java/Databases
+
+Q1
+
+Memory Vault - Core Development (Non-Cloud)
+
+Develop a memory vault to create, view, edit, and delete Text logs, Images, Voice notes, Implement basic search and categorization, Ensure secure local storage & user authentication by using Angular, Java, Spring Boot, MongoDB technologies
+
+2 Cloud
+
+Q2
+
+AWS Memory Vault - Cloud Migration - Deploying on AWS
+
+Convert the app into a cloud-native solution, Deploy on AWS using Pulumi, Implement S3 for storage (text, images, audio), Enable authentication with Cognito, Use API Gateway for scalable access
+
+3 PWA/Hybrid App Deployment
+
+Q3
+
+PWA/Hybrid App Deployment Memory Vault - Mobile and PWA Optimization
+
+Enhance with PWA features for a seamless mobile experience like Push notifications for daily reminders, Offline support for viewing/saving records, Add to home screen shortcut, Immersive full-screen mode and Explore Hybrid Mobile App deployment for iOS & Android
+
+4 AI/ML
+
+Q4
+
+AI/ML Memory Vault - AI-Powered Enhancements
+
+Introduce AI/ML features like Chat-based memory search (natural language queries), AI-generated reflections & mood analysis, Imaginary photo generation from text memories

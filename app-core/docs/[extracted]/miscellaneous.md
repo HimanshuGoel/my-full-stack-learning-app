@@ -59,6 +59,8 @@
 
 - We should different visuals like screenshots, icons, symbols, table, graphs and charts, flowcharts to make it easy to understand and engaging.
 
+- Writing should be an expression of original thought. Using LLMs for creative tasks not only dilutes authenticity but also results in content that's often generic and uninspired. He concludes that if a task isn't worth genuine human effort, it's better left undone than delegated to a machine.
+
 ### Interview
 
 - A good interview is like a good and informal chat between passionate developers. it is an exchange of information: a good debate about techniques, tools, challenges, and approaches to software development.
@@ -259,9 +261,13 @@
 
 ### Exercise
 
+- Our body has amazing cleansing capabilities. We poop, pee, burp, fart, sweat, vomit, tear up, salivate, and many other internal organs that keep us as healthy as possible. All we really have to do is keep doing what aids these natural processes.
+
 - No treatment in the world will have even as remotely similar results as regular exercise. This is the silver bullet for your health. Your construction crew will repair everything in your body from injuries, sicknesses, inflammation to cancer cells. In fact, the "crew" will keep your body in such good shape that it will prevent 99% of afflictions.
 
 ### Socializing
+
+- Any loan provider asking for money before disbursing a loan is fraudulent. Banks and NBFCs deduct processing fees from the sanctioned amount rather than requiring upfront payments.
 
 - It is not the finances that should scare you, it is the loneliness and illness during your sunset years
 
@@ -449,6 +455,16 @@
 - First pain points come then solution and then the a great product comes.
 
 - Yoga - To "know" your body in the best possible way. Gym - To "grow" your body in the best possible way.
+
+- Your birth certificate is not your responsibility but your passport is. choose your destiny, oh awakened one!
+
+- Grooming n fitness is super important . the 80% folks must pay attention to their style , grooming , conversation skills , fitness .
+
+- These days it's better to be a hardcore Introvert in public places. Keeping shut your mouth is the most Wisest thing to do rather than come into some confronting situations with such A*****s.
+
+- There is one, and only one sin that God does not, indeed cannot forgive, and that is any sin that no forgiveness is sought for. It’s not because God is powerless to do so, or unwilling to do so, but because He will not override our free will. He won’t force his grace and mercy on us if we decide we don’t want it. If someone decides they don’t want or need forgiveness, God will let them go on, patiently waiting for them to seek his mercy. Every sin is forgivable by God, and nobody is beyond the reach of His mercy.
+
+- Imagine you’re staring out the window, thinking about flying dragons, magical forests, or becoming a superhero. That’s called daydreaming—it’s like letting your mind play and imagine fun things, even if they aren’t real. This article says that people today don’t daydream as much anymore. Why? Because we’re always looking at our phones, watching videos, or scrolling through apps. Our brains don’t get bored enough to just imagine things on their own. But being bored is actually good sometimes—it helps our imagination grow! The writer is worried that kids and adults are forgetting how to let their minds wander and create fun stories inside their heads. He thinks daydreaming is important because it helps us become more creative, kind, and thoughtful. Put the phone down sometimes. Stare out the window. Let your brain go on a little adventure all by itself.
 
 ## Others
 
