@@ -261,11 +261,15 @@
 
 ### Exercise
 
+- Easy ways to stay healthy everyday. Go for an early morning walk. Enjoy the fresh air, cool breeze and nature.
+
 - Our body has amazing cleansing capabilities. We poop, pee, burp, fart, sweat, vomit, tear up, salivate, and many other internal organs that keep us as healthy as possible. All we really have to do is keep doing what aids these natural processes.
 
 - No treatment in the world will have even as remotely similar results as regular exercise. This is the silver bullet for your health. Your construction crew will repair everything in your body from injuries, sicknesses, inflammation to cancer cells. In fact, the "crew" will keep your body in such good shape that it will prevent 99% of afflictions.
 
 ### Socializing
+
+- The worst thing that can happen to any parent is to lose a child. To even think you lost a child is enough to send any man or woman to an early grave. You cannot rest. You cannot calm down. You cannot find peace until you know where your child is, whether your child is an infant or an adult, it doesn’t matter. If you do ever feel like disappearing from the world, at least let your family know where you are, don’t leave them in the dark — it could quite literally kill your parents, not to know if you’re safe.
 
 - Any loan provider asking for money before disbursing a loan is fraudulent. Banks and NBFCs deduct processing fees from the sanctioned amount rather than requiring upfront payments.
 
@@ -276,6 +280,8 @@
 - Create events in life - every month should have 4 normal event and 1 big event, year should have 7 to 8 big events like birthday and anniversary in the household, holi and diwali
 
 ### Philosophies
+
+- Just like building a toy or drawing a picture, working a little each day, listening to feedback, and focusing on making something helpful can lead to something amazing.
 
 - Build your dreams or someone else will hire you to build theirs.
 
@@ -467,6 +473,12 @@
 - Imagine you’re staring out the window, thinking about flying dragons, magical forests, or becoming a superhero. That’s called daydreaming—it’s like letting your mind play and imagine fun things, even if they aren’t real. This article says that people today don’t daydream as much anymore. Why? Because we’re always looking at our phones, watching videos, or scrolling through apps. Our brains don’t get bored enough to just imagine things on their own. But being bored is actually good sometimes—it helps our imagination grow! The writer is worried that kids and adults are forgetting how to let their minds wander and create fun stories inside their heads. He thinks daydreaming is important because it helps us become more creative, kind, and thoughtful. Put the phone down sometimes. Stare out the window. Let your brain go on a little adventure all by itself.
 
 ## Others
+
+### Software
+
+- Superior stack syndrome
+
+- Good engineers with good connections can always find a job. The key is to be good at your craft and not work in a silo.
 
 ### Gadgets
 

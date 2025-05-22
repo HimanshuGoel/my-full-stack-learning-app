@@ -2233,3 +2233,11 @@ this.quantity.update(v => v.2);
 - in service we should use rxjs to get the data from the service but from service we should only expose signals. signals are great for optimizing rendering.
 
 - While ARIA is a powerful tool for enhancing accessibility, it should be used as a last resort. Native semantic HTML elements and attributes are preferred whenever possible, as they provide built-in accessibility features that ARIA does not have to replicate. Always prefer native elements like <button>, <label>, <nav> and <header> over their ARIA counterparts. For example, instead of using role="button" on a <div>, use a <button> element. Speaking about ARIA roles, they define what an HTML element is or how it should behave – when native HTML elements are not applicable. They tell assistive technologies how to interpret an element and its purpose within the page. Roles are particularly useful for custom components that don’t have native semantic meaning.
+
+- 96% of the detected accessibility issues fall into 6 buckets. Here are the buckets from most to least common:
+  - Low-contrast text: 79.1%
+  - Missing alternative (alt) text for images: 55.5%
+  - Missing form input labels: 48.2%
+  - Empty links: 45.4%
+  - Empty buttons: 29.6%
+  - Missing document language: 15.8%
