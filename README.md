@@ -21,28 +21,12 @@ my-full-stack-learning-app/
 │   └── docs/                  # Documentation for both frontend & backend setup, usage, and APIs
 │
 ├── backend-service/           # Backend service with Spring Boot and other technologies
-│   ├── src/                   # Backend source code
-│   │   ├── main/
-│   │   │   ├── java/          # Java source code for business logic, controllers, etc.
-│   │   │   └── resources/     # Application config files like application.properties
-│   ├── config/                # Backend-specific config (CORS, security, database)
-│   ├── db/                    # Database setup scripts (optional)
-│   └── build.gradle           # Gradle build file (or pom.xml if using Maven)
 │
-├── frontend-ui/               # Frontend with Angular
-│   ├── src/                   # Angular source code
-│   │   ├── app/               # Angular app code (components, services, modules)
-│   │   ├── assets/            # Static assets (images, icons)
-│   ├── styles/                # Shared styles, themes, and custom design system
-│   ├── environments/          # Environment configurations for dev, prod
-│   ├── angular.json           # Angular CLI config
-│   └── package.json           # Node dependencies for Angular
+├── frontend-ui/               # Frontend code like Angular
 │
 ├── generative-ai/             # Projects based on Generative AI
+│
 ├── deployment/                # Deployment configurations and scripts
-│   ├── docker/                # Docker files and Docker Compose for containerizing backend and frontend
-│   ├── k8s/                   # Kubernetes manifests, if deploying to a K8s cluster
-│   ├── scripts/               # Helper scripts for CI/CD (build, deploy, test)
 │   └── README.md              # Documentation for deployment procedures
 │
 ├── README.md                  # Main project overview and instructions
@@ -65,6 +49,7 @@ This application has been deployed on Firebase at <https://frontend-learnings-75
 - [Troubleshooting](./TROUBLESHOOTING.md)
 - [Console Commands](./CONSOLE_COMMANDS.md)
 - [Keyboard Shortcuts](./KEYBOARD_SHORTCUTS.md)
+- [Quick References](./QUICK_REFERENCES.md)
 
 ## Other Documents
 

@@ -1,8 +1,0 @@
-{
-  "config_hash": "647af989aa862de0c37140261472387b68f2737888c133b44b73fe982f851963",
-  "devbox_version": "0.13.7",
-  "is_fish": false,
-  "lock_file_hash": "ceaad45b5c1ee15c459ee218c128b44d8747036e0d0c6d0a3fc83f1a160caad2",
-  "nix_print_dev_env_hash": "11095dcea8b5592535ad0aad89be6f6c4688e0d175f4bee9005a8cbb3013dc64",
-  "nix_profile_manifest_hash": "54a5ca56ad2336ce691fdb69a24144ccb77ad265b0bf360cd5a7deee315351d5"
-}

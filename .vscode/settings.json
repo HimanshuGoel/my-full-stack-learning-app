@@ -6,6 +6,7 @@
     "Asynquence",
     "Bazel",
     "behaviour",
+    "Bootcamp",
     "BSON",
     "callstack",
     "certmgr",
@@ -69,6 +70,7 @@
     "predebug",
     "proto",
     "PSTN",
+    "Pulumi",
     "regulex",
     "Retursion",
     "SAST",
@@ -102,6 +104,5 @@
     "xmsl",
     "zoomable"
 ],
-  "markdown.extension.toc.updateOnSave": false,
-  "eslint.workingDirectories": ["frontend"]
+  "markdown.extension.toc.updateOnSave": false
 }
