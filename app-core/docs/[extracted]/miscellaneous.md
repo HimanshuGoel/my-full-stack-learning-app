@@ -261,6 +261,10 @@
 
 ### Exercise
 
+- I want to live well for as long as possible. I don’t want to be the old man who can’t carry his groceries in from the car at 80.
+
+- I like to look good. I’m 60 and I’ve noticed that other guys my age are starting to look less and less like MEN. Their faces are sagging, their shoulders slope and their bellies hang out. Screw that! It doesn’t need to be that way!
+
 - Easy ways to stay healthy everyday. Go for an early morning walk. Enjoy the fresh air, cool breeze and nature.
 
 - Our body has amazing cleansing capabilities. We poop, pee, burp, fart, sweat, vomit, tear up, salivate, and many other internal organs that keep us as healthy as possible. All we really have to do is keep doing what aids these natural processes.
