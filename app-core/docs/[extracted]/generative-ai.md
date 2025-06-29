@@ -7,3 +7,10 @@
 ## LLM
 
 - Local LLMs are advanced AI models that have been optimized to run on personal devices without the need for constant internet connectivity like GPT-2 Mobile, ALBERT, DistilBERT.
+
+## Misc
+
+- Companies that embraced AI too eagerly have to had to contend with frustrated customers and declining service quality.
+
+- If AI is going to speak for me, it needs to ask more than just permission... it needs to know when to step. Because being helpful doesn't give it the right become me.
+-

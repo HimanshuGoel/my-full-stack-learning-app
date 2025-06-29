@@ -2241,3 +2241,7 @@ this.quantity.update(v => v.2);
   - Empty links: 45.4%
   - Empty buttons: 29.6%
   - Missing document language: 15.8%
+
+- Batching, Fan Out and scheduling concepts in System Design
+
+- Angular CDK Accessibility - LiveAnnouncer, FocusTrap, Regions, FocusMonitor, CSS class as cdk-visually-hidden and cdk.high-contrast.

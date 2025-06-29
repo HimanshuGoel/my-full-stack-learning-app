@@ -15,6 +15,7 @@
   - [Socializing](#socializing)
   - [Philosophies](#philosophies)
 - [Others](#others)
+  - [Software](#software)
   - [Gadgets](#gadgets)
   - [Science](#science)
   - [Games](#games)
@@ -261,6 +262,8 @@
 
 ### Exercise
 
+- Scientists discovered that your body doesn’t just slow down slowly as you get older. instead, there are two big "jumps" in how things inside your body change. around age 44 and 60. 40s how your body handles alcohol, caffeine, fats, muscle, heart, and skin. 60s how your body handles sugars, your immune system, kidneys, plus some of the same stuff from your 40s (heart, muscle, skin). these big changes could be why growing older sometimes feels like suddenly everything is different or harder.
+
 - I want to live well for as long as possible. I don’t want to be the old man who can’t carry his groceries in from the car at 80.
 
 - I like to look good. I’m 60 and I’ve noticed that other guys my age are starting to look less and less like MEN. Their faces are sagging, their shoulders slope and their bellies hang out. Screw that! It doesn’t need to be that way!
@@ -284,6 +287,8 @@
 - Create events in life - every month should have 4 normal event and 1 big event, year should have 7 to 8 big events like birthday and anniversary in the household, holi and diwali
 
 ### Philosophies
+
+- Revenge is a dish best served with a well-timed.
 
 - Just like building a toy or drawing a picture, working a little each day, listening to feedback, and focusing on making something helpful can lead to something amazing.
 
@@ -480,6 +485,10 @@
 
 ### Software
 
+- Project mindset - no custom domain, no project requirement documents, no version, world's peace/good, lack of perspective, giving for free no subscription
+
+- Product mindset - how should i charge, plan of action, features, serving your paid users
+
 - Superior stack syndrome
 
 - Good engineers with good connections can always find a job. The key is to be good at your craft and not work in a silo.
@@ -553,3 +562,6 @@
 ### Games
 
 - Games like sifu, cuphead and dead cells will be easier when you think about them as games about dodging / parrying, not fighting
+
+- Formally, animations control the viewer. But in games, the verwer controls the animation. That's the kind of lens you look through when animating for games.
+-
