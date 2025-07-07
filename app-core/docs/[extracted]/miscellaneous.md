@@ -288,6 +288,8 @@
 
 ### Philosophies
 
+- The best way to avoid mid-life crisis is to keep on inventing and creating challenges before you. So long as the life is full of challenges, there is no scope for mid-life crisis to invade your life. Any life devoid of goals and challenges is a life of crisis only.
+
 - Revenge is a dish best served with a well-timed.
 
 - Just like building a toy or drawing a picture, working a little each day, listening to feedback, and focusing on making something helpful can lead to something amazing.

@@ -2235,6 +2235,7 @@ this.quantity.update(v => v.2);
 - While ARIA is a powerful tool for enhancing accessibility, it should be used as a last resort. Native semantic HTML elements and attributes are preferred whenever possible, as they provide built-in accessibility features that ARIA does not have to replicate. Always prefer native elements like <button>, <label>, <nav> and <header> over their ARIA counterparts. For example, instead of using role="button" on a <div>, use a <button> element. Speaking about ARIA roles, they define what an HTML element is or how it should behave – when native HTML elements are not applicable. They tell assistive technologies how to interpret an element and its purpose within the page. Roles are particularly useful for custom components that don’t have native semantic meaning.
 
 - 96% of the detected accessibility issues fall into 6 buckets. Here are the buckets from most to least common:
+
   - Low-contrast text: 79.1%
   - Missing alternative (alt) text for images: 55.5%
   - Missing form input labels: 48.2%
@@ -2245,3 +2246,23 @@ this.quantity.update(v => v.2);
 - Batching, Fan Out and scheduling concepts in System Design
 
 - Angular CDK Accessibility - LiveAnnouncer, FocusTrap, Regions, FocusMonitor, CSS class as cdk-visually-hidden and cdk.high-contrast.
+
+- Zoneless angular
+
+  - What Still Works - Event-driven updates: user interactions or async operations still trigger change detection. Signals: seamlessly notify and refresh dependent views. AsyncPipe: continues to mark components dirty automatically. ChangeDetectorRef.markForCheck() works for manual control. These mechanisms uphold reactivity without relying on Zone.js
+
+  - What Breaks / Needs Manual Handling - Operations outside Zone.js context, such as timers or setInterval, won’t auto-trigger updates — use markForCheck() or signals instead. Legacy apps or UI libraries that depend on Zone.js–style “magic” behavior might malfunction until migrated. Adopting component OnPush strategy is vital to reap the full benefits and ensure your app stays reactive
+
+  - Why It Matters - Bundle size & performance: removing Zone.js reduces payload and startup overhead. Improved Core Web Vitals: fewer, smarter change-detection cycles speed up runtime performance. Better debugging: no more obscure stack traces from patched async APIs. Ecosystem-friendly: fewer conflicts with native browser APIs or external libraries that don’t expect Zone.js behavior. Angular is clearly pointing toward this as the future: signals, hydration, and zoneless mode form a more direct, Solid/Vue‑like DX.
+
+The link you shared — [W3C QA Tip: "Don't use 'click here' as link text"](https://www.w3.org/QA/Tips/noClickHere) — is a best practice guideline from the W3C (World Wide Web Consortium).
+
+- Don’t use "click here" as link text - Avoid using vague link text like **“click here”**, because it:
+
+  - **Lacks context**: Screen readers or people skimming the page may not understand where the link leads.
+  - **Hurts accessibility**: For visually impaired users using screen readers, hearing "click here" repeatedly doesn’t help them navigate.
+  - **Reduces usability**: It forces users to read surrounding text to understand what the link does.
+  - **Hurts SEO**: Search engines use link text to understand the content of the linked page. “Click here” gives no useful info.
+  - Use **descriptive link text** that clearly tells users where they’ll go if they click. like `Learn more about our \[privacy policy].` instead of `To read more, \[click here].` This makes your content **clearer, more accessible, and user-friendly**.
+
+-

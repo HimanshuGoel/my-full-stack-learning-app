@@ -13,4 +13,5 @@
 - Companies that embraced AI too eagerly have to had to contend with frustrated customers and declining service quality.
 
 - If AI is going to speak for me, it needs to ask more than just permission... it needs to know when to step. Because being helpful doesn't give it the right become me.
--
+
+- Generative ai is just brain can't take any action, but agentic ai is like also having body parts which can take action and have goals, planning, memory, reasoning, autonomy.

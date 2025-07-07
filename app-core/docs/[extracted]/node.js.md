@@ -124,6 +124,8 @@
 
 ## Architecture
 
+- While Node.js has flourished in I/O-heavy and web-centric scenarios, it was never architected for robust backend systems in 2025: Its single-threaded core and optional threading features are suboptimal for modern concurrency. GC unpredictability makes it a poor choice for heavy-duty workloads.Dependency bloat and package instability add to long-term maintenance burdens.Alternative ecosystems like Go or Rust now better address backend demands. Balanced views from others note that Node.js still performs admirably in real-time and microservices environments, especially for I/O-bound tasks. But heavy computation, enterprise-grade apps, or stricter system-level reliability often benefit from languages with built-in concurrency and control. Node.js remains valuable for lightweight, I/O-oriented backends. However, for single-language convenience, real-time apps, or quick prototyping, it's fine. Cautions that relying on it for complex, CPU-heavy, or system-critical backends in 2025 is a design mistake.
+
 - Node.js provides a wrapper around V8 JS Runtime engine to provide additional functionalities for building network applications. It is fast because all written in C language. We can build WebSocket server, fast file uploading client, Ad Server, Any real-time data apps. Node.js is not a multi-threaded application. Benefits of non-blocking code – files will be read in parallel
 
   ![node-js-blocking-vs-non-blocking](./images/node-js-blocking-vs-non-blocking.png)
