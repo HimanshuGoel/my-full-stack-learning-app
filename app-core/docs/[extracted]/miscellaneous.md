@@ -288,6 +288,8 @@
 
 ### Philosophies
 
+- When You Start Making Good Money, Do this - Buy fewer clothes, but wear the highest quality, Eat premium food, not junk, Hire a helper for household chores. Buy back your time, Surround yourself with high-value people.
+
 - The best way to avoid mid-life crisis is to keep on inventing and creating challenges before you. So long as the life is full of challenges, there is no scope for mid-life crisis to invade your life. Any life devoid of goals and challenges is a life of crisis only.
 
 - Revenge is a dish best served with a well-timed.
@@ -453,15 +455,15 @@
 - For fulfilling life - I've said many times, "I'm not the smartest guy in the room but if I develop a routine I can accomplish anything." And that's paid off big time in life.
 
   1. Marriage. Ok, that doesn't sound romantic. My wife and I, purposely, catch up every day. While we walk and have dinner together. Oh, and other things. And that's paid off big time in romance.
-  1. Family. While our kids were growing up I rarely watched TV. Instead, we talked over dinner and enjoyed family activities. And that's paid off big time in our relationships.
-  1. Food. I know what works in my body so I eat the same diet every day. Boring? I find feeling crappy boring. And that's paid off big time in health.
-  1. Exercise. I exercise every day. Walking, karate, yard work (not my favorite). And I stretch and strengthen. Boring? Sometimes. Yet, it's paid off big time in vitality.
-  1. Gratitude. Every morning, while getting ready, I give thanks for everything I have. No TV, phones or emails. Just gratitude. And that's paid off big time in happiness.
-  1. Prayer. Every morning, while having breakfast, I pray for those I love and everything I need. Boring? Never. Every day I expect the best. And it's paid off big time receiving it.
-  1. Saving. My wife and I have saved for retirement since we married. Often a real sacrifice when we had little. Boring? Often. And it's paid off big time in savings.
-  1. Investing. I'm not smart enough to time the market or discover hot investments. So I just keep investing broadly. Boring? Sure. But I like boring investing. And it's paid off big time in wealth.
-  1. Growing. Every day I do something to grow. Reading, listening, watching something that causes me to think and discover. Boring? Never. And it's paid off big time in knowledge.
-  1. Giving. I try to give every day to my family, friends, clients, non-profits and readers. Never boring. Constantly rewarding. And it's paid off big time in fulfillment.
+  2. Family. While our kids were growing up I rarely watched TV. Instead, we talked over dinner and enjoyed family activities. And that's paid off big time in our relationships.
+  3. Food. I know what works in my body so I eat the same diet every day. Boring? I find feeling crappy boring. And that's paid off big time in health.
+  4. Exercise. I exercise every day. Walking, karate, yard work (not my favorite). And I stretch and strengthen. Boring? Sometimes. Yet, it's paid off big time in vitality.
+  5. Gratitude. Every morning, while getting ready, I give thanks for everything I have. No TV, phones or emails. Just gratitude. And that's paid off big time in happiness.
+  6. Prayer. Every morning, while having breakfast, I pray for those I love and everything I need. Boring? Never. Every day I expect the best. And it's paid off big time receiving it.
+  7. Saving. My wife and I have saved for retirement since we married. Often a real sacrifice when we had little. Boring? Often. And it's paid off big time in savings.
+  8. Investing. I'm not smart enough to time the market or discover hot investments. So I just keep investing broadly. Boring? Sure. But I like boring investing. And it's paid off big time in wealth.
+  9. Growing. Every day I do something to grow. Reading, listening, watching something that causes me to think and discover. Boring? Never. And it's paid off big time in knowledge.
+  10. Giving. I try to give every day to my family, friends, clients, non-profits and readers. Never boring. Constantly rewarding. And it's paid off big time in fulfillment.
 
 - Why do you think the old stories tell of men who set out on great journeys to impress the gods? Because trying to impress people just isn't worth the time and effort. - Henry Rollins
 
