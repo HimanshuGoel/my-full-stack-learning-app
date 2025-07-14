@@ -288,6 +288,22 @@
 
 ### Philosophies
 
+- Must wake up early - Not at 7. Not at 6. When it’s still dark and quiet, that’s when they rise. Because power is built before the world opens its eyes.
+
+- Move like a weapon. Push your body. Sweat early. Because weakness leaves the body through movement. You can’t be mentally dangerous in a physically lazy shell.
+
+- Read like it’s armour. 10 pages. Every morning. They feed the mind like it’s part of the job. Because it is. The ignorant are predictable. Dangerous people aren’t.
+
+- Block time like a fortress. The first 90 minutes are off-limits. No meetings. No calls. No noise. They use that time to execute, while others warm up.
+
+- Cold water. No excuses. Hydrate. Shower. Shock the system. Wake up with discipline, not dopamine.
+
+- Eat like it’s fuel, not fun. No sugar rush. No heavy crash. They eat to stay sharp, not to escape. What you feed your body is how your brain behaves.
+
+- Set targets, not to-do lists. They don’t write down “tasks.” They write down kills. Objectives. Moves. A day without a target is a day given to someone else.
+
+- Guard the gate. No random content. No emotional leaks. Their inputs are curated. Focused. Controlled. Because in a noisy world, clarity is power.
+
 - When You Start Making Good Money, Do this - Buy fewer clothes, but wear the highest quality, Eat premium food, not junk, Hire a helper for household chores. Buy back your time, Surround yourself with high-value people.
 
 - The best way to avoid mid-life crisis is to keep on inventing and creating challenges before you. So long as the life is full of challenges, there is no scope for mid-life crisis to invade your life. Any life devoid of goals and challenges is a life of crisis only.
