@@ -288,6 +288,8 @@
 
 ### Philosophies
 
+- Great programmers don't just type fast—they think smart. They imagine problems before they happen, and fix them early. So, to be a better programmer, treat your brain like a mini detective. Ask questions, think through your code like a puzzle, and try to spot mistakes before the computer does.
+
 - Must wake up early - Not at 7. Not at 6. When it’s still dark and quiet, that’s when they rise. Because power is built before the world opens its eyes.
 
 - Move like a weapon. Push your body. Sweat early. Because weakness leaves the body through movement. You can’t be mentally dangerous in a physically lazy shell.

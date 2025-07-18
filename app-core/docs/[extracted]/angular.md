@@ -1250,6 +1250,7 @@ Public-Key-Pins: pin-sha256=[pin 1]; pin-sha256=[pin 2]; max-age=2592000; report
 - Create accessible forms – each control should have label or aria-labelled-by, use grouping of controls, provide clear notifications, break up long forms. We should avoid placeholder text in your forms. It is often low contrast and difficult to see.
 
 - Assistive technology – screen readers, screen magnification software, speech input software, head pointers, eye tracking, single switch entry devices.
+
 - Web accessibility guidelines – WCAG (A, AA, AAA).
 
 - 4 types of disability – physical, vision-related, cognitive and hearing-related.
@@ -1265,6 +1266,7 @@ Public-Key-Pins: pin-sha256=[pin 1]; pin-sha256=[pin 2]; max-age=2592000; report
 - For low vision user, the content should be zoomable, it should not lead to any loss of functionality and content.
 
 - Too much use of the animation can cause distractions among users, the website should also provide pause, stop and hide the animation. We can use chrome emulation for testing
+
 - We should have language, charset=utf-8, title tags on the HTML page. The title bar of browser should also include company name.
 
 - HTML landmarks such as header, nav, main, footer, aside, form and section should have accessible name by providing aria-label attribute.
@@ -1272,6 +1274,7 @@ Public-Key-Pins: pin-sha256=[pin 1]; pin-sha256=[pin 2]; max-age=2592000; report
 - Links are for navigation or change of context, buttons are for action.
 
 - The email field should have autocomplete attribute as `email`.
+
 - The WCAG (web content accessibility guidelines) measure to accessibility of a website. Level A, Level AA, Level AAA. Who benefits – who only has one arm so can’t operate mouse, only the keyboard, a person who is blind so uses a screen reader, a person who has dexterity problem, can’t click on a small item, uses keyboard if she is struggling with the mouse.
 
 - Basic commands on form which can be interacted with like button, link and input controls, they are called focusable elements, pressing enter on that link or button should activate it. Space bar is used to toggle a checkbox and open a select control. Up and down arrows are used to scrolling the page or scroll through select component.
@@ -1279,16 +1282,21 @@ Public-Key-Pins: pin-sha256=[pin 1]; pin-sha256=[pin 2]; max-age=2592000; report
 - Mouse should be required only for drawing in an art program, some games, but drag and drop and resizing and rotating can be handled through the keyboard.
 
 - If we set tab index as -1 then we cannot tab to it with keyboard, but can set focus programmatically. If we set 0 then we can tab to element and focus order determined by the HTML.
+
 - ARIA is a technical specification for improving the accessibility of web pages, it allows us to update the accessibility tree.
 
 - Common navigation patterns are navigation bars, sidenavs, breadcrumb and hamburger menus.
+
 - It will be hard and require more money to support accessibility if we try to implement it after project has been complete, if we start the project with accessibility in mind then it will become easy and without any additional budget.
+
 - Typography – choosing right typeface and hierarchy of font sizes it should be in rage of 16px to 20px.
+
 - Every transition or animation should have purpose. When everything is just flashing and sliding around all over the page, it is not good for anyone, it makes user sick. We should provide an option to the user to disable animations.
 - Images are inaccessible so we need to use alt attribute to provide description of content of the image.
 - Aria roles is about filing the gap between what is available and the semantics of the code that we are using and what’s actually occurring in our rich internet applications.
 
 - ARIA states – describe dynamic states and changed with JavaScript: aria-busy, aria-disabled, aria-grabbed, aria-hidden, aria-invalid.
+
 - For forms the spacebar should activates controls and the enter key should submit the default action of the form.
 
 - We should only use custom elements, widgets and ARIA when we either do not have an HTML equivalent control or when we absolutely cannot use the existing control because it doesn’t have the functionality that we need.
@@ -1797,6 +1805,7 @@ CSS is the styling mechanism for the web. It is a standard of selectors, propert
 - HTML is derived from SGML.
 
 - Why should we structure our text – users can get to information quickly, enables accessibility tools to understand information, enables browsers to style the content, helps search engines to understand content.
+
 - The term progressive enhancement refers to the use of newer features that add to the experience in modern browsers that support those features, but doesn’t detract from the experience in older browsers.
 - URL part composition
 
@@ -2251,18 +2260,27 @@ this.quantity.update(v => v.2);
 
   - What Still Works - Event-driven updates: user interactions or async operations still trigger change detection. Signals: seamlessly notify and refresh dependent views. AsyncPipe: continues to mark components dirty automatically. ChangeDetectorRef.markForCheck() works for manual control. These mechanisms uphold reactivity without relying on Zone.js
 
-  - What Breaks / Needs Manual Handling - Operations outside Zone.js context, such as timers or setInterval, won’t auto-trigger updates — use markForCheck() or signals instead. Legacy apps or UI libraries that depend on Zone.js–style “magic” behavior might malfunction until migrated. Adopting component OnPush strategy is vital to reap the full benefits and ensure your app stays reactive
+  - What Breaks / Needs Manual Handling - Operations outside Zone.js context, such as timers or setInterval, won't auto-trigger updates — use markForCheck() or signals instead. Legacy apps or UI libraries that depend on Zone.js–style "magic" behavior might malfunction until migrated. Adopting component OnPush strategy is vital to reap the full benefits and ensure your app stays reactive
 
-  - Why It Matters - Bundle size & performance: removing Zone.js reduces payload and startup overhead. Improved Core Web Vitals: fewer, smarter change-detection cycles speed up runtime performance. Better debugging: no more obscure stack traces from patched async APIs. Ecosystem-friendly: fewer conflicts with native browser APIs or external libraries that don’t expect Zone.js behavior. Angular is clearly pointing toward this as the future: signals, hydration, and zoneless mode form a more direct, Solid/Vue‑like DX.
+  - Why It Matters - Bundle size & performance: removing Zone.js reduces payload and startup overhead. Improved Core Web Vitals: fewer, smarter change-detection cycles speed up runtime performance. Better debugging: no more obscure stack traces from patched async APIs. Ecosystem-friendly: fewer conflicts with native browser APIs or external libraries that don't expect Zone.js behavior. Angular is clearly pointing toward this as the future: signals, hydration, and zoneless mode form a more direct, Solid/Vue‑like DX.
 
 The link you shared — [W3C QA Tip: "Don't use 'click here' as link text"](https://www.w3.org/QA/Tips/noClickHere) — is a best practice guideline from the W3C (World Wide Web Consortium).
 
-- Don’t use "click here" as link text - Avoid using vague link text like **“click here”**, because it:
+- Don't use "click here" as link text - Avoid using vague link text like **“click here”**, because it:
 
   - **Lacks context**: Screen readers or people skimming the page may not understand where the link leads.
-  - **Hurts accessibility**: For visually impaired users using screen readers, hearing "click here" repeatedly doesn’t help them navigate.
+  - **Hurts accessibility**: For visually impaired users using screen readers, hearing "click here" repeatedly doesn't help them navigate.
   - **Reduces usability**: It forces users to read surrounding text to understand what the link does.
-  - **Hurts SEO**: Search engines use link text to understand the content of the linked page. “Click here” gives no useful info.
-  - Use **descriptive link text** that clearly tells users where they’ll go if they click. like `Learn more about our \[privacy policy].` instead of `To read more, \[click here].` This makes your content **clearer, more accessible, and user-friendly**.
+  - **Hurts SEO**: Search engines use link text to understand the content of the linked page. "Click here" gives no useful info.
+  - Use **descriptive link text** that clearly tells users where they'll go if they click. like `Learn more about our \[privacy policy].` instead of `To read more, \[click here].` This makes your content **clearer, more accessible, and user-friendly**.
 
--
+- Use below approach to disable on the form by using signal
+
+```html
+<button [disabled]="disableForm()">Submit</button>
+<button [disabled]="disableForm()">Save Draft</button>
+```
+
+```typescript
+disableForm = computed(() => this.formInvalid() || this.formPending());
+```
